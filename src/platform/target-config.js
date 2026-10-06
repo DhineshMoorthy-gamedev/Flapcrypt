@@ -36,6 +36,8 @@ export const TargetConfig = {
     // Keyboard instructions banner display
     keyboardHints: true,
     // Mobile viewport & safe-area handling
-    safeAreaPadding: activeMode === TARGET_MODES.PLAYSTORE || activeMode === TARGET_MODES.WEB
+    safeAreaPadding: activeMode === TARGET_MODES.PLAYSTORE || activeMode === TARGET_MODES.WEB,
+    // Bottom reserved banner ad slot (Play Store and Web)
+    showAdBanner: activeMode === TARGET_MODES.PLAYSTORE || activeMode === TARGET_MODES.WEB
   }
 };

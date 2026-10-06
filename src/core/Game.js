@@ -46,18 +46,20 @@ export class Game {
 
     this.state.selectedGroup = this.state.groups[0];
 
-    this.ui.updateLevelInfo(index, LEVEL_DATA.length, level.diff);
+    this.ui.updateLevelInfo(index, LEVEL_DATA.length, level.diff, level.tier);
     this.ui.updateHintButton(this.state.hintsRemaining);
-    this.ui.updateLinkedMode(this.state.bothFlapsLinked);
     this.ui.updateSoundButton(this.audio.isSoundEnabled());
 
     this.refreshBoardAndUI();
-    this.ui.setStatus("Select a letter cell. Turn drums independently or toggle Both Flaps to step together.");
+    this.ui.setStatus("Tap a letter cell to rotate flaps.");
   }
 
-  handleCellSelect(cipherChar) {
+  handleCellSelect(cipherChar, shouldScroll = true) {
     this.state.selectGroup(cipherChar);
     this.renderer.updateBoardState(this.state.groups, this.state);
+    if (shouldScroll) {
+      this.renderer.scrollToCell(cipherChar);
+    }
   }
 
   handleStep(whichHalf, dir) {
@@ -65,7 +67,7 @@ export class Game {
     if (!payload) return;
 
     if (payload.isFixed) {
-      this.ui.setStatus("That half is a fixed clue.");
+      this.ui.setStatus("🔒 Fixed clue.");
       return;
     }
 
@@ -135,25 +137,22 @@ export class Game {
     if (!hint) return;
 
     if (hint.alreadyFixed) {
-      this.ui.setStatus("Both halves of this letter are already fixed.");
+      this.ui.setStatus("🔒 Letter already solved.");
       return;
     }
 
-    const { cipherChar, targetHalf, hintsRemaining } = hint;
-    this.renderer.fixHalfVisual(cipherChar, targetHalf, this.state.drums[cipherChar].sol);
+    const { cipherChar, hintsRemaining } = hint;
+    const sol = this.state.drums[cipherChar].sol;
+    this.renderer.fixHalfVisual(cipherChar, 't', sol);
+    this.renderer.fixHalfVisual(cipherChar, 'b', sol);
     this.ui.updateHintButton(hintsRemaining);
     this.refreshBoardAndUI();
-    this.ui.setStatus("Half revealed and locked in place.");
+    this.ui.setStatus(`💡 Letter '${sol}' fully revealed.`);
+    PlatformBridge.vibrateLight();
   }
 
   handleToggleLinked() {
-    const isLinked = this.state.toggleLinkedMode();
-    this.ui.updateLinkedMode(isLinked);
-    if (isLinked) {
-      this.ui.setStatus("Both Flaps mode ON: Stepping will rotate top and bottom drums together.");
-    } else {
-      this.ui.setStatus("Both Flaps mode OFF: Top and bottom drums rotate independently.");
-    }
+    // Both flaps always rotate together
   }
 
   handleToggleSound() {
@@ -168,8 +167,9 @@ export class Game {
   }
 
   handleNextLevel() {
-    const nextIndex = (this.state.levelIndex + 1) % LEVEL_DATA.length;
-    this.loadLevel(nextIndex);
+    if (this.state.levelIndex < LEVEL_DATA.length - 1) {
+      this.loadLevel(this.state.levelIndex + 1);
+    }
   }
 
   handleMoveSelection(delta) {
@@ -178,6 +178,20 @@ export class Game {
     const currIdx = groups.indexOf(this.state.selectedGroup);
     const nextIdx = (currIdx + delta + groups.length) % groups.length;
     this.handleCellSelect(groups[nextIdx]);
+  }
+
+  handleNavigateUnsolved(delta) {
+    if (!this.state.groups.length) return;
+    const nextGroup = this.state.getNextEmptyGroup(this.state.selectedGroup, delta);
+    if (nextGroup) {
+      this.handleCellSelect(nextGroup, true);
+      PlatformBridge.vibrateLight();
+      this.audio.playClick();
+    }
+  }
+
+  handleNavigateEmpty(delta) {
+    this.handleNavigateUnsolved(delta);
   }
 
   refreshBoardAndUI() {
@@ -221,9 +235,9 @@ export class Game {
       const numAgreed = groups.filter(c => this.state.isAgreed(c)).length;
       const hasClash = Object.values(letterUsage).some(list => list.length > 1);
       if (hasClash) {
-        this.ui.setStatus("⚠️ Conflict: Two ciphertext letters share the same decoded letter.");
+        this.ui.setStatus("⚠️ Conflict: duplicate decoded letter");
       } else {
-        this.ui.setStatus(`${solvedCount} of ${totalCount} letters correctly decoded (${numAgreed} matching).`);
+        this.ui.setStatus(`${solvedCount} of ${totalCount} decoded (${numAgreed} matching)`);
       }
     }
   }

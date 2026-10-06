@@ -18,12 +18,15 @@ export class InputManager {
         this.game.handleTypeLetter(key.toUpperCase());
         e.preventDefault();
       } else if (key === "ArrowUp") {
-        this.game.handleStep(e.shiftKey ? "b" : "t", 1);
+        this.game.handleStep('t', 1);
         e.preventDefault();
       } else if (key === "ArrowDown") {
-        this.game.handleStep(e.shiftKey ? "b" : "t", -1);
+        this.game.handleStep('t', -1);
         e.preventDefault();
-      } else if (key === "ArrowRight" || key === "Tab" || key === " ") {
+      } else if (key === "Tab") {
+        this.game.handleNavigateUnsolved(e.shiftKey ? -1 : 1);
+        e.preventDefault();
+      } else if (key === "ArrowRight" || key === " ") {
         this.game.handleMoveSelection(1);
         e.preventDefault();
       } else if (key === "ArrowLeft") {
@@ -35,26 +38,15 @@ export class InputManager {
       }
     });
 
-    // Button Click Listeners
-    if (this.elements.linkToggleBtn) {
-      this.elements.linkToggleBtn.addEventListener('click', () => this.game.handleToggleLinked());
+    // Stepper Button Click Listeners (Forward ▲ and Reverse ▼)
+    const forwardBtn = this.elements.tu || this.elements.stepUpBtn;
+    if (forwardBtn) {
+      forwardBtn.addEventListener('click', () => this.game.handleStep('t', 1));
     }
 
-    if (this.elements.tu) {
-      this.elements.tu.addEventListener('click', () => this.game.handleStep('t', 1));
-    }
-    if (this.elements.td) {
-      this.elements.td.addEventListener('click', () => this.game.handleStep('t', -1));
-    }
-    if (this.elements.bu) {
-      this.elements.bu.addEventListener('click', () => this.game.handleStep('b', 1));
-    }
-    if (this.elements.bd) {
-      this.elements.bd.addEventListener('click', () => this.game.handleStep('b', -1));
-    }
-
-    if (this.elements.clearBtn) {
-      this.elements.clearBtn.addEventListener('click', () => this.game.handleClear());
+    const reverseBtn = this.elements.td || this.elements.stepDownBtn;
+    if (reverseBtn) {
+      reverseBtn.addEventListener('click', () => this.game.handleStep('t', -1));
     }
 
     if (this.elements.hintBtn) {
@@ -62,11 +54,19 @@ export class InputManager {
     }
 
     if (this.elements.prevBtn) {
-      this.elements.prevBtn.addEventListener('click', () => this.game.handlePrevLevel());
+      this.elements.prevBtn.addEventListener('click', () => this.game.handleNavigateUnsolved(-1));
     }
 
     if (this.elements.nextBtn) {
-      this.elements.nextBtn.addEventListener('click', () => this.game.handleNextLevel());
+      this.elements.nextBtn.addEventListener('click', () => this.game.handleNavigateUnsolved(1));
+    }
+
+    if (this.elements.prevLevelBtn) {
+      this.elements.prevLevelBtn.addEventListener('click', () => this.game.handlePrevLevel());
+    }
+
+    if (this.elements.nextLevelBtn) {
+      this.elements.nextLevelBtn.addEventListener('click', () => this.game.handleNextLevel());
     }
 
     if (this.elements.soundBtn) {

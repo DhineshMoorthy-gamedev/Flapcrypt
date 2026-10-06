@@ -10,7 +10,7 @@ export class GameState {
     this.selectedGroup = null;
     this.hintsRemaining = 3;
     this.isWon = false;
-    this.bothFlapsLinked = false;
+    this.bothFlapsLinked = true;
     this.lockedPreviously = {};
   }
 
@@ -23,6 +23,7 @@ export class GameState {
     this.selectedGroup = null;
     this.hintsRemaining = 3;
     this.isWon = false;
+    this.bothFlapsLinked = true;
     this.lockedPreviously = {};
   }
 
@@ -89,6 +90,47 @@ export class GameState {
     this.selectedGroup = cipherChar;
   }
 
+  hasEmptyFlap(cipherChar) {
+    const d = this.drums[cipherChar];
+    if (!d) return false;
+    if (this.isLetterCorrect(cipherChar)) return false;
+    const topEmpty = !d.fx?.t && (!d.t || d.t === " ");
+    const botEmpty = !d.fx?.b && (!d.b || d.b === " ");
+    return topEmpty || botEmpty;
+  }
+
+  getNextEmptyGroup(currentGroup, dir = 1) {
+    if (!this.groups.length) return null;
+    const total = this.groups.length;
+    let startIdx = this.groups.indexOf(currentGroup);
+    if (startIdx === -1) startIdx = 0;
+
+    // 1. Prioritize cells that still have an empty flap
+    for (let step = 1; step <= total; step++) {
+      const idx = (startIdx + dir * step + total * 100) % total;
+      const candidate = this.groups[idx];
+      if (this.hasEmptyFlap(candidate)) {
+        return candidate;
+      }
+    }
+
+    // 2. Fallback: If no empty flaps remain, search for any unsolved letter
+    for (let step = 1; step <= total; step++) {
+      const idx = (startIdx + dir * step + total * 100) % total;
+      const candidate = this.groups[idx];
+      if (!this.isLetterCorrect(candidate)) {
+        return candidate;
+      }
+    }
+
+    // 3. Fallback: If all are solved, cycle sequentially
+    return this.groups[(startIdx + dir + total * 100) % total];
+  }
+
+  getNextUnsolvedGroup(currentGroup, dir = 1) {
+    return this.getNextEmptyGroup(currentGroup, dir);
+  }
+
   toggleLinkedMode() {
     this.bothFlapsLinked = !this.bothFlapsLinked;
     return this.bothFlapsLinked;
@@ -101,8 +143,20 @@ export class GameState {
 
     if (this.bothFlapsLinked) {
       const f = d.fx || {};
-      const baseChar = (!f.t && d.t !== " ") ? d.t : (!f.b && d.b !== " " ? d.b : (d.t !== " " ? d.t : (dir > 0 ? " " : "A")));
-      let idx = ORDER.indexOf(baseChar);
+      if (f.t && f.b) {
+        return { isFixed: true };
+      }
+
+      let currChar = " ";
+      if (f.t) {
+        currChar = d.b || " ";
+      } else if (f.b) {
+        currChar = d.t || " ";
+      } else {
+        currChar = (d.t && d.t !== " ") ? d.t : ((d.b && d.b !== " ") ? d.b : " ");
+      }
+
+      let idx = ORDER.indexOf(currChar);
       if (idx === -1) idx = 0;
       idx = (idx + dir + ORDER.length) % ORDER.length;
       const nextChar = ORDER[idx];
@@ -121,6 +175,7 @@ export class GameState {
     }
 
     let idx = ORDER.indexOf(d[whichHalf]);
+    if (idx === -1) idx = 0;
     idx = (idx + dir + ORDER.length) % ORDER.length;
     const nextChar = ORDER[idx];
 
@@ -152,15 +207,16 @@ export class GameState {
     if (!d) return null;
 
     const f = d.fx || {};
-    const targetHalf = !f.t ? "t" : (!f.b ? "b" : null);
-    if (!targetHalf) return { alreadyFixed: true };
+    if (f.t && f.b && d.t === d.sol && d.b === d.sol) {
+      return { alreadyFixed: true };
+    }
 
     this.hintsRemaining--;
-    this.fixHalf(this.selectedGroup, targetHalf);
+    this.fixHalf(this.selectedGroup, "t");
+    this.fixHalf(this.selectedGroup, "b");
 
     return {
       cipherChar: this.selectedGroup,
-      targetHalf,
       hintsRemaining: this.hintsRemaining
     };
   }

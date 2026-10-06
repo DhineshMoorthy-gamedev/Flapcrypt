@@ -136,4 +136,11 @@ export class BoardRenderer {
   setVictory(isWon) {
     this.boardEl.classList.toggle('won', isWon);
   }
+
+  scrollToCell(cipherChar) {
+    const cells = this.cellsByCipherChar[cipherChar];
+    if (cells && cells[0]) {
+      cells[0].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    }
+  }
 }

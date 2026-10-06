@@ -73,7 +73,8 @@ export const PlatformBridge = {
     if (isCapacitor && window.Capacitor?.Plugins?.StatusBar) {
       try {
         const StatusBar = window.Capacitor.Plugins.StatusBar;
-        await StatusBar.setBackgroundColor({ color: "#0d1210" });
+        await StatusBar.hide();
+        await StatusBar.setOverlaysWebView({ overlay: true });
       } catch (err) {
         console.warn("[PlatformBridge] StatusBar setup skipped:", err);
       }
