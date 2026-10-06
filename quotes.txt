@@ -1,0 +1,729 @@
+================================================================================
+FAMOUS QUOTES RANKED BY PROGRESSIVE DIFFICULTY (HALF FLAP CRYPTOGRAM)
+================================================================================
+
+Difficulty Scoring System (1.0 = Easiest, 99.0 = Hardest):
+ - Unique Drums (Letters): Fewer unique letters reduce cipher complexity.
+ - Redundancy Ratio: (Total Letters / Unique Letters) provides cross-board deduction.
+ - Anchor Words: Common short words (A, I, IS, THE, AND) act as instant entry points.
+ - Visual Ambiguity: Letter shapes with distinctive apexes vs ambiguous curves.
+
+--------------------------------------------------------------------------------
+TIER 1: EASY / BEGINNER (Score 1.0 - 45.0)
+--------------------------------------------------------------------------------
+
+1.
+Difficulty Score: 1.0/100
+Quote: "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that."
+Author: Martin Luther King Jr.
+Stats: [Unique Letters: 17, Total Letters: 87, Redundancy: 5.12x, Words: 20]
+
+2.
+Difficulty Score: 10.6/100
+Quote: "Ask not what your country can do for you; ask what you can do for your country."
+Author: John F. Kennedy
+Stats: [Unique Letters: 14, Total Letters: 61, Redundancy: 4.36x, Words: 17]
+
+3.
+Difficulty Score: 10.8/100
+Quote: "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel."
+Author: Maya Angelou
+Stats: [Unique Letters: 20, Total Letters: 109, Redundancy: 5.45x, Words: 26]
+
+4.
+Difficulty Score: 25.6/100
+Quote: "In the end, it's not the years in your life that count. It's the life in your years."
+Author: Abraham Lincoln
+Stats: [Unique Letters: 15, Total Letters: 62, Redundancy: 4.13x, Words: 20]
+
+5.
+Difficulty Score: 29.6/100
+Quote: "Success is not final, failure is not fatal: It is the courage to continue that counts."
+Author: Winston Churchill
+Stats: [Unique Letters: 14, Total Letters: 68, Redundancy: 4.86x, Words: 16]
+
+6.
+Difficulty Score: 33.3/100
+Quote: "I dream my painting and I paint my dream."
+Author: Vincent van Gogh
+Stats: [Unique Letters: 11, Total Letters: 32, Redundancy: 2.91x, Words: 9]
+
+7.
+Difficulty Score: 35.4/100
+Quote: "Do not go gentle into that good night. Rage, rage against the dying of the light."
+Author: Dylan Thomas
+Stats: [Unique Letters: 14, Total Letters: 63, Redundancy: 4.5x, Words: 16]
+
+8.
+Difficulty Score: 35.5/100
+Quote: "The fool doth think he is wise, but the wise man knows himself to be a fool."
+Author: William Shakespeare
+Stats: [Unique Letters: 16, Total Letters: 58, Redundancy: 3.62x, Words: 17]
+
+9.
+Difficulty Score: 37.4/100
+Quote: "Government of the people, by the people, for the people, shall not perish from the earth."
+Author: Abraham Lincoln
+Stats: [Unique Letters: 17, Total Letters: 70, Redundancy: 4.12x, Words: 16]
+
+10.
+Difficulty Score: 38.9/100
+Quote: "If you want to go fast, go alone. If you want to go far, go together."
+Author: African Proverb
+Stats: [Unique Letters: 15, Total Letters: 50, Redundancy: 3.33x, Words: 16]
+
+11.
+Difficulty Score: 39.8/100
+Quote: "Live as if you were to die tomorrow. Learn as if you were to live forever."
+Author: Mahatma Gandhi
+Stats: [Unique Letters: 16, Total Letters: 57, Redundancy: 3.56x, Words: 16]
+
+12.
+Difficulty Score: 39.8/100
+Quote: "Two roads diverged in a wood, and I - I took the one less traveled by, and that has made all the difference."
+Author: Robert Frost
+Stats: [Unique Letters: 20, Total Letters: 82, Redundancy: 4.1x, Words: 22]
+
+13.
+Difficulty Score: 41.7/100
+Quote: "All the world's a stage, and all the men and women merely players."
+Author: William Shakespeare
+Stats: [Unique Letters: 15, Total Letters: 51, Redundancy: 3.4x, Words: 14]
+
+--------------------------------------------------------------------------------
+TIER 2: MEDIUM / INTERMEDIATE (Score 45.1 - 65.0)
+--------------------------------------------------------------------------------
+
+14.
+Difficulty Score: 45.3/100
+Quote: "The two most important days in your life are the day you are born and the day you find out why."
+Author: Mark Twain
+Stats: [Unique Letters: 18, Total Letters: 74, Redundancy: 4.11x, Words: 21]
+
+15.
+Difficulty Score: 45.5/100
+Quote: "He who lives in harmony with himself lives in harmony with the universe."
+Author: Marcus Aurelius
+Stats: [Unique Letters: 16, Total Letters: 59, Redundancy: 3.69x, Words: 13]
+
+16.
+Difficulty Score: 45.8/100
+Quote: "Knowing is not enough, we must apply. Willing is not enough, we must do."
+Author: Bruce Lee
+Stats: [Unique Letters: 17, Total Letters: 55, Redundancy: 3.24x, Words: 14]
+
+17.
+Difficulty Score: 45.9/100
+Quote: "To be, or not to be, that is the question."
+Author: William Shakespeare
+Stats: [Unique Letters: 12, Total Letters: 30, Redundancy: 2.5x, Words: 10]
+
+18.
+Difficulty Score: 46.4/100
+Quote: "The secret of getting ahead is getting started."
+Author: Mark Twain
+Stats: [Unique Letters: 13, Total Letters: 39, Redundancy: 3.0x, Words: 8]
+
+19.
+Difficulty Score: 46.5/100
+Quote: "Hell is other people."
+Author: Jean-Paul Sartre
+Stats: [Unique Letters: 9, Total Letters: 17, Redundancy: 1.89x, Words: 4]
+
+20.
+Difficulty Score: 46.7/100
+Quote: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do."
+Author: Mark Twain
+Stats: [Unique Letters: 19, Total Letters: 89, Redundancy: 4.68x, Words: 24]
+
+21.
+Difficulty Score: 48.1/100
+Quote: "Not all those who wander are lost."
+Author: J.R.R. Tolkien
+Stats: [Unique Letters: 11, Total Letters: 27, Redundancy: 2.45x, Words: 7]
+
+22.
+Difficulty Score: 48.7/100
+Quote: "Educating the mind without educating the heart is no education at all."
+Author: Aristotle
+Stats: [Unique Letters: 16, Total Letters: 58, Redundancy: 3.62x, Words: 12]
+
+23.
+Difficulty Score: 49.6/100
+Quote: "Genius is one percent inspiration and ninety-nine percent perspiration."
+Author: Thomas Edison
+Stats: [Unique Letters: 14, Total Letters: 61, Redundancy: 4.36x, Words: 10]
+
+24.
+Difficulty Score: 50.2/100
+Quote: "All that we are is the result of what we have thought."
+Author: Buddha
+Stats: [Unique Letters: 14, Total Letters: 42, Redundancy: 3.0x, Words: 12]
+
+25.
+Difficulty Score: 50.5/100
+Quote: "Look up at the stars and not down at your feet. Try to make sense of what you see."
+Author: Stephen Hawking
+Stats: [Unique Letters: 17, Total Letters: 62, Redundancy: 3.65x, Words: 19]
+
+26.
+Difficulty Score: 50.9/100
+Quote: "Strive not to be a success, but rather to be of value."
+Author: Albert Einstein
+Stats: [Unique Letters: 15, Total Letters: 41, Redundancy: 2.73x, Words: 12]
+
+27.
+Difficulty Score: 50.9/100
+Quote: "We are all in the gutter, but some of us are looking at the stars."
+Author: Oscar Wilde
+Stats: [Unique Letters: 17, Total Letters: 50, Redundancy: 2.94x, Words: 15]
+
+28.
+Difficulty Score: 52.4/100
+Quote: "I think, therefore I am."
+Author: René Descartes
+Stats: [Unique Letters: 11, Total Letters: 18, Redundancy: 1.64x, Words: 5]
+
+29.
+Difficulty Score: 52.9/100
+Quote: "A room without books is like a body without a soul."
+Author: Marcus Tullius Cicero
+Stats: [Unique Letters: 16, Total Letters: 40, Redundancy: 2.5x, Words: 11]
+
+30.
+Difficulty Score: 54.4/100
+Quote: "Early to bed and early to rise makes a man healthy, wealthy, and wise."
+Author: Benjamin Franklin
+Stats: [Unique Letters: 16, Total Letters: 54, Redundancy: 3.38x, Words: 14]
+
+31.
+Difficulty Score: 55.6/100
+Quote: "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin."
+Author: Martin Luther King Jr.
+Stats: [Unique Letters: 22, Total Letters: 103, Redundancy: 4.68x, Words: 28]
+
+32.
+Difficulty Score: 56.0/100
+Quote: "If your actions inspire others to dream more, learn more, do more and become more, you are a leader."
+Author: John Quincy Adams
+Stats: [Unique Letters: 18, Total Letters: 78, Redundancy: 4.33x, Words: 19]
+
+33.
+Difficulty Score: 56.5/100
+Quote: "It does not matter how slowly you go as long as you do not stop."
+Author: Confucius
+Stats: [Unique Letters: 17, Total Letters: 49, Redundancy: 2.88x, Words: 15]
+
+34.
+Difficulty Score: 57.2/100
+Quote: "Wise men speak because they have something to say; fools because they have to say something."
+Author: Plato
+Stats: [Unique Letters: 20, Total Letters: 75, Redundancy: 3.75x, Words: 16]
+
+35.
+Difficulty Score: 57.9/100
+Quote: "Science without religion is lame, religion without science is blind."
+Author: Albert Einstein
+Stats: [Unique Letters: 17, Total Letters: 57, Redundancy: 3.35x, Words: 10]
+
+36.
+Difficulty Score: 59.2/100
+Quote: "Nothing in life is to be feared, it is only to be understood."
+Author: Marie Curie
+Stats: [Unique Letters: 16, Total Letters: 47, Redundancy: 2.94x, Words: 13]
+
+37.
+Difficulty Score: 59.9/100
+Quote: "Life is long if you know how to use it."
+Author: Seneca
+Stats: [Unique Letters: 14, Total Letters: 29, Redundancy: 2.07x, Words: 10]
+
+38.
+Difficulty Score: 60.6/100
+Quote: "If you're going through hell, keep going."
+Author: Winston Churchill
+Stats: [Unique Letters: 14, Total Letters: 32, Redundancy: 2.29x, Words: 8]
+
+39.
+Difficulty Score: 61.4/100
+Quote: "The people who are crazy enough to think they can change the world are the ones who do."
+Author: Steve Jobs
+Stats: [Unique Letters: 19, Total Letters: 69, Redundancy: 3.63x, Words: 18]
+
+40.
+Difficulty Score: 61.7/100
+Quote: "That's one small step for a man, one giant leap for mankind."
+Author: Neil Armstrong
+Stats: [Unique Letters: 16, Total Letters: 46, Redundancy: 2.88x, Words: 13]
+
+41.
+Difficulty Score: 61.7/100
+Quote: "If I have seen further it is by standing on the shoulders of giants."
+Author: Isaac Newton
+Stats: [Unique Letters: 17, Total Letters: 54, Redundancy: 3.18x, Words: 14]
+
+42.
+Difficulty Score: 61.9/100
+Quote: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking."
+Author: Marcus Aurelius
+Stats: [Unique Letters: 20, Total Letters: 74, Redundancy: 3.7x, Words: 19]
+
+43.
+Difficulty Score: 63.0/100
+Quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
+Author: Albert Einstein
+Stats: [Unique Letters: 19, Total Letters: 76, Redundancy: 4.0x, Words: 17]
+
+44.
+Difficulty Score: 63.9/100
+Quote: "You miss 100% of the shots you don't take."
+Author: Wayne Gretzky
+Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.0x, Words: 9]
+
+45.
+Difficulty Score: 64.4/100
+Quote: "The only thing we have to fear is fear itself."
+Author: Franklin D. Roosevelt
+Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.4x, Words: 10]
+
+46.
+Difficulty Score: 64.8/100
+Quote: "Whatever you are, be a good one."
+Author: Abraham Lincoln
+Stats: [Unique Letters: 14, Total Letters: 24, Redundancy: 1.71x, Words: 7]
+
+47.
+Difficulty Score: 64.8/100
+Quote: "Whatever the mind of man can conceive and believe, it can achieve."
+Author: Napoleon Hill
+Stats: [Unique Letters: 16, Total Letters: 53, Redundancy: 3.31x, Words: 12]
+
+48.
+Difficulty Score: 64.9/100
+Quote: "There is no greater agony than bearing an untold story inside you."
+Author: Maya Angelou
+Stats: [Unique Letters: 15, Total Letters: 54, Redundancy: 3.6x, Words: 12]
+
+--------------------------------------------------------------------------------
+TIER 3: HARD / ADVANCED (Score 65.1 - 80.0)
+--------------------------------------------------------------------------------
+
+49.
+Difficulty Score: 65.1/100
+Quote: "A rose by any other name would smell as sweet."
+Author: William Shakespeare
+Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.4x, Words: 10]
+
+50.
+Difficulty Score: 65.2/100
+Quote: "The greatest glory in living lies not in never falling, but in rising every time we fall."
+Author: Nelson Mandela
+Stats: [Unique Letters: 18, Total Letters: 71, Redundancy: 3.94x, Words: 17]
+
+51.
+Difficulty Score: 65.3/100
+Quote: "The purpose of our lives is to be happy."
+Author: Dalai Lama
+Stats: [Unique Letters: 15, Total Letters: 31, Redundancy: 2.07x, Words: 9]
+
+52.
+Difficulty Score: 65.4/100
+Quote: "I have no special talent. I am only passionately curious."
+Author: Albert Einstein
+Stats: [Unique Letters: 16, Total Letters: 46, Redundancy: 2.88x, Words: 10]
+
+53.
+Difficulty Score: 65.5/100
+Quote: "Get busy living or get busy dying."
+Author: Stephen King
+Stats: [Unique Letters: 14, Total Letters: 27, Redundancy: 1.93x, Words: 7]
+
+54.
+Difficulty Score: 65.6/100
+Quote: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart."
+Author: Helen Keller
+Stats: [Unique Letters: 20, Total Letters: 90, Redundancy: 4.5x, Words: 22]
+
+55.
+Difficulty Score: 65.9/100
+Quote: "The only limit to our realization of tomorrow will be our doubts of today."
+Author: Franklin D. Roosevelt
+Stats: [Unique Letters: 18, Total Letters: 60, Redundancy: 3.33x, Words: 14]
+
+56.
+Difficulty Score: 66.0/100
+Quote: "There is nothing impossible to him who will try."
+Author: Alexander the Great
+Stats: [Unique Letters: 15, Total Letters: 39, Redundancy: 2.6x, Words: 9]
+
+57.
+Difficulty Score: 66.2/100
+Quote: "When one door of happiness closes, another opens."
+Author: Helen Keller
+Stats: [Unique Letters: 15, Total Letters: 40, Redundancy: 2.67x, Words: 8]
+
+58.
+Difficulty Score: 66.2/100
+Quote: "Everything has beauty, but not everyone can see it."
+Author: Confucius
+Stats: [Unique Letters: 15, Total Letters: 41, Redundancy: 2.73x, Words: 9]
+
+59.
+Difficulty Score: 66.6/100
+Quote: "Be water, my friend."
+Author: Bruce Lee
+Stats: [Unique Letters: 12, Total Letters: 15, Redundancy: 1.25x, Words: 4]
+
+60.
+Difficulty Score: 66.6/100
+Quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit."
+Author: Aristotle
+Stats: [Unique Letters: 18, Total Letters: 56, Redundancy: 3.11x, Words: 15]
+
+61.
+Difficulty Score: 67.1/100
+Quote: "Stay hungry, stay foolish."
+Author: Steve Jobs
+Stats: [Unique Letters: 13, Total Letters: 21, Redundancy: 1.62x, Words: 4]
+
+62.
+Difficulty Score: 67.7/100
+Quote: "He who has a why to live can bear almost any how."
+Author: Friedrich Nietzsche
+Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 12]
+
+63.
+Difficulty Score: 67.7/100
+Quote: "Great things are done by a series of small things brought together."
+Author: Vincent van Gogh
+Stats: [Unique Letters: 17, Total Letters: 55, Redundancy: 3.24x, Words: 12]
+
+64.
+Difficulty Score: 67.7/100
+Quote: "I can calculate the motion of heavenly bodies, but not the madness of people."
+Author: Isaac Newton
+Stats: [Unique Letters: 18, Total Letters: 62, Redundancy: 3.44x, Words: 14]
+
+65.
+Difficulty Score: 68.4/100
+Quote: "Intelligence is the ability to adapt to change."
+Author: Stephen Hawking
+Stats: [Unique Letters: 15, Total Letters: 39, Redundancy: 2.6x, Words: 8]
+
+66.
+Difficulty Score: 68.9/100
+Quote: "The good thing about science is that it's true whether or not you believe in it."
+Author: Neil deGrasse Tyson
+Stats: [Unique Letters: 18, Total Letters: 63, Redundancy: 3.5x, Words: 17]
+
+67.
+Difficulty Score: 69.8/100
+Quote: "It always seems impossible until it's done."
+Author: Nelson Mandela
+Stats: [Unique Letters: 15, Total Letters: 35, Redundancy: 2.33x, Words: 8]
+
+68.
+Difficulty Score: 69.9/100
+Quote: "You only live once, but if you do it right, once is enough."
+Author: Mae West
+Stats: [Unique Letters: 17, Total Letters: 44, Redundancy: 2.59x, Words: 13]
+
+69.
+Difficulty Score: 70.0/100
+Quote: "It is our choices that show what we truly are, far more than our abilities."
+Author: J.K. Rowling
+Stats: [Unique Letters: 17, Total Letters: 59, Redundancy: 3.47x, Words: 15]
+
+70.
+Difficulty Score: 70.4/100
+Quote: "We are a way for the cosmos to know itself."
+Author: Carl Sagan
+Stats: [Unique Letters: 16, Total Letters: 33, Redundancy: 2.06x, Words: 10]
+
+71.
+Difficulty Score: 72.1/100
+Quote: "Science may set limits to knowledge, but should not set limits to imagination."
+Author: Bertrand Russell
+Stats: [Unique Letters: 18, Total Letters: 64, Redundancy: 3.56x, Words: 13]
+
+72.
+Difficulty Score: 73.5/100
+Quote: "Be the change that you wish to see in the world."
+Author: Mahatma Gandhi
+Stats: [Unique Letters: 17, Total Letters: 37, Redundancy: 2.18x, Words: 11]
+
+73.
+Difficulty Score: 73.8/100
+Quote: "We suffer more often in imagination than in reality."
+Author: Seneca
+Stats: [Unique Letters: 16, Total Letters: 43, Redundancy: 2.69x, Words: 9]
+
+74.
+Difficulty Score: 77.1/100
+Quote: "The only true wisdom is in knowing you know nothing."
+Author: Socrates
+Stats: [Unique Letters: 16, Total Letters: 42, Redundancy: 2.62x, Words: 10]
+
+75.
+Difficulty Score: 77.1/100
+Quote: "Every child is an artist. The problem is how to remain an artist once we grow up."
+Author: Pablo Picasso
+Stats: [Unique Letters: 20, Total Letters: 63, Redundancy: 3.15x, Words: 17]
+
+76.
+Difficulty Score: 77.7/100
+Quote: "Impossible is a word to be found only in the dictionary of fools."
+Author: Napoleon Bonaparte
+Stats: [Unique Letters: 19, Total Letters: 52, Redundancy: 2.74x, Words: 13]
+
+77.
+Difficulty Score: 78.0/100
+Quote: "Many of life's failures are people who did not realize how close they were to success when they gave up."
+Author: Thomas Edison
+Stats: [Unique Letters: 21, Total Letters: 83, Redundancy: 3.95x, Words: 21]
+
+78.
+Difficulty Score: 78.1/100
+Quote: "Peace begins with a smile."
+Author: Mother Teresa
+Stats: [Unique Letters: 14, Total Letters: 21, Redundancy: 1.5x, Words: 5]
+
+79.
+Difficulty Score: 78.4/100
+Quote: "If you judge people, you have no time to love them."
+Author: Mother Teresa
+Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 11]
+
+80.
+Difficulty Score: 78.5/100
+Quote: "Life must be understood backward. But it must be lived forward."
+Author: Søren Kierkegaard
+Stats: [Unique Letters: 18, Total Letters: 51, Redundancy: 2.83x, Words: 11]
+
+81.
+Difficulty Score: 79.5/100
+Quote: "Knowing others is intelligence; knowing yourself is true wisdom."
+Author: Lao Tzu
+Stats: [Unique Letters: 18, Total Letters: 54, Redundancy: 3.0x, Words: 9]
+
+82.
+Difficulty Score: 79.6/100
+Quote: "No one can make you feel inferior without your consent."
+Author: Eleanor Roosevelt
+Stats: [Unique Letters: 17, Total Letters: 45, Redundancy: 2.65x, Words: 10]
+
+--------------------------------------------------------------------------------
+TIER 4: EXPERT / MASTER (Score 80.1 - 99.0)
+--------------------------------------------------------------------------------
+
+83.
+Difficulty Score: 80.3/100
+Quote: "In the depth of winter, I finally learned that within me there lay an invincible summer."
+Author: Albert Camus
+Stats: [Unique Letters: 20, Total Letters: 71, Redundancy: 3.55x, Words: 16]
+
+84.
+Difficulty Score: 82.3/100
+Quote: "Be yourself; everyone else is already taken."
+Author: Oscar Wilde
+Stats: [Unique Letters: 16, Total Letters: 36, Redundancy: 2.25x, Words: 7]
+
+85.
+Difficulty Score: 83.3/100
+Quote: "The way to get started is to quit talking and begin doing."
+Author: Walt Disney
+Stats: [Unique Letters: 18, Total Letters: 46, Redundancy: 2.56x, Words: 12]
+
+86.
+Difficulty Score: 83.6/100
+Quote: "Your time is limited, don't waste it living someone else's life."
+Author: Steve Jobs
+Stats: [Unique Letters: 17, Total Letters: 50, Redundancy: 2.94x, Words: 13]
+
+87.
+Difficulty Score: 83.7/100
+Quote: "Education is the most powerful weapon which you can use to change the world."
+Author: Nelson Mandela
+Stats: [Unique Letters: 19, Total Letters: 62, Redundancy: 3.26x, Words: 14]
+
+88.
+Difficulty Score: 83.9/100
+Quote: "Without music, life would be a mistake."
+Author: Friedrich Nietzsche
+Stats: [Unique Letters: 16, Total Letters: 31, Redundancy: 1.94x, Words: 7]
+
+89.
+Difficulty Score: 84.5/100
+Quote: "Somewhere, something incredible is waiting to be known."
+Author: Carl Sagan
+Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 8]
+
+90.
+Difficulty Score: 85.2/100
+Quote: "The future belongs to those who believe in the beauty of their dreams."
+Author: Eleanor Roosevelt
+Stats: [Unique Letters: 19, Total Letters: 57, Redundancy: 3.0x, Words: 13]
+
+91.
+Difficulty Score: 85.9/100
+Quote: "The most courageous act is still to think for yourself. Aloud."
+Author: Coco Chanel
+Stats: [Unique Letters: 18, Total Letters: 50, Redundancy: 2.78x, Words: 11]
+
+92.
+Difficulty Score: 85.9/100
+Quote: "All our dreams can come true, if we have the courage to pursue them."
+Author: Walt Disney
+Stats: [Unique Letters: 19, Total Letters: 53, Redundancy: 2.79x, Words: 14]
+
+93.
+Difficulty Score: 86.1/100
+Quote: "Life is like riding a bicycle. To keep your balance, you must keep moving."
+Author: Albert Einstein
+Stats: [Unique Letters: 20, Total Letters: 58, Redundancy: 2.9x, Words: 14]
+
+94.
+Difficulty Score: 86.8/100
+Quote: "Believe you can and you're halfway there."
+Author: Theodore Roosevelt
+Stats: [Unique Letters: 17, Total Letters: 33, Redundancy: 1.94x, Words: 8]
+
+95.
+Difficulty Score: 88.9/100
+Quote: "You have power over your mind - not outside events. Realize this, and you will find strength."
+Author: Marcus Aurelius
+Stats: [Unique Letters: 20, Total Letters: 73, Redundancy: 3.65x, Words: 16]
+
+96.
+Difficulty Score: 90.1/100
+Quote: "Life shrinks or expands in proportion to one's courage."
+Author: Anaïs Nin
+Stats: [Unique Letters: 18, Total Letters: 45, Redundancy: 2.5x, Words: 10]
+
+97.
+Difficulty Score: 92.1/100
+Quote: "Everything is theoretically impossible, until it is done."
+Author: Robert A. Heinlein
+Stats: [Unique Letters: 19, Total Letters: 48, Redundancy: 2.53x, Words: 8]
+
+98.
+Difficulty Score: 97.1/100
+Quote: "A journey of a thousand miles begins with a single step."
+Author: Lao Tzu
+Stats: [Unique Letters: 20, Total Letters: 45, Redundancy: 2.25x, Words: 11]
+
+99.
+Difficulty Score: 97.3/100
+Quote: "The mind is everything. What you think you become."
+Author: Buddha
+Stats: [Unique Letters: 19, Total Letters: 40, Redundancy: 2.11x, Words: 9]
+
+100.
+Difficulty Score: 99.0/100
+Quote: "Life is what happens when you're busy making other plans."
+Author: John Lennon
+Stats: [Unique Letters: 19, Total Letters: 46, Redundancy: 2.42x, Words: 11]
+
+================================================================================
+COMPACT LINE-BY-LINE LIST (ORDERED FROM EASIEST TO HARDEST)
+================================================================================
+[01.0] #001: "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that." - Martin Luther King Jr.
+[10.6] #002: "Ask not what your country can do for you; ask what you can do for your country." - John F. Kennedy
+[10.8] #003: "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel." - Maya Angelou
+[25.6] #004: "In the end, it's not the years in your life that count. It's the life in your years." - Abraham Lincoln
+[29.6] #005: "Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill
+[33.3] #006: "I dream my painting and I paint my dream." - Vincent van Gogh
+[35.4] #007: "Do not go gentle into that good night. Rage, rage against the dying of the light." - Dylan Thomas
+[35.5] #008: "The fool doth think he is wise, but the wise man knows himself to be a fool." - William Shakespeare
+[37.4] #009: "Government of the people, by the people, for the people, shall not perish from the earth." - Abraham Lincoln
+[38.9] #010: "If you want to go fast, go alone. If you want to go far, go together." - African Proverb
+[39.8] #011: "Live as if you were to die tomorrow. Learn as if you were to live forever." - Mahatma Gandhi
+[39.8] #012: "Two roads diverged in a wood, and I - I took the one less traveled by, and that has made all the difference." - Robert Frost
+[41.7] #013: "All the world's a stage, and all the men and women merely players." - William Shakespeare
+[45.3] #014: "The two most important days in your life are the day you are born and the day you find out why." - Mark Twain
+[45.5] #015: "He who lives in harmony with himself lives in harmony with the universe." - Marcus Aurelius
+[45.8] #016: "Knowing is not enough, we must apply. Willing is not enough, we must do." - Bruce Lee
+[45.9] #017: "To be, or not to be, that is the question." - William Shakespeare
+[46.4] #018: "The secret of getting ahead is getting started." - Mark Twain
+[46.5] #019: "Hell is other people." - Jean-Paul Sartre
+[46.7] #020: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do." - Mark Twain
+[48.1] #021: "Not all those who wander are lost." - J.R.R. Tolkien
+[48.7] #022: "Educating the mind without educating the heart is no education at all." - Aristotle
+[49.6] #023: "Genius is one percent inspiration and ninety-nine percent perspiration." - Thomas Edison
+[50.2] #024: "All that we are is the result of what we have thought." - Buddha
+[50.5] #025: "Look up at the stars and not down at your feet. Try to make sense of what you see." - Stephen Hawking
+[50.9] #026: "Strive not to be a success, but rather to be of value." - Albert Einstein
+[50.9] #027: "We are all in the gutter, but some of us are looking at the stars." - Oscar Wilde
+[52.4] #028: "I think, therefore I am." - René Descartes
+[52.9] #029: "A room without books is like a body without a soul." - Marcus Tullius Cicero
+[54.4] #030: "Early to bed and early to rise makes a man healthy, wealthy, and wise." - Benjamin Franklin
+[55.6] #031: "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin." - Martin Luther King Jr.
+[56.0] #032: "If your actions inspire others to dream more, learn more, do more and become more, you are a leader." - John Quincy Adams
+[56.5] #033: "It does not matter how slowly you go as long as you do not stop." - Confucius
+[57.2] #034: "Wise men speak because they have something to say; fools because they have to say something." - Plato
+[57.9] #035: "Science without religion is lame, religion without science is blind." - Albert Einstein
+[59.2] #036: "Nothing in life is to be feared, it is only to be understood." - Marie Curie
+[59.9] #037: "Life is long if you know how to use it." - Seneca
+[60.6] #038: "If you're going through hell, keep going." - Winston Churchill
+[61.4] #039: "The people who are crazy enough to think they can change the world are the ones who do." - Steve Jobs
+[61.7] #040: "That's one small step for a man, one giant leap for mankind." - Neil Armstrong
+[61.7] #041: "If I have seen further it is by standing on the shoulders of giants." - Isaac Newton
+[61.9] #042: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking." - Marcus Aurelius
+[63.0] #043: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe." - Albert Einstein
+[63.9] #044: "You miss 100% of the shots you don't take." - Wayne Gretzky
+[64.4] #045: "The only thing we have to fear is fear itself." - Franklin D. Roosevelt
+[64.8] #046: "Whatever you are, be a good one." - Abraham Lincoln
+[64.8] #047: "Whatever the mind of man can conceive and believe, it can achieve." - Napoleon Hill
+[64.9] #048: "There is no greater agony than bearing an untold story inside you." - Maya Angelou
+[65.1] #049: "A rose by any other name would smell as sweet." - William Shakespeare
+[65.2] #050: "The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson Mandela
+[65.3] #051: "The purpose of our lives is to be happy." - Dalai Lama
+[65.4] #052: "I have no special talent. I am only passionately curious." - Albert Einstein
+[65.5] #053: "Get busy living or get busy dying." - Stephen King
+[65.6] #054: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." - Helen Keller
+[65.9] #055: "The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt
+[66.0] #056: "There is nothing impossible to him who will try." - Alexander the Great
+[66.2] #057: "When one door of happiness closes, another opens." - Helen Keller
+[66.2] #058: "Everything has beauty, but not everyone can see it." - Confucius
+[66.6] #059: "Be water, my friend." - Bruce Lee
+[66.6] #060: "We are what we repeatedly do. Excellence, then, is not an act, but a habit." - Aristotle
+[67.1] #061: "Stay hungry, stay foolish." - Steve Jobs
+[67.7] #062: "He who has a why to live can bear almost any how." - Friedrich Nietzsche
+[67.7] #063: "Great things are done by a series of small things brought together." - Vincent van Gogh
+[67.7] #064: "I can calculate the motion of heavenly bodies, but not the madness of people." - Isaac Newton
+[68.4] #065: "Intelligence is the ability to adapt to change." - Stephen Hawking
+[68.9] #066: "The good thing about science is that it's true whether or not you believe in it." - Neil deGrasse Tyson
+[69.8] #067: "It always seems impossible until it's done." - Nelson Mandela
+[69.9] #068: "You only live once, but if you do it right, once is enough." - Mae West
+[70.0] #069: "It is our choices that show what we truly are, far more than our abilities." - J.K. Rowling
+[70.4] #070: "We are a way for the cosmos to know itself." - Carl Sagan
+[72.1] #071: "Science may set limits to knowledge, but should not set limits to imagination." - Bertrand Russell
+[73.5] #072: "Be the change that you wish to see in the world." - Mahatma Gandhi
+[73.8] #073: "We suffer more often in imagination than in reality." - Seneca
+[77.1] #074: "The only true wisdom is in knowing you know nothing." - Socrates
+[77.1] #075: "Every child is an artist. The problem is how to remain an artist once we grow up." - Pablo Picasso
+[77.7] #076: "Impossible is a word to be found only in the dictionary of fools." - Napoleon Bonaparte
+[78.0] #077: "Many of life's failures are people who did not realize how close they were to success when they gave up." - Thomas Edison
+[78.1] #078: "Peace begins with a smile." - Mother Teresa
+[78.4] #079: "If you judge people, you have no time to love them." - Mother Teresa
+[78.5] #080: "Life must be understood backward. But it must be lived forward." - Søren Kierkegaard
+[79.5] #081: "Knowing others is intelligence; knowing yourself is true wisdom." - Lao Tzu
+[79.6] #082: "No one can make you feel inferior without your consent." - Eleanor Roosevelt
+[80.3] #083: "In the depth of winter, I finally learned that within me there lay an invincible summer." - Albert Camus
+[82.3] #084: "Be yourself; everyone else is already taken." - Oscar Wilde
+[83.3] #085: "The way to get started is to quit talking and begin doing." - Walt Disney
+[83.6] #086: "Your time is limited, don't waste it living someone else's life." - Steve Jobs
+[83.7] #087: "Education is the most powerful weapon which you can use to change the world." - Nelson Mandela
+[83.9] #088: "Without music, life would be a mistake." - Friedrich Nietzsche
+[84.5] #089: "Somewhere, something incredible is waiting to be known." - Carl Sagan
+[85.2] #090: "The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt
+[85.9] #091: "The most courageous act is still to think for yourself. Aloud." - Coco Chanel
+[85.9] #092: "All our dreams can come true, if we have the courage to pursue them." - Walt Disney
+[86.1] #093: "Life is like riding a bicycle. To keep your balance, you must keep moving." - Albert Einstein
+[86.8] #094: "Believe you can and you're halfway there." - Theodore Roosevelt
+[88.9] #095: "You have power over your mind - not outside events. Realize this, and you will find strength." - Marcus Aurelius
+[90.1] #096: "Life shrinks or expands in proportion to one's courage." - Anaïs Nin
+[92.1] #097: "Everything is theoretically impossible, until it is done." - Robert A. Heinlein
+[97.1] #098: "A journey of a thousand miles begins with a single step." - Lao Tzu
+[97.3] #099: "The mind is everything. What you think you become." - Buddha
+[99.0] #100: "Life is what happens when you're busy making other plans." - John Lennon

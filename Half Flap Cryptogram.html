@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Half Flap Cryptogram</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e9ece6;--ink:#1d2a24;--mute:#5d6b63;--btn:#d3d9d0;--plate:#16261f;--flap:#24342c;--flap2:#1d2b24;--glyph:#efe6d0;--sel:#e0a83a;--ok:#8fbf8a;--bad:#d4503a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1411;--ink:#e6e9e1;--mute:#8d9a92;--btn:#1f2c26}}
+:root[data-theme="dark"]{--bg:#0d1411;--ink:#e6e9e1;--mute:#8d9a92;--btn:#1f2c26}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Barlow Condensed","Arial Narrow",sans-serif}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+main{max-width:860px;margin:0 auto;padding:20px 14px 40px}
+h1{font-size:28px;margin:0 0 4px;font-weight:700}
+p.sub{margin:0 0 16px;color:var(--mute);font-size:18px;max-width:60ch}
+#board{background:var(--plate);border-radius:10px;padding:22px 16px 18px;display:flex;flex-wrap:wrap;gap:20px 22px;--w:clamp(24px,6.2vw,40px);--h:calc(var(--w)*.95);box-shadow:inset 0 0 0 3px #0f1a15}
+.word{display:flex;gap:4px}
+.cell{width:var(--w);cursor:pointer;perspective:420px;text-align:center;position:relative}
+.half{position:relative;height:var(--h);overflow:hidden;background:var(--flap);color:var(--glyph)}
+.half.top{border-radius:5px 5px 0 0;transform-origin:50% 100%;margin-bottom:1px}
+.half.bot{border-radius:0 0 5px 5px;background:var(--flap2);transform-origin:50% 0}
+.half span{position:absolute;left:0;right:0;height:200%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:calc(var(--w)*1.5);line-height:1}
+.top span{top:0}.bot span{top:-100%}
+.tag{font-size:13px;color:#7f9187;margin-top:5px;height:14px}
+.half.fixed{background:#35503f;box-shadow:inset 0 0 0 1px #5d8571}.half.bot.fixed{background:#2d443a}
+.cell.sel .half{outline:2px solid var(--sel);outline-offset:-2px}
+.cell.sel .tag{color:var(--sel)}
+.cell.lock .tag{color:var(--ok)}
+.cell.lock .half{color:#fff6dc}
+.cell.clash .half{color:var(--bad)}
+.won .half{color:var(--ok)}
+#bar{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px;align-items:center}
+.grp{display:flex;gap:4px;align-items:center;background:var(--btn);border-radius:8px;padding:4px 4px 4px 12px;font-size:17px}
+button{font:inherit;font-size:17px;border:0;border-radius:6px;padding:7px 12px;background:var(--plate);color:var(--glyph);cursor:pointer;min-width:38px}
+button:hover{background:#2f4a3d}
+button:focus-visible,.cell:focus-visible{outline:3px solid var(--sel);outline-offset:2px}
+button:disabled{opacity:.4;cursor:default}
+#status{font-size:20px;min-height:28px;margin:6px 0}
+.keys{color:var(--mute);font-size:16px;line-height:1.4;max-width:70ch}
+</style>
+</head>
+<body>
+<main>
+<h1>Half flap cryptogram</h1>
+<p class="sub">Every ciphertext letter owns one pair of drums, shared by all its cells. Some halves are already fixed in place (the lighter ones). Work out the missing half, or a whole empty flap, until top and bottom agree.</p>
+<div id="board" role="group" aria-label="Cryptogram board"></div>
+<div id="bar">
+<div class="grp">Top half <button id="tu" aria-label="Top half forward">&#9650;</button><button id="td" aria-label="Top half back">&#9660;</button></div>
+<div class="grp">Bottom half <button id="bu" aria-label="Bottom half forward">&#9650;</button><button id="bd" aria-label="Bottom half back">&#9660;</button></div>
+<button id="hint">Reveal a top half (3)</button>
+<button id="clear">Clear letter</button>
+<button id="next">Next message</button>
+</div>
+<div id="status" aria-live="polite"></div>
+<div class="keys">Click a cell to select its letter. Type a letter to set both halves (fixed halves stay put). Up and down turn the top drum; Shift with up or down turns the bottom drum. Left and right change selection. Backspace clears. Turn sound on by interacting once.</div>
+</main>
+<script>
+const GIVEN=[8,6,4];
+const QUOTES=["SLOW IS SMOOTH AND SMOOTH IS FAST","THE BOARD NEVER FORGETS A DEPARTURE","EVERY LETTER HIDES ANOTHER"];
+const ORDER=" ABCDEFGHIJKLMNOPQRSTUVWXYZ",AL=ORDER.slice(1);
+let qi=0,plain,map,drums,cells,groups,sel,hints,won;
+const $=id=>document.getElementById(id);
+let ac=null;
+function audio(){if(!ac){try{ac=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}return ac}
+function click(){const a=audio();if(!a)return;const n=a.sampleRate*.03|0,b=a.createBuffer(1,n,a.sampleRate),d=b.getChannelData(0);
+for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,3);
+const s=a.createBufferSource();s.buffer=b;const f=a.createBiquadFilter();f.type="bandpass";f.frequency.value=1500+Math.random()*1200;f.Q.value=1.2;
+const g=a.createGain();g.gain.value=.5;s.connect(f);f.connect(g);g.connect(a.destination);s.start()}
+function tone(fr,dl){const a=audio();if(!a)return;const t=a.currentTime+dl/1000,o=a.createOscillator(),g=a.createGain();
+o.frequency.value=fr;g.gain.setValueAtTime(.001,t);g.gain.exponentialRampToValueAtTime(.12,t+.01);g.gain.exponentialRampToValueAtTime(.001,t+.35);
+o.connect(g);g.connect(a.destination);o.start(t);o.stop(t+.4)}
+function rng(s){return()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function makeMap(seed){const r=rng(seed*97+13);let p;
+do{p=AL.split("");for(let i=25;i>0;i--){const j=r()*(i+1)|0;[p[i],p[j]]=[p[j],p[i]]}}while(p.some((c,i)=>c===AL[i]));
+const m={};AL.split("").forEach((c,i)=>m[c]=p[i]);return m}
+function build(){
+plain=QUOTES[qi];map=makeMap(qi+1);drums={};cells={};groups=[];hints=3;won=false;
+const bd=$("board");bd.innerHTML="";bd.classList.remove("won");
+plain.split(" ").forEach(w=>{const wd=document.createElement("div");wd.className="word";
+w.split("").forEach(ch=>{const c=map[ch];
+if(!drums[c]){drums[c]={t:" ",b:" ",sol:ch};cells[c]=[];groups.push(c)}
+const el=document.createElement("div");el.className="cell";el.tabIndex=0;el.dataset.c=c;
+el.innerHTML='<div class="half top"><span></span></div><div class="half bot"><span></span></div><div class="tag">'+c+'</div>';
+el.onclick=()=>select(c);el.onfocus=()=>select(c);cells[c].push(el);wd.appendChild(el)});
+bd.appendChild(wd)});
+const gr=rng(qi*31+7),ord=groups.slice();for(let i=ord.length-1;i>0;i--){const j=gr()*(i+1)|0;[ord[i],ord[j]]=[ord[j],ord[i]]}
+ord.slice(0,Math.min(GIVEN[qi],ord.length)).forEach((c,i)=>fixHalf(c,i%2?"t":"b"));
+sel=groups[0];$("hint").textContent="Reveal a half (3)";$("hint").disabled=false;
+refresh();setStatus("Fixed halves are clues. Start with the letters that already have one.")}
+function fixHalf(c,w){const d=drums[c];d[w]=d.sol;d.fx=d.fx||{};d.fx[w]=true;cells[c].forEach(el=>{const h=el.querySelector(w==="t"?".top":".bot");h.classList.add("fixed");h.firstChild.textContent=d.sol})}
+function setStatus(t){$("status").textContent=t}
+function flip(el,ch,delay){setTimeout(()=>{
+const top=el.classList.contains("top"),sp=el.firstChild;
+const a=el.animate([{transform:"rotateX(0)"},{transform:"rotateX("+(top?-90:90)+"deg)"}],{duration:70,easing:"ease-in"});
+a.onfinish=()=>{sp.textContent=ch.trim();el.animate([{transform:"rotateX("+(top?90:-90)+"deg)"},{transform:"rotateX(0)"}],{duration:90,easing:"ease-out"});click()}},delay)}
+function setHalf(c,which,ch,base){
+const d=drums[c];if(d[which]===ch)return;d[which]=ch;
+cells[c].forEach((cell,i)=>flip(cell.querySelector(which==="t"?".top":".bot"),ch,(base||0)+i*35));
+setTimeout(refresh,(base||0)+cells[c].length*35+170)}
+function agree(c){return drums[c].t!==" "&&drums[c].t===drums[c].b}
+const lockedBefore={};
+function refresh(){
+const by={};groups.forEach(c=>{if(agree(c))(by[drums[c].t]=by[drums[c].t]||[]).push(c)});
+groups.forEach(c=>{const ok=agree(c),clash=ok&&by[drums[c].t].length>1;
+if(ok&&!lockedBefore[c]){tone(660+groups.indexOf(c)*18,0)}
+lockedBefore[c]=ok;
+cells[c].forEach(el=>{el.classList.toggle("lock",ok);el.classList.toggle("clash",clash);el.classList.toggle("sel",c===sel)})});
+const solved=groups.every(c=>agree(c)&&drums[c].t===drums[c].sol);
+if(solved&&!won){won=true;$("board").classList.add("won");setStatus("Message decoded. Every drum agrees.");[0,120,240,420].forEach((d,i)=>tone([523,659,784,1046][i],d))}
+else if(!solved&&won){won=false;$("board").classList.remove("won")}
+if(!won){const n=groups.filter(agree).length,cl=Object.values(by).some(a=>a.length>1);
+setStatus(cl?"Two ciphertext letters share a plaintext letter. One of them is wrong.":n+" of "+groups.length+" letters have matching halves.")}}
+function select(c){sel=c;groups.forEach(g=>cells[g].forEach(el=>el.classList.toggle("sel",g===c)))}
+function step(which,dir){const d=drums[sel];if(d.fx&&d.fx[which]){setStatus('That half is fixed.');return}let i=ORDER.indexOf(d[which]);i=(i+dir+ORDER.length)%ORDER.length;setHalf(sel,which,ORDER[i])}
+function setBoth(ch){const f=drums[sel].fx||{};if(!f.t)setHalf(sel,"t",ch,0);if(!f.b)setHalf(sel,"b",ch,f.t?0:130)}
+function move(d){const i=groups.indexOf(sel);select(groups[(i+d+groups.length)%groups.length])}
+document.addEventListener("keydown",e=>{
+if(e.metaKey||e.ctrlKey||e.altKey)return;const k=e.key;
+if(/^[a-zA-Z]$/.test(k)){setBoth(k.toUpperCase());e.preventDefault()}
+else if(k==="ArrowUp"||k==="ArrowDown"){step(e.shiftKey?"b":"t",k==="ArrowUp"?1:-1);e.preventDefault()}
+else if(k==="ArrowRight"){move(1);e.preventDefault()}
+else if(k==="ArrowLeft"){move(-1);e.preventDefault()}
+else if(k==="Backspace"||k==="Delete"){setBoth(" ");e.preventDefault()}});
+$("tu").onclick=()=>step("t",1);$("td").onclick=()=>step("t",-1);
+$("bu").onclick=()=>step("b",1);$("bd").onclick=()=>step("b",-1);
+$("clear").onclick=()=>setBoth(" ");
+$("hint").onclick=()=>{if(hints<1)return;const d=drums[sel],f=d.fx||{},w=!f.t?"t":!f.b?"b":null;
+if(!w){setStatus("Both halves of this letter are already fixed.");return}
+hints--;fixHalf(sel,w);refresh();
+$("hint").textContent="Reveal a half ("+hints+")";$("hint").disabled=hints===0;setStatus("Half revealed and fixed in place.")};
+$("next").onclick=()=>{qi=(qi+1)%QUOTES.length;for(const k in lockedBefore)delete lockedBefore[k];build()};
+build();
+</script>
+</body>
+</html>

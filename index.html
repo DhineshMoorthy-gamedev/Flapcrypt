@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>FlapCrypt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main>
+    <header>
+      <div class="title-row">
+        <div class="badge-group">
+          <span class="level-badge" id="levelBadge">LEVEL 1 / 5 • DIFF 1.0</span>
+          <span class="letter-badge" id="letterBadge">🔤 LETTERS: 0 / 17</span>
+        </div>
+        <h1>FlapCrypt</h1>
+        <button id="soundBtn" class="btn-step" title="Toggle Sound">🔊 ON</button>
+      </div>
+      <p class="subtitle">
+        Click any cell to select it. Turn drums independently or toggle <b>Both Flaps</b> to step both halves in sync.
+      </p>
+    </header>
+
+    <div id="board" role="group" aria-label="Cryptogram Board">
+      <div class="quote-area" id="quoteArea"></div>
+      <div class="author-row" id="authorRow"></div>
+    </div>
+
+    <div id="controls">
+      <!-- Toggle Both Flaps in Sync -->
+      <button id="linkToggleBtn" class="btn-toggle" title="Toggle Both Flaps Together">🔗 Both Flaps: OFF</button>
+
+      <div class="drum-grp" id="topDrumGrp">
+        <b>Top Drum:</b>
+        <button id="tu" class="btn-step" aria-label="Top drum forward">▲</button>
+        <button id="td" class="btn-step" aria-label="Top drum backward">▼</button>
+      </div>
+
+      <div class="drum-grp" id="botDrumGrp">
+        <b>Bottom Drum:</b>
+        <button id="bu" class="btn-step" aria-label="Bottom drum forward">▲</button>
+        <button id="bd" class="btn-step" aria-label="Bottom drum backward">▼</button>
+      </div>
+
+      <button id="hint" class="btn-action">💡 Reveal Half (3)</button>
+      <button id="clearBtn">Clear Letter</button>
+      <button id="prevBtn">◀ Prev</button>
+      <button id="nextBtn" class="btn-next">Next Quote ▶</button>
+    </div>
+
+    <div id="status-bar" aria-live="polite"></div>
+
+    <div class="instructions-card">
+      <b>Controls:</b> Click cell to select. Type <kbd>A-Z</kbd> to set both halves. <kbd>▲</kbd> / <kbd>▼</kbd> (or buttons) turns top drum; <kbd>Shift</kbd> + <kbd>▲</kbd>/<kbd>▼</kbd> turns bottom drum. Toggle <kbd>L</kbd> for <b>Both Flaps</b> sync mode. <kbd>◄</kbd> / <kbd>►</kbd> moves selection. <kbd>Backspace</kbd> clears.
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

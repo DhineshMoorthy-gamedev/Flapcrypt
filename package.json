@@ -1,0 +1,33 @@
+{
+  "name": "flapcrypt",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:web": "vite --mode web",
+    "dev:itch": "vite --mode itch",
+    "dev:desktop": "vite --mode desktop",
+    "dev:playstore": "vite --mode playstore",
+    "build": "vite build",
+    "build:web": "vite build --mode web --outDir dist/web",
+    "build:itch": "vite build --mode itch --outDir dist/itch",
+    "build:desktop": "vite build --mode desktop --outDir dist/desktop",
+    "build:playstore": "vite build --mode playstore --outDir dist/playstore && cap sync android",
+    "build:apk": "npm run build:playstore && cd android && .\\gradlew.bat assembleDebug",
+    "cap:sync": "cap sync android",
+    "cap:open": "cap open android",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/cli": "^8.5.2",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.4"
+  }
+}

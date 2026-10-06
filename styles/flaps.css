@@ -1,0 +1,142 @@
+/* Flap Container & Perspective */
+.flap-container {
+  width: 100%;
+  height: var(--cell-h);
+  position: relative;
+  perspective: 400px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Half Flap Base */
+.half {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--flap-h);
+  overflow: hidden;
+  color: var(--flap-glyph);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  user-select: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.half span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--cell-h);
+  line-height: var(--cell-h);
+  font-size: calc(var(--cell-w) * 1.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top Flap Section */
+.half.top {
+  top: 0;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, var(--flap-top), #1c2b23);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.85);
+  transform-origin: bottom center;
+}
+.half.top span {
+  top: 0;
+}
+
+/* Bottom Flap Section */
+.half.bot {
+  top: var(--flap-h);
+  border-radius: 0 0 6px 6px;
+  background: linear-gradient(180deg, #18241e, var(--flap-bot));
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  transform-origin: top center;
+}
+.half.bot span {
+  top: calc(-1 * var(--flap-h));
+}
+
+/* Fixed Clue States */
+.half.fixed {
+  background: linear-gradient(180deg, var(--fixed-top), #2a4335) !important;
+  box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.3) !important;
+  color: #ecfdf5 !important;
+}
+.half.bot.fixed {
+  background: linear-gradient(180deg, #22372c, var(--fixed-bot)) !important;
+}
+
+/* Punctuation Fixed Tile */
+.cell.punct .half {
+  background: linear-gradient(180deg, var(--punct-top), var(--punct-bot)) !important;
+  color: #94a3b8 !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Split Center Divider & Hinges */
+.split-seam {
+  position: absolute;
+  top: calc(var(--flap-h) - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.flap-container::before,
+.flap-container::after {
+  content: '';
+  position: absolute;
+  top: calc(var(--flap-h) - 3px);
+  width: 3px;
+  height: 6px;
+  background: #0d1410;
+  z-index: 10;
+  border-radius: 1px;
+}
+.flap-container::before { left: -1px; }
+.flap-container::after { right: -1px; }
+
+/* Selection & Status States */
+.cell.sel .flap-container {
+  outline: 2px solid var(--sel-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.35);
+}
+.cell.sel .tag {
+  color: var(--sel-color);
+}
+
+.cell.lock .flap-container {
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.25);
+}
+.cell.lock .half {
+  color: #d1fae5;
+}
+.cell.lock .tag {
+  color: var(--lock-color);
+}
+
+.cell.clash .flap-container {
+  outline: 2px solid var(--clash-color);
+  outline-offset: 1px;
+}
+.cell.clash .half {
+  color: #fecaca;
+}
+.cell.clash .tag {
+  color: var(--clash-color);
+}
+
+#board.won .half:not(.punct .half) {
+  color: #34d399;
+  text-shadow: 0 0 8px rgba(52, 211, 153, 0.5);
+}

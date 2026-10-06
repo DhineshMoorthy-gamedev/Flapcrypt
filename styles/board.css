@@ -1,0 +1,97 @@
+/* Main Cryptogram Board */
+#board {
+  width: 100%;
+  background: var(--board-bg);
+  border: 2px solid var(--board-border);
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    inset 0 1px 2px rgba(255, 255, 255, 0.08),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 16px;
+  --cell-w: clamp(28px, 6.2vw, 42px);
+  --cell-h: calc(var(--cell-w) * 1.35);
+  --flap-h: calc(var(--cell-h) / 2);
+}
+
+/* Quote Area */
+.quote-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+/* Word and Cell Layout */
+.word {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 2px;
+  align-items: flex-start;
+  position: relative;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.cell {
+  width: var(--cell-w);
+  height: calc(var(--cell-h) + 18px);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+}
+
+.cell.punct {
+  cursor: default;
+  pointer-events: none;
+  width: calc(var(--cell-w) * 0.75);
+}
+
+/* Author Row */
+.author-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 12px 16px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.author-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: calc(var(--cell-w) * 0.9);
+  font-weight: 700;
+  color: var(--text-muted);
+  height: var(--cell-h);
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+}
+
+/* Ciphertext Tag */
+.tag {
+  font-size: 13px;
+  color: var(--tag-color);
+  margin-top: 3px;
+  font-weight: 700;
+  height: 16px;
+  transition: color 0.15s ease;
+}
+
+.cell.has-fixed .tag {
+  visibility: hidden;
+}
+
+.cell.punct .tag {
+  visibility: hidden;
+}

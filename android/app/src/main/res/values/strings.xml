@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FlapCrypt</string>
+    <string name="title_activity_main">FlapCrypt</string>
+    <string name="package_name">com.olaidigitalstudios.flapcrypt</string>
+    <string name="custom_url_scheme">com.olaidigitalstudios.flapcrypt</string>
+</resources>
