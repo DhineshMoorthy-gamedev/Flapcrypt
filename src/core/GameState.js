@@ -8,7 +8,7 @@ export class GameState {
     this.drums = {};
     this.groups = [];
     this.selectedGroup = null;
-    this.hintsRemaining = 3;
+    this.hintsRemaining = Infinity;
     this.isWon = false;
     this.bothFlapsLinked = true;
     this.lockedPreviously = {};
@@ -21,7 +21,7 @@ export class GameState {
     this.drums = {};
     this.groups = [];
     this.selectedGroup = null;
-    this.hintsRemaining = 3;
+    this.hintsRemaining = Infinity;
     this.isWon = false;
     this.bothFlapsLinked = true;
     this.lockedPreviously = {};
@@ -202,7 +202,7 @@ export class GameState {
   }
 
   getHintPayload() {
-    if (this.hintsRemaining < 1 || !this.selectedGroup) return null;
+    if (!this.selectedGroup) return null;
     const d = this.drums[this.selectedGroup];
     if (!d) return null;
 
@@ -211,13 +211,12 @@ export class GameState {
       return { alreadyFixed: true };
     }
 
-    this.hintsRemaining--;
     this.fixHalf(this.selectedGroup, "t");
     this.fixHalf(this.selectedGroup, "b");
 
     return {
       cipherChar: this.selectedGroup,
-      hintsRemaining: this.hintsRemaining
+      hintsRemaining: Infinity
     };
   }
 }

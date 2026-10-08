@@ -1,0 +1,374 @@
+import { LEVEL_DATA } from '../data/levels.js';
+import { PlatformBridge } from '../platform/lifecycle.js';
+import { DailyChallengeService } from '../core/DailyChallengeService.js';
+import { Icons } from './Icons.js';
+
+export class HomeScreen {
+  constructor({ storageService, audioService, modalManager, onStartGame, onOpenSettings, onOpenLevelSelect }) {
+    this.storage = storageService;
+    this.audio = audioService;
+    this.modals = modalManager;
+    this.onStartGame = onStartGame;
+    this.onOpenSettings = onOpenSettings;
+    this.onOpenLevelSelect = onOpenLevelSelect;
+    this.isAnimatingTitle = false;
+    this.animTimers = [];
+
+    this.container = document.getElementById('homeScreen');
+    this.heroBoard = document.getElementById('heroFlapBoard');
+    this.levelTextEl = document.getElementById('campaignLevelText');
+    this.tierBadgeEl = document.getElementById('campaignTierBadge');
+    this.progressFillEl = document.getElementById('campaignProgressFill');
+    this.progressPctEl = document.getElementById('campaignProgressPct');
+    this.continueSubtextEl = document.getElementById('continueBtnSubtext');
+    this.campaignSelectSubtext = document.getElementById('campaignLevelSelectSubtext');
+
+    // Daily Challenge elements
+    this.dailyCard = document.getElementById('dailyCard');
+    this.dailyDateBadge = document.getElementById('dailyDateBadge');
+    this.dailyStreakText = document.getElementById('dailyStreakText');
+    this.dailyStatusHeading = document.getElementById('dailyStatusHeading');
+    this.dailyTierBadge = document.getElementById('dailyTierBadge');
+    this.btnPlayDaily = document.getElementById('btnPlayDaily');
+    this.dailyPlayIcon = document.getElementById('dailyPlayIcon');
+    this.dailyBtnMainLabel = document.getElementById('dailyBtnMainLabel');
+    this.dailyBtnSubLabel = document.getElementById('dailyBtnSubLabel');
+
+    this.initHeroFlaps();
+    this.initButtons();
+    this.updateProgress();
+  }
+
+  initHeroFlaps() {
+    if (!this.heroBoard) return;
+    const title = 'FLAPCRYPT';
+    this.heroBoard.innerHTML = title.split('').map((char, idx) => `
+      <div class="hero-flap-cell" data-index="${idx}" aria-label="${char}">
+        <div class="hero-flap-half hero-flap-top">
+          <span class="hero-flap-char">${char}</span>
+        </div>
+        <div class="hero-flap-half hero-flap-bottom">
+          <span class="hero-flap-char">${char}</span>
+        </div>
+        <div class="hero-flap-seam"></div>
+      </div>
+    `).join('');
+
+    // Clicking anywhere on the signboard triggers the mechanical flip animation!
+    this.heroBoard.addEventListener('click', () => {
+      this.animateTitle();
+    });
+
+    this.heroBoard.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.animateTitle();
+      }
+    });
+  }
+
+  clearAnimation() {
+    if (this.animTimers && this.animTimers.length) {
+      this.animTimers.forEach(t => clearTimeout(t));
+      this.animTimers = [];
+    }
+    this.isAnimatingTitle = false;
+    if (this.heroBoard) {
+      this.heroBoard.classList.remove('flipping');
+      const halves = this.heroBoard.querySelectorAll('.hero-flap-half');
+      halves.forEach(h => {
+        h.classList.remove('hero-flip-top', 'hero-flip-bot');
+        h.style.transform = '';
+      });
+    }
+  }
+
+  /**
+   * Resets all 9 signboard cells firmly to "FLAPCRYPT".
+   * Guaranteed idempotent so letters can never vanish or get stuck in 3D rotation.
+   */
+  resetTitle() {
+    this.clearAnimation();
+    if (!this.heroBoard) return;
+    const title = 'FLAPCRYPT';
+    let cells = Array.from(this.heroBoard.querySelectorAll('.hero-flap-cell'));
+    if (cells.length !== title.length) {
+      this.initHeroFlaps();
+      cells = Array.from(this.heroBoard.querySelectorAll('.hero-flap-cell'));
+    }
+
+    cells.forEach((cell, i) => {
+      const char = title[i];
+      const topHalf = cell.querySelector('.hero-flap-top');
+      const botHalf = cell.querySelector('.hero-flap-bottom');
+      const topSpan = topHalf ? topHalf.querySelector('.hero-flap-char') : null;
+      const botSpan = botHalf ? botHalf.querySelector('.hero-flap-char') : null;
+
+      if (topHalf) {
+        topHalf.classList.remove('hero-flip-top');
+        topHalf.style.transform = '';
+      }
+      if (botHalf) {
+        botHalf.classList.remove('hero-flip-bot');
+        botHalf.style.transform = '';
+      }
+      if (topSpan) topSpan.textContent = char;
+      if (botSpan) botSpan.textContent = char;
+    });
+  }
+
+  /**
+   * Cascades mechanical split-flap rotations across the "FLAPCRYPT" signboard.
+   * Uses CSS keyframe classes and strict timer tracking so letters never vanish.
+   */
+  animateTitle({ silent = false } = {}) {
+    if (!this.heroBoard) return;
+    // Cancel any active animation and ensure clean baseline
+    this.resetTitle();
+    this.isAnimatingTitle = true;
+    this.heroBoard.classList.add('flipping');
+
+    const title = 'FLAPCRYPT';
+    const cells = Array.from(this.heroBoard.querySelectorAll('.hero-flap-cell'));
+    if (!cells.length) {
+      this.isAnimatingTitle = false;
+      return;
+    }
+
+    const charsPool = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    // Crisp mechanical solenoid clack on trigger
+    if (!silent) {
+      try {
+        if (this.audio && (!this.storage || this.storage.isSoundEnabled())) {
+          this.audio.playClick();
+        }
+        PlatformBridge.vibrateLight();
+      } catch (_) {}
+    }
+
+    cells.forEach((cellEl, idx) => {
+      const topHalf = cellEl.querySelector('.hero-flap-top');
+      const botHalf = cellEl.querySelector('.hero-flap-bottom');
+      const topSpan = topHalf ? topHalf.querySelector('.hero-flap-char') : null;
+      const botSpan = botHalf ? botHalf.querySelector('.hero-flap-char') : null;
+      const targetChar = title[idx];
+
+      const staggerDelay = idx * 45; // 45ms stagger per letter
+
+      const timer1 = setTimeout(() => {
+        // Step 1: Start 3D flap rotation and swap to transient character
+        const randChar = charsPool[Math.floor(Math.random() * charsPool.length)];
+        if (topSpan) topSpan.textContent = randChar;
+        if (botSpan) botSpan.textContent = randChar;
+
+        if (topHalf) topHalf.classList.add('hero-flip-top');
+        if (botHalf) botHalf.classList.add('hero-flip-bot');
+
+        // Step 2: Mid-rotation / finish flip, lock firmly on correct letter
+        const timer2 = setTimeout(() => {
+          if (topHalf) {
+            topHalf.classList.remove('hero-flip-top');
+            topHalf.style.transform = '';
+          }
+          if (botHalf) {
+            botHalf.classList.remove('hero-flip-bot');
+            botHalf.style.transform = '';
+          }
+          if (topSpan) topSpan.textContent = targetChar;
+          if (botSpan) botSpan.textContent = targetChar;
+
+          if (!silent) {
+            try {
+              if (this.audio && (!this.storage || this.storage.isSoundEnabled())) {
+                this.audio.playClick();
+              }
+            } catch (_) {}
+          }
+
+          // When final letter finishes, clean up completely
+          if (idx === cells.length - 1) {
+            const timer3 = setTimeout(() => {
+              this.resetTitle();
+            }, 60);
+            this.animTimers.push(timer3);
+          }
+        }, 140);
+        this.animTimers.push(timer2);
+      }, staggerDelay);
+
+      this.animTimers.push(timer1);
+    });
+  }
+
+  initButtons() {
+    const btnContinue = document.getElementById('btnContinueCampaign');
+    if (btnContinue) {
+      btnContinue.addEventListener('click', () => {
+        const levelIndex = this.storage.getCurrentLevel();
+        if (this.onStartGame) {
+          this.onStartGame(levelIndex, { mode: 'campaign' });
+        }
+      });
+    }
+
+    const btnLevelSelect = document.getElementById('btnLevelSelect');
+    if (btnLevelSelect) {
+      btnLevelSelect.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (this.audio) this.audio.playClick();
+        if (this.onOpenLevelSelect) {
+          this.onOpenLevelSelect();
+        }
+      });
+    }
+
+    const campaignCard = document.getElementById('campaignCard');
+    if (campaignCard) {
+      campaignCard.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
+        if (this.onOpenLevelSelect) {
+          this.onOpenLevelSelect();
+        }
+      });
+    }
+
+    if (this.btnPlayDaily) {
+      this.btnPlayDaily.addEventListener('click', () => {
+        const dailyInfo = DailyChallengeService.getDailyLevelInfo();
+        if (this.onStartGame) {
+          this.onStartGame(dailyInfo.levelIndex, {
+            mode: 'daily',
+            dateStr: dailyInfo.dateStr,
+            displayDate: dailyInfo.shortDate,
+            level: dailyInfo.level
+          });
+        }
+      });
+    }
+
+    const btnAchievements = document.getElementById('btnAchievements');
+    if (btnAchievements) {
+      btnAchievements.addEventListener('click', () => this.modals.open('achievements'));
+    }
+
+    const btnHowToPlay = document.getElementById('btnHowToPlay');
+    if (btnHowToPlay) {
+      btnHowToPlay.addEventListener('click', () => this.modals.open('howToPlay'));
+    }
+
+    const btnSettings = document.getElementById('btnSettings');
+    if (btnSettings) {
+      btnSettings.addEventListener('click', () => {
+        if (this.onOpenSettings) {
+          this.onOpenSettings();
+        } else {
+          this.modals.open('settings');
+        }
+      });
+    }
+
+    const btnShop = document.getElementById('btnShop');
+    if (btnShop) {
+      btnShop.addEventListener('click', () => this.modals.open('shop'));
+    }
+
+    const btnStats = document.getElementById('btnStats');
+    if (btnStats) {
+      btnStats.addEventListener('click', () => this.modals.open('stats'));
+    }
+  }
+
+  updateDailyChallenge() {
+    const dailyInfo = DailyChallengeService.getDailyLevelInfo();
+    const isCompleted = this.storage ? this.storage.isDailyCompletedToday(dailyInfo.dateStr) : false;
+    const dailyState = this.storage ? this.storage.getDailyState() : { currentStreak: 0 };
+    const streak = dailyState.currentStreak || 0;
+
+    if (this.dailyDateBadge) {
+      this.dailyDateBadge.textContent = dailyInfo.shortDate;
+    }
+
+    if (this.dailyStreakText) {
+      this.dailyStreakText.textContent = `${streak} ${streak === 1 ? 'DAY' : 'DAYS'}`;
+    }
+
+    if (this.dailyTierBadge && dailyInfo.level) {
+      const category = (dailyInfo.level.category || 'Quotes').toUpperCase();
+      const tierShort = (dailyInfo.level.tier || 'BEGINNER').replace(/Tier \d+:\s*/i, '').toUpperCase();
+      this.dailyTierBadge.textContent = `${category} • ${tierShort}`;
+    }
+
+    if (this.dailyCard) {
+      this.dailyCard.classList.toggle('completed', isCompleted);
+    }
+
+    if (isCompleted) {
+      if (this.dailyStatusHeading) {
+        this.dailyStatusHeading.textContent = 'TODAY DECODED';
+      }
+      if (this.dailyPlayIcon) {
+        this.dailyPlayIcon.innerHTML = Icons.check(16);
+      }
+      if (this.dailyBtnMainLabel) {
+        this.dailyBtnMainLabel.textContent = 'COMPLETED';
+      }
+      if (this.dailyBtnSubLabel) {
+        this.dailyBtnSubLabel.textContent = `REPLAY PUZZLE`;
+      }
+    } else {
+      if (this.dailyStatusHeading) {
+        this.dailyStatusHeading.textContent = "TODAY'S PUZZLE";
+      }
+      if (this.dailyPlayIcon) {
+        this.dailyPlayIcon.innerHTML = Icons.calendar(16);
+      }
+      if (this.dailyBtnMainLabel) {
+        this.dailyBtnMainLabel.textContent = 'PLAY DAILY';
+      }
+      if (this.dailyBtnSubLabel) {
+        this.dailyBtnSubLabel.textContent = `DAILY CIPHER`;
+      }
+    }
+  }
+
+  updateProgress() {
+    this.updateDailyChallenge();
+
+    const currentIdx = this.storage.getCurrentLevel();
+    const solvedCount = this.storage.getCompletedLevelsCount();
+    const totalLevels = LEVEL_DATA.length;
+    const currentLevel = LEVEL_DATA[currentIdx] || LEVEL_DATA[0];
+
+    const category = currentLevel.category || 'Quotes';
+    const catUpper = category.toUpperCase();
+    const catTotal = LEVEL_DATA.filter(l => (l.category || 'Quotes') === category).length;
+    const catLabel = `${catUpper} ${currentLevel.num}`;
+    const pct = Math.min(100, Math.round((solvedCount / totalLevels) * 100));
+
+    if (this.levelTextEl) {
+      this.levelTextEl.textContent = `${catLabel} OF ${catTotal}`;
+    }
+
+    if (this.tierBadgeEl && currentLevel) {
+      const tierClean = (currentLevel.tier || 'BEGINNER').replace(/Tier \d+:\s*/i, '').toUpperCase();
+      this.tierBadgeEl.textContent = `${catUpper} • ${tierClean}`;
+    }
+
+    if (this.progressFillEl) {
+      this.progressFillEl.style.width = `${Math.max(2, pct)}%`;
+    }
+
+    if (this.progressPctEl) {
+      this.progressPctEl.textContent = `${solvedCount} / ${totalLevels} SOLVED • ${pct}%`;
+    }
+
+    if (this.campaignSelectSubtext) {
+      this.campaignSelectSubtext.textContent = `ALL ${totalLevels} PUZZLES`;
+    }
+
+    if (this.continueSubtextEl) {
+      this.continueSubtextEl.textContent = `RESUME ${catLabel}`;
+    }
+  }
+}

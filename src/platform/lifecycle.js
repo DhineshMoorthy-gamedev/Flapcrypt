@@ -7,6 +7,19 @@ import { TargetConfig } from "./target-config.js";
 
 const isCapacitor = typeof window !== "undefined" && Boolean(window.Capacitor?.isNativePlatform?.());
 
+let hasUserInteracted = false;
+if (typeof window !== "undefined") {
+  const onFirstInteraction = () => {
+    hasUserInteracted = true;
+    window.removeEventListener("pointerdown", onFirstInteraction, true);
+    window.removeEventListener("keydown", onFirstInteraction, true);
+    window.removeEventListener("touchstart", onFirstInteraction, true);
+  };
+  window.addEventListener("pointerdown", onFirstInteraction, true);
+  window.addEventListener("keydown", onFirstInteraction, true);
+  window.addEventListener("touchstart", onFirstInteraction, true);
+}
+
 let onPauseCallback = null;
 let onResumeCallback = null;
 let onBackActionCallback = null;
@@ -95,13 +108,21 @@ export const PlatformBridge = {
   },
 
   // ── Haptic Vibration ───────────────────────────────────────────────────────
+  canVibrate() {
+    if (typeof navigator === "undefined" || typeof navigator.vibrate !== "function") return false;
+    if ("userActivation" in navigator) {
+      return Boolean(navigator.userActivation.hasBeenActive);
+    }
+    return hasUserInteracted;
+  },
+
   async vibrateLight() {
     if (!TargetConfig.features.haptics) return;
     if (isCapacitor && window.Capacitor?.Plugins?.Haptics) {
       try {
         await window.Capacitor.Plugins.Haptics.impact({ style: "LIGHT" });
       } catch (_) {}
-    } else if (typeof navigator !== "undefined" && typeof navigator.vibrate === "function") {
+    } else if (this.canVibrate()) {
       try { navigator.vibrate(12); } catch (_) {}
     }
   },
@@ -112,7 +133,7 @@ export const PlatformBridge = {
       try {
         await window.Capacitor.Plugins.Haptics.notification({ type: "SUCCESS" });
       } catch (_) {}
-    } else if (typeof navigator !== "undefined" && typeof navigator.vibrate === "function") {
+    } else if (this.canVibrate()) {
       try { navigator.vibrate([25, 60, 30]); } catch (_) {}
     }
   },

@@ -48,6 +48,7 @@
   flex-direction: column;
   align-items: center;
   outline: none;
+  contain: layout style;
 }
 
 .cell.punct {
@@ -69,7 +70,7 @@
 }
 
 .author-label {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-display);
   font-size: calc(var(--cell-w) * 0.9);
   font-weight: 700;
   color: var(--text-muted);
@@ -81,10 +82,11 @@
 
 /* Ciphertext Tag */
 .tag {
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 12px;
   color: var(--tag-color);
   margin-top: 3px;
-  font-weight: 700;
+  font-weight: 600;
   height: 16px;
   transition: color 0.15s ease;
 }

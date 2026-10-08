@@ -1,43 +1,86 @@
 import { FlapAnimator } from './FlapAnimator.js';
 import { ANIMATION_CONFIG } from '../config/constants.js';
 
+const letterTemplate = document.createElement('template');
+letterTemplate.innerHTML = '<div class="cell" tabindex="0"><div class="flap-container"><div class="half top"><span> </span></div><div class="half bot"><span> </span></div><div class="split-seam"></div></div><div class="tag"></div></div>';
+
+const punctTemplate = document.createElement('template');
+punctTemplate.innerHTML = '<div class="cell punct"><div class="flap-container"><div class="half top fixed"><span></span></div><div class="half bot fixed"><span></span></div><div class="split-seam"></div></div><div class="tag">&nbsp;</div></div>';
+
 export class BoardRenderer {
   constructor(boardEl, quoteAreaEl, authorRowEl) {
     this.boardEl = boardEl;
     this.quoteAreaEl = quoteAreaEl;
     this.authorRowEl = authorRowEl;
     this.cellsByCipherChar = {};
+    this.introTimer = null;
+    this.onCellClick = null;
+
+    // Single delegated event listener for entire board
+    this.boardEl.addEventListener('click', (e) => {
+      const cell = e.target.closest('.cell');
+      if (cell && cell.dataset.c && typeof this.onCellClick === 'function') {
+        this.onCellClick(cell.dataset.c);
+      }
+    });
+  }
+
+  clearIntroAnimation() {
+    if (this.introTimer) {
+      clearTimeout(this.introTimer);
+      this.introTimer = null;
+    }
+    if (this.boardEl) {
+      this.boardEl.classList.remove('board-intro');
+      const cells = this.boardEl.querySelectorAll('.cell');
+      cells.forEach(cell => {
+        cell.style.removeProperty('--intro-delay');
+      });
+    }
   }
 
   clear() {
+    this.clearIntroAnimation();
     this.quoteAreaEl.innerHTML = '';
     this.authorRowEl.innerHTML = '';
+    this.authorRowEl.style.display = '';
     this.boardEl.classList.remove('won');
     this.cellsByCipherChar = {};
   }
 
   buildBoard(level, cipherMap, onCellClick, onRegisterLetter) {
     this.clear();
+    this.onCellClick = onCellClick;
 
-    // 1. Render Quote Words
+    // 1. Render Quote Words into DocumentFragment (Atomic single-pass DOM mount)
+    const quoteFrag = document.createDocumentFragment();
     const quoteWords = level.quote.split(" ");
     quoteWords.forEach(w => {
-      this.renderWordBlock(w, this.quoteAreaEl, cipherMap, onCellClick, onRegisterLetter);
+      this.renderWordBlock(w, quoteFrag, cipherMap, onRegisterLetter);
     });
+    this.quoteAreaEl.appendChild(quoteFrag);
 
-    // 2. Render Author Section
-    const dashEl = document.createElement("div");
-    dashEl.className = "author-label";
-    dashEl.textContent = "—";
-    this.authorRowEl.appendChild(dashEl);
+    // 2. Render Author Section into DocumentFragment (if author is present)
+    const authorText = (level.author || "").trim();
+    if (authorText) {
+      this.authorRowEl.style.display = '';
+      const authorFrag = document.createDocumentFragment();
+      const dashEl = document.createElement("div");
+      dashEl.className = "author-label";
+      dashEl.textContent = "—";
+      authorFrag.appendChild(dashEl);
 
-    const authorWords = level.author.split(" ");
-    authorWords.forEach(w => {
-      this.renderWordBlock(w, this.authorRowEl, cipherMap, onCellClick, onRegisterLetter);
-    });
+      const authorWords = authorText.split(" ");
+      authorWords.forEach(w => {
+        this.renderWordBlock(w, authorFrag, cipherMap, onRegisterLetter);
+      });
+      this.authorRowEl.appendChild(authorFrag);
+    } else {
+      this.authorRowEl.style.display = 'none';
+    }
   }
 
-  renderWordBlock(wordText, container, cipherMap, onCellClick, onRegisterLetter) {
+  renderWordBlock(wordText, container, cipherMap, onRegisterLetter) {
     const wordEl = document.createElement("div");
     wordEl.className = "word";
 
@@ -55,36 +98,17 @@ export class BoardRenderer {
           this.cellsByCipherChar[cipherChar] = [];
         }
 
-        const cellEl = document.createElement("div");
-        cellEl.className = "cell";
-        cellEl.tabIndex = 0;
+        const cellEl = letterTemplate.content.firstElementChild.cloneNode(true);
         cellEl.dataset.c = cipherChar;
-        cellEl.innerHTML = `
-          <div class="flap-container">
-            <div class="half top"><span> </span></div>
-            <div class="half bot"><span> </span></div>
-            <div class="split-seam"></div>
-          </div>
-          <div class="tag">${cipherChar}</div>
-        `;
-
-        cellEl.addEventListener('click', () => onCellClick(cipherChar));
-        cellEl.addEventListener('focus', () => onCellClick(cipherChar));
+        cellEl.lastElementChild.textContent = cipherChar;
 
         this.cellsByCipherChar[cipherChar].push(cellEl);
         wordEl.appendChild(cellEl);
       } else {
         // Punctuation Mark (Fixed)
-        const punctCell = document.createElement("div");
-        punctCell.className = "cell punct";
-        punctCell.innerHTML = `
-          <div class="flap-container">
-            <div class="half top fixed"><span>${rawChar}</span></div>
-            <div class="half bot fixed"><span>${rawChar}</span></div>
-            <div class="split-seam"></div>
-          </div>
-          <div class="tag">&nbsp;</div>
-        `;
+        const punctCell = punctTemplate.content.firstElementChild.cloneNode(true);
+        punctCell.querySelector('.top span').textContent = rawChar;
+        punctCell.querySelector('.bot span').textContent = rawChar;
         wordEl.appendChild(punctCell);
       }
     }
@@ -101,6 +125,19 @@ export class BoardRenderer {
       const halfEl = cell.querySelector(whichHalf === "t" ? ".top" : ".bot");
       halfEl.classList.add("fixed");
       halfEl.querySelector("span").textContent = solutionChar;
+    });
+  }
+
+  setHalfVisual(cipherChar, whichHalf, char) {
+    const cells = this.cellsByCipherChar[cipherChar];
+    if (!cells) return;
+
+    cells.forEach(cell => {
+      const halfEl = cell.querySelector(whichHalf === "t" ? ".top" : ".bot");
+      if (halfEl) {
+        const span = halfEl.querySelector("span");
+        if (span) span.textContent = char || " ";
+      }
     });
   }
 
@@ -135,6 +172,41 @@ export class BoardRenderer {
 
   setVictory(isWon) {
     this.boardEl.classList.toggle('won', isWon);
+  }
+
+  /**
+   * Sweeps a pure CSS GPU-accelerated mechanical split-flap cascade wave across the board.
+   * Runs 100% on the browser compositor with zero main-thread timer loops or DOM text thrashing.
+   */
+  animateLevelIntro(onCascadeRoll) {
+    this.clearIntroAnimation();
+    const words = Array.from(this.boardEl.querySelectorAll('.word'));
+    if (!words.length) return;
+
+    const staggerMs = 36;
+    const totalDurationMs = words.length * staggerMs + 220;
+
+    // Apply clean mechanical word-sweep delay across board
+    words.forEach((wordEl, wordIdx) => {
+      const delay = wordIdx * staggerMs;
+      const cells = wordEl.querySelectorAll('.cell');
+      cells.forEach(cell => {
+        cell.style.setProperty('--intro-delay', `${delay}ms`);
+      });
+    });
+
+    // Trigger hardware-accelerated cascade wave
+    this.boardEl.classList.add('board-intro');
+
+    // Trigger scheduled audio clack roll if provided
+    if (typeof onCascadeRoll === 'function') {
+      onCascadeRoll();
+    }
+
+    // Clean up classes and CSS properties once animation concludes
+    this.introTimer = setTimeout(() => {
+      this.clearIntroAnimation();
+    }, totalDurationMs);
   }
 
   scrollToCell(cipherChar) {

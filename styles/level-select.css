@@ -1,0 +1,359 @@
+/* ==========================================================================
+   FLAPCRYPT — LEVEL SELECT SCREEN STYLES
+   Split-flap inspired tactical level selection grid across 200 missions.
+   ========================================================================== */
+
+.level-select-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 15%, #14221B 0%, #0B100E 65%, #050807 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* --------------------------------------------------------------------------
+   STICKY HEADER
+   -------------------------------------------------------------------------- */
+.level-select-header {
+  flex-shrink: 0;
+  background: rgba(14, 22, 18, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1E3328;
+  padding: 10px 16px;
+  z-index: 5;
+}
+
+.level-select-header-inner {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.level-select-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #F59E0B;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.level-select-progress-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  padding: 3px 9px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   TIER FILTER TABS (STICKY BAR)
+   -------------------------------------------------------------------------- */
+.level-select-tabs-bar {
+  flex-shrink: 0;
+  background: #0E1612;
+  border-bottom: 1px solid #1C2E24;
+  padding: 8px 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  z-index: 4;
+}
+
+.level-select-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.level-select-tabs-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 520px;
+  margin: 0 auto;
+  min-width: max-content;
+}
+
+.tier-tab-btn {
+  background: rgba(25, 38, 31, 0.7);
+  border: 1px solid #283F33;
+  color: #8CA497;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tier-tab-btn:active {
+  transform: scale(0.96);
+}
+
+.tier-tab-btn.active {
+  background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
+  border-color: #FCD34D;
+  color: #1A1305;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+}
+
+.tier-tab-count {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   SCROLLABLE GRID CONTAINER
+   -------------------------------------------------------------------------- */
+.level-select-scroll {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 16px 14px 28px;
+}
+
+.level-select-content {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Tier Section */
+.tier-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tier-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 2px;
+  border-bottom: 1px solid #1E3328;
+  padding-bottom: 8px;
+}
+
+.tier-section-title {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #F59E0B;
+  text-transform: uppercase;
+}
+
+.tier-section-meta {
+  font-family: var(--font-mono);
+  font-size: 0.70rem;
+  color: #6C8A7B;
+  text-transform: uppercase;
+}
+
+/* Responsive Grid */
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+}
+
+@media (min-width: 480px) {
+  .level-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   TACTILE LEVEL CARD / TILE
+   -------------------------------------------------------------------------- */
+.level-card {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(180deg, #1C2B24 0%, #121E19 100%);
+  border: 1px solid #283F33;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 4px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: transform 0.12s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.level-card:active {
+  transform: scale(0.94);
+}
+
+.level-card-num {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #DDE5E0;
+}
+
+.level-card-category-tag {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 1px 4px;
+  border-radius: 4px;
+  margin-top: 2px;
+  text-transform: uppercase;
+  max-width: 92%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.level-card-diff {
+  font-family: var(--font-mono);
+  font-size: 0.60rem;
+  font-weight: 600;
+  color: #6E8A7B;
+  margin-top: 4px;
+  letter-spacing: 0.02em;
+}
+
+/* State: CURRENT LEVEL */
+.level-card.current {
+  border: 2px solid #F59E0B;
+  background: linear-gradient(180deg, #24352B 0%, #15241C 100%);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(245, 158, 11, 0.2);
+}
+
+.level-card.current .level-card-num {
+  color: #F59E0B;
+}
+
+.level-card.current::after {
+  content: 'CURRENT';
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  font-family: var(--font-mono);
+  font-size: 0.50rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #1A1305;
+  background: #F59E0B;
+  padding: 1px 4px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* State: SOLVED */
+.level-card.solved {
+  background: linear-gradient(180deg, #14281E 0%, #0F1D16 100%);
+  border-color: #1B4530;
+}
+
+.level-card.solved .level-card-num {
+  color: #E2ECE6;
+}
+
+.level-card.solved .level-card-diff {
+  color: #10B981;
+}
+
+.level-card-badge-solved {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* State: IN PROGRESS (Saved Midway) */
+.level-card.in-progress {
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  background: linear-gradient(180deg, #1E2E25 0%, #121E19 100%);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(245, 158, 11, 0.15);
+}
+
+.level-card.in-progress .level-card-num {
+  color: #F8EFE4;
+}
+
+.level-card.in-progress .level-card-diff {
+  color: #F59E0B;
+}
+
+.level-card-badge-progress {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  color: #F59E0B;
+  font-size: 0.65rem;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   INTERACTIVE TOAST / NOTIFICATION
+   -------------------------------------------------------------------------- */
+.level-select-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background: rgba(18, 28, 23, 0.95);
+  border: 1px solid #F59E0B;
+  color: #F3EDE2;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 10px 18px;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  white-space: nowrap;
+}
+
+.level-select-toast.active {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

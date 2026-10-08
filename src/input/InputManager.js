@@ -61,16 +61,18 @@ export class InputManager {
       this.elements.nextBtn.addEventListener('click', () => this.game.handleNavigateUnsolved(1));
     }
 
-    if (this.elements.prevLevelBtn) {
-      this.elements.prevLevelBtn.addEventListener('click', () => this.game.handlePrevLevel());
-    }
-
-    if (this.elements.nextLevelBtn) {
-      this.elements.nextLevelBtn.addEventListener('click', () => this.game.handleNextLevel());
-    }
 
     if (this.elements.soundBtn) {
       this.elements.soundBtn.addEventListener('click', () => this.game.handleToggleSound());
     }
+
+    if (this.elements.homeBtn) {
+      this.elements.homeBtn.addEventListener('click', () => this.game.handleReturnToHome());
+    }
+
+    if (this.elements.btnResetLevel) {
+      this.elements.btnResetLevel.addEventListener('click', () => this.game.handleRequestResetLevel());
+    }
   }
 }
+

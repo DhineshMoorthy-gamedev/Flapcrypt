@@ -1,0 +1,753 @@
+/* ==========================================================================
+   FLAPCRYPT DEDICATED FULL SCREEN SETTINGS & SUBVIEWS
+   Matches the Dark-Pine Mechanical Solari Split-Flap Aesthetic
+   ========================================================================== */
+
+/* Settings Screen Container */
+.settings-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #0c120f;
+  background-image:
+    radial-gradient(ellipse 70% 35% at 50% 12%, rgba(245, 158, 11, 0.06) 0%, transparent 65%),
+    repeating-linear-gradient(180deg, transparent 0, transparent 35px, rgba(255, 255, 255, 0.015) 36px),
+    linear-gradient(rgba(26, 42, 34, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 42, 34, 0.25) 1px, transparent 1px),
+    radial-gradient(circle at 50% 25%, #15241d 0%, #0d1310 70%, #070a08 100%);
+  background-size: 100% 100%, 100% 36px, 28px 28px, 28px 28px, 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 15;
+}
+
+/* Fixed Header */
+.settings-header {
+  width: 100%;
+  flex-shrink: 0;
+  background: #0d1410;
+  border-bottom: 1px solid var(--board-border, #1d2c25);
+  box-shadow: inset 0 -1px 0 rgba(245, 158, 11, 0.1), 0 4px 16px rgba(0, 0, 0, 0.45);
+  padding-top: max(10px, env(safe-area-inset-top));
+  padding-left: max(14px, env(safe-area-inset-left));
+  padding-right: max(14px, env(safe-area-inset-right));
+  padding-bottom: 10px;
+  z-index: 30;
+}
+
+.settings-header-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-title-text {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #F59E0B;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-header-spacer {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+/* Scrollable Stage */
+.settings-stage {
+  flex: 1 1 0%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 14px 40px;
+  box-sizing: border-box;
+}
+
+.settings-content-wrapper {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Section Header */
+.settings-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.settings-group-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #F59E0B;
+  text-transform: uppercase;
+}
+
+.settings-group-rule {
+  flex: 1;
+  height: 1px;
+  background: rgba(245, 158, 11, 0.18);
+}
+
+/* Group Container */
+.settings-group {
+  background: #141f1a;
+  border: 1px solid #1e3328;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Setting Row */
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  min-height: 56px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background-color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.settings-row:last-child {
+  border-bottom: none;
+}
+
+.settings-row.row-interactive {
+  cursor: pointer;
+}
+
+.settings-row.row-interactive:hover {
+  background-color: rgba(245, 158, 11, 0.04);
+}
+
+.settings-row.row-interactive:active {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Row Left Side */
+.settings-item-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-icon-box {
+  width: 38px;
+  height: 38px;
+  background: #0d1410;
+  border: 1px solid #22362c;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7b9487;
+  flex-shrink: 0;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.settings-row:hover .settings-icon-box {
+  color: #F59E0B;
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.settings-item-title {
+  font-family: var(--font-ui);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #F3EDE2;
+}
+
+/* Row Right Side */
+.settings-item-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+/* External Link Dummy Button */
+.btn-external-dummy {
+  height: 32px;
+  padding: 0 12px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 6px;
+  color: #F59E0B;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-external-dummy:hover {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
+}
+
+.btn-external-dummy:active {
+  transform: scale(0.95);
+  background: rgba(245, 158, 11, 0.25);
+}
+
+/* In-App Purchase Dummy Button (Remove Ads) */
+.btn-iap-dummy {
+  height: 34px;
+  padding: 0 14px;
+  background: linear-gradient(180deg, #2a4135 0%, #1c2c24 100%);
+  border: 1px solid #10B981;
+  border-radius: 6px;
+  color: #E2ECE6;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.16s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-iap-price {
+  background: #10B981;
+  color: #0c120f;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.btn-iap-dummy:hover {
+  background: linear-gradient(180deg, #355243 0%, #24382e 100%);
+  border-color: #34D399;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-iap-dummy:active {
+  transform: scale(0.95);
+}
+
+/* Chevron indicator */
+.row-chevron {
+  color: #7B9487;
+  display: flex;
+  align-items: center;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.row-interactive:hover .row-chevron {
+  color: #F59E0B;
+  transform: translateX(2px);
+}
+
+/* Minimalist Monospace Footer (matching Grid Leap / bug.png) */
+.settings-footer {
+  margin-top: 14px;
+  padding: 24px 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.settings-footer-text {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: #55665d;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+/* ==========================================================================
+   NESTED SLIDING SUBVIEWS (PRIVACY POLICY, ABOUT)
+   ========================================================================== */
+.settings-subview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  background-color: #0c120f;
+  background-image:
+    radial-gradient(ellipse 70% 35% at 50% 12%, rgba(245, 158, 11, 0.06) 0%, transparent 65%),
+    repeating-linear-gradient(180deg, transparent 0, transparent 35px, rgba(255, 255, 255, 0.015) 36px),
+    linear-gradient(rgba(26, 42, 34, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 42, 34, 0.25) 1px, transparent 1px),
+    radial-gradient(circle at 50% 25%, #15241d 0%, #0d1310 70%, #070a08 100%);
+  background-size: 100% 100%, 100% 36px, 28px 28px, 28px 28px, 100% 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.settings-subview.active {
+  transform: translate3d(0, 0, 0);
+}
+
+.subview-header {
+  width: 100%;
+  flex-shrink: 0;
+  background: #0d1410;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  padding-top: max(10px, env(safe-area-inset-top));
+  padding-left: max(14px, env(safe-area-inset-left));
+  padding-right: max(14px, env(safe-area-inset-right));
+  padding-bottom: 10px;
+  z-index: 50;
+}
+
+.subview-header .settings-title-text {
+  color: #FFFFFF;
+  text-shadow: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.subview-header .btn-header-action {
+  background: transparent;
+  border: none;
+  color: #C3CEC8;
+  box-shadow: none;
+}
+
+.subview-header .btn-header-action:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.subview-stage {
+  flex: 1 1 0%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subview-article {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.subview-article.about-mode {
+  flex: 1 1 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  gap: 0;
+  max-width: 100%;
+}
+
+.subview-hero-badge {
+  background: #141f1a;
+  border: 1px solid #1e3328;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subview-hero-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #F59E0B;
+}
+
+.subview-hero-tag {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  color: #7B9487;
+  text-transform: uppercase;
+}
+
+.subview-section {
+  background: #141f1a;
+  border: 1px solid #1e3328;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subview-section-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #F59E0B;
+}
+
+.subview-text {
+  font-size: 0.88rem;
+  color: #A7B7AF;
+  line-height: 1.45;
+}
+
+.highlight-text {
+  color: #F3EDE2;
+}
+
+.credits-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.credit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.credit-row:last-child {
+  border-bottom: none;
+}
+
+.credit-role {
+  font-size: 0.82rem;
+  color: #7B9487;
+}
+
+.credit-name {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #F3EDE2;
+}
+
+/* ==========================================================================
+   ABOUT SCREEN (MATCHING BUG.PNG SPECIFICATION)
+   ========================================================================== */
+.about-screen-layout {
+  width: 100%;
+  max-width: 340px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 12px 24px;
+  box-sizing: border-box;
+}
+
+/* App Icon (Center Squircle) */
+.about-icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.about-squircle-icon {
+  width: 96px;
+  height: 96px;
+  background: radial-gradient(circle at 35% 30%, #1d3027 0%, #101c16 70%, #08100c 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(16, 185, 129, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-icon-flap {
+  width: 50px;
+  height: 58px;
+  background: #090e0b;
+  border-radius: 6px;
+  border: 1px solid #1f3328;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.65);
+}
+
+.about-icon-flap-top,
+.about-icon-flap-bot {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-icon-flap-top {
+  background: linear-gradient(180deg, #2c4437 0%, #203329 100%);
+  align-items: flex-end;
+}
+
+.about-icon-flap-bot {
+  background: linear-gradient(180deg, #18271f 0%, #121e18 100%);
+  align-items: flex-start;
+}
+
+.about-icon-flap-top span,
+.about-icon-flap-bot span {
+  font-family: var(--font-flap);
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #F3EDE2;
+  line-height: 58px;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.45);
+}
+
+.about-icon-flap-seam {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: #090e0b;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.85);
+  z-index: 3;
+}
+
+/* Game Title & Version Badge */
+.about-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.about-version-badge {
+  display: inline-block;
+  background: #182026;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 3px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #8E9BA5;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+/* Developer & Studio Credits (Vertically Stacked Typography) */
+.about-credits-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.about-meta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.about-meta-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #6C7A86;
+  text-transform: uppercase;
+  font-family: var(--font-ui);
+}
+
+.about-meta-value.main-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+}
+
+.about-meta-value.lead-dev {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #38BDF8; /* Electric Cyan accent matching bug.png */
+  letter-spacing: 0.02em;
+}
+
+.about-location {
+  font-family: var(--font-ui);
+  font-size: 0.94rem;
+  color: #8E9BA5;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-top: 2px;
+}
+
+/* Stacked Action Buttons */
+.about-buttons-stack {
+  width: 100%;
+  max-width: 310px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.btn-about-pill {
+  width: 100%;
+  height: 48px;
+  background: #171E24;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-about-pill:hover {
+  background: #202930;
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #38BDF8;
+}
+
+.btn-about-pill:active {
+  transform: scale(0.98);
+  background: #11161B;
+}
+
+.btn-about-pill .ui-icon {
+  color: inherit;
+  flex-shrink: 0;
+}
+
+/* Legal Footer */
+.about-legal-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.about-copyright {
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #8E9BA5;
+  letter-spacing: 0.02em;
+}
+
+.about-rights {
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  color: #5A6874;
+  letter-spacing: 0.02em;
+}
+
+/* Notice Dialog content */
+.notice-dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.notice-text {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: #C3CEC8;
+  line-height: 1.45;
+}
+
+.btn-notice-dismiss {
+  width: 100%;
+  height: 42px;
+  background: #1B2922;
+  border: 1px solid #2B4235;
+  border-radius: 8px;
+  color: #F59E0B;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+}
+
+.btn-notice-dismiss:active {
+  background: #121C17;
+  transform: scale(0.98);
+}

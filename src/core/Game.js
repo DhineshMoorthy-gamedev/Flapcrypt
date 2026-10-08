@@ -3,22 +3,77 @@ import { buildCipherMap } from './Cipher.js';
 import { createRng } from '../utils/prng.js';
 import { ANIMATION_CONFIG, AUDIO_CONFIG } from '../config/constants.js';
 import { PlatformBridge } from '../platform/lifecycle.js';
+import { DailyChallengeService } from './DailyChallengeService.js';
 
 export class Game {
-  constructor({ gameState, audioService, renderer, uiController }) {
+  constructor({ gameState, audioService, renderer, uiController, storageService, onReturnToHome, onRequestResetLevel, onLevelCompleted }) {
     this.state = gameState;
     this.audio = audioService;
     this.renderer = renderer;
     this.ui = uiController;
+    this.storage = storageService;
+    this.onReturnToHome = onReturnToHome;
+    this.onRequestResetLevel = onRequestResetLevel;
+    this.onLevelCompleted = onLevelCompleted;
+    this.gameMode = 'campaign';
+    this.gameOptions = {};
+    this.levelStartTime = Date.now();
+    this.hintsUsedInLevel = 0;
+    this.victoryTimer = null;
   }
 
-  start() {
-    this.loadLevel(0);
+  start(levelIndex = null, options = {}) {
+    this.gameMode = options.mode || 'campaign';
+    this.gameOptions = options;
+    const idx = levelIndex !== null 
+      ? levelIndex 
+      : (this.storage ? this.storage.getCurrentLevel() : 0);
+    this.loadLevel(idx, { delayIntroMs: 250 });
   }
 
-  loadLevel(index) {
+  saveCurrentLevelState() {
+    if (!this.storage || this.gameMode !== 'campaign') return;
+    const idx = this.state.levelIndex;
+    if (idx === null || idx === undefined || !this.state.groups.length) return;
+
+    const drumsToSave = {};
+    for (const c of this.state.groups) {
+      const d = this.state.drums[c];
+      if (d) {
+        drumsToSave[c] = {
+          t: d.t,
+          b: d.b,
+          fx: { ...(d.fx || {}) }
+        };
+      }
+    }
+
+    this.storage.saveLevelProgress(idx, {
+      drums: drumsToSave,
+      hintsRemaining: this.state.hintsRemaining,
+      isWon: this.state.isWon,
+      selectedGroup: this.state.selectedGroup,
+      updatedAt: Date.now()
+    });
+  }
+
+  loadLevel(index, { delayIntroMs = 0 } = {}) {
     const level = LEVEL_DATA[index];
-    if (!level) return;
+    if (this.victoryTimer) {
+      clearTimeout(this.victoryTimer);
+      this.victoryTimer = null;
+    }
+    this.levelStartTime = Date.now();
+    this.hintsUsedInLevel = 0;
+
+    // Save previous level progress if switching
+    if (this.state && this.state.currentLevel && this.state.groups.length) {
+      this.saveCurrentLevelState();
+    }
+
+    if (this.storage && this.gameMode === 'campaign') {
+      this.storage.setCurrentLevel(index);
+    }
 
     const cipherMap = buildCipherMap(index + 1);
     this.state.initLevel(index, level, cipherMap);
@@ -30,28 +85,121 @@ export class Game {
       (cipherChar, solChar) => this.state.registerCipherChar(cipherChar, solChar)
     );
 
-    // Distribute Given Fixed Clue Halves
-    const rng = createRng(index * 31 + 7);
-    const shuffledGroups = this.state.groups.slice();
-    for (let i = shuffledGroups.length - 1; i > 0; i--) {
-      const j = Math.floor(rng() * (i + 1));
-      [shuffledGroups[i], shuffledGroups[j]] = [shuffledGroups[j], shuffledGroups[i]];
+    // Check for saved midway progress for this level
+    const saved = (this.storage && this.gameMode === 'campaign')
+      ? this.storage.getLevelProgress(index)
+      : null;
+
+    if (saved && saved.drums && Object.keys(saved.drums).length > 0) {
+      // Restore saved drum positions and fixed halves
+      this.state.groups.forEach(c => {
+        const sd = saved.drums[c];
+        if (sd) {
+          this.state.drums[c].t = sd.t || " ";
+          this.state.drums[c].b = sd.b || " ";
+          this.state.drums[c].fx = { ...(sd.fx || {}) };
+
+          if (sd.fx?.t) {
+            this.renderer.fixHalfVisual(c, 't', this.state.drums[c].sol);
+          } else if (sd.t && sd.t !== " ") {
+            this.renderer.setHalfVisual(c, 't', sd.t);
+          }
+
+          if (sd.fx?.b) {
+            this.renderer.fixHalfVisual(c, 'b', this.state.drums[c].sol);
+          } else if (sd.b && sd.b !== " ") {
+            this.renderer.setHalfVisual(c, 'b', sd.b);
+          }
+        }
+      });
+
+      this.state.hintsRemaining = Infinity;
+      if (saved.isWon !== undefined) {
+        this.state.isWon = saved.isWon;
+        if (this.state.isWon) {
+          this.renderer.setVictory(true);
+        }
+      }
+      if (saved.selectedGroup && this.state.groups.includes(saved.selectedGroup)) {
+        this.state.selectedGroup = saved.selectedGroup;
+      }
+    } else {
+      // Fresh level: Distribute Given Fixed Clue Halves
+      // 1. Guarantee up to 3 unique clues in Author's Name (if author present)
+      const authorText = (level.author || "").trim();
+      const authorUniqueChars = authorText ? Array.from(
+        new Set(authorText.toUpperCase().replace(/[^A-Z]/g, ''))
+      ).map(c => cipherMap[c]) : [];
+
+      const quoteUniqueChars = Array.from(
+        new Set(level.quote.toUpperCase().replace(/[^A-Z]/g, ''))
+      ).map(c => cipherMap[c]);
+
+      const rng = createRng(index * 31 + 7);
+      const shuffledAuthor = authorUniqueChars.slice();
+      for (let i = shuffledAuthor.length - 1; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        [shuffledAuthor[i], shuffledAuthor[j]] = [shuffledAuthor[j], shuffledAuthor[i]];
+      }
+
+      const authorClues = shuffledAuthor.slice(0, Math.min(3, shuffledAuthor.length));
+
+      // 2. Fill remaining clues from quote characters not already given
+      const effectiveGiven = Math.max(3, level.given || 3);
+      const remainingNeeded = Math.max(0, effectiveGiven - authorClues.length);
+
+      const remainingQuoteChars = quoteUniqueChars.filter(c => !authorClues.includes(c));
+      for (let i = remainingQuoteChars.length - 1; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        [remainingQuoteChars[i], remainingQuoteChars[j]] = [remainingQuoteChars[j], remainingQuoteChars[i]];
+      }
+      const additionalQuoteClues = remainingQuoteChars.slice(0, remainingNeeded);
+
+      const finalClues = [...authorClues, ...additionalQuoteClues];
+
+      finalClues.forEach((c, idx) => {
+        const whichHalf = idx % 2 === 0 ? "t" : "b";
+        this.state.fixHalf(c, whichHalf);
+        this.renderer.fixHalfVisual(c, whichHalf, this.state.drums[c].sol);
+      });
     }
 
-    shuffledGroups.slice(0, Math.min(level.given, shuffledGroups.length)).forEach((c, idx) => {
-      const whichHalf = idx % 2 === 0 ? "t" : "b";
-      this.state.fixHalf(c, whichHalf);
-      this.renderer.fixHalfVisual(c, whichHalf, this.state.drums[c].sol);
-    });
-
-    this.state.selectedGroup = this.state.groups[0];
-
-    this.ui.updateLevelInfo(index, LEVEL_DATA.length, level.diff, level.tier);
+    const isSpecial = level.category && level.category !== 'Quotes';
+    const catLabel = isSpecial ? `${level.category.toUpperCase()} ${level.num}` : `LEVEL ${level.num}`;
+    const customTitle = this.gameMode === 'daily'
+      ? `DAILY • ${this.gameOptions.displayDate || 'TODAY'} (${catLabel})`
+      : catLabel;
+    this.ui.updateLevelInfo(index, LEVEL_DATA.length, level.diff, level.tier, this.gameMode, customTitle, level.category);
     this.ui.updateHintButton(this.state.hintsRemaining);
     this.ui.updateSoundButton(this.audio.isSoundEnabled());
 
     this.refreshBoardAndUI();
-    this.ui.setStatus("Tap a letter cell to rotate flaps.");
+
+    if (this.state.isWon) {
+      const authorText = (level.author || "").trim();
+      const authorSpan = authorText ? ` <span class="status-author">— ${authorText}</span>` : '';
+      this.ui.setStatus(`🎉 ${catLabel} Decoded!${authorSpan}`);
+    } else if (saved) {
+      this.ui.setStatus(`Resumed ${catLabel} progress.`);
+    } else {
+      this.ui.setStatus("Tap a letter cell to rotate flaps.");
+    }
+
+    // Trigger authentic mechanical split-flap cascade wave across the board on level load
+    const triggerIntro = () => {
+      this.renderer.animateLevelIntro(() => {
+        if (this.audio && this.audio.isSoundEnabled()) {
+          this.audio.playCascadeSequence(6, 42);
+        }
+        PlatformBridge.vibrateLight();
+      });
+    };
+
+    if (delayIntroMs > 0) {
+      setTimeout(triggerIntro, delayIntroMs);
+    } else {
+      triggerIntro();
+    }
   }
 
   handleCellSelect(cipherChar, shouldScroll = true) {
@@ -88,17 +236,25 @@ export class Game {
       }
 
       if (animated) {
+        if (this.storage) this.storage.recordFlapRotation();
         PlatformBridge.vibrateLight();
-        setTimeout(() => this.refreshBoardAndUI(), 180);
+        setTimeout(() => {
+          this.refreshBoardAndUI();
+          this.saveCurrentLevelState();
+        }, 180);
       }
       return;
     }
 
     const { cipherChar, targetChar } = payload;
     if (this.state.setDrum(cipherChar, whichHalf, targetChar)) {
+      if (this.storage) this.storage.recordFlapRotation();
       PlatformBridge.vibrateLight();
       this.renderer.animateDrumHalf(cipherChar, whichHalf, targetChar, 0, () => this.audio.playClick());
-      setTimeout(() => this.refreshBoardAndUI(), 180);
+      setTimeout(() => {
+        this.refreshBoardAndUI();
+        this.saveCurrentLevelState();
+      }, 180);
     }
   }
 
@@ -123,8 +279,12 @@ export class Game {
     }
 
     if (animated) {
+      if (this.storage) this.storage.recordFlapRotation();
       PlatformBridge.vibrateLight();
-      setTimeout(() => this.refreshBoardAndUI(), 180);
+      setTimeout(() => {
+        this.refreshBoardAndUI();
+        this.saveCurrentLevelState();
+      }, 180);
     }
   }
 
@@ -133,6 +293,21 @@ export class Game {
   }
 
   handleHint() {
+    // If no group is currently selected, auto-select first unsolved letter group
+    if (!this.state.selectedGroup) {
+      const unsolved = this.state.groups.find(c => {
+        const d = this.state.drums[c];
+        const f = d.fx || {};
+        return !(f.t && f.b && d.t === d.sol && d.b === d.sol);
+      });
+      if (unsolved) {
+        this.handleCellSelect(unsolved, true);
+      } else {
+        this.ui.setStatus("🎉 All letters already solved!");
+        return;
+      }
+    }
+
     const hint = this.state.getHintPayload();
     if (!hint) return;
 
@@ -141,12 +316,18 @@ export class Game {
       return;
     }
 
+    if (this.storage) {
+      this.storage.recordHintUsed();
+    }
+    this.hintsUsedInLevel = (this.hintsUsedInLevel || 0) + 1;
+
     const { cipherChar, hintsRemaining } = hint;
     const sol = this.state.drums[cipherChar].sol;
     this.renderer.fixHalfVisual(cipherChar, 't', sol);
     this.renderer.fixHalfVisual(cipherChar, 'b', sol);
     this.ui.updateHintButton(hintsRemaining);
     this.refreshBoardAndUI();
+    this.saveCurrentLevelState();
     this.ui.setStatus(`💡 Letter '${sol}' fully revealed.`);
     PlatformBridge.vibrateLight();
   }
@@ -157,16 +338,44 @@ export class Game {
 
   handleToggleSound() {
     const enabled = this.audio.toggleSound();
+    if (this.storage) {
+      this.storage.setSoundEnabled(enabled);
+    }
     this.ui.updateSoundButton(enabled);
   }
 
+  handleReturnToHome() {
+    this.saveCurrentLevelState();
+    if (this.onReturnToHome) {
+      this.onReturnToHome();
+    }
+  }
+
+  handleRequestResetLevel() {
+    if (this.onRequestResetLevel) {
+      this.onRequestResetLevel();
+    } else {
+      this.handleResetLevel();
+    }
+  }
+
+  handleResetLevel() {
+    if (this.storage) {
+      this.storage.clearLevelProgress(this.state.levelIndex);
+    }
+    this.loadLevel(this.state.levelIndex);
+    this.ui.setStatus("Puzzle reset to initial state.");
+  }
+
   handlePrevLevel() {
+    this.saveCurrentLevelState();
     if (this.state.levelIndex > 0) {
       this.loadLevel(this.state.levelIndex - 1);
     }
   }
 
   handleNextLevel() {
+    this.saveCurrentLevelState();
     if (this.state.levelIndex < LEVEL_DATA.length - 1) {
       this.loadLevel(this.state.levelIndex + 1);
     }
@@ -223,12 +432,72 @@ export class Game {
       this.state.isWon = true;
       this.renderer.setVictory(true);
       const author = this.state.currentLevel.author;
-      this.ui.setStatus(`🎉 Message & Author decoded! <span class="status-author">— ${author}</span>`);
+
+      const authorText = (author || "").trim();
+      const authorSpan = authorText ? ` <span class="status-author">— ${authorText}</span>` : '';
+
+      let dailyStreak = 0;
+      const nextLevelIndex = this.state.levelIndex + 1;
+      const hasNextLevel = this.gameMode !== 'daily' && nextLevelIndex < LEVEL_DATA.length;
+
+      if (this.gameMode === 'daily') {
+        const todayDateStr = this.gameOptions.dateStr || DailyChallengeService.getDateStr();
+        const yesterdayDateStr = DailyChallengeService.getYesterdayDateStr();
+        const dailyState = this.storage ? this.storage.completeDailyChallenge(todayDateStr, yesterdayDateStr) : { currentStreak: 1 };
+        dailyStreak = dailyState ? dailyState.currentStreak : 1;
+        this.ui.setStatus(`🎉 Daily Dispatch Decoded! Streak: ${dailyStreak} ${dailyStreak === 1 ? 'day' : 'days'}${authorSpan}`);
+      } else {
+        if (this.storage) {
+          this.storage.completeLevel(this.state.levelIndex);
+          if (this.storage.getCurrentLevel() === this.state.levelIndex && hasNextLevel) {
+            this.storage.setCurrentLevel(nextLevelIndex);
+          }
+          this.saveCurrentLevelState();
+        }
+        const winTitle = authorText ? '🎉 Message & Author decoded!' : '🎉 Message decoded!';
+        const nextBtnHtml = hasNextLevel ? ` <button id="statusNextBtn" class="status-next-btn">NEXT LEVEL →</button>` : '';
+        this.ui.setStatus(`${winTitle}${authorSpan}${nextBtnHtml}`);
+        const statusNextBtn = document.getElementById('statusNextBtn');
+        if (statusNextBtn) {
+          statusNextBtn.onclick = () => {
+            this.start(nextLevelIndex, { mode: 'campaign' });
+          };
+        }
+      }
+
       PlatformBridge.vibrateSuccess();
       this.audio.playVictoryFanfare();
+
+      if (this.onLevelCompleted) {
+        const elapsedSeconds = Math.max(1, Math.floor((Date.now() - (this.levelStartTime || Date.now())) / 1000));
+        const completionData = {
+          level: this.state.currentLevel,
+          levelIndex: this.state.levelIndex,
+          nextLevelIndex,
+          hasNextLevel,
+          mode: this.gameMode,
+          hintsUsed: this.hintsUsedInLevel || 0,
+          elapsedSeconds,
+          totalLetters: totalCount,
+          solvedLetters: solvedCount,
+          dailyStreak,
+          dailyDisplayDate: this.gameOptions.displayDate || ''
+        };
+
+        if (this.victoryTimer) clearTimeout(this.victoryTimer);
+        this.victoryTimer = setTimeout(() => {
+          if (this.state.isWon) {
+            this.onLevelCompleted(completionData);
+          }
+        }, 750);
+      }
     } else if (!isSolved && this.state.isWon) {
       this.state.isWon = false;
       this.renderer.setVictory(false);
+      if (this.victoryTimer) {
+        clearTimeout(this.victoryTimer);
+        this.victoryTimer = null;
+      }
     }
 
     if (!this.state.isWon) {

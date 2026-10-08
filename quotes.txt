@@ -1,5 +1,5 @@
 ================================================================================
-FAMOUS QUOTES RANKED BY PROGRESSIVE DIFFICULTY (HALF FLAP CRYPTOGRAM)
+FAMOUS QUOTES & CATEGORIES RANKED BY PROGRESSIVE DIFFICULTY (HALF FLAP CRYPTOGRAM)
 ================================================================================
 
 Difficulty Scoring System (1.0 = Easiest, 99.0 = Hardest):
@@ -8,8 +8,12 @@ Difficulty Scoring System (1.0 = Easiest, 99.0 = Hardest):
  - Anchor Words: Common short words (A, I, IS, THE, AND) act as instant entry points.
  - Visual Ambiguity: Letter shapes with distinctive apexes vs ambiguous curves.
 
+================================================================================
+FAMOUS QUOTES CATEGORY (LEVELS 1 - 200)
+================================================================================
+
 --------------------------------------------------------------------------------
-TIER 1: EASY / BEGINNER (Score 1.0 - 45.0)
+TIER 1: BEGINNER
 --------------------------------------------------------------------------------
 
 1.
@@ -28,702 +32,4562 @@ Stats: [Unique Letters: 14, Total Letters: 61, Redundancy: 4.36x, Words: 17]
 Difficulty Score: 10.8/100
 Quote: "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel."
 Author: Maya Angelou
-Stats: [Unique Letters: 20, Total Letters: 109, Redundancy: 5.45x, Words: 26]
+Stats: [Unique Letters: 20, Total Letters: 109, Redundancy: 5.45x, Words: 25]
 
 4.
+Difficulty Score: 14.2/100
+Quote: "When you have seen one, you have seen all."
+Author: Terence
+Stats: [Unique Letters: 11, Total Letters: 32, Redundancy: 2.91x, Words: 9]
+
+5.
+Difficulty Score: 18.5/100
+Quote: "To know that we know what we know, and that we do not know what we do not know, that is true knowledge."
+Author: Confucius
+Stats: [Unique Letters: 15, Total Letters: 78, Redundancy: 5.20x, Words: 23]
+
+6.
+Difficulty Score: 22.4/100
+Quote: "Tell me and I forget. Teach me and I remember. Involve me and I learn."
+Author: Benjamin Franklin
+Stats: [Unique Letters: 16, Total Letters: 53, Redundancy: 3.31x, Words: 15]
+
+7.
 Difficulty Score: 25.6/100
 Quote: "In the end, it's not the years in your life that count. It's the life in your years."
 Author: Abraham Lincoln
-Stats: [Unique Letters: 15, Total Letters: 62, Redundancy: 4.13x, Words: 20]
+Stats: [Unique Letters: 15, Total Letters: 62, Redundancy: 4.13x, Words: 18]
 
-5.
+8.
+Difficulty Score: 27.8/100
+Quote: "An eye for an eye only ends up making the whole world blind."
+Author: Mahatma Gandhi
+Stats: [Unique Letters: 20, Total Letters: 47, Redundancy: 2.35x, Words: 13]
+
+9.
 Difficulty Score: 29.6/100
 Quote: "Success is not final, failure is not fatal: It is the courage to continue that counts."
 Author: Winston Churchill
 Stats: [Unique Letters: 14, Total Letters: 68, Redundancy: 4.86x, Words: 16]
 
-6.
+10.
+Difficulty Score: 31.2/100
+Quote: "There is nothing either good or bad, but thinking makes it so."
+Author: William Shakespeare
+Stats: [Unique Letters: 15, Total Letters: 49, Redundancy: 3.27x, Words: 12]
+
+11.
+Difficulty Score: 32.5/100
+Quote: "No act of kindness, no matter how small, is ever wasted."
+Author: Aesop
+Stats: [Unique Letters: 17, Total Letters: 43, Redundancy: 2.53x, Words: 11]
+
+12.
 Difficulty Score: 33.3/100
 Quote: "I dream my painting and I paint my dream."
 Author: Vincent van Gogh
 Stats: [Unique Letters: 11, Total Letters: 32, Redundancy: 2.91x, Words: 9]
 
-7.
+13.
+Difficulty Score: 34.1/100
+Quote: "It always takes two to tell the truth - one to speak, and another to hear."
+Author: Henry David Thoreau
+Stats: [Unique Letters: 16, Total Letters: 56, Redundancy: 3.50x, Words: 16]
+
+14.
+Difficulty Score: 34.8/100
+Quote: "Where there is love there is life."
+Author: Mahatma Gandhi
+Stats: [Unique Letters: 11, Total Letters: 27, Redundancy: 2.45x, Words: 7]
+
+15.
 Difficulty Score: 35.4/100
 Quote: "Do not go gentle into that good night. Rage, rage against the dying of the light."
 Author: Dylan Thomas
-Stats: [Unique Letters: 14, Total Letters: 63, Redundancy: 4.5x, Words: 16]
+Stats: [Unique Letters: 14, Total Letters: 63, Redundancy: 4.50x, Words: 16]
 
-8.
+16.
 Difficulty Score: 35.5/100
 Quote: "The fool doth think he is wise, but the wise man knows himself to be a fool."
 Author: William Shakespeare
 Stats: [Unique Letters: 16, Total Letters: 58, Redundancy: 3.62x, Words: 17]
 
-9.
+17.
+Difficulty Score: 36.2/100
+Quote: "If you cannot do great things, do small things in a great way."
+Author: Napoleon Hill
+Stats: [Unique Letters: 18, Total Letters: 48, Redundancy: 2.67x, Words: 13]
+
+18.
+Difficulty Score: 37.1/100
+Quote: "The only journey is the one within."
+Author: Rainer Maria Rilke
+Stats: [Unique Letters: 13, Total Letters: 28, Redundancy: 2.15x, Words: 7]
+
+19.
 Difficulty Score: 37.4/100
 Quote: "Government of the people, by the people, for the people, shall not perish from the earth."
 Author: Abraham Lincoln
 Stats: [Unique Letters: 17, Total Letters: 70, Redundancy: 4.12x, Words: 16]
 
-10.
+20.
+Difficulty Score: 37.9/100
+Quote: "Better three hours too soon than a minute too late."
+Author: William Shakespeare
+Stats: [Unique Letters: 13, Total Letters: 41, Redundancy: 3.15x, Words: 10]
+
+21.
+Difficulty Score: 38.5/100
+Quote: "Give me six hours to chop down a tree and I will spend the first four sharpening the axe."
+Author: Abraham Lincoln
+Stats: [Unique Letters: 20, Total Letters: 70, Redundancy: 3.50x, Words: 19]
+
+22.
 Difficulty Score: 38.9/100
 Quote: "If you want to go fast, go alone. If you want to go far, go together."
 Author: African Proverb
 Stats: [Unique Letters: 15, Total Letters: 50, Redundancy: 3.33x, Words: 16]
 
-11.
+23.
+Difficulty Score: 39.2/100
+Quote: "In the middle of every difficulty lies opportunity."
+Author: Albert Einstein
+Stats: [Unique Letters: 17, Total Letters: 43, Redundancy: 2.53x, Words: 8]
+
+24.
 Difficulty Score: 39.8/100
 Quote: "Live as if you were to die tomorrow. Learn as if you were to live forever."
 Author: Mahatma Gandhi
 Stats: [Unique Letters: 16, Total Letters: 57, Redundancy: 3.56x, Words: 16]
 
-12.
+25.
 Difficulty Score: 39.8/100
 Quote: "Two roads diverged in a wood, and I - I took the one less traveled by, and that has made all the difference."
 Author: Robert Frost
-Stats: [Unique Letters: 20, Total Letters: 82, Redundancy: 4.1x, Words: 22]
+Stats: [Unique Letters: 20, Total Letters: 82, Redundancy: 4.10x, Words: 23]
 
-13.
+26.
+Difficulty Score: 40.1/100
+Quote: "What we achieve inwardly will change outer reality."
+Author: Plutarch
+Stats: [Unique Letters: 16, Total Letters: 43, Redundancy: 2.69x, Words: 8]
+
+27.
+Difficulty Score: 40.8/100
+Quote: "A person who never made a mistake never tried anything new."
+Author: Albert Einstein
+Stats: [Unique Letters: 17, Total Letters: 48, Redundancy: 2.82x, Words: 11]
+
+28.
+Difficulty Score: 41.4/100
+Quote: "The roots of education are bitter, but the fruit is sweet."
+Author: Aristotle
+Stats: [Unique Letters: 15, Total Letters: 46, Redundancy: 3.07x, Words: 11]
+
+29.
 Difficulty Score: 41.7/100
 Quote: "All the world's a stage, and all the men and women merely players."
 Author: William Shakespeare
-Stats: [Unique Letters: 15, Total Letters: 51, Redundancy: 3.4x, Words: 14]
+Stats: [Unique Letters: 15, Total Letters: 51, Redundancy: 3.40x, Words: 13]
+
+30.
+Difficulty Score: 42.0/100
+Quote: "It is not in the stars to hold our destiny but in ourselves."
+Author: William Shakespeare
+Stats: [Unique Letters: 15, Total Letters: 47, Redundancy: 3.13x, Words: 13]
+
+31.
+Difficulty Score: 42.6/100
+Quote: "We do not remember days, we remember moments."
+Author: Cesare Pavese
+Stats: [Unique Letters: 12, Total Letters: 36, Redundancy: 3.00x, Words: 8]
+
+32.
+Difficulty Score: 43.1/100
+Quote: "Simplicity is the keynote of all true elegance."
+Author: Coco Chanel
+Stats: [Unique Letters: 18, Total Letters: 39, Redundancy: 2.17x, Words: 8]
+
+33.
+Difficulty Score: 43.5/100
+Quote: "To live is the rarest thing in the world. Most people exist, that is all."
+Author: Oscar Wilde
+Stats: [Unique Letters: 17, Total Letters: 56, Redundancy: 3.29x, Words: 15]
+
+34.
+Difficulty Score: 43.9/100
+Quote: "Honesty is the first chapter in the book of wisdom."
+Author: Thomas Jefferson
+Stats: [Unique Letters: 18, Total Letters: 41, Redundancy: 2.28x, Words: 10]
+
+35.
+Difficulty Score: 44.2/100
+Quote: "An unexamined life is not worth living."
+Author: Socrates
+Stats: [Unique Letters: 18, Total Letters: 32, Redundancy: 1.78x, Words: 7]
+
+36.
+Difficulty Score: 44.5/100
+Quote: "Kind words do not cost much. Yet they accomplish much."
+Author: Blaise Pascal
+Stats: [Unique Letters: 18, Total Letters: 43, Redundancy: 2.39x, Words: 10]
+
+37.
+Difficulty Score: 44.8/100
+Quote: "Act as if what you do makes a difference. It does."
+Author: William James
+Stats: [Unique Letters: 17, Total Letters: 38, Redundancy: 2.24x, Words: 11]
+
+38.
+Difficulty Score: 45.0/100
+Quote: "The quieter you become, the more you are able to hear."
+Author: Rumi
+Stats: [Unique Letters: 14, Total Letters: 42, Redundancy: 3.00x, Words: 11]
 
 --------------------------------------------------------------------------------
-TIER 2: MEDIUM / INTERMEDIATE (Score 45.1 - 65.0)
+TIER 2: INTERMEDIATE
 --------------------------------------------------------------------------------
 
-14.
+39.
 Difficulty Score: 45.3/100
 Quote: "The two most important days in your life are the day you are born and the day you find out why."
 Author: Mark Twain
 Stats: [Unique Letters: 18, Total Letters: 74, Redundancy: 4.11x, Words: 21]
 
-15.
+40.
 Difficulty Score: 45.5/100
 Quote: "He who lives in harmony with himself lives in harmony with the universe."
 Author: Marcus Aurelius
 Stats: [Unique Letters: 16, Total Letters: 59, Redundancy: 3.69x, Words: 13]
 
-16.
+41.
 Difficulty Score: 45.8/100
 Quote: "Knowing is not enough, we must apply. Willing is not enough, we must do."
 Author: Bruce Lee
 Stats: [Unique Letters: 17, Total Letters: 55, Redundancy: 3.24x, Words: 14]
 
-17.
+42.
 Difficulty Score: 45.9/100
 Quote: "To be, or not to be, that is the question."
 Author: William Shakespeare
-Stats: [Unique Letters: 12, Total Letters: 30, Redundancy: 2.5x, Words: 10]
+Stats: [Unique Letters: 12, Total Letters: 30, Redundancy: 2.50x, Words: 10]
 
-18.
+43.
 Difficulty Score: 46.4/100
 Quote: "The secret of getting ahead is getting started."
 Author: Mark Twain
-Stats: [Unique Letters: 13, Total Letters: 39, Redundancy: 3.0x, Words: 8]
+Stats: [Unique Letters: 13, Total Letters: 39, Redundancy: 3.00x, Words: 8]
 
-19.
+44.
 Difficulty Score: 46.5/100
 Quote: "Hell is other people."
 Author: Jean-Paul Sartre
 Stats: [Unique Letters: 9, Total Letters: 17, Redundancy: 1.89x, Words: 4]
 
-20.
+45.
 Difficulty Score: 46.7/100
 Quote: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do."
 Author: Mark Twain
-Stats: [Unique Letters: 19, Total Letters: 89, Redundancy: 4.68x, Words: 24]
+Stats: [Unique Letters: 19, Total Letters: 89, Redundancy: 4.68x, Words: 23]
 
-21.
+46.
+Difficulty Score: 47.2/100
+Quote: "In three words I can sum up everything I've learned about life: it goes on."
+Author: Robert Frost
+Stats: [Unique Letters: 21, Total Letters: 58, Redundancy: 2.76x, Words: 15]
+
+47.
 Difficulty Score: 48.1/100
 Quote: "Not all those who wander are lost."
 Author: J.R.R. Tolkien
 Stats: [Unique Letters: 11, Total Letters: 27, Redundancy: 2.45x, Words: 7]
 
-22.
+48.
 Difficulty Score: 48.7/100
 Quote: "Educating the mind without educating the heart is no education at all."
 Author: Aristotle
 Stats: [Unique Letters: 16, Total Letters: 58, Redundancy: 3.62x, Words: 12]
 
-23.
+49.
 Difficulty Score: 49.6/100
 Quote: "Genius is one percent inspiration and ninety-nine percent perspiration."
 Author: Thomas Edison
-Stats: [Unique Letters: 14, Total Letters: 61, Redundancy: 4.36x, Words: 10]
+Stats: [Unique Letters: 14, Total Letters: 61, Redundancy: 4.36x, Words: 9]
 
-24.
+50.
 Difficulty Score: 50.2/100
 Quote: "All that we are is the result of what we have thought."
 Author: Buddha
-Stats: [Unique Letters: 14, Total Letters: 42, Redundancy: 3.0x, Words: 12]
+Stats: [Unique Letters: 14, Total Letters: 42, Redundancy: 3.00x, Words: 12]
 
-25.
+51.
 Difficulty Score: 50.5/100
 Quote: "Look up at the stars and not down at your feet. Try to make sense of what you see."
 Author: Stephen Hawking
 Stats: [Unique Letters: 17, Total Letters: 62, Redundancy: 3.65x, Words: 19]
 
-26.
+52.
 Difficulty Score: 50.9/100
 Quote: "Strive not to be a success, but rather to be of value."
 Author: Albert Einstein
 Stats: [Unique Letters: 15, Total Letters: 41, Redundancy: 2.73x, Words: 12]
 
-27.
+53.
 Difficulty Score: 50.9/100
 Quote: "We are all in the gutter, but some of us are looking at the stars."
 Author: Oscar Wilde
 Stats: [Unique Letters: 17, Total Letters: 50, Redundancy: 2.94x, Words: 15]
 
-28.
+54.
+Difficulty Score: 51.5/100
+Quote: "It is during our darkest moments that we must focus to see the light."
+Author: Aristotle
+Stats: [Unique Letters: 18, Total Letters: 55, Redundancy: 3.06x, Words: 14]
+
+55.
 Difficulty Score: 52.4/100
 Quote: "I think, therefore I am."
-Author: René Descartes
+Author: Rene Descartes
 Stats: [Unique Letters: 11, Total Letters: 18, Redundancy: 1.64x, Words: 5]
 
-29.
+56.
 Difficulty Score: 52.9/100
 Quote: "A room without books is like a body without a soul."
 Author: Marcus Tullius Cicero
-Stats: [Unique Letters: 16, Total Letters: 40, Redundancy: 2.5x, Words: 11]
+Stats: [Unique Letters: 16, Total Letters: 40, Redundancy: 2.50x, Words: 11]
 
-30.
+57.
+Difficulty Score: 53.8/100
+Quote: "Do what you can, with what you have, where you are."
+Author: Theodore Roosevelt
+Stats: [Unique Letters: 14, Total Letters: 38, Redundancy: 2.71x, Words: 11]
+
+58.
 Difficulty Score: 54.4/100
 Quote: "Early to bed and early to rise makes a man healthy, wealthy, and wise."
 Author: Benjamin Franklin
 Stats: [Unique Letters: 16, Total Letters: 54, Redundancy: 3.38x, Words: 14]
 
-31.
+59.
+Difficulty Score: 54.5/100
+Quote: "There is no charm equal to tenderness of heart."
+Author: Jane Austen
+Stats: [Unique Letters: 16, Total Letters: 38, Redundancy: 2.38x, Words: 9]
+
+60.
+Difficulty Score: 55.2/100
+Quote: "The only true test of friendship is the time it takes to forgive."
+Author: Arthur Conan Doyle
+Stats: [Unique Letters: 19, Total Letters: 52, Redundancy: 2.74x, Words: 13]
+
+61.
 Difficulty Score: 55.6/100
 Quote: "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin."
 Author: Martin Luther King Jr.
 Stats: [Unique Letters: 22, Total Letters: 103, Redundancy: 4.68x, Words: 28]
 
-32.
+62.
+Difficulty Score: 55.8/100
+Quote: "There are no shortcuts to any place worth going."
+Author: Beverly Sills
+Stats: [Unique Letters: 16, Total Letters: 39, Redundancy: 2.44x, Words: 9]
+
+63.
 Difficulty Score: 56.0/100
 Quote: "If your actions inspire others to dream more, learn more, do more and become more, you are a leader."
 Author: John Quincy Adams
 Stats: [Unique Letters: 18, Total Letters: 78, Redundancy: 4.33x, Words: 19]
 
-33.
+64.
+Difficulty Score: 56.3/100
+Quote: "Turn your face to the sun and the shadows fall behind you."
+Author: Maori Proverb
+Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 12]
+
+65.
 Difficulty Score: 56.5/100
 Quote: "It does not matter how slowly you go as long as you do not stop."
 Author: Confucius
 Stats: [Unique Letters: 17, Total Letters: 49, Redundancy: 2.88x, Words: 15]
 
-34.
+66.
+Difficulty Score: 56.9/100
+Quote: "He who fears being conquered is sure of defeat."
+Author: Napoleon Bonaparte
+Stats: [Unique Letters: 17, Total Letters: 38, Redundancy: 2.24x, Words: 9]
+
+67.
 Difficulty Score: 57.2/100
 Quote: "Wise men speak because they have something to say; fools because they have to say something."
 Author: Plato
 Stats: [Unique Letters: 20, Total Letters: 75, Redundancy: 3.75x, Words: 16]
 
-35.
+68.
+Difficulty Score: 57.5/100
+Quote: "What lies behind us and what lies before us are tiny matters compared to what lies within us."
+Author: Ralph Waldo Emerson
+Stats: [Unique Letters: 19, Total Letters: 75, Redundancy: 3.95x, Words: 18]
+
+69.
 Difficulty Score: 57.9/100
 Quote: "Science without religion is lame, religion without science is blind."
 Author: Albert Einstein
 Stats: [Unique Letters: 17, Total Letters: 57, Redundancy: 3.35x, Words: 10]
 
-36.
+70.
+Difficulty Score: 58.2/100
+Quote: "The power of imagination makes us infinite."
+Author: John Muir
+Stats: [Unique Letters: 16, Total Letters: 36, Redundancy: 2.25x, Words: 7]
+
+71.
+Difficulty Score: 58.6/100
+Quote: "Waste no more time arguing what a good man should be. Be one."
+Author: Marcus Aurelius
+Stats: [Unique Letters: 16, Total Letters: 47, Redundancy: 2.94x, Words: 13]
+
+72.
 Difficulty Score: 59.2/100
 Quote: "Nothing in life is to be feared, it is only to be understood."
 Author: Marie Curie
 Stats: [Unique Letters: 16, Total Letters: 47, Redundancy: 2.94x, Words: 13]
 
-37.
+73.
 Difficulty Score: 59.9/100
 Quote: "Life is long if you know how to use it."
 Author: Seneca
 Stats: [Unique Letters: 14, Total Letters: 29, Redundancy: 2.07x, Words: 10]
 
-38.
+74.
+Difficulty Score: 60.1/100
+Quote: "Simplicity is the ultimate sophistication."
+Author: Leonardo da Vinci
+Stats: [Unique Letters: 14, Total Letters: 37, Redundancy: 2.64x, Words: 5]
+
+75.
+Difficulty Score: 60.4/100
+Quote: "A leader is one who knows the way, goes the way, and shows the way."
+Author: John C. Maxwell
+Stats: [Unique Letters: 15, Total Letters: 50, Redundancy: 3.33x, Words: 15]
+
+76.
 Difficulty Score: 60.6/100
 Quote: "If you're going through hell, keep going."
 Author: Winston Churchill
-Stats: [Unique Letters: 14, Total Letters: 32, Redundancy: 2.29x, Words: 8]
+Stats: [Unique Letters: 14, Total Letters: 32, Redundancy: 2.29x, Words: 7]
 
-39.
+77.
+Difficulty Score: 60.9/100
+Quote: "Knowledge speaks, but wisdom listens."
+Author: Jimi Hendrix
+Stats: [Unique Letters: 16, Total Letters: 31, Redundancy: 1.94x, Words: 5]
+
+78.
+Difficulty Score: 61.2/100
+Quote: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment."
+Author: Buddha
+Stats: [Unique Letters: 17, Total Letters: 76, Redundancy: 4.47x, Words: 19]
+
+79.
 Difficulty Score: 61.4/100
 Quote: "The people who are crazy enough to think they can change the world are the ones who do."
 Author: Steve Jobs
 Stats: [Unique Letters: 19, Total Letters: 69, Redundancy: 3.63x, Words: 18]
 
-40.
+80.
+Difficulty Score: 61.6/100
+Quote: "The greatest wealth is to live content with little."
+Author: Plato
+Stats: [Unique Letters: 14, Total Letters: 42, Redundancy: 3.00x, Words: 9]
+
+81.
 Difficulty Score: 61.7/100
 Quote: "That's one small step for a man, one giant leap for mankind."
 Author: Neil Armstrong
-Stats: [Unique Letters: 16, Total Letters: 46, Redundancy: 2.88x, Words: 13]
+Stats: [Unique Letters: 16, Total Letters: 46, Redundancy: 2.88x, Words: 12]
 
-41.
+82.
 Difficulty Score: 61.7/100
 Quote: "If I have seen further it is by standing on the shoulders of giants."
 Author: Isaac Newton
 Stats: [Unique Letters: 17, Total Letters: 54, Redundancy: 3.18x, Words: 14]
 
-42.
+83.
 Difficulty Score: 61.9/100
 Quote: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking."
 Author: Marcus Aurelius
-Stats: [Unique Letters: 20, Total Letters: 74, Redundancy: 3.7x, Words: 19]
+Stats: [Unique Letters: 20, Total Letters: 74, Redundancy: 3.70x, Words: 19]
 
-43.
+84.
+Difficulty Score: 62.5/100
+Quote: "I am not afraid of storms, for I am learning how to sail my ship."
+Author: Louisa May Alcott
+Stats: [Unique Letters: 17, Total Letters: 49, Redundancy: 2.88x, Words: 15]
+
+85.
+Difficulty Score: 62.8/100
+Quote: "Courage is resistance to fear, mastery of fear - not absence of fear."
+Author: Mark Twain
+Stats: [Unique Letters: 15, Total Letters: 54, Redundancy: 3.60x, Words: 13]
+
+86.
 Difficulty Score: 63.0/100
 Quote: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
 Author: Albert Einstein
-Stats: [Unique Letters: 19, Total Letters: 76, Redundancy: 4.0x, Words: 17]
+Stats: [Unique Letters: 19, Total Letters: 76, Redundancy: 4.00x, Words: 16]
 
-44.
+87.
+Difficulty Score: 63.2/100
+Quote: "Not how long, but how well you have lived is the main thing."
+Author: Seneca
+Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 13]
+
+88.
+Difficulty Score: 63.5/100
+Quote: "Beware the barrenness of a busy life."
+Author: Socrates
+Stats: [Unique Letters: 15, Total Letters: 30, Redundancy: 2.00x, Words: 7]
+
+89.
+Difficulty Score: 63.7/100
+Quote: "We do not see things as they are, we see them as we are."
+Author: Anais Nin
+Stats: [Unique Letters: 14, Total Letters: 41, Redundancy: 2.93x, Words: 14]
+
+90.
 Difficulty Score: 63.9/100
 Quote: "You miss 100% of the shots you don't take."
 Author: Wayne Gretzky
-Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.0x, Words: 9]
+Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.00x, Words: 9]
 
-45.
+91.
+Difficulty Score: 64.1/100
+Quote: "The soul becomes dyed with the color of its thoughts."
+Author: Marcus Aurelius
+Stats: [Unique Letters: 17, Total Letters: 43, Redundancy: 2.53x, Words: 10]
+
+92.
+Difficulty Score: 64.3/100
+Quote: "It is not death that a man should fear, but he should fear never beginning to live."
+Author: Marcus Aurelius
+Stats: [Unique Letters: 17, Total Letters: 65, Redundancy: 3.82x, Words: 17]
+
+93.
 Difficulty Score: 64.4/100
 Quote: "The only thing we have to fear is fear itself."
 Author: Franklin D. Roosevelt
-Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.4x, Words: 10]
+Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.40x, Words: 10]
 
-46.
+94.
+Difficulty Score: 64.5/100
+Quote: "If you wish to be loved, love."
+Author: Seneca
+Stats: [Unique Letters: 14, Total Letters: 22, Redundancy: 1.57x, Words: 7]
+
+95.
+Difficulty Score: 64.7/100
+Quote: "To know thyself is the beginning of wisdom."
+Author: Socrates
+Stats: [Unique Letters: 16, Total Letters: 35, Redundancy: 2.19x, Words: 8]
+
+96.
 Difficulty Score: 64.8/100
 Quote: "Whatever you are, be a good one."
 Author: Abraham Lincoln
 Stats: [Unique Letters: 14, Total Letters: 24, Redundancy: 1.71x, Words: 7]
 
-47.
+97.
 Difficulty Score: 64.8/100
 Quote: "Whatever the mind of man can conceive and believe, it can achieve."
 Author: Napoleon Hill
 Stats: [Unique Letters: 16, Total Letters: 53, Redundancy: 3.31x, Words: 12]
 
-48.
+98.
 Difficulty Score: 64.9/100
 Quote: "There is no greater agony than bearing an untold story inside you."
 Author: Maya Angelou
-Stats: [Unique Letters: 15, Total Letters: 54, Redundancy: 3.6x, Words: 12]
+Stats: [Unique Letters: 15, Total Letters: 54, Redundancy: 3.60x, Words: 12]
+
+99.
+Difficulty Score: 64.9/100
+Quote: "He who conquers himself is the mightiest warrior."
+Author: Confucius
+Stats: [Unique Letters: 17, Total Letters: 41, Redundancy: 2.41x, Words: 8]
+
+100.
+Difficulty Score: 65.0/100
+Quote: "Happiness depends upon ourselves."
+Author: Aristotle
+Stats: [Unique Letters: 13, Total Letters: 29, Redundancy: 2.23x, Words: 4]
 
 --------------------------------------------------------------------------------
-TIER 3: HARD / ADVANCED (Score 65.1 - 80.0)
+TIER 3: ADVANCED
 --------------------------------------------------------------------------------
 
-49.
+101.
 Difficulty Score: 65.1/100
 Quote: "A rose by any other name would smell as sweet."
 Author: William Shakespeare
-Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.4x, Words: 10]
+Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.40x, Words: 10]
 
-50.
+102.
 Difficulty Score: 65.2/100
 Quote: "The greatest glory in living lies not in never falling, but in rising every time we fall."
 Author: Nelson Mandela
 Stats: [Unique Letters: 18, Total Letters: 71, Redundancy: 3.94x, Words: 17]
 
-51.
+103.
 Difficulty Score: 65.3/100
 Quote: "The purpose of our lives is to be happy."
 Author: Dalai Lama
 Stats: [Unique Letters: 15, Total Letters: 31, Redundancy: 2.07x, Words: 9]
 
-52.
+104.
 Difficulty Score: 65.4/100
 Quote: "I have no special talent. I am only passionately curious."
 Author: Albert Einstein
 Stats: [Unique Letters: 16, Total Letters: 46, Redundancy: 2.88x, Words: 10]
 
-53.
+105.
 Difficulty Score: 65.5/100
 Quote: "Get busy living or get busy dying."
 Author: Stephen King
 Stats: [Unique Letters: 14, Total Letters: 27, Redundancy: 1.93x, Words: 7]
 
-54.
+106.
 Difficulty Score: 65.6/100
 Quote: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart."
 Author: Helen Keller
-Stats: [Unique Letters: 20, Total Letters: 90, Redundancy: 4.5x, Words: 22]
+Stats: [Unique Letters: 20, Total Letters: 90, Redundancy: 4.50x, Words: 23]
 
-55.
+107.
 Difficulty Score: 65.9/100
 Quote: "The only limit to our realization of tomorrow will be our doubts of today."
 Author: Franklin D. Roosevelt
 Stats: [Unique Letters: 18, Total Letters: 60, Redundancy: 3.33x, Words: 14]
 
-56.
+108.
 Difficulty Score: 66.0/100
 Quote: "There is nothing impossible to him who will try."
 Author: Alexander the Great
-Stats: [Unique Letters: 15, Total Letters: 39, Redundancy: 2.6x, Words: 9]
+Stats: [Unique Letters: 15, Total Letters: 39, Redundancy: 2.60x, Words: 9]
 
-57.
+109.
 Difficulty Score: 66.2/100
 Quote: "When one door of happiness closes, another opens."
 Author: Helen Keller
 Stats: [Unique Letters: 15, Total Letters: 40, Redundancy: 2.67x, Words: 8]
 
-58.
+110.
 Difficulty Score: 66.2/100
 Quote: "Everything has beauty, but not everyone can see it."
 Author: Confucius
 Stats: [Unique Letters: 15, Total Letters: 41, Redundancy: 2.73x, Words: 9]
 
-59.
+111.
 Difficulty Score: 66.6/100
 Quote: "Be water, my friend."
 Author: Bruce Lee
 Stats: [Unique Letters: 12, Total Letters: 15, Redundancy: 1.25x, Words: 4]
 
-60.
+112.
 Difficulty Score: 66.6/100
 Quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit."
 Author: Aristotle
 Stats: [Unique Letters: 18, Total Letters: 56, Redundancy: 3.11x, Words: 15]
 
-61.
+113.
+Difficulty Score: 66.8/100
+Quote: "The question isn't who is going to let me; it's who is going to stop me."
+Author: Ayn Rand
+Stats: [Unique Letters: 14, Total Letters: 53, Redundancy: 3.79x, Words: 16]
+
+114.
 Difficulty Score: 67.1/100
 Quote: "Stay hungry, stay foolish."
 Author: Steve Jobs
 Stats: [Unique Letters: 13, Total Letters: 21, Redundancy: 1.62x, Words: 4]
 
-62.
+115.
 Difficulty Score: 67.7/100
 Quote: "He who has a why to live can bear almost any how."
 Author: Friedrich Nietzsche
 Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 12]
 
-63.
+116.
 Difficulty Score: 67.7/100
 Quote: "Great things are done by a series of small things brought together."
 Author: Vincent van Gogh
 Stats: [Unique Letters: 17, Total Letters: 55, Redundancy: 3.24x, Words: 12]
 
-64.
+117.
 Difficulty Score: 67.7/100
 Quote: "I can calculate the motion of heavenly bodies, but not the madness of people."
 Author: Isaac Newton
 Stats: [Unique Letters: 18, Total Letters: 62, Redundancy: 3.44x, Words: 14]
 
-65.
+118.
+Difficulty Score: 68.2/100
+Quote: "Real knowledge is to know the extent of one's ignorance."
+Author: Confucius
+Stats: [Unique Letters: 17, Total Letters: 45, Redundancy: 2.65x, Words: 10]
+
+119.
 Difficulty Score: 68.4/100
 Quote: "Intelligence is the ability to adapt to change."
 Author: Stephen Hawking
-Stats: [Unique Letters: 15, Total Letters: 39, Redundancy: 2.6x, Words: 8]
+Stats: [Unique Letters: 15, Total Letters: 39, Redundancy: 2.60x, Words: 8]
 
-66.
+120.
 Difficulty Score: 68.9/100
 Quote: "The good thing about science is that it's true whether or not you believe in it."
 Author: Neil deGrasse Tyson
-Stats: [Unique Letters: 18, Total Letters: 63, Redundancy: 3.5x, Words: 17]
+Stats: [Unique Letters: 18, Total Letters: 63, Redundancy: 3.50x, Words: 16]
 
-67.
+121.
+Difficulty Score: 69.1/100
+Quote: "Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree."
+Author: Martin Luther
+Stats: [Unique Letters: 21, Total Letters: 73, Redundancy: 3.48x, Words: 19]
+
+122.
+Difficulty Score: 69.5/100
+Quote: "The impediment to action advances action. What stands in the way becomes the way."
+Author: Marcus Aurelius
+Stats: [Unique Letters: 16, Total Letters: 66, Redundancy: 4.12x, Words: 14]
+
+123.
 Difficulty Score: 69.8/100
 Quote: "It always seems impossible until it's done."
 Author: Nelson Mandela
-Stats: [Unique Letters: 15, Total Letters: 35, Redundancy: 2.33x, Words: 8]
+Stats: [Unique Letters: 15, Total Letters: 35, Redundancy: 2.33x, Words: 7]
 
-68.
+124.
 Difficulty Score: 69.9/100
 Quote: "You only live once, but if you do it right, once is enough."
 Author: Mae West
 Stats: [Unique Letters: 17, Total Letters: 44, Redundancy: 2.59x, Words: 13]
 
-69.
+125.
 Difficulty Score: 70.0/100
 Quote: "It is our choices that show what we truly are, far more than our abilities."
 Author: J.K. Rowling
 Stats: [Unique Letters: 17, Total Letters: 59, Redundancy: 3.47x, Words: 15]
 
-70.
+126.
 Difficulty Score: 70.4/100
 Quote: "We are a way for the cosmos to know itself."
 Author: Carl Sagan
 Stats: [Unique Letters: 16, Total Letters: 33, Redundancy: 2.06x, Words: 10]
 
-71.
+127.
+Difficulty Score: 71.0/100
+Quote: "Doubt is the origin of wisdom."
+Author: Rene Descartes
+Stats: [Unique Letters: 15, Total Letters: 24, Redundancy: 1.60x, Words: 6]
+
+128.
+Difficulty Score: 71.5/100
+Quote: "Fortune favors the bold."
+Author: Virgil
+Stats: [Unique Letters: 14, Total Letters: 20, Redundancy: 1.43x, Words: 4]
+
+129.
 Difficulty Score: 72.1/100
 Quote: "Science may set limits to knowledge, but should not set limits to imagination."
 Author: Bertrand Russell
 Stats: [Unique Letters: 18, Total Letters: 64, Redundancy: 3.56x, Words: 13]
 
-72.
+130.
+Difficulty Score: 72.4/100
+Quote: "Nature does not hurry, yet everything is accomplished."
+Author: Lao Tzu
+Stats: [Unique Letters: 18, Total Letters: 45, Redundancy: 2.50x, Words: 8]
+
+131.
+Difficulty Score: 73.1/100
+Quote: "Change is the end result of all true learning."
+Author: Leo Buscaglia
+Stats: [Unique Letters: 15, Total Letters: 37, Redundancy: 2.47x, Words: 9]
+
+132.
 Difficulty Score: 73.5/100
 Quote: "Be the change that you wish to see in the world."
 Author: Mahatma Gandhi
 Stats: [Unique Letters: 17, Total Letters: 37, Redundancy: 2.18x, Words: 11]
 
-73.
+133.
 Difficulty Score: 73.8/100
 Quote: "We suffer more often in imagination than in reality."
 Author: Seneca
 Stats: [Unique Letters: 16, Total Letters: 43, Redundancy: 2.69x, Words: 9]
 
-74.
+134.
+Difficulty Score: 74.5/100
+Quote: "Life is a question and how we live it is our answer."
+Author: Gary Keller
+Stats: [Unique Letters: 16, Total Letters: 40, Redundancy: 2.50x, Words: 12]
+
+135.
+Difficulty Score: 75.2/100
+Quote: "We find in life exactly what we put into it."
+Author: Ralph Waldo Emerson
+Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.12x, Words: 10]
+
+136.
+Difficulty Score: 75.8/100
+Quote: "One day your life will flash before your eyes. Make sure it's worth watching."
+Author: Gerard Way
+Stats: [Unique Letters: 20, Total Letters: 61, Redundancy: 3.05x, Words: 14]
+
+137.
+Difficulty Score: 76.1/100
+Quote: "There is no substitute for hard work."
+Author: Thomas Edison
+Stats: [Unique Letters: 15, Total Letters: 30, Redundancy: 2.00x, Words: 7]
+
+138.
+Difficulty Score: 76.5/100
+Quote: "The energy of the mind is the essence of life."
+Author: Aristotle
+Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.40x, Words: 10]
+
+139.
+Difficulty Score: 76.8/100
+Quote: "Character is destiny."
+Author: Heraclitus
+Stats: [Unique Letters: 11, Total Letters: 18, Redundancy: 1.64x, Words: 3]
+
+140.
 Difficulty Score: 77.1/100
 Quote: "The only true wisdom is in knowing you know nothing."
 Author: Socrates
 Stats: [Unique Letters: 16, Total Letters: 42, Redundancy: 2.62x, Words: 10]
 
-75.
+141.
 Difficulty Score: 77.1/100
 Quote: "Every child is an artist. The problem is how to remain an artist once we grow up."
 Author: Pablo Picasso
 Stats: [Unique Letters: 20, Total Letters: 63, Redundancy: 3.15x, Words: 17]
 
-76.
+142.
+Difficulty Score: 77.4/100
+Quote: "Freedom lies in being bold."
+Author: Robert Frost
+Stats: [Unique Letters: 12, Total Letters: 22, Redundancy: 1.83x, Words: 5]
+
+143.
 Difficulty Score: 77.7/100
 Quote: "Impossible is a word to be found only in the dictionary of fools."
 Author: Napoleon Bonaparte
 Stats: [Unique Letters: 19, Total Letters: 52, Redundancy: 2.74x, Words: 13]
 
-77.
+144.
+Difficulty Score: 77.9/100
+Quote: "A smooth sea never made a skilled sailor."
+Author: Franklin D. Roosevelt
+Stats: [Unique Letters: 14, Total Letters: 33, Redundancy: 2.36x, Words: 8]
+
+145.
 Difficulty Score: 78.0/100
 Quote: "Many of life's failures are people who did not realize how close they were to success when they gave up."
 Author: Thomas Edison
-Stats: [Unique Letters: 21, Total Letters: 83, Redundancy: 3.95x, Words: 21]
+Stats: [Unique Letters: 21, Total Letters: 83, Redundancy: 3.95x, Words: 20]
 
-78.
+146.
 Difficulty Score: 78.1/100
 Quote: "Peace begins with a smile."
 Author: Mother Teresa
-Stats: [Unique Letters: 14, Total Letters: 21, Redundancy: 1.5x, Words: 5]
+Stats: [Unique Letters: 14, Total Letters: 21, Redundancy: 1.50x, Words: 5]
 
-79.
+147.
+Difficulty Score: 78.2/100
+Quote: "The soul should always stand ajar, ready to welcome the ecstatic experience."
+Author: Emily Dickinson
+Stats: [Unique Letters: 19, Total Letters: 63, Redundancy: 3.32x, Words: 12]
+
+148.
 Difficulty Score: 78.4/100
 Quote: "If you judge people, you have no time to love them."
 Author: Mother Teresa
 Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 11]
 
-80.
+149.
 Difficulty Score: 78.5/100
 Quote: "Life must be understood backward. But it must be lived forward."
-Author: Søren Kierkegaard
+Author: Soren Kierkegaard
 Stats: [Unique Letters: 18, Total Letters: 51, Redundancy: 2.83x, Words: 11]
 
-81.
+150.
+Difficulty Score: 78.8/100
+Quote: "Those who cannot remember the past are condemned to repeat it."
+Author: George Santayana
+Stats: [Unique Letters: 15, Total Letters: 51, Redundancy: 3.40x, Words: 11]
+
+151.
+Difficulty Score: 79.1/100
+Quote: "To understand everything is to forgive everything."
+Author: Leo Tolstoy
+Stats: [Unique Letters: 15, Total Letters: 43, Redundancy: 2.87x, Words: 7]
+
+152.
+Difficulty Score: 79.3/100
+Quote: "Beware that, when fighting monsters, you yourself do not become a monster."
+Author: Friedrich Nietzsche
+Stats: [Unique Letters: 19, Total Letters: 60, Redundancy: 3.16x, Words: 12]
+
+153.
+Difficulty Score: 79.4/100
+Quote: "Man is condemned to be free."
+Author: Jean-Paul Sartre
+Stats: [Unique Letters: 13, Total Letters: 22, Redundancy: 1.69x, Words: 6]
+
+154.
 Difficulty Score: 79.5/100
 Quote: "Knowing others is intelligence; knowing yourself is true wisdom."
 Author: Lao Tzu
-Stats: [Unique Letters: 18, Total Letters: 54, Redundancy: 3.0x, Words: 9]
+Stats: [Unique Letters: 18, Total Letters: 54, Redundancy: 3.00x, Words: 9]
 
-82.
+155.
 Difficulty Score: 79.6/100
 Quote: "No one can make you feel inferior without your consent."
 Author: Eleanor Roosevelt
 Stats: [Unique Letters: 17, Total Letters: 45, Redundancy: 2.65x, Words: 10]
 
+156.
+Difficulty Score: 79.7/100
+Quote: "The only real mistake is the one from which we learn nothing."
+Author: Henry Ford
+Stats: [Unique Letters: 17, Total Letters: 49, Redundancy: 2.88x, Words: 12]
+
+157.
+Difficulty Score: 79.8/100
+Quote: "He who has overcome his fears will truly be free."
+Author: Aristotle
+Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 10]
+
+158.
+Difficulty Score: 79.9/100
+Quote: "Patience is bitter, but its fruit is sweet."
+Author: Jean-Jacques Rousseau
+Stats: [Unique Letters: 13, Total Letters: 34, Redundancy: 2.62x, Words: 8]
+
+159.
+Difficulty Score: 80.0/100
+Quote: "Order is the shape upon which beauty depends."
+Author: Pearl S. Buck
+Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 8]
+
 --------------------------------------------------------------------------------
-TIER 4: EXPERT / MASTER (Score 80.1 - 99.0)
+TIER 4: MASTER
 --------------------------------------------------------------------------------
 
-83.
+160.
 Difficulty Score: 80.3/100
 Quote: "In the depth of winter, I finally learned that within me there lay an invincible summer."
 Author: Albert Camus
 Stats: [Unique Letters: 20, Total Letters: 71, Redundancy: 3.55x, Words: 16]
 
-84.
+161.
+Difficulty Score: 81.1/100
+Quote: "Knowing what must be done does away with fear."
+Author: Rosa Parks
+Stats: [Unique Letters: 18, Total Letters: 37, Redundancy: 2.06x, Words: 9]
+
+162.
+Difficulty Score: 81.5/100
+Quote: "Silence is a source of great strength."
+Author: Lao Tzu
+Stats: [Unique Letters: 14, Total Letters: 31, Redundancy: 2.21x, Words: 7]
+
+163.
 Difficulty Score: 82.3/100
 Quote: "Be yourself; everyone else is already taken."
 Author: Oscar Wilde
 Stats: [Unique Letters: 16, Total Letters: 36, Redundancy: 2.25x, Words: 7]
 
-85.
+164.
+Difficulty Score: 82.8/100
+Quote: "No wind favors he who has no destined port."
+Author: Michel de Montaigne
+Stats: [Unique Letters: 14, Total Letters: 34, Redundancy: 2.43x, Words: 9]
+
+165.
+Difficulty Score: 83.1/100
+Quote: "Life is a mirror and will reflect back to the thinker what he thinks into it."
+Author: Ernest Holmes
+Stats: [Unique Letters: 17, Total Letters: 61, Redundancy: 3.59x, Words: 16]
+
+166.
 Difficulty Score: 83.3/100
 Quote: "The way to get started is to quit talking and begin doing."
 Author: Walt Disney
 Stats: [Unique Letters: 18, Total Letters: 46, Redundancy: 2.56x, Words: 12]
 
-86.
+167.
 Difficulty Score: 83.6/100
 Quote: "Your time is limited, don't waste it living someone else's life."
 Author: Steve Jobs
-Stats: [Unique Letters: 17, Total Letters: 50, Redundancy: 2.94x, Words: 13]
+Stats: [Unique Letters: 17, Total Letters: 50, Redundancy: 2.94x, Words: 11]
 
-87.
+168.
 Difficulty Score: 83.7/100
 Quote: "Education is the most powerful weapon which you can use to change the world."
 Author: Nelson Mandela
 Stats: [Unique Letters: 19, Total Letters: 62, Redundancy: 3.26x, Words: 14]
 
-88.
+169.
 Difficulty Score: 83.9/100
 Quote: "Without music, life would be a mistake."
 Author: Friedrich Nietzsche
 Stats: [Unique Letters: 16, Total Letters: 31, Redundancy: 1.94x, Words: 7]
 
-89.
+170.
+Difficulty Score: 84.2/100
+Quote: "Whatever is begun in anger ends in shame."
+Author: Benjamin Franklin
+Stats: [Unique Letters: 15, Total Letters: 33, Redundancy: 2.20x, Words: 8]
+
+171.
 Difficulty Score: 84.5/100
 Quote: "Somewhere, something incredible is waiting to be known."
 Author: Carl Sagan
 Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 8]
 
-90.
+172.
+Difficulty Score: 84.8/100
+Quote: "The eye sees only what the mind is prepared to comprehend."
+Author: Robertson Davies
+Stats: [Unique Letters: 16, Total Letters: 47, Redundancy: 2.94x, Words: 11]
+
+173.
 Difficulty Score: 85.2/100
 Quote: "The future belongs to those who believe in the beauty of their dreams."
 Author: Eleanor Roosevelt
-Stats: [Unique Letters: 19, Total Letters: 57, Redundancy: 3.0x, Words: 13]
+Stats: [Unique Letters: 19, Total Letters: 57, Redundancy: 3.00x, Words: 13]
 
-91.
+174.
+Difficulty Score: 85.5/100
+Quote: "What you seek is seeking you."
+Author: Rumi
+Stats: [Unique Letters: 13, Total Letters: 23, Redundancy: 1.77x, Words: 6]
+
+175.
 Difficulty Score: 85.9/100
 Quote: "The most courageous act is still to think for yourself. Aloud."
 Author: Coco Chanel
 Stats: [Unique Letters: 18, Total Letters: 50, Redundancy: 2.78x, Words: 11]
 
-92.
+176.
 Difficulty Score: 85.9/100
 Quote: "All our dreams can come true, if we have the courage to pursue them."
 Author: Walt Disney
 Stats: [Unique Letters: 19, Total Letters: 53, Redundancy: 2.79x, Words: 14]
 
-93.
+177.
 Difficulty Score: 86.1/100
 Quote: "Life is like riding a bicycle. To keep your balance, you must keep moving."
 Author: Albert Einstein
-Stats: [Unique Letters: 20, Total Letters: 58, Redundancy: 2.9x, Words: 14]
+Stats: [Unique Letters: 20, Total Letters: 58, Redundancy: 2.90x, Words: 14]
 
-94.
+178.
+Difficulty Score: 86.4/100
+Quote: "In the midst of chaos, there is also opportunity."
+Author: Sun Tzu
+Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 9]
+
+179.
 Difficulty Score: 86.8/100
 Quote: "Believe you can and you're halfway there."
 Author: Theodore Roosevelt
-Stats: [Unique Letters: 17, Total Letters: 33, Redundancy: 1.94x, Words: 8]
+Stats: [Unique Letters: 17, Total Letters: 33, Redundancy: 1.94x, Words: 7]
 
-95.
+180.
+Difficulty Score: 87.2/100
+Quote: "A truth that's told with bad intent beats all the lies you can invent."
+Author: William Blake
+Stats: [Unique Letters: 17, Total Letters: 55, Redundancy: 3.24x, Words: 14]
+
+181.
+Difficulty Score: 87.5/100
+Quote: "Turn your wounds into wisdom."
+Author: Oprah Winfrey
+Stats: [Unique Letters: 11, Total Letters: 24, Redundancy: 2.18x, Words: 5]
+
+182.
+Difficulty Score: 88.2/100
+Quote: "Genius is eternal patience."
+Author: Michelangelo
+Stats: [Unique Letters: 12, Total Letters: 23, Redundancy: 1.92x, Words: 4]
+
+183.
+Difficulty Score: 88.6/100
+Quote: "Nothing great was ever achieved without enthusiasm."
+Author: Ralph Waldo Emerson
+Stats: [Unique Letters: 16, Total Letters: 44, Redundancy: 2.75x, Words: 7]
+
+184.
 Difficulty Score: 88.9/100
 Quote: "You have power over your mind - not outside events. Realize this, and you will find strength."
 Author: Marcus Aurelius
-Stats: [Unique Letters: 20, Total Letters: 73, Redundancy: 3.65x, Words: 16]
+Stats: [Unique Letters: 20, Total Letters: 73, Redundancy: 3.65x, Words: 17]
 
-96.
+185.
+Difficulty Score: 89.4/100
+Quote: "The present is theirs; the future, for which I really worked, is mine."
+Author: Nikola Tesla
+Stats: [Unique Letters: 19, Total Letters: 54, Redundancy: 2.84x, Words: 13]
+
+186.
 Difficulty Score: 90.1/100
 Quote: "Life shrinks or expands in proportion to one's courage."
-Author: Anaïs Nin
-Stats: [Unique Letters: 18, Total Letters: 45, Redundancy: 2.5x, Words: 10]
+Author: Anais Nin
+Stats: [Unique Letters: 18, Total Letters: 45, Redundancy: 2.50x, Words: 9]
 
-97.
+187.
+Difficulty Score: 91.2/100
+Quote: "Do not go where the path may lead, go instead where there is no path and leave a trail."
+Author: Ralph Waldo Emerson
+Stats: [Unique Letters: 17, Total Letters: 67, Redundancy: 3.94x, Words: 19]
+
+188.
+Difficulty Score: 91.8/100
+Quote: "It is quality rather than quantity that matters."
+Author: Lucius Annaeus Seneca
+Stats: [Unique Letters: 13, Total Letters: 40, Redundancy: 3.08x, Words: 8]
+
+189.
 Difficulty Score: 92.1/100
 Quote: "Everything is theoretically impossible, until it is done."
 Author: Robert A. Heinlein
 Stats: [Unique Letters: 19, Total Letters: 48, Redundancy: 2.53x, Words: 8]
 
-98.
+190.
+Difficulty Score: 93.0/100
+Quote: "Difficulties strengthen the mind, as labor does the body."
+Author: Seneca
+Stats: [Unique Letters: 18, Total Letters: 47, Redundancy: 2.61x, Words: 9]
+
+191.
+Difficulty Score: 93.5/100
+Quote: "Those who know do not speak. Those who speak do not know."
+Author: Lao Tzu
+Stats: [Unique Letters: 11, Total Letters: 44, Redundancy: 4.00x, Words: 12]
+
+192.
+Difficulty Score: 94.2/100
+Quote: "The art of living is more like wrestling than dancing."
+Author: Marcus Aurelius
+Stats: [Unique Letters: 18, Total Letters: 44, Redundancy: 2.44x, Words: 10]
+
+193.
+Difficulty Score: 95.2/100
+Quote: "Dare to know! Have the courage to use your own understanding."
+Author: Immanuel Kant
+Stats: [Unique Letters: 17, Total Letters: 49, Redundancy: 2.88x, Words: 11]
+
+194.
+Difficulty Score: 96.0/100
+Quote: "Wisdom begins in wonder."
+Author: Socrates
+Stats: [Unique Letters: 11, Total Letters: 20, Redundancy: 1.82x, Words: 4]
+
+195.
+Difficulty Score: 96.5/100
+Quote: "I am become death, the destroyer of worlds."
+Author: J. Robert Oppenheimer
+Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.12x, Words: 8]
+
+196.
 Difficulty Score: 97.1/100
 Quote: "A journey of a thousand miles begins with a single step."
 Author: Lao Tzu
 Stats: [Unique Letters: 20, Total Letters: 45, Redundancy: 2.25x, Words: 11]
 
-99.
+197.
 Difficulty Score: 97.3/100
 Quote: "The mind is everything. What you think you become."
 Author: Buddha
 Stats: [Unique Letters: 19, Total Letters: 40, Redundancy: 2.11x, Words: 9]
 
-100.
+198.
+Difficulty Score: 97.8/100
+Quote: "To see a world in a grain of sand and a heaven in a wild flower."
+Author: William Blake
+Stats: [Unique Letters: 15, Total Letters: 48, Redundancy: 3.20x, Words: 16]
+
+199.
+Difficulty Score: 98.5/100
+Quote: "Mystery creates wonder and wonder is the basis of man's desire to understand."
+Author: Neil Armstrong
+Stats: [Unique Letters: 17, Total Letters: 63, Redundancy: 3.71x, Words: 13]
+
+200.
 Difficulty Score: 99.0/100
 Quote: "Life is what happens when you're busy making other plans."
 Author: John Lennon
-Stats: [Unique Letters: 19, Total Letters: 46, Redundancy: 2.42x, Words: 11]
+Stats: [Unique Letters: 19, Total Letters: 46, Redundancy: 2.42x, Words: 10]
 
 ================================================================================
-COMPACT LINE-BY-LINE LIST (ORDERED FROM EASIEST TO HARDEST)
+PROVERBS CATEGORY (LEVELS 1 - 60)
 ================================================================================
-[01.0] #001: "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that." - Martin Luther King Jr.
-[10.6] #002: "Ask not what your country can do for you; ask what you can do for your country." - John F. Kennedy
-[10.8] #003: "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel." - Maya Angelou
-[25.6] #004: "In the end, it's not the years in your life that count. It's the life in your years." - Abraham Lincoln
-[29.6] #005: "Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill
-[33.3] #006: "I dream my painting and I paint my dream." - Vincent van Gogh
-[35.4] #007: "Do not go gentle into that good night. Rage, rage against the dying of the light." - Dylan Thomas
-[35.5] #008: "The fool doth think he is wise, but the wise man knows himself to be a fool." - William Shakespeare
-[37.4] #009: "Government of the people, by the people, for the people, shall not perish from the earth." - Abraham Lincoln
-[38.9] #010: "If you want to go fast, go alone. If you want to go far, go together." - African Proverb
-[39.8] #011: "Live as if you were to die tomorrow. Learn as if you were to live forever." - Mahatma Gandhi
-[39.8] #012: "Two roads diverged in a wood, and I - I took the one less traveled by, and that has made all the difference." - Robert Frost
-[41.7] #013: "All the world's a stage, and all the men and women merely players." - William Shakespeare
-[45.3] #014: "The two most important days in your life are the day you are born and the day you find out why." - Mark Twain
-[45.5] #015: "He who lives in harmony with himself lives in harmony with the universe." - Marcus Aurelius
-[45.8] #016: "Knowing is not enough, we must apply. Willing is not enough, we must do." - Bruce Lee
-[45.9] #017: "To be, or not to be, that is the question." - William Shakespeare
-[46.4] #018: "The secret of getting ahead is getting started." - Mark Twain
-[46.5] #019: "Hell is other people." - Jean-Paul Sartre
-[46.7] #020: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do." - Mark Twain
-[48.1] #021: "Not all those who wander are lost." - J.R.R. Tolkien
-[48.7] #022: "Educating the mind without educating the heart is no education at all." - Aristotle
-[49.6] #023: "Genius is one percent inspiration and ninety-nine percent perspiration." - Thomas Edison
-[50.2] #024: "All that we are is the result of what we have thought." - Buddha
-[50.5] #025: "Look up at the stars and not down at your feet. Try to make sense of what you see." - Stephen Hawking
-[50.9] #026: "Strive not to be a success, but rather to be of value." - Albert Einstein
-[50.9] #027: "We are all in the gutter, but some of us are looking at the stars." - Oscar Wilde
-[52.4] #028: "I think, therefore I am." - René Descartes
-[52.9] #029: "A room without books is like a body without a soul." - Marcus Tullius Cicero
-[54.4] #030: "Early to bed and early to rise makes a man healthy, wealthy, and wise." - Benjamin Franklin
-[55.6] #031: "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin." - Martin Luther King Jr.
-[56.0] #032: "If your actions inspire others to dream more, learn more, do more and become more, you are a leader." - John Quincy Adams
-[56.5] #033: "It does not matter how slowly you go as long as you do not stop." - Confucius
-[57.2] #034: "Wise men speak because they have something to say; fools because they have to say something." - Plato
-[57.9] #035: "Science without religion is lame, religion without science is blind." - Albert Einstein
-[59.2] #036: "Nothing in life is to be feared, it is only to be understood." - Marie Curie
-[59.9] #037: "Life is long if you know how to use it." - Seneca
-[60.6] #038: "If you're going through hell, keep going." - Winston Churchill
-[61.4] #039: "The people who are crazy enough to think they can change the world are the ones who do." - Steve Jobs
-[61.7] #040: "That's one small step for a man, one giant leap for mankind." - Neil Armstrong
-[61.7] #041: "If I have seen further it is by standing on the shoulders of giants." - Isaac Newton
-[61.9] #042: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking." - Marcus Aurelius
-[63.0] #043: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe." - Albert Einstein
-[63.9] #044: "You miss 100% of the shots you don't take." - Wayne Gretzky
-[64.4] #045: "The only thing we have to fear is fear itself." - Franklin D. Roosevelt
-[64.8] #046: "Whatever you are, be a good one." - Abraham Lincoln
-[64.8] #047: "Whatever the mind of man can conceive and believe, it can achieve." - Napoleon Hill
-[64.9] #048: "There is no greater agony than bearing an untold story inside you." - Maya Angelou
-[65.1] #049: "A rose by any other name would smell as sweet." - William Shakespeare
-[65.2] #050: "The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson Mandela
-[65.3] #051: "The purpose of our lives is to be happy." - Dalai Lama
-[65.4] #052: "I have no special talent. I am only passionately curious." - Albert Einstein
-[65.5] #053: "Get busy living or get busy dying." - Stephen King
-[65.6] #054: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." - Helen Keller
-[65.9] #055: "The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt
-[66.0] #056: "There is nothing impossible to him who will try." - Alexander the Great
-[66.2] #057: "When one door of happiness closes, another opens." - Helen Keller
-[66.2] #058: "Everything has beauty, but not everyone can see it." - Confucius
-[66.6] #059: "Be water, my friend." - Bruce Lee
-[66.6] #060: "We are what we repeatedly do. Excellence, then, is not an act, but a habit." - Aristotle
-[67.1] #061: "Stay hungry, stay foolish." - Steve Jobs
-[67.7] #062: "He who has a why to live can bear almost any how." - Friedrich Nietzsche
-[67.7] #063: "Great things are done by a series of small things brought together." - Vincent van Gogh
-[67.7] #064: "I can calculate the motion of heavenly bodies, but not the madness of people." - Isaac Newton
-[68.4] #065: "Intelligence is the ability to adapt to change." - Stephen Hawking
-[68.9] #066: "The good thing about science is that it's true whether or not you believe in it." - Neil deGrasse Tyson
-[69.8] #067: "It always seems impossible until it's done." - Nelson Mandela
-[69.9] #068: "You only live once, but if you do it right, once is enough." - Mae West
-[70.0] #069: "It is our choices that show what we truly are, far more than our abilities." - J.K. Rowling
-[70.4] #070: "We are a way for the cosmos to know itself." - Carl Sagan
-[72.1] #071: "Science may set limits to knowledge, but should not set limits to imagination." - Bertrand Russell
-[73.5] #072: "Be the change that you wish to see in the world." - Mahatma Gandhi
-[73.8] #073: "We suffer more often in imagination than in reality." - Seneca
-[77.1] #074: "The only true wisdom is in knowing you know nothing." - Socrates
-[77.1] #075: "Every child is an artist. The problem is how to remain an artist once we grow up." - Pablo Picasso
-[77.7] #076: "Impossible is a word to be found only in the dictionary of fools." - Napoleon Bonaparte
-[78.0] #077: "Many of life's failures are people who did not realize how close they were to success when they gave up." - Thomas Edison
-[78.1] #078: "Peace begins with a smile." - Mother Teresa
-[78.4] #079: "If you judge people, you have no time to love them." - Mother Teresa
-[78.5] #080: "Life must be understood backward. But it must be lived forward." - Søren Kierkegaard
-[79.5] #081: "Knowing others is intelligence; knowing yourself is true wisdom." - Lao Tzu
-[79.6] #082: "No one can make you feel inferior without your consent." - Eleanor Roosevelt
-[80.3] #083: "In the depth of winter, I finally learned that within me there lay an invincible summer." - Albert Camus
-[82.3] #084: "Be yourself; everyone else is already taken." - Oscar Wilde
-[83.3] #085: "The way to get started is to quit talking and begin doing." - Walt Disney
-[83.6] #086: "Your time is limited, don't waste it living someone else's life." - Steve Jobs
-[83.7] #087: "Education is the most powerful weapon which you can use to change the world." - Nelson Mandela
-[83.9] #088: "Without music, life would be a mistake." - Friedrich Nietzsche
-[84.5] #089: "Somewhere, something incredible is waiting to be known." - Carl Sagan
-[85.2] #090: "The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt
-[85.9] #091: "The most courageous act is still to think for yourself. Aloud." - Coco Chanel
-[85.9] #092: "All our dreams can come true, if we have the courage to pursue them." - Walt Disney
-[86.1] #093: "Life is like riding a bicycle. To keep your balance, you must keep moving." - Albert Einstein
-[86.8] #094: "Believe you can and you're halfway there." - Theodore Roosevelt
-[88.9] #095: "You have power over your mind - not outside events. Realize this, and you will find strength." - Marcus Aurelius
-[90.1] #096: "Life shrinks or expands in proportion to one's courage." - Anaïs Nin
-[92.1] #097: "Everything is theoretically impossible, until it is done." - Robert A. Heinlein
-[97.1] #098: "A journey of a thousand miles begins with a single step." - Lao Tzu
-[97.3] #099: "The mind is everything. What you think you become." - Buddha
-[99.0] #100: "Life is what happens when you're busy making other plans." - John Lennon
+
+--------------------------------------------------------------------------------
+TIER 1: BEGINNER
+--------------------------------------------------------------------------------
+
+1.
+Category: Proverbs
+Difficulty Score: 1.0/100
+Tier: Tier 1: Beginner
+Quote: "Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 73, Redundancy: 4.06x, Words: 24]
+
+2.
+Category: Proverbs
+Difficulty Score: 2.3/100
+Tier: Tier 1: Beginner
+Quote: "A friend in need is a friend indeed."
+Author: None (Omitted)
+Stats: [Unique Letters: 8, Total Letters: 28, Redundancy: 3.50x, Words: 8]
+
+3.
+Category: Proverbs
+Difficulty Score: 17.0/100
+Tier: Tier 1: Beginner
+Quote: "Where there is a will, there is a way."
+Author: None (Omitted)
+Stats: [Unique Letters: 10, Total Letters: 28, Redundancy: 2.80x, Words: 9]
+
+4.
+Category: Proverbs
+Difficulty Score: 22.6/100
+Tier: Tier 1: Beginner
+Quote: "When the going gets tough, the tough get going."
+Author: None (Omitted)
+Stats: [Unique Letters: 10, Total Letters: 37, Redundancy: 3.70x, Words: 9]
+
+5.
+Category: Proverbs
+Difficulty Score: 24.4/100
+Tier: Tier 1: Beginner
+Quote: "A penny saved is a penny earned."
+Author: None (Omitted)
+Stats: [Unique Letters: 10, Total Letters: 25, Redundancy: 2.50x, Words: 7]
+
+6.
+Category: Proverbs
+Difficulty Score: 25.1/100
+Tier: Tier 1: Beginner
+Quote: "Do unto others as you would have them do unto you."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 39, Redundancy: 2.60x, Words: 11]
+
+7.
+Category: Proverbs
+Difficulty Score: 27.5/100
+Tier: Tier 1: Beginner
+Quote: "Slow and steady wins the race."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 24, Redundancy: 1.71x, Words: 6]
+
+8.
+Category: Proverbs
+Difficulty Score: 28.0/100
+Tier: Tier 1: Beginner
+Quote: "Blood is thicker than water."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 23, Redundancy: 1.53x, Words: 5]
+
+9.
+Category: Proverbs
+Difficulty Score: 30.2/100
+Tier: Tier 1: Beginner
+Quote: "Better late than never."
+Author: None (Omitted)
+Stats: [Unique Letters: 9, Total Letters: 19, Redundancy: 2.11x, Words: 4]
+
+10.
+Category: Proverbs
+Difficulty Score: 31.8/100
+Tier: Tier 1: Beginner
+Quote: "Two wrongs do not make a right."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 24, Redundancy: 1.71x, Words: 7]
+
+11.
+Category: Proverbs
+Difficulty Score: 34.0/100
+Tier: Tier 1: Beginner
+Quote: "Two heads are better than one."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 24, Redundancy: 2.18x, Words: 6]
+
+12.
+Category: Proverbs
+Difficulty Score: 36.5/100
+Tier: Tier 1: Beginner
+Quote: "If the shoe fits, wear it."
+Author: None (Omitted)
+Stats: [Unique Letters: 10, Total Letters: 19, Redundancy: 1.90x, Words: 6]
+
+13.
+Category: Proverbs
+Difficulty Score: 38.2/100
+Tier: Tier 1: Beginner
+Quote: "Birds of a feather flock together."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 28, Redundancy: 1.87x, Words: 6]
+
+14.
+Category: Proverbs
+Difficulty Score: 40.5/100
+Tier: Tier 1: Beginner
+Quote: "All good things must come to an end."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.00x, Words: 8]
+
+15.
+Category: Proverbs
+Difficulty Score: 43.8/100
+Tier: Tier 1: Beginner
+Quote: "Practice makes perfect."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 20, Redundancy: 1.82x, Words: 3]
+
+--------------------------------------------------------------------------------
+TIER 2: INTERMEDIATE
+--------------------------------------------------------------------------------
+
+16.
+Category: Proverbs
+Difficulty Score: 46.2/100
+Tier: Tier 2: Intermediate
+Quote: "A picture is worth a thousand words."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 29, Redundancy: 2.07x, Words: 7]
+
+17.
+Category: Proverbs
+Difficulty Score: 47.5/100
+Tier: Tier 2: Intermediate
+Quote: "Look before you leap."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 17, Redundancy: 1.55x, Words: 4]
+
+18.
+Category: Proverbs
+Difficulty Score: 48.9/100
+Tier: Tier 2: Intermediate
+Quote: "No pain, no gain."
+Author: None (Omitted)
+Stats: [Unique Letters: 6, Total Letters: 12, Redundancy: 2.00x, Words: 4]
+
+19.
+Category: Proverbs
+Difficulty Score: 50.1/100
+Tier: Tier 2: Intermediate
+Quote: "Better safe than sorry."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 19, Redundancy: 1.73x, Words: 4]
+
+20.
+Category: Proverbs
+Difficulty Score: 51.4/100
+Tier: Tier 2: Intermediate
+Quote: "All that glitters is not gold."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 24, Redundancy: 2.00x, Words: 6]
+
+21.
+Category: Proverbs
+Difficulty Score: 53.0/100
+Tier: Tier 2: Intermediate
+Quote: "When in Rome, do as the Romans do."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 25, Redundancy: 2.08x, Words: 8]
+
+22.
+Category: Proverbs
+Difficulty Score: 54.2/100
+Tier: Tier 2: Intermediate
+Quote: "A stitch in time saves nine."
+Author: None (Omitted)
+Stats: [Unique Letters: 10, Total Letters: 22, Redundancy: 2.20x, Words: 6]
+
+23.
+Category: Proverbs
+Difficulty Score: 55.6/100
+Tier: Tier 2: Intermediate
+Quote: "Every cloud has a silver lining."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 26, Redundancy: 1.73x, Words: 6]
+
+24.
+Category: Proverbs
+Difficulty Score: 57.0/100
+Tier: Tier 2: Intermediate
+Quote: "Strike while the iron is hot."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 23, Redundancy: 2.09x, Words: 6]
+
+25.
+Category: Proverbs
+Difficulty Score: 58.5/100
+Tier: Tier 2: Intermediate
+Quote: "Rome was not built in a day."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 21, Redundancy: 1.40x, Words: 7]
+
+26.
+Category: Proverbs
+Difficulty Score: 59.8/100
+Tier: Tier 2: Intermediate
+Quote: "The early bird catches the worm."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 26, Redundancy: 1.73x, Words: 6]
+
+27.
+Category: Proverbs
+Difficulty Score: 61.2/100
+Tier: Tier 2: Intermediate
+Quote: "Do not judge a book by its cover."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 25, Redundancy: 1.47x, Words: 8]
+
+28.
+Category: Proverbs
+Difficulty Score: 62.5/100
+Tier: Tier 2: Intermediate
+Quote: "Honesty is the best policy."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 22, Redundancy: 1.83x, Words: 5]
+
+29.
+Category: Proverbs
+Difficulty Score: 63.8/100
+Tier: Tier 2: Intermediate
+Quote: "Barking dogs seldom bite."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 21, Redundancy: 1.50x, Words: 4]
+
+30.
+Category: Proverbs
+Difficulty Score: 64.9/100
+Tier: Tier 2: Intermediate
+Quote: "Time heals all wounds."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 18, Redundancy: 1.38x, Words: 4]
+
+--------------------------------------------------------------------------------
+TIER 3: ADVANCED
+--------------------------------------------------------------------------------
+
+31.
+Category: Proverbs
+Difficulty Score: 66.2/100
+Tier: Tier 3: Advanced
+Quote: "A bird in the hand is worth two in the bush."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 33, Redundancy: 2.54x, Words: 11]
+
+32.
+Category: Proverbs
+Difficulty Score: 67.5/100
+Tier: Tier 3: Advanced
+Quote: "Do not count your chickens before they hatch."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 8]
+
+33.
+Category: Proverbs
+Difficulty Score: 68.8/100
+Tier: Tier 3: Advanced
+Quote: "Do not cry over spilled milk."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 23, Redundancy: 1.53x, Words: 6]
+
+34.
+Category: Proverbs
+Difficulty Score: 70.0/100
+Tier: Tier 3: Advanced
+Quote: "Do not put all your eggs in one basket."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 30, Redundancy: 1.88x, Words: 9]
+
+35.
+Category: Proverbs
+Difficulty Score: 71.4/100
+Tier: Tier 3: Advanced
+Quote: "Cleanliness is next to godliness."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 28, Redundancy: 2.33x, Words: 5]
+
+36.
+Category: Proverbs
+Difficulty Score: 72.8/100
+Tier: Tier 3: Advanced
+Quote: "Curiosity killed the cat."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 21, Redundancy: 1.50x, Words: 4]
+
+37.
+Category: Proverbs
+Difficulty Score: 73.9/100
+Tier: Tier 3: Advanced
+Quote: "Do not bite the hand that feeds you."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 28, Redundancy: 2.15x, Words: 8]
+
+38.
+Category: Proverbs
+Difficulty Score: 75.0/100
+Tier: Tier 3: Advanced
+Quote: "Every dog has its day."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 17, Redundancy: 1.42x, Words: 5]
+
+39.
+Category: Proverbs
+Difficulty Score: 76.1/100
+Tier: Tier 3: Advanced
+Quote: "Good things come to those who wait."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 28, Redundancy: 2.15x, Words: 7]
+
+40.
+Category: Proverbs
+Difficulty Score: 77.0/100
+Tier: Tier 3: Advanced
+Quote: "Haste makes waste."
+Author: None (Omitted)
+Stats: [Unique Letters: 8, Total Letters: 15, Redundancy: 1.88x, Words: 3]
+
+41.
+Category: Proverbs
+Difficulty Score: 78.0/100
+Tier: Tier 3: Advanced
+Quote: "Hope for the best, prepare for the worst."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 32, Redundancy: 2.91x, Words: 8]
+
+42.
+Category: Proverbs
+Difficulty Score: 78.8/100
+Tier: Tier 3: Advanced
+Quote: "It takes a village to raise a child."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.00x, Words: 8]
+
+43.
+Category: Proverbs
+Difficulty Score: 79.2/100
+Tier: Tier 3: Advanced
+Quote: "Laughter is the best medicine."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 25, Redundancy: 1.67x, Words: 5]
+
+44.
+Category: Proverbs
+Difficulty Score: 79.6/100
+Tier: Tier 3: Advanced
+Quote: "Make hay while the sun shines."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 24, Redundancy: 1.85x, Words: 6]
+
+45.
+Category: Proverbs
+Difficulty Score: 80.0/100
+Tier: Tier 3: Advanced
+Quote: "Necessity is the mother of invention."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 31, Redundancy: 2.38x, Words: 6]
+
+--------------------------------------------------------------------------------
+TIER 4: MASTER
+--------------------------------------------------------------------------------
+
+46.
+Category: Proverbs
+Difficulty Score: 81.5/100
+Tier: Tier 4: Master
+Quote: "Out of sight, out of mind."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 19, Redundancy: 1.73x, Words: 6]
+
+47.
+Category: Proverbs
+Difficulty Score: 82.8/100
+Tier: Tier 4: Master
+Quote: "Patience is a virtue."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 17, Redundancy: 1.55x, Words: 4]
+
+48.
+Category: Proverbs
+Difficulty Score: 84.0/100
+Tier: Tier 4: Master
+Quote: "Silence is golden."
+Author: None (Omitted)
+Stats: [Unique Letters: 9, Total Letters: 15, Redundancy: 1.67x, Words: 3]
+
+49.
+Category: Proverbs
+Difficulty Score: 85.2/100
+Tier: Tier 4: Master
+Quote: "The grass is always greener on the other side."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 37, Redundancy: 2.64x, Words: 9]
+
+50.
+Category: Proverbs
+Difficulty Score: 86.5/100
+Tier: Tier 4: Master
+Quote: "The pen is mightier than the sword."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.00x, Words: 7]
+
+51.
+Category: Proverbs
+Difficulty Score: 88.0/100
+Tier: Tier 4: Master
+Quote: "There is no place like home."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 22, Redundancy: 1.57x, Words: 6]
+
+52.
+Category: Proverbs
+Difficulty Score: 89.4/100
+Tier: Tier 4: Master
+Quote: "Too many cooks spoil the broth."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 25, Redundancy: 1.56x, Words: 6]
+
+53.
+Category: Proverbs
+Difficulty Score: 91.0/100
+Tier: Tier 4: Master
+Quote: "You cannot teach an old dog new tricks."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 31, Redundancy: 1.82x, Words: 8]
+
+54.
+Category: Proverbs
+Difficulty Score: 92.5/100
+Tier: Tier 4: Master
+Quote: "You reap what you sow."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 17, Redundancy: 1.55x, Words: 5]
+
+55.
+Category: Proverbs
+Difficulty Score: 94.0/100
+Tier: Tier 4: Master
+Quote: "Beauty is in the eye of the beholder."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 29, Redundancy: 1.93x, Words: 8]
+
+56.
+Category: Proverbs
+Difficulty Score: 95.2/100
+Tier: Tier 4: Master
+Quote: "Fall seven times, stand up eight."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 26, Redundancy: 1.73x, Words: 6]
+
+57.
+Category: Proverbs
+Difficulty Score: 96.5/100
+Tier: Tier 4: Master
+Quote: "A watched pot never boils."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 21, Redundancy: 1.31x, Words: 5]
+
+58.
+Category: Proverbs
+Difficulty Score: 97.8/100
+Tier: Tier 4: Master
+Quote: "Actions speak louder than words."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 27, Redundancy: 1.69x, Words: 5]
+
+59.
+Category: Proverbs
+Difficulty Score: 98.6/100
+Tier: Tier 4: Master
+Quote: "Many hands make light work."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 22, Redundancy: 1.38x, Words: 5]
+
+60.
+Category: Proverbs
+Difficulty Score: 99.0/100
+Tier: Tier 4: Master
+Quote: "Absence makes the heart grow fonder."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 30, Redundancy: 1.88x, Words: 6]
+
+================================================================================
+RIDDLES CATEGORY (LEVELS 1 - 60)
+================================================================================
+
+--------------------------------------------------------------------------------
+TIER 1: BEGINNER
+--------------------------------------------------------------------------------
+
+1.
+Category: Riddles
+Difficulty Score: 1.0/100
+Tier: Tier 1: Beginner
+Quote: "I turn once, what is out will not get in. I turn again, what is in will not get out. What am I? A key."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 72, Redundancy: 4.24x, Words: 25]
+
+2.
+Category: Riddles
+Difficulty Score: 10.3/100
+Tier: Tier 1: Beginner
+Quote: "It cannot be seen, cannot be felt, cannot be heard, cannot be smelt. It lies behind stars and under hills. What is it? Darkness."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 98, Redundancy: 5.44x, Words: 24]
+
+3.
+Category: Riddles
+Difficulty Score: 17.3/100
+Tier: Tier 1: Beginner
+Quote: "If you have me, you want to share me; if you share me, you do not have me. What am I? A secret."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 67, Redundancy: 3.94x, Words: 23]
+
+4.
+Category: Riddles
+Difficulty Score: 25.0/100
+Tier: Tier 1: Beginner
+Quote: "The person who makes it has no need of it; the person who buys it has no use for it. What is it? A coffin."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 78, Redundancy: 4.11x, Words: 25]
+
+5.
+Category: Riddles
+Difficulty Score: 31.1/100
+Tier: Tier 1: Beginner
+Quote: "I am tall when I am young, and I am short when I am old. What am I? A candle."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 54, Redundancy: 3.18x, Words: 20]
+
+6.
+Category: Riddles
+Difficulty Score: 33.5/100
+Tier: Tier 1: Beginner
+Quote: "Thirty white horses on a red hill; first they champ, then they stamp, then they stand still. What are they? Teeth."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 88, Redundancy: 5.18x, Words: 21]
+
+7.
+Category: Riddles
+Difficulty Score: 38.8/100
+Tier: Tier 1: Beginner
+Quote: "What goes on four legs in the morning, two legs at noon, and three legs in the evening? Man."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 70, Redundancy: 4.12x, Words: 19]
+
+8.
+Category: Riddles
+Difficulty Score: 39.0/100
+Tier: Tier 1: Beginner
+Quote: "I shave every day, but my beard stays the same. What am I? A barber."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 50, Redundancy: 3.57x, Words: 15]
+
+9.
+Category: Riddles
+Difficulty Score: 39.3/100
+Tier: Tier 1: Beginner
+Quote: "I have many teeth, but I cannot bite. What am I? A comb."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 40, Redundancy: 2.86x, Words: 13]
+
+10.
+Category: Riddles
+Difficulty Score: 39.6/100
+Tier: Tier 1: Beginner
+Quote: "Feed me and I live, yet give me a drink and I die. What am I? Fire."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 47, Redundancy: 2.94x, Words: 17]
+
+11.
+Category: Riddles
+Difficulty Score: 41.4/100
+Tier: Tier 1: Beginner
+Quote: "What has a head and a foot but no body? A bed."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 33, Redundancy: 2.54x, Words: 12]
+
+12.
+Category: Riddles
+Difficulty Score: 43.1/100
+Tier: Tier 1: Beginner
+Quote: "I follow you all day, but when the sun goes down I am gone. What am I? A shadow."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 58, Redundancy: 3.41x, Words: 19]
+
+13.
+Category: Riddles
+Difficulty Score: 43.3/100
+Tier: Tier 1: Beginner
+Quote: "What kind of room has no doors or windows? A mushroom."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 42, Redundancy: 3.00x, Words: 11]
+
+14.
+Category: Riddles
+Difficulty Score: 44.7/100
+Tier: Tier 1: Beginner
+Quote: "What has a tongue but cannot taste? A shoe."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 33, Redundancy: 2.75x, Words: 9]
+
+15.
+Category: Riddles
+Difficulty Score: 45.0/100
+Tier: Tier 1: Beginner
+Quote: "What flies when it is born, lies when it is alive, and runs when it is dead? A snowflake."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 67, Redundancy: 3.94x, Words: 19]
+
+--------------------------------------------------------------------------------
+TIER 2: INTERMEDIATE
+--------------------------------------------------------------------------------
+
+16.
+Category: Riddles
+Difficulty Score: 45.5/100
+Tier: Tier 2: Intermediate
+Quote: "I have cities, but no houses; forests, but no trees; and water, but no fish. What am I? A map."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 67, Redundancy: 3.72x, Words: 20]
+
+17.
+Category: Riddles
+Difficulty Score: 53.0/100
+Tier: Tier 2: Intermediate
+Quote: "What has a bark but no bite? A tree."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 26, Redundancy: 2.00x, Words: 9]
+
+18.
+Category: Riddles
+Difficulty Score: 53.1/100
+Tier: Tier 2: Intermediate
+Quote: "What begins with T, finishes with T, and has T in it? A teapot."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 46, Redundancy: 3.29x, Words: 14]
+
+19.
+Category: Riddles
+Difficulty Score: 53.5/100
+Tier: Tier 2: Intermediate
+Quote: "What has an eye but cannot see? A needle."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 31, Redundancy: 2.21x, Words: 9]
+
+20.
+Category: Riddles
+Difficulty Score: 53.9/100
+Tier: Tier 2: Intermediate
+Quote: "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I? An echo."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 82, Redundancy: 4.10x, Words: 24]
+
+21.
+Category: Riddles
+Difficulty Score: 53.9/100
+Tier: Tier 2: Intermediate
+Quote: "There is a house. One enters it blind and comes out seeing. What is it? A school."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 61, Redundancy: 3.59x, Words: 17]
+
+22.
+Category: Riddles
+Difficulty Score: 54.9/100
+Tier: Tier 2: Intermediate
+Quote: "I am an odd number. Take away a letter and I become even. What number am I? Seven."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 61, Redundancy: 3.21x, Words: 18]
+
+23.
+Category: Riddles
+Difficulty Score: 58.7/100
+Tier: Tier 2: Intermediate
+Quote: "If you drop me I am sure to crack, but give me a smile and I will always smile back. What am I? A mirror."
+Author: None (Omitted)
+Stats: [Unique Letters: 22, Total Letters: 77, Redundancy: 3.50x, Words: 25]
+
+24.
+Category: Riddles
+Difficulty Score: 59.0/100
+Tier: Tier 2: Intermediate
+Quote: "I belong to you, but others use me more than you do. What am I? Your name."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 54, Redundancy: 3.18x, Words: 17]
+
+25.
+Category: Riddles
+Difficulty Score: 59.8/100
+Tier: Tier 2: Intermediate
+Quote: "What runs but never walks, has a mouth but never talks? A river."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 49, Redundancy: 3.06x, Words: 13]
+
+26.
+Category: Riddles
+Difficulty Score: 59.9/100
+Tier: Tier 2: Intermediate
+Quote: "The more you take away, the larger I become. What am I? A hole."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 46, Redundancy: 2.88x, Words: 14]
+
+27.
+Category: Riddles
+Difficulty Score: 61.8/100
+Tier: Tier 2: Intermediate
+Quote: "What comes once in a minute, twice in a moment, but never in a thousand years? The letter M."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 70, Redundancy: 3.89x, Words: 19]
+
+28.
+Category: Riddles
+Difficulty Score: 62.4/100
+Tier: Tier 2: Intermediate
+Quote: "What has a neck but no head? A bottle."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.00x, Words: 9]
+
+29.
+Category: Riddles
+Difficulty Score: 63.4/100
+Tier: Tier 2: Intermediate
+Quote: "What has a head and a tail but no body? A coin."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 34, Redundancy: 2.27x, Words: 12]
+
+30.
+Category: Riddles
+Difficulty Score: 64.9/100
+Tier: Tier 2: Intermediate
+Quote: "Poor people have it. Rich people need it. If you eat it, you die. What is it? Nothing."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 63, Redundancy: 3.32x, Words: 18]
+
+--------------------------------------------------------------------------------
+TIER 3: ADVANCED
+--------------------------------------------------------------------------------
+
+31.
+Category: Riddles
+Difficulty Score: 65.5/100
+Tier: Tier 3: Advanced
+Quote: "What can you catch, but never throw? A cold."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 33, Redundancy: 2.20x, Words: 9]
+
+32.
+Category: Riddles
+Difficulty Score: 65.5/100
+Tier: Tier 3: Advanced
+Quote: "What has to be broken before you can use it? An egg."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 12]
+
+33.
+Category: Riddles
+Difficulty Score: 66.3/100
+Tier: Tier 3: Advanced
+Quote: "What can be swallowed, but can also swallow you? Pride."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 43, Redundancy: 2.53x, Words: 10]
+
+34.
+Category: Riddles
+Difficulty Score: 68.2/100
+Tier: Tier 3: Advanced
+Quote: "What loses its head in the morning and gets it back at night? A pillow."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 55, Redundancy: 3.06x, Words: 15]
+
+35.
+Category: Riddles
+Difficulty Score: 68.4/100
+Tier: Tier 3: Advanced
+Quote: "What has a spine, but no bones? An encyclopedia."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 9]
+
+36.
+Category: Riddles
+Difficulty Score: 69.0/100
+Tier: Tier 3: Advanced
+Quote: "What can you break, even if you never pick it up or touch it? A promise."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 54, Redundancy: 2.84x, Words: 16]
+
+37.
+Category: Riddles
+Difficulty Score: 70.1/100
+Tier: Tier 3: Advanced
+Quote: "What has thirteen hearts, but no other organs? A deck of cards."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 49, Redundancy: 2.88x, Words: 12]
+
+38.
+Category: Riddles
+Difficulty Score: 70.6/100
+Tier: Tier 3: Advanced
+Quote: "What has a ring but no finger? A telephone."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 33, Redundancy: 2.06x, Words: 9]
+
+39.
+Category: Riddles
+Difficulty Score: 72.0/100
+Tier: Tier 3: Advanced
+Quote: "What begins with P, ends with E, and has thousands of letters? The post office."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 61, Redundancy: 3.39x, Words: 15]
+
+40.
+Category: Riddles
+Difficulty Score: 72.1/100
+Tier: Tier 3: Advanced
+Quote: "What is full of holes but still holds water? A sponge."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 42, Redundancy: 2.47x, Words: 11]
+
+41.
+Category: Riddles
+Difficulty Score: 72.4/100
+Tier: Tier 3: Advanced
+Quote: "What begins with an E but only has one letter? An envelope."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 12]
+
+42.
+Category: Riddles
+Difficulty Score: 73.5/100
+Tier: Tier 3: Advanced
+Quote: "What flies without wings and cries without eyes? A cloud."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 10]
+
+43.
+Category: Riddles
+Difficulty Score: 73.8/100
+Tier: Tier 3: Advanced
+Quote: "I am light as a feather, yet the strongest person cannot hold me for five minutes. What am I? Breath."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 78, Redundancy: 3.71x, Words: 20]
+
+44.
+Category: Riddles
+Difficulty Score: 79.5/100
+Tier: Tier 3: Advanced
+Quote: "The more you take, the more you leave behind. What am I? Footsteps."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 51, Redundancy: 2.55x, Words: 13]
+
+45.
+Category: Riddles
+Difficulty Score: 79.9/100
+Tier: Tier 3: Advanced
+Quote: "What has a thumb and four fingers but is not alive? A glove."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 46, Redundancy: 2.56x, Words: 13]
+
+--------------------------------------------------------------------------------
+TIER 4: MASTER
+--------------------------------------------------------------------------------
+
+46.
+Category: Riddles
+Difficulty Score: 80.5/100
+Tier: Tier 4: Master
+Quote: "What five-letter word becomes shorter when you add two letters to it? Short."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 61, Redundancy: 3.21x, Words: 13]
+
+47.
+Category: Riddles
+Difficulty Score: 80.7/100
+Tier: Tier 4: Master
+Quote: "What gets sharper the more you use it? Your brain."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 39, Redundancy: 2.44x, Words: 10]
+
+48.
+Category: Riddles
+Difficulty Score: 81.3/100
+Tier: Tier 4: Master
+Quote: "What has many keys but cannot open a single lock? A piano."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 45, Redundancy: 2.50x, Words: 12]
+
+49.
+Category: Riddles
+Difficulty Score: 81.7/100
+Tier: Tier 4: Master
+Quote: "What disappears the moment you say its name? Silence."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 43, Redundancy: 2.53x, Words: 9]
+
+50.
+Category: Riddles
+Difficulty Score: 82.6/100
+Tier: Tier 4: Master
+Quote: "What has many needles, but cannot sew? A pine tree."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 39, Redundancy: 2.17x, Words: 10]
+
+51.
+Category: Riddles
+Difficulty Score: 84.5/100
+Tier: Tier 4: Master
+Quote: "What goes up and down without moving? A staircase."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 40, Redundancy: 2.35x, Words: 9]
+
+52.
+Category: Riddles
+Difficulty Score: 84.5/100
+Tier: Tier 4: Master
+Quote: "What can travel around the world while staying in a corner? A stamp."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 54, Redundancy: 2.84x, Words: 13]
+
+53.
+Category: Riddles
+Difficulty Score: 84.6/100
+Tier: Tier 4: Master
+Quote: "What has one horn and gives milk? A milk truck."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 36, Redundancy: 2.00x, Words: 10]
+
+54.
+Category: Riddles
+Difficulty Score: 84.7/100
+Tier: Tier 4: Master
+Quote: "What building has the most stories? The library."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 8]
+
+55.
+Category: Riddles
+Difficulty Score: 86.6/100
+Tier: Tier 4: Master
+Quote: "What can fill a room but takes up no space? Light."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 38, Redundancy: 2.00x, Words: 11]
+
+56.
+Category: Riddles
+Difficulty Score: 87.3/100
+Tier: Tier 4: Master
+Quote: "What can run around the whole yard without moving? A fence."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 47, Redundancy: 2.61x, Words: 11]
+
+57.
+Category: Riddles
+Difficulty Score: 88.2/100
+Tier: Tier 4: Master
+Quote: "What has four wheels and flies? A garbage truck."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 38, Redundancy: 2.11x, Words: 9]
+
+58.
+Category: Riddles
+Difficulty Score: 92.9/100
+Tier: Tier 4: Master
+Quote: "What goes through cities and over fields, but never moves? A road."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 52, Redundancy: 2.74x, Words: 12]
+
+59.
+Category: Riddles
+Difficulty Score: 95.4/100
+Tier: Tier 4: Master
+Quote: "What goes up but never comes down? Your age."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 34, Redundancy: 1.89x, Words: 9]
+
+60.
+Category: Riddles
+Difficulty Score: 99.0/100
+Tier: Tier 4: Master
+Quote: "What kind of band never plays music? A rubber band."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 40, Redundancy: 1.90x, Words: 10]
+
+================================================================================
+MOVIE LINES CATEGORY (LEVELS 1 - 100)
+================================================================================
+
+--------------------------------------------------------------------------------
+TIER 1: BEGINNER
+--------------------------------------------------------------------------------
+
+1.
+Category: Movie Lines
+Difficulty Score: 1.0/100
+Tier: Tier 1: Beginner
+Quote: "Listen to me, mister. You're my knight in shining armor. Don't you forget it. You're going to get back on that horse, and I'm going to be right behind you, holding on tight, and away we're gonna go, go, go!"
+Author: On Golden Pond
+Stats: [Unique Letters: 20, Total Letters: 152, Redundancy: 7.60x, Words: 40]
+
+2.
+Category: Movie Lines
+Difficulty Score: 7.8/100
+Tier: Tier 1: Beginner
+Quote: "Cinderella story. Outta nowhere. It looks like a miracle. It's in the hole!"
+Author: Caddyshack
+Stats: [Unique Letters: 17, Total Letters: 58, Redundancy: 3.41x, Words: 13]
+
+3.
+Category: Movie Lines
+Difficulty Score: 12.4/100
+Tier: Tier 1: Beginner
+Quote: "You don't understand! I coulda had class. I coulda been a contender. I could've been somebody, instead of a bum, which is what I am."
+Author: On the Waterfront
+Stats: [Unique Letters: 19, Total Letters: 100, Redundancy: 5.26x, Words: 25]
+
+4.
+Category: Movie Lines
+Difficulty Score: 15.0/100
+Tier: Tier 1: Beginner
+Quote: "My mother thanks you. My father thanks you. My sister thanks you. And I thank you."
+Author: Yankee Doodle Dandy
+Stats: [Unique Letters: 15, Total Letters: 63, Redundancy: 4.20x, Words: 16]
+
+5.
+Category: Movie Lines
+Difficulty Score: 16.2/100
+Tier: Tier 1: Beginner
+Quote: "La-dee-da, la-dee-da."
+Author: Annie Hall
+Stats: [Unique Letters: 4, Total Letters: 14, Redundancy: 3.50x, Words: 2]
+
+6.
+Category: Movie Lines
+Difficulty Score: 19.7/100
+Tier: Tier 1: Beginner
+Quote: "Badges? We ain't got no badges! We don't need no badges! I don't have to show you any stinking badges!"
+Author: The Treasure of the Sierra Madre
+Stats: [Unique Letters: 16, Total Letters: 76, Redundancy: 4.75x, Words: 20]
+
+7.
+Category: Movie Lines
+Difficulty Score: 27.5/100
+Tier: Tier 1: Beginner
+Quote: "Soylent Green is people!"
+Author: Soylent Green
+Stats: [Unique Letters: 11, Total Letters: 20, Redundancy: 1.82x, Words: 4]
+
+8.
+Category: Movie Lines
+Difficulty Score: 35.5/100
+Tier: Tier 1: Beginner
+Quote: "It's alive! It's alive!"
+Author: Frankenstein
+Stats: [Unique Letters: 7, Total Letters: 16, Redundancy: 2.29x, Words: 4]
+
+9.
+Category: Movie Lines
+Difficulty Score: 36.5/100
+Tier: Tier 1: Beginner
+Quote: "Stella! Hey, Stella!"
+Author: A Streetcar Named Desire
+Stats: [Unique Letters: 7, Total Letters: 15, Redundancy: 2.14x, Words: 3]
+
+10.
+Category: Movie Lines
+Difficulty Score: 36.8/100
+Tier: Tier 1: Beginner
+Quote: "Shane. Shane. Come back!"
+Author: Shane
+Stats: [Unique Letters: 10, Total Letters: 18, Redundancy: 1.80x, Words: 4]
+
+11.
+Category: Movie Lines
+Difficulty Score: 37.5/100
+Tier: Tier 1: Beginner
+Quote: "Today, I consider myself the luckiest man on the face of the Earth."
+Author: The Pride of the Yankees
+Stats: [Unique Letters: 17, Total Letters: 53, Redundancy: 3.12x, Words: 13]
+
+12.
+Category: Movie Lines
+Difficulty Score: 37.9/100
+Tier: Tier 1: Beginner
+Quote: "I feel the need - the need for speed!"
+Author: Top Gun
+Stats: [Unique Letters: 12, Total Letters: 27, Redundancy: 2.25x, Words: 9]
+
+13.
+Category: Movie Lines
+Difficulty Score: 38.5/100
+Tier: Tier 1: Beginner
+Quote: "Attica! Attica!"
+Author: Dog Day Afternoon
+Stats: [Unique Letters: 4, Total Letters: 12, Redundancy: 3.00x, Words: 2]
+
+14.
+Category: Movie Lines
+Difficulty Score: 39.4/100
+Tier: Tier 1: Beginner
+Quote: "Greed, for lack of a better word, is good."
+Author: Wall Street
+Stats: [Unique Letters: 15, Total Letters: 31, Redundancy: 2.07x, Words: 9]
+
+15.
+Category: Movie Lines
+Difficulty Score: 40.9/100
+Tier: Tier 1: Beginner
+Quote: "Of all the gin joints in all the towns in all the world, she walks into mine."
+Author: Casablanca
+Stats: [Unique Letters: 17, Total Letters: 59, Redundancy: 3.47x, Words: 17]
+
+16.
+Category: Movie Lines
+Difficulty Score: 41.5/100
+Tier: Tier 1: Beginner
+Quote: "One morning I shot an elephant in my pajamas. How he got in my pajamas, I don't know."
+Author: Animal Crackers
+Stats: [Unique Letters: 18, Total Letters: 64, Redundancy: 3.56x, Words: 18]
+
+17.
+Category: Movie Lines
+Difficulty Score: 41.9/100
+Tier: Tier 1: Beginner
+Quote: "I see dead people."
+Author: The Sixth Sense
+Stats: [Unique Letters: 8, Total Letters: 14, Redundancy: 1.75x, Words: 4]
+
+18.
+Category: Movie Lines
+Difficulty Score: 42.2/100
+Tier: Tier 1: Beginner
+Quote: "Bond. James Bond."
+Author: Dr. No
+Stats: [Unique Letters: 9, Total Letters: 13, Redundancy: 1.44x, Words: 3]
+
+19.
+Category: Movie Lines
+Difficulty Score: 42.5/100
+Tier: Tier 1: Beginner
+Quote: "I'll have what she's having."
+Author: When Harry Met Sally...
+Stats: [Unique Letters: 11, Total Letters: 21, Redundancy: 1.91x, Words: 5]
+
+20.
+Category: Movie Lines
+Difficulty Score: 42.6/100
+Tier: Tier 1: Beginner
+Quote: "A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti."
+Author: The Silence of the Lambs
+Stats: [Unique Letters: 19, Total Letters: 73, Redundancy: 3.84x, Words: 20]
+
+21.
+Category: Movie Lines
+Difficulty Score: 42.9/100
+Tier: Tier 1: Beginner
+Quote: "Yo, Adrian!"
+Author: Rocky
+Stats: [Unique Letters: 7, Total Letters: 8, Redundancy: 1.14x, Words: 2]
+
+22.
+Category: Movie Lines
+Difficulty Score: 43.3/100
+Tier: Tier 1: Beginner
+Quote: "I'm as mad as hell, and I'm not going to take this anymore!"
+Author: Network
+Stats: [Unique Letters: 15, Total Letters: 43, Redundancy: 2.87x, Words: 13]
+
+23.
+Category: Movie Lines
+Difficulty Score: 44.9/100
+Tier: Tier 1: Beginner
+Quote: "Wait a minute, wait a minute. You ain't heard nothin' yet!"
+Author: The Jazz Singer
+Stats: [Unique Letters: 13, Total Letters: 43, Redundancy: 3.31x, Words: 11]
+
+24.
+Category: Movie Lines
+Difficulty Score: 45.0/100
+Tier: Tier 1: Beginner
+Quote: "There is no spoon."
+Author: The Matrix
+Stats: [Unique Letters: 9, Total Letters: 14, Redundancy: 1.56x, Words: 4]
+
+25.
+Category: Movie Lines
+Difficulty Score: 45.0/100
+Tier: Tier 1: Beginner
+Quote: "Here's Johnny!"
+Author: The Shining
+Stats: [Unique Letters: 8, Total Letters: 11, Redundancy: 1.38x, Words: 2]
+
+--------------------------------------------------------------------------------
+TIER 2: INTERMEDIATE
+--------------------------------------------------------------------------------
+
+26.
+Category: Movie Lines
+Difficulty Score: 45.5/100
+Tier: Tier 2: Intermediate
+Quote: "Is it safe?"
+Author: Marathon Man
+Stats: [Unique Letters: 6, Total Letters: 8, Redundancy: 1.33x, Words: 3]
+
+27.
+Category: Movie Lines
+Difficulty Score: 47.5/100
+Tier: Tier 2: Intermediate
+Quote: "Surely you can't be serious. I am serious, and don't call me Shirley."
+Author: Airplane!
+Stats: [Unique Letters: 16, Total Letters: 52, Redundancy: 3.25x, Words: 13]
+
+28.
+Category: Movie Lines
+Difficulty Score: 48.0/100
+Tier: Tier 2: Intermediate
+Quote: "The stuff that dreams are made of."
+Author: The Maltese Falcon
+Stats: [Unique Letters: 11, Total Letters: 27, Redundancy: 2.45x, Words: 7]
+
+29.
+Category: Movie Lines
+Difficulty Score: 48.4/100
+Tier: Tier 2: Intermediate
+Quote: "The first rule of Fight Club is: you do not talk about Fight Club."
+Author: Fight Club
+Stats: [Unique Letters: 18, Total Letters: 51, Redundancy: 2.83x, Words: 14]
+
+30.
+Category: Movie Lines
+Difficulty Score: 48.7/100
+Tier: Tier 2: Intermediate
+Quote: "Life moves pretty fast. If you don't stop and look around once in a while, you could miss it."
+Author: Ferris Bueller's Day Off
+Stats: [Unique Letters: 20, Total Letters: 71, Redundancy: 3.55x, Words: 19]
+
+31.
+Category: Movie Lines
+Difficulty Score: 53.4/100
+Tier: Tier 2: Intermediate
+Quote: "Toga! Toga!"
+Author: National Lampoon's Animal House
+Stats: [Unique Letters: 4, Total Letters: 8, Redundancy: 2.00x, Words: 2]
+
+32.
+Category: Movie Lines
+Difficulty Score: 54.1/100
+Tier: Tier 2: Intermediate
+Quote: "You had me at 'hello."
+Author: Jerry Maguire
+Stats: [Unique Letters: 10, Total Letters: 15, Redundancy: 1.50x, Words: 5]
+
+33.
+Category: Movie Lines
+Difficulty Score: 55.3/100
+Tier: Tier 2: Intermediate
+Quote: "To infinity and beyond!"
+Author: Toy Story
+Stats: [Unique Letters: 10, Total Letters: 19, Redundancy: 1.90x, Words: 4]
+
+34.
+Category: Movie Lines
+Difficulty Score: 55.5/100
+Tier: Tier 2: Intermediate
+Quote: "Play it, Sam. Play 'As Time Goes By."
+Author: Casablanca
+Stats: [Unique Letters: 12, Total Letters: 25, Redundancy: 2.08x, Words: 8]
+
+35.
+Category: Movie Lines
+Difficulty Score: 55.6/100
+Tier: Tier 2: Intermediate
+Quote: "I'll be back."
+Author: The Terminator
+Stats: [Unique Letters: 7, Total Letters: 9, Redundancy: 1.29x, Words: 3]
+
+36.
+Category: Movie Lines
+Difficulty Score: 55.6/100
+Tier: Tier 2: Intermediate
+Quote: "Love means never having to say you're sorry."
+Author: Love Story
+Stats: [Unique Letters: 15, Total Letters: 35, Redundancy: 2.33x, Words: 8]
+
+37.
+Category: Movie Lines
+Difficulty Score: 55.7/100
+Tier: Tier 2: Intermediate
+Quote: "They're here!"
+Author: Poltergeist
+Stats: [Unique Letters: 5, Total Letters: 10, Redundancy: 2.00x, Words: 2]
+
+38.
+Category: Movie Lines
+Difficulty Score: 56.1/100
+Tier: Tier 2: Intermediate
+Quote: "You know how to whistle, don't you, Steve? You just put your lips together and blow."
+Author: To Have and Have Not
+Stats: [Unique Letters: 20, Total Letters: 64, Redundancy: 3.20x, Words: 16]
+
+39.
+Category: Movie Lines
+Difficulty Score: 57.6/100
+Tier: Tier 2: Intermediate
+Quote: "I'll get you, my pretty, and your little dog too!"
+Author: The Wizard of Oz
+Stats: [Unique Letters: 14, Total Letters: 36, Redundancy: 2.57x, Words: 10]
+
+40.
+Category: Movie Lines
+Difficulty Score: 57.7/100
+Tier: Tier 2: Intermediate
+Quote: "Hello, gorgeous."
+Author: Funny Girl
+Stats: [Unique Letters: 8, Total Letters: 13, Redundancy: 1.62x, Words: 2]
+
+41.
+Category: Movie Lines
+Difficulty Score: 57.8/100
+Tier: Tier 2: Intermediate
+Quote: "Made it, Ma! Top of the world!"
+Author: White Heat
+Stats: [Unique Letters: 13, Total Letters: 21, Redundancy: 1.62x, Words: 7]
+
+42.
+Category: Movie Lines
+Difficulty Score: 58.0/100
+Tier: Tier 2: Intermediate
+Quote: "Open the pod bay doors, HAL."
+Author: 2001: A Space Odyssey
+Stats: [Unique Letters: 13, Total Letters: 21, Redundancy: 1.62x, Words: 6]
+
+43.
+Category: Movie Lines
+Difficulty Score: 58.4/100
+Tier: Tier 2: Intermediate
+Quote: "I want to be alone."
+Author: Grand Hotel
+Stats: [Unique Letters: 9, Total Letters: 14, Redundancy: 1.56x, Words: 5]
+
+44.
+Category: Movie Lines
+Difficulty Score: 59.2/100
+Tier: Tier 2: Intermediate
+Quote: "E.T. phone home."
+Author: E.T. the Extra-Terrestrial
+Stats: [Unique Letters: 7, Total Letters: 11, Redundancy: 1.57x, Words: 3]
+
+45.
+Category: Movie Lines
+Difficulty Score: 59.4/100
+Tier: Tier 2: Intermediate
+Quote: "I'm gonna make him an offer he can't refuse."
+Author: The Godfather
+Stats: [Unique Letters: 15, Total Letters: 33, Redundancy: 2.20x, Words: 9]
+
+46.
+Category: Movie Lines
+Difficulty Score: 60.1/100
+Tier: Tier 2: Intermediate
+Quote: "Sawyer, you're going out a youngster, but you've got to come back a star!"
+Author: 42nd Street
+Stats: [Unique Letters: 17, Total Letters: 55, Redundancy: 3.24x, Words: 14]
+
+47.
+Category: Movie Lines
+Difficulty Score: 60.5/100
+Tier: Tier 2: Intermediate
+Quote: "Snap out of it!"
+Author: Moonstruck
+Stats: [Unique Letters: 9, Total Letters: 11, Redundancy: 1.22x, Words: 4]
+
+48.
+Category: Movie Lines
+Difficulty Score: 60.8/100
+Tier: Tier 2: Intermediate
+Quote: "Mother of mercy, is this the end of Rico?"
+Author: Little Caesar
+Stats: [Unique Letters: 13, Total Letters: 31, Redundancy: 2.38x, Words: 9]
+
+49.
+Category: Movie Lines
+Difficulty Score: 61.3/100
+Tier: Tier 2: Intermediate
+Quote: "Forget it, Jake, it's Chinatown."
+Author: Chinatown
+Stats: [Unique Letters: 15, Total Letters: 24, Redundancy: 1.60x, Words: 5]
+
+50.
+Category: Movie Lines
+Difficulty Score: 64.9/100
+Tier: Tier 2: Intermediate
+Quote: "You're gonna need a bigger boat."
+Author: Jaws
+Stats: [Unique Letters: 12, Total Letters: 25, Redundancy: 2.08x, Words: 6]
+
+--------------------------------------------------------------------------------
+TIER 3: ADVANCED
+--------------------------------------------------------------------------------
+
+51.
+Category: Movie Lines
+Difficulty Score: 65.5/100
+Tier: Tier 3: Advanced
+Quote: "Great Scott!"
+Author: Back to the Future
+Stats: [Unique Letters: 8, Total Letters: 10, Redundancy: 1.25x, Words: 2]
+
+52.
+Category: Movie Lines
+Difficulty Score: 66.8/100
+Tier: Tier 3: Advanced
+Quote: "You either die a hero or you live long enough to see yourself become the villain."
+Author: The Dark Knight
+Stats: [Unique Letters: 19, Total Letters: 65, Redundancy: 3.42x, Words: 16]
+
+53.
+Category: Movie Lines
+Difficulty Score: 67.3/100
+Tier: Tier 3: Advanced
+Quote: "They call me Mister Tibbs!"
+Author: In the Heat of the Night
+Stats: [Unique Letters: 12, Total Letters: 21, Redundancy: 1.75x, Words: 5]
+
+54.
+Category: Movie Lines
+Difficulty Score: 68.4/100
+Tier: Tier 3: Advanced
+Quote: "Say 'hello' to my little friend!"
+Author: Scarface
+Stats: [Unique Letters: 14, Total Letters: 24, Redundancy: 1.71x, Words: 6]
+
+55.
+Category: Movie Lines
+Difficulty Score: 69.6/100
+Tier: Tier 3: Advanced
+Quote: "After all, tomorrow is another day!"
+Author: Gone with the Wind
+Stats: [Unique Letters: 15, Total Letters: 28, Redundancy: 1.87x, Words: 6]
+
+56.
+Category: Movie Lines
+Difficulty Score: 70.4/100
+Tier: Tier 3: Advanced
+Quote: "As God is my witness, I'll never be hungry again."
+Author: Gone with the Wind
+Stats: [Unique Letters: 18, Total Letters: 37, Redundancy: 2.06x, Words: 10]
+
+57.
+Category: Movie Lines
+Difficulty Score: 70.6/100
+Tier: Tier 3: Advanced
+Quote: "Oh, Jerry, don't let's ask for the moon. We have the stars."
+Author: Now, Voyager
+Stats: [Unique Letters: 17, Total Letters: 42, Redundancy: 2.47x, Words: 12]
+
+58.
+Category: Movie Lines
+Difficulty Score: 71.0/100
+Tier: Tier 3: Advanced
+Quote: "We'll always have Paris."
+Author: Casablanca
+Stats: [Unique Letters: 11, Total Letters: 19, Redundancy: 1.73x, Words: 4]
+
+59.
+Category: Movie Lines
+Difficulty Score: 71.2/100
+Tier: Tier 3: Advanced
+Quote: "Mrs. Robinson, you're trying to seduce me. Aren't you?"
+Author: The Graduate
+Stats: [Unique Letters: 15, Total Letters: 40, Redundancy: 2.67x, Words: 9]
+
+60.
+Category: Movie Lines
+Difficulty Score: 71.6/100
+Tier: Tier 3: Advanced
+Quote: "We rob banks."
+Author: Bonnie and Clyde
+Stats: [Unique Letters: 9, Total Letters: 10, Redundancy: 1.11x, Words: 3]
+
+61.
+Category: Movie Lines
+Difficulty Score: 71.9/100
+Tier: Tier 3: Advanced
+Quote: "No wire hangers, ever!"
+Author: Mommie Dearest
+Stats: [Unique Letters: 11, Total Letters: 17, Redundancy: 1.55x, Words: 4]
+
+62.
+Category: Movie Lines
+Difficulty Score: 72.5/100
+Tier: Tier 3: Advanced
+Quote: "Who's on first?"
+Author: The Naughty Nineties
+Stats: [Unique Letters: 9, Total Letters: 11, Redundancy: 1.22x, Words: 3]
+
+63.
+Category: Movie Lines
+Difficulty Score: 73.1/100
+Tier: Tier 3: Advanced
+Quote: "Tell 'em to go out there with all they got and win just one for the Gipper."
+Author: Knute Rockne, All American
+Stats: [Unique Letters: 19, Total Letters: 57, Redundancy: 3.00x, Words: 17]
+
+64.
+Category: Movie Lines
+Difficulty Score: 74.4/100
+Tier: Tier 3: Advanced
+Quote: "Why don't you come up sometime and see me?"
+Author: She Done Him Wrong
+Stats: [Unique Letters: 15, Total Letters: 32, Redundancy: 2.13x, Words: 9]
+
+65.
+Category: Movie Lines
+Difficulty Score: 74.4/100
+Tier: Tier 3: Advanced
+Quote: "I'm walkin' here! I'm walkin' here!"
+Author: Midnight Cowboy
+Stats: [Unique Letters: 10, Total Letters: 24, Redundancy: 2.40x, Words: 6]
+
+66.
+Category: Movie Lines
+Difficulty Score: 75.0/100
+Tier: Tier 3: Advanced
+Quote: "A martini. Shaken, not stirred."
+Author: Goldfinger
+Stats: [Unique Letters: 12, Total Letters: 24, Redundancy: 2.00x, Words: 5]
+
+67.
+Category: Movie Lines
+Difficulty Score: 75.3/100
+Tier: Tier 3: Advanced
+Quote: "Oh, no, it wasn't the airplanes. It was Beauty killed the Beast."
+Author: King Kong
+Stats: [Unique Letters: 17, Total Letters: 48, Redundancy: 2.82x, Words: 12]
+
+68.
+Category: Movie Lines
+Difficulty Score: 77.2/100
+Tier: Tier 3: Advanced
+Quote: "I love the smell of napalm in the morning."
+Author: Apocalypse Now
+Stats: [Unique Letters: 15, Total Letters: 33, Redundancy: 2.20x, Words: 9]
+
+69.
+Category: Movie Lines
+Difficulty Score: 77.6/100
+Tier: Tier 3: Advanced
+Quote: "Houston, we have a problem."
+Author: Apollo 13
+Stats: [Unique Letters: 15, Total Letters: 21, Redundancy: 1.40x, Words: 5]
+
+70.
+Category: Movie Lines
+Difficulty Score: 77.9/100
+Tier: Tier 3: Advanced
+Quote: "Toto, I've a feeling we're not in Kansas anymore."
+Author: The Wizard of Oz
+Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 9]
+
+71.
+Category: Movie Lines
+Difficulty Score: 77.9/100
+Tier: Tier 3: Advanced
+Quote: "Winter is coming."
+Author: Game of Thrones
+Stats: [Unique Letters: 11, Total Letters: 14, Redundancy: 1.27x, Words: 3]
+
+72.
+Category: Movie Lines
+Difficulty Score: 78.0/100
+Tier: Tier 3: Advanced
+Quote: "Louis, I think this is the beginning of a beautiful friendship."
+Author: Casablanca
+Stats: [Unique Letters: 17, Total Letters: 51, Redundancy: 3.00x, Words: 11]
+
+73.
+Category: Movie Lines
+Difficulty Score: 78.0/100
+Tier: Tier 3: Advanced
+Quote: "Round up the usual suspects."
+Author: Casablanca
+Stats: [Unique Letters: 13, Total Letters: 23, Redundancy: 1.77x, Words: 5]
+
+74.
+Category: Movie Lines
+Difficulty Score: 78.9/100
+Tier: Tier 3: Advanced
+Quote: "Plastics."
+Author: The Graduate
+Stats: [Unique Letters: 7, Total Letters: 8, Redundancy: 1.14x, Words: 1]
+
+75.
+Category: Movie Lines
+Difficulty Score: 79.9/100
+Tier: Tier 3: Advanced
+Quote: "You talkin' to me?"
+Author: Taxi Driver
+Stats: [Unique Letters: 11, Total Letters: 13, Redundancy: 1.18x, Words: 4]
+
+--------------------------------------------------------------------------------
+TIER 4: MASTER
+--------------------------------------------------------------------------------
+
+76.
+Category: Movie Lines
+Difficulty Score: 80.5/100
+Tier: Tier 4: Master
+Quote: "Frankly, my dear, I don't give a damn."
+Author: Gone with the Wind
+Stats: [Unique Letters: 15, Total Letters: 27, Redundancy: 1.80x, Words: 8]
+
+77.
+Category: Movie Lines
+Difficulty Score: 81.3/100
+Tier: Tier 4: Master
+Quote: "Show me the money!"
+Author: Jerry Maguire
+Stats: [Unique Letters: 9, Total Letters: 14, Redundancy: 1.56x, Words: 4]
+
+78.
+Category: Movie Lines
+Difficulty Score: 81.8/100
+Tier: Tier 4: Master
+Quote: "There's no crying in baseball!"
+Author: A League of Their Own
+Stats: [Unique Letters: 14, Total Letters: 24, Redundancy: 1.71x, Words: 5]
+
+79.
+Category: Movie Lines
+Difficulty Score: 82.3/100
+Tier: Tier 4: Master
+Quote: "Nobody puts Baby in a corner."
+Author: Dirty Dancing
+Stats: [Unique Letters: 14, Total Letters: 23, Redundancy: 1.64x, Words: 6]
+
+80.
+Category: Movie Lines
+Difficulty Score: 82.7/100
+Tier: Tier 4: Master
+Quote: "You can't handle the truth!"
+Author: A Few Good Men
+Stats: [Unique Letters: 12, Total Letters: 21, Redundancy: 1.75x, Words: 5]
+
+81.
+Category: Movie Lines
+Difficulty Score: 82.8/100
+Tier: Tier 4: Master
+Quote: "I'm the king of the world!"
+Author: Titanic
+Stats: [Unique Letters: 14, Total Letters: 19, Redundancy: 1.36x, Words: 6]
+
+82.
+Category: Movie Lines
+Difficulty Score: 83.9/100
+Tier: Tier 4: Master
+Quote: "Fasten your seatbelts. It's going to be a bumpy night."
+Author: All About Eve
+Stats: [Unique Letters: 17, Total Letters: 42, Redundancy: 2.47x, Words: 10]
+
+83.
+Category: Movie Lines
+Difficulty Score: 84.7/100
+Tier: Tier 4: Master
+Quote: "Why so serious?"
+Author: The Dark Knight
+Stats: [Unique Letters: 9, Total Letters: 12, Redundancy: 1.33x, Words: 3]
+
+84.
+Category: Movie Lines
+Difficulty Score: 85.5/100
+Tier: Tier 4: Master
+Quote: "Just keep swimming."
+Author: Finding Nemo
+Stats: [Unique Letters: 12, Total Letters: 16, Redundancy: 1.33x, Words: 3]
+
+85.
+Category: Movie Lines
+Difficulty Score: 85.8/100
+Tier: Tier 4: Master
+Quote: "If you build it, he will come."
+Author: Field of Dreams
+Stats: [Unique Letters: 14, Total Letters: 22, Redundancy: 1.57x, Words: 7]
+
+86.
+Category: Movie Lines
+Difficulty Score: 86.6/100
+Tier: Tier 4: Master
+Quote: "May the Force be with you."
+Author: Star Wars
+Stats: [Unique Letters: 14, Total Letters: 20, Redundancy: 1.43x, Words: 6]
+
+87.
+Category: Movie Lines
+Difficulty Score: 87.7/100
+Tier: Tier 4: Master
+Quote: "I have always depended on the kindness of strangers."
+Author: A Streetcar Named Desire
+Stats: [Unique Letters: 18, Total Letters: 43, Redundancy: 2.39x, Words: 9]
+
+88.
+Category: Movie Lines
+Difficulty Score: 88.1/100
+Tier: Tier 4: Master
+Quote: "Inconceivable!"
+Author: The Princess Bride
+Stats: [Unique Letters: 9, Total Letters: 13, Redundancy: 1.44x, Words: 1]
+
+89.
+Category: Movie Lines
+Difficulty Score: 89.4/100
+Tier: Tier 4: Master
+Quote: "Go ahead, make my day."
+Author: Sudden Impact
+Stats: [Unique Letters: 9, Total Letters: 16, Redundancy: 1.78x, Words: 5]
+
+90.
+Category: Movie Lines
+Difficulty Score: 89.5/100
+Tier: Tier 4: Master
+Quote: "Every time a bell rings, an angel gets his wings."
+Author: It's a Wonderful Life
+Stats: [Unique Letters: 15, Total Letters: 38, Redundancy: 2.53x, Words: 10]
+
+91.
+Category: Movie Lines
+Difficulty Score: 89.8/100
+Tier: Tier 4: Master
+Quote: "Well, here's another nice mess you've gotten me into!"
+Author: Sons of the Desert
+Stats: [Unique Letters: 17, Total Letters: 41, Redundancy: 2.41x, Words: 9]
+
+92.
+Category: Movie Lines
+Difficulty Score: 90.0/100
+Tier: Tier 4: Master
+Quote: "I am your father."
+Author: The Empire Strikes Back
+Stats: [Unique Letters: 11, Total Letters: 13, Redundancy: 1.18x, Words: 4]
+
+93.
+Category: Movie Lines
+Difficulty Score: 91.9/100
+Tier: Tier 4: Master
+Quote: "My precious."
+Author: The Lord of the Rings: The Two Towers
+Stats: [Unique Letters: 10, Total Letters: 10, Redundancy: 1.00x, Words: 2]
+
+94.
+Category: Movie Lines
+Difficulty Score: 92.2/100
+Tier: Tier 4: Master
+Quote: "Rosebud."
+Author: Citizen Kane
+Stats: [Unique Letters: 7, Total Letters: 7, Redundancy: 1.00x, Words: 1]
+
+95.
+Category: Movie Lines
+Difficulty Score: 93.3/100
+Tier: Tier 4: Master
+Quote: "A boy's best friend is his mother."
+Author: Psycho
+Stats: [Unique Letters: 14, Total Letters: 26, Redundancy: 1.86x, Words: 7]
+
+96.
+Category: Movie Lines
+Difficulty Score: 94.2/100
+Tier: Tier 4: Master
+Quote: "As you wish."
+Author: The Princess Bride
+Stats: [Unique Letters: 8, Total Letters: 9, Redundancy: 1.12x, Words: 3]
+
+97.
+Category: Movie Lines
+Difficulty Score: 94.3/100
+Tier: Tier 4: Master
+Quote: "You've got to ask yourself one question: 'Do I feel lucky?' Well, do ya, punk?"
+Author: Dirty Harry
+Stats: [Unique Letters: 20, Total Letters: 56, Redundancy: 2.80x, Words: 15]
+
+98.
+Category: Movie Lines
+Difficulty Score: 95.2/100
+Tier: Tier 4: Master
+Quote: "I am big! It's the pictures that got small."
+Author: Sunset Boulevard
+Stats: [Unique Letters: 15, Total Letters: 32, Redundancy: 2.13x, Words: 9]
+
+99.
+Category: Movie Lines
+Difficulty Score: 98.4/100
+Tier: Tier 4: Master
+Quote: "Gentlemen, you can't fight in here! This is the War Room!"
+Author: Dr. Strangelove
+Stats: [Unique Letters: 17, Total Letters: 43, Redundancy: 2.53x, Words: 11]
+
+100.
+Category: Movie Lines
+Difficulty Score: 99.0/100
+Tier: Tier 4: Master
+Quote: "Elementary, my dear Watson."
+Author: The Adventures of Sherlock Holmes
+Stats: [Unique Letters: 12, Total Letters: 22, Redundancy: 1.83x, Words: 4]
+
+================================================================================
+TRIVIA CATEGORY (LEVELS 1 - 60)
+================================================================================
+
+--------------------------------------------------------------------------------
+TIER 1: BEGINNER
+--------------------------------------------------------------------------------
+
+1.
+Category: Trivia
+Difficulty Score: 1.0/100
+Tier: Tier 1: Beginner
+Quote: "There is an island in a lake on an island in a lake on an island in Canada."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 57, Redundancy: 4.38x, Words: 18]
+
+2.
+Category: Trivia
+Difficulty Score: 4.1/100
+Tier: Tier 1: Beginner
+Quote: "Antarctica is technically the largest and driest desert on planet Earth."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 61, Redundancy: 4.07x, Words: 11]
+
+3.
+Category: Trivia
+Difficulty Score: 7.3/100
+Tier: Tier 1: Beginner
+Quote: "Maine is the closest United States state to the African continent."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 55, Redundancy: 3.67x, Words: 11]
+
+4.
+Category: Trivia
+Difficulty Score: 10.4/100
+Tier: Tier 1: Beginner
+Quote: "More historical artifacts rest at the bottom of the ocean than in all the world's museums combined."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 81, Redundancy: 4.76x, Words: 17]
+
+5.
+Category: Trivia
+Difficulty Score: 13.6/100
+Tier: Tier 1: Beginner
+Quote: "Australia is wider in diameter than the Moon."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 37, Redundancy: 2.64x, Words: 8]
+
+6.
+Category: Trivia
+Difficulty Score: 16.7/100
+Tier: Tier 1: Beginner
+Quote: "Nearly ninety percent of the entire human population lives in the Northern Hemisphere."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 73, Redundancy: 4.29x, Words: 13]
+
+7.
+Category: Trivia
+Difficulty Score: 19.9/100
+Tier: Tier 1: Beginner
+Quote: "Scotland chose the mythical unicorn as its official national animal in the twelfth century."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 77, Redundancy: 4.53x, Words: 14]
+
+8.
+Category: Trivia
+Difficulty Score: 23.0/100
+Tier: Tier 1: Beginner
+Quote: "Sunset on Mars appears blue to the human eye due to fine dust in its thin atmosphere."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 68, Redundancy: 4.00x, Words: 17]
+
+9.
+Category: Trivia
+Difficulty Score: 26.1/100
+Tier: Tier 1: Beginner
+Quote: "The Sun contains over ninety-nine percent of all the mass in our solar system."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 63, Redundancy: 3.71x, Words: 14]
+
+10.
+Category: Trivia
+Difficulty Score: 29.3/100
+Tier: Tier 1: Beginner
+Quote: "There are more trees on Earth than stars in the Milky Way galaxy."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 52, Redundancy: 3.25x, Words: 13]
+
+11.
+Category: Trivia
+Difficulty Score: 32.4/100
+Tier: Tier 1: Beginner
+Quote: "Mount Chimborazo in Ecuador is the closest point on Earth to the Moon due to the equatorial bulge."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 80, Redundancy: 4.21x, Words: 18]
+
+12.
+Category: Trivia
+Difficulty Score: 35.6/100
+Tier: Tier 1: Beginner
+Quote: "An octopus has three hearts, nine brains, and blue blood."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 45, Redundancy: 3.00x, Words: 10]
+
+13.
+Category: Trivia
+Difficulty Score: 38.7/100
+Tier: Tier 1: Beginner
+Quote: "The Pacific Ocean is larger in surface area than all of the Earth's land masses combined."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 72, Redundancy: 4.00x, Words: 16]
+
+14.
+Category: Trivia
+Difficulty Score: 41.9/100
+Tier: Tier 1: Beginner
+Quote: "A day on Venus is longer than its year; it takes 243 Earth days to rotate once."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 58, Redundancy: 3.41x, Words: 17]
+
+15.
+Category: Trivia
+Difficulty Score: 45.0/100
+Tier: Tier 1: Beginner
+Quote: "Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 80, Redundancy: 4.21x, Words: 17]
+
+--------------------------------------------------------------------------------
+TIER 2: INTERMEDIATE
+--------------------------------------------------------------------------------
+
+16.
+Category: Trivia
+Difficulty Score: 45.5/100
+Tier: Tier 2: Intermediate
+Quote: "The shortest war in recorded human history lasted only thirty-eight minutes."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 64, Redundancy: 3.76x, Words: 11]
+
+17.
+Category: Trivia
+Difficulty Score: 46.9/100
+Tier: Tier 2: Intermediate
+Quote: "The Mid-Atlantic Ridge is the longest mountain chain on Earth, spanning forty thousand miles underwater."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 87, Redundancy: 4.58x, Words: 15]
+
+18.
+Category: Trivia
+Difficulty Score: 48.3/100
+Tier: Tier 2: Intermediate
+Quote: "The footprint left by Apollo astronauts on the Moon could last for a million years."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 68, Redundancy: 3.78x, Words: 15]
+
+19.
+Category: Trivia
+Difficulty Score: 49.7/100
+Tier: Tier 2: Intermediate
+Quote: "Elephants are the only mammals that cannot jump."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 40, Redundancy: 2.67x, Words: 8]
+
+20.
+Category: Trivia
+Difficulty Score: 51.0/100
+Tier: Tier 2: Intermediate
+Quote: "Babies are born with three hundred bones, but adults have only two hundred and six."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 67, Redundancy: 3.94x, Words: 15]
+
+21.
+Category: Trivia
+Difficulty Score: 52.4/100
+Tier: Tier 2: Intermediate
+Quote: "A bolt of lightning is roughly five times hotter than the surface of the Sun."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 62, Redundancy: 3.44x, Words: 15]
+
+22.
+Category: Trivia
+Difficulty Score: 53.8/100
+Tier: Tier 2: Intermediate
+Quote: "Your skin is the largest and heaviest organ in your entire body."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 52, Redundancy: 3.06x, Words: 12]
+
+23.
+Category: Trivia
+Difficulty Score: 55.2/100
+Tier: Tier 2: Intermediate
+Quote: "Butterflies taste their food with tiny sensors on their feet."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 51, Redundancy: 3.19x, Words: 10]
+
+24.
+Category: Trivia
+Difficulty Score: 56.6/100
+Tier: Tier 2: Intermediate
+Quote: "A snail can sleep continuously for up to three years without eating."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 56, Redundancy: 3.29x, Words: 12]
+
+25.
+Category: Trivia
+Difficulty Score: 58.0/100
+Tier: Tier 2: Intermediate
+Quote: "Ancient Romans used heated hollow floors called hypocausts to warm their homes in winter."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 75, Redundancy: 4.17x, Words: 14]
+
+26.
+Category: Trivia
+Difficulty Score: 59.4/100
+Tier: Tier 2: Intermediate
+Quote: "The Eiffel Tower grows up to six inches taller during the heat of summer due to thermal expansion."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 80, Redundancy: 4.21x, Words: 18]
+
+27.
+Category: Trivia
+Difficulty Score: 60.7/100
+Tier: Tier 2: Intermediate
+Quote: "The inventor of the stop sign never learned how to drive a motor vehicle."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 59, Redundancy: 3.28x, Words: 14]
+
+28.
+Category: Trivia
+Difficulty Score: 62.1/100
+Tier: Tier 2: Intermediate
+Quote: "Your stomach lining completely replaces itself every three to four days to avoid digesting itself."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 83, Redundancy: 4.37x, Words: 15]
+
+29.
+Category: Trivia
+Difficulty Score: 63.5/100
+Tier: Tier 2: Intermediate
+Quote: "Saturn is less dense than water; if placed in a giant bathtub, it would float."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 61, Redundancy: 3.39x, Words: 15]
+
+30.
+Category: Trivia
+Difficulty Score: 64.9/100
+Tier: Tier 2: Intermediate
+Quote: "The lighter was invented before the modern friction match was created in 1826."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 61, Redundancy: 3.39x, Words: 13]
+
+--------------------------------------------------------------------------------
+TIER 3: ADVANCED
+--------------------------------------------------------------------------------
+
+31.
+Category: Trivia
+Difficulty Score: 65.5/100
+Tier: Tier 3: Advanced
+Quote: "In 1913, Hitler, Stalin, Trotsky, and Freud all lived within a few miles of each other in Vienna."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 71, Redundancy: 3.74x, Words: 18]
+
+32.
+Category: Trivia
+Difficulty Score: 66.5/100
+Tier: Tier 3: Advanced
+Quote: "Russia spans eleven different time zones across Europe and Asia."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 54, Redundancy: 3.18x, Words: 10]
+
+33.
+Category: Trivia
+Difficulty Score: 67.6/100
+Tier: Tier 3: Advanced
+Quote: "Human bones are gram for gram roughly five times stronger than structural steel."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 67, Redundancy: 3.72x, Words: 13]
+
+34.
+Category: Trivia
+Difficulty Score: 68.6/100
+Tier: Tier 3: Advanced
+Quote: "A group of flamingos is officially known as a flamboyance."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 48, Redundancy: 2.67x, Words: 10]
+
+35.
+Category: Trivia
+Difficulty Score: 69.6/100
+Tier: Tier 3: Advanced
+Quote: "Bubble wrap was originally invented in 1957 to serve as textured wallpaper."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 59, Redundancy: 3.28x, Words: 12]
+
+36.
+Category: Trivia
+Difficulty Score: 70.6/100
+Tier: Tier 3: Advanced
+Quote: "The Moon is lemon-shaped, with flattened poles and a slight equatorial bulge."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 63, Redundancy: 3.32x, Words: 12]
+
+37.
+Category: Trivia
+Difficulty Score: 71.7/100
+Tier: Tier 3: Advanced
+Quote: "Continents drift across tectonic plates at about the same rate human fingernails grow."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 73, Redundancy: 3.84x, Words: 13]
+
+38.
+Category: Trivia
+Difficulty Score: 72.7/100
+Tier: Tier 3: Advanced
+Quote: "Sound travels four times faster through water than it does through open air."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 63, Redundancy: 3.50x, Words: 13]
+
+39.
+Category: Trivia
+Difficulty Score: 73.7/100
+Tier: Tier 3: Advanced
+Quote: "Honey never spoils; pots found in ancient Egyptian tombs are over three thousand years old and still edible."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 89, Redundancy: 4.45x, Words: 18]
+
+40.
+Category: Trivia
+Difficulty Score: 74.8/100
+Tier: Tier 3: Advanced
+Quote: "One million Earths could comfortably fit inside the Sun."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 47, Redundancy: 2.76x, Words: 9]
+
+41.
+Category: Trivia
+Difficulty Score: 75.8/100
+Tier: Tier 3: Advanced
+Quote: "Space is completely silent because there is no atmosphere to carry sound waves."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 66, Redundancy: 3.47x, Words: 13]
+
+42.
+Category: Trivia
+Difficulty Score: 76.8/100
+Tier: Tier 3: Advanced
+Quote: "A hummingbird weighs less than a single penny."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 38, Redundancy: 2.24x, Words: 8]
+
+43.
+Category: Trivia
+Difficulty Score: 77.8/100
+Tier: Tier 3: Advanced
+Quote: "Honeybees can be trained to recognize and remember human faces."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 53, Redundancy: 2.94x, Words: 10]
+
+44.
+Category: Trivia
+Difficulty Score: 78.9/100
+Tier: Tier 3: Advanced
+Quote: "Neutron stars spin so fast they can rotate hundreds of times every single second."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 67, Redundancy: 3.53x, Words: 14]
+
+45.
+Category: Trivia
+Difficulty Score: 79.9/100
+Tier: Tier 3: Advanced
+Quote: "Male seahorses carry the eggs and give birth to up to two thousand babies at once."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 66, Redundancy: 3.30x, Words: 16]
+
+--------------------------------------------------------------------------------
+TIER 4: MASTER
+--------------------------------------------------------------------------------
+
+46.
+Category: Trivia
+Difficulty Score: 80.5/100
+Tier: Tier 4: Master
+Quote: "Canned food was invented in 1810, but the can opener was not invented until forty-eight years later."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 77, Redundancy: 3.85x, Words: 17]
+
+47.
+Category: Trivia
+Difficulty Score: 81.8/100
+Tier: Tier 4: Master
+Quote: "Wombats are the only known animals in the world that produce cube-shaped droppings."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 69, Redundancy: 3.45x, Words: 13]
+
+48.
+Category: Trivia
+Difficulty Score: 83.1/100
+Tier: Tier 4: Master
+Quote: "Polar bears have black skin underneath their thick white fur to absorb heat from the sun."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 73, Redundancy: 3.65x, Words: 16]
+
+49.
+Category: Trivia
+Difficulty Score: 84.5/100
+Tier: Tier 4: Master
+Quote: "Sloths can hold their breath underwater for forty minutes, four times longer than dolphins."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 76, Redundancy: 3.80x, Words: 14]
+
+50.
+Category: Trivia
+Difficulty Score: 85.8/100
+Tier: Tier 4: Master
+Quote: "Bananas are naturally radioactive because they contain high levels of potassium forty."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 74, Redundancy: 3.70x, Words: 12]
+
+51.
+Category: Trivia
+Difficulty Score: 87.1/100
+Tier: Tier 4: Master
+Quote: "Water can boil and freeze simultaneously at a unique temperature called the triple point."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 75, Redundancy: 3.57x, Words: 14]
+
+52.
+Category: Trivia
+Difficulty Score: 88.4/100
+Tier: Tier 4: Master
+Quote: "Sharks existed on Earth before trees; sharks appeared four hundred million years ago."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 71, Redundancy: 3.55x, Words: 13]
+
+53.
+Category: Trivia
+Difficulty Score: 89.8/100
+Tier: Tier 4: Master
+Quote: "Atoms are ninety-nine percent empty space; all humanity would fit inside a sugar cube."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 70, Redundancy: 3.50x, Words: 14]
+
+54.
+Category: Trivia
+Difficulty Score: 91.1/100
+Tier: Tier 4: Master
+Quote: "Cows have best friends and experience measurable stress when separated from them."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 69, Redundancy: 3.45x, Words: 12]
+
+55.
+Category: Trivia
+Difficulty Score: 92.4/100
+Tier: Tier 4: Master
+Quote: "The Great Wall of China is held together in part by sticky rice mortar."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 57, Redundancy: 2.85x, Words: 14]
+
+56.
+Category: Trivia
+Difficulty Score: 93.7/100
+Tier: Tier 4: Master
+Quote: "Woolly mammoths were still walking the Earth while the Great Pyramid of Giza was being built."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 77, Redundancy: 3.67x, Words: 16]
+
+57.
+Category: Trivia
+Difficulty Score: 95.0/100
+Tier: Tier 4: Master
+Quote: "A single fluffy cumulus cloud can weigh over one million pounds."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 53, Redundancy: 2.79x, Words: 11]
+
+58.
+Category: Trivia
+Difficulty Score: 96.4/100
+Tier: Tier 4: Master
+Quote: "Archaeologists have found five-thousand-year-old chewing gum made from birch bark tar."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 72, Redundancy: 3.43x, Words: 11]
+
+59.
+Category: Trivia
+Difficulty Score: 97.7/100
+Tier: Tier 4: Master
+Quote: "The immortal jellyfish can revert back to its juvenile polyp stage when injured or aging."
+Author: None (Omitted)
+Stats: [Unique Letters: 23, Total Letters: 74, Redundancy: 3.22x, Words: 15]
+
+60.
+Category: Trivia
+Difficulty Score: 99.0/100
+Tier: Tier 4: Master
+Quote: "Dolphins call each other by unique signature whistles that act just like individual names."
+Author: None (Omitted)
+Stats: [Unique Letters: 23, Total Letters: 76, Redundancy: 3.30x, Words: 14]
+
+================================================================================
+WORDPLAY CATEGORY (LEVELS 1 - 60)
+================================================================================
+
+--------------------------------------------------------------------------------
+TIER 1: BEGINNER
+--------------------------------------------------------------------------------
+
+1.
+Category: Wordplay
+Difficulty Score: 1.0/100
+Tier: Tier 1: Beginner
+Quote: "I used to do drugs. I still do, but I used to, too."
+Author: Mitch Hedberg
+Stats: [Unique Letters: 11, Total Letters: 35, Redundancy: 3.18x, Words: 13]
+
+2.
+Category: Wordplay
+Difficulty Score: 4.1/100
+Tier: Tier 1: Beginner
+Quote: "Outside of a dog, a book is a man's best friend. Inside of a dog, it's too dark to read."
+Author: Groucho Marx
+Stats: [Unique Letters: 15, Total Letters: 63, Redundancy: 4.20x, Words: 20]
+
+3.
+Category: Wordplay
+Difficulty Score: 7.3/100
+Tier: Tier 1: Beginner
+Quote: "I'm on a seafood diet. Every time I see food, I eat it."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 39, Redundancy: 3.00x, Words: 13]
+
+4.
+Category: Wordplay
+Difficulty Score: 10.4/100
+Tier: Tier 1: Beginner
+Quote: "I used to be a banker, but then I lost interest."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 36, Redundancy: 2.57x, Words: 11]
+
+5.
+Category: Wordplay
+Difficulty Score: 13.6/100
+Tier: Tier 1: Beginner
+Quote: "I intend to live forever. So far, so good."
+Author: Steven Wright
+Stats: [Unique Letters: 13, Total Letters: 31, Redundancy: 2.38x, Words: 9]
+
+6.
+Category: Wordplay
+Difficulty Score: 16.7/100
+Tier: Tier 1: Beginner
+Quote: "A bicycle cannot stand on its own because it is two-tired."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 46, Redundancy: 3.07x, Words: 11]
+
+7.
+Category: Wordplay
+Difficulty Score: 19.9/100
+Tier: Tier 1: Beginner
+Quote: "Knowledge is knowing a tomato is a fruit; wisdom is not putting it in a fruit salad."
+Author: Miles Kington
+Stats: [Unique Letters: 17, Total Letters: 66, Redundancy: 3.88x, Words: 17]
+
+8.
+Category: Wordplay
+Difficulty Score: 23.0/100
+Tier: Tier 1: Beginner
+Quote: "My wife and I were happy for twenty years; then we met."
+Author: Rodney Dangerfield
+Stats: [Unique Letters: 15, Total Letters: 42, Redundancy: 2.80x, Words: 12]
+
+9.
+Category: Wordplay
+Difficulty Score: 26.1/100
+Tier: Tier 1: Beginner
+Quote: "The tallest building in town is the library; it has thousands of stories."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 59, Redundancy: 3.47x, Words: 13]
+
+10.
+Category: Wordplay
+Difficulty Score: 29.3/100
+Tier: Tier 1: Beginner
+Quote: "The future ain't what it used to be."
+Author: Yogi Berra
+Stats: [Unique Letters: 14, Total Letters: 27, Redundancy: 1.93x, Words: 8]
+
+11.
+Category: Wordplay
+Difficulty Score: 32.4/100
+Tier: Tier 1: Beginner
+Quote: "I used to be addicted to soap, but I'm clean now."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.40x, Words: 11]
+
+12.
+Category: Wordplay
+Difficulty Score: 35.6/100
+Tier: Tier 1: Beginner
+Quote: "Baseball is ninety percent mental. The other half is physical."
+Author: Yogi Berra
+Stats: [Unique Letters: 16, Total Letters: 51, Redundancy: 3.19x, Words: 10]
+
+13.
+Category: Wordplay
+Difficulty Score: 38.7/100
+Tier: Tier 1: Beginner
+Quote: "I was wondering why the baseball was getting bigger. Then it hit me."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 54, Redundancy: 3.38x, Words: 13]
+
+14.
+Category: Wordplay
+Difficulty Score: 41.9/100
+Tier: Tier 1: Beginner
+Quote: "A day without sunshine is like, you know, night."
+Author: Steve Martin
+Stats: [Unique Letters: 15, Total Letters: 37, Redundancy: 2.47x, Words: 9]
+
+15.
+Category: Wordplay
+Difficulty Score: 45.0/100
+Tier: Tier 1: Beginner
+Quote: "Time flies like an arrow, but fruit flies like a banana."
+Author: Groucho Marx
+Stats: [Unique Letters: 15, Total Letters: 44, Redundancy: 2.93x, Words: 11]
+
+--------------------------------------------------------------------------------
+TIER 2: INTERMEDIATE
+--------------------------------------------------------------------------------
+
+16.
+Category: Wordplay
+Difficulty Score: 45.5/100
+Tier: Tier 2: Intermediate
+Quote: "The rotation of Earth really makes my day."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 34, Redundancy: 2.27x, Words: 8]
+
+17.
+Category: Wordplay
+Difficulty Score: 46.9/100
+Tier: Tier 2: Intermediate
+Quote: "Parallel lines have so much in common. It is a shame they will never meet."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 58, Redundancy: 3.41x, Words: 15]
+
+18.
+Category: Wordplay
+Difficulty Score: 48.3/100
+Tier: Tier 2: Intermediate
+Quote: "Right now I'm having amnesia and deja vu at the same time."
+Author: Steven Wright
+Stats: [Unique Letters: 16, Total Letters: 45, Redundancy: 2.81x, Words: 12]
+
+19.
+Category: Wordplay
+Difficulty Score: 49.7/100
+Tier: Tier 2: Intermediate
+Quote: "I used to work in a blanket factory, but it folded."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 11]
+
+20.
+Category: Wordplay
+Difficulty Score: 51.0/100
+Tier: Tier 2: Intermediate
+Quote: "I spilled spot remover on my dog, and now he is gone."
+Author: Steven Wright
+Stats: [Unique Letters: 17, Total Letters: 40, Redundancy: 2.35x, Words: 12]
+
+21.
+Category: Wordplay
+Difficulty Score: 52.4/100
+Tier: Tier 2: Intermediate
+Quote: "My math teacher called me average. How mean."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 35, Redundancy: 2.33x, Words: 8]
+
+22.
+Category: Wordplay
+Difficulty Score: 53.8/100
+Tier: Tier 2: Intermediate
+Quote: "I told my doctor that I broke my arm in two places. He told me to stop going to those places."
+Author: Henny Youngman
+Stats: [Unique Letters: 19, Total Letters: 71, Redundancy: 3.74x, Words: 21]
+
+23.
+Category: Wordplay
+Difficulty Score: 55.2/100
+Tier: Tier 2: Intermediate
+Quote: "A pessimist's blood type is always B-negative."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 7]
+
+24.
+Category: Wordplay
+Difficulty Score: 56.6/100
+Tier: Tier 2: Intermediate
+Quote: "We never really grow up; we only learn how to act in public."
+Author: Bryan White
+Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 13]
+
+25.
+Category: Wordplay
+Difficulty Score: 58.0/100
+Tier: Tier 2: Intermediate
+Quote: "If I agreed with you, we would both be wrong."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.12x, Words: 10]
+
+26.
+Category: Wordplay
+Difficulty Score: 59.4/100
+Tier: Tier 2: Intermediate
+Quote: "I want to die peacefully in my sleep like my grandfather, not screaming like the passengers in his car."
+Author: Bob Monkhouse
+Stats: [Unique Letters: 20, Total Letters: 83, Redundancy: 4.15x, Words: 19]
+
+27.
+Category: Wordplay
+Difficulty Score: 60.7/100
+Tier: Tier 2: Intermediate
+Quote: "If at first you don't succeed, then skydiving definitely isn't for you."
+Author: Steven Wright
+Stats: [Unique Letters: 18, Total Letters: 56, Redundancy: 3.11x, Words: 12]
+
+28.
+Category: Wordplay
+Difficulty Score: 62.1/100
+Tier: Tier 2: Intermediate
+Quote: "The early bird gets the worm, but the second mouse gets the cheese."
+Author: Steven Wright
+Stats: [Unique Letters: 18, Total Letters: 53, Redundancy: 2.94x, Words: 13]
+
+29.
+Category: Wordplay
+Difficulty Score: 63.5/100
+Tier: Tier 2: Intermediate
+Quote: "I find television very educating. Every time someone turns it on, I go and read a book."
+Author: Groucho Marx
+Stats: [Unique Letters: 19, Total Letters: 68, Redundancy: 3.58x, Words: 17]
+
+30.
+Category: Wordplay
+Difficulty Score: 64.9/100
+Tier: Tier 2: Intermediate
+Quote: "I can resist everything except temptation."
+Author: Oscar Wilde
+Stats: [Unique Letters: 16, Total Letters: 36, Redundancy: 2.25x, Words: 6]
+
+--------------------------------------------------------------------------------
+TIER 3: ADVANCED
+--------------------------------------------------------------------------------
+
+31.
+Category: Wordplay
+Difficulty Score: 65.5/100
+Tier: Tier 3: Advanced
+Quote: "It's deja vu all over again."
+Author: Yogi Berra
+Stats: [Unique Letters: 14, Total Letters: 21, Redundancy: 1.50x, Words: 6]
+
+32.
+Category: Wordplay
+Difficulty Score: 66.5/100
+Tier: Tier 3: Advanced
+Quote: "A clear conscience is usually the sign of a bad memory."
+Author: Steven Wright
+Stats: [Unique Letters: 18, Total Letters: 44, Redundancy: 2.44x, Words: 11]
+
+33.
+Category: Wordplay
+Difficulty Score: 67.6/100
+Tier: Tier 3: Advanced
+Quote: "I told my suitcase there will be no vacation this year. Now I'm dealing with emotional baggage."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 76, Redundancy: 4.00x, Words: 17]
+
+34.
+Category: Wordplay
+Difficulty Score: 68.6/100
+Tier: Tier 3: Advanced
+Quote: "There are two types of people: those who can extrapolate from incomplete data."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 64, Redundancy: 3.56x, Words: 13]
+
+35.
+Category: Wordplay
+Difficulty Score: 69.6/100
+Tier: Tier 3: Advanced
+Quote: "I wanted to buy a candle holder, but the store didn't have one, so I got a cake."
+Author: Mitch Hedberg
+Stats: [Unique Letters: 19, Total Letters: 59, Redundancy: 3.11x, Words: 18]
+
+36.
+Category: Wordplay
+Difficulty Score: 70.6/100
+Tier: Tier 3: Advanced
+Quote: "I used to think I was indecisive, but now I am not quite sure."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 47, Redundancy: 2.61x, Words: 14]
+
+37.
+Category: Wordplay
+Difficulty Score: 71.7/100
+Tier: Tier 3: Advanced
+Quote: "I asked my dog what's on top of the house. He said roof."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 41, Redundancy: 2.28x, Words: 13]
+
+38.
+Category: Wordplay
+Difficulty Score: 72.7/100
+Tier: Tier 3: Advanced
+Quote: "Some cause happiness wherever they go; others whenever they go."
+Author: Oscar Wilde
+Stats: [Unique Letters: 17, Total Letters: 52, Redundancy: 3.06x, Words: 10]
+
+39.
+Category: Wordplay
+Difficulty Score: 73.7/100
+Tier: Tier 3: Advanced
+Quote: "Behind every great man is a woman rolling her eyes."
+Author: Jim Carrey
+Stats: [Unique Letters: 17, Total Letters: 41, Redundancy: 2.41x, Words: 10]
+
+40.
+Category: Wordplay
+Difficulty Score: 74.8/100
+Tier: Tier 3: Advanced
+Quote: "Artificial intelligence is no match for natural stupidity."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 50, Redundancy: 2.78x, Words: 8]
+
+41.
+Category: Wordplay
+Difficulty Score: 75.8/100
+Tier: Tier 3: Advanced
+Quote: "A conscience is what hurts when all your other parts feel so good."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 53, Redundancy: 2.94x, Words: 13]
+
+42.
+Category: Wordplay
+Difficulty Score: 76.8/100
+Tier: Tier 3: Advanced
+Quote: "Never trust an atom; they make up everything."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 36, Redundancy: 2.25x, Words: 8]
+
+43.
+Category: Wordplay
+Difficulty Score: 77.8/100
+Tier: Tier 3: Advanced
+Quote: "I refused to believe my dad was stealing from his road work job, but when I got home all the signs were there."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 86, Redundancy: 4.10x, Words: 23]
+
+44.
+Category: Wordplay
+Difficulty Score: 78.9/100
+Tier: Tier 3: Advanced
+Quote: "Nobody goes there anymore because it's too crowded."
+Author: Yogi Berra
+Stats: [Unique Letters: 17, Total Letters: 42, Redundancy: 2.47x, Words: 8]
+
+45.
+Category: Wordplay
+Difficulty Score: 79.9/100
+Tier: Tier 3: Advanced
+Quote: "I bought a ceiling fan the other day. Complete waste of money; he just stands there applauding."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 76, Redundancy: 3.62x, Words: 17]
+
+--------------------------------------------------------------------------------
+TIER 4: MASTER
+--------------------------------------------------------------------------------
+
+46.
+Category: Wordplay
+Difficulty Score: 80.5/100
+Tier: Tier 4: Master
+Quote: "I'm reading a book on anti-gravity. It's impossible to put down!"
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 49, Redundancy: 2.58x, Words: 11]
+
+47.
+Category: Wordplay
+Difficulty Score: 81.8/100
+Tier: Tier 4: Master
+Quote: "Always borrow money from a pessimist. He won't expect it back."
+Author: Oscar Wilde
+Stats: [Unique Letters: 19, Total Letters: 49, Redundancy: 2.58x, Words: 11]
+
+48.
+Category: Wordplay
+Difficulty Score: 83.1/100
+Tier: Tier 4: Master
+Quote: "I don't care to belong to any club that will have me as a member."
+Author: Groucho Marx
+Stats: [Unique Letters: 19, Total Letters: 49, Redundancy: 2.58x, Words: 15]
+
+49.
+Category: Wordplay
+Difficulty Score: 84.5/100
+Tier: Tier 4: Master
+Quote: "My doctor gave me six months to live, but when I couldn't pay the bill he gave me six months more."
+Author: Walter Matthau
+Stats: [Unique Letters: 21, Total Letters: 75, Redundancy: 3.57x, Words: 21]
+
+50.
+Category: Wordplay
+Difficulty Score: 85.8/100
+Tier: Tier 4: Master
+Quote: "Those are my principles. If you don't like them, I have others."
+Author: Groucho Marx
+Stats: [Unique Letters: 19, Total Letters: 48, Redundancy: 2.53x, Words: 12]
+
+51.
+Category: Wordplay
+Difficulty Score: 87.1/100
+Tier: Tier 4: Master
+Quote: "You can observe a lot just by watching."
+Author: Yogi Berra
+Stats: [Unique Letters: 18, Total Letters: 31, Redundancy: 1.72x, Words: 8]
+
+52.
+Category: Wordplay
+Difficulty Score: 88.4/100
+Tier: Tier 4: Master
+Quote: "Change is inevitable, except from a vending machine."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 43, Redundancy: 2.26x, Words: 8]
+
+53.
+Category: Wordplay
+Difficulty Score: 89.8/100
+Tier: Tier 4: Master
+Quote: "A bank is a place that will lend you money if you can prove that you don't need it."
+Author: Bob Hope
+Stats: [Unique Letters: 21, Total Letters: 63, Redundancy: 3.00x, Words: 19]
+
+54.
+Category: Wordplay
+Difficulty Score: 91.1/100
+Tier: Tier 4: Master
+Quote: "If you don't know where you are going, you might wind up someplace else."
+Author: Yogi Berra
+Stats: [Unique Letters: 20, Total Letters: 56, Redundancy: 2.80x, Words: 14]
+
+55.
+Category: Wordplay
+Difficulty Score: 92.4/100
+Tier: Tier 4: Master
+Quote: "If you think nobody cares if you are alive, try missing a couple of payments."
+Author: Flip Wilson
+Stats: [Unique Letters: 21, Total Letters: 61, Redundancy: 2.90x, Words: 15]
+
+56.
+Category: Wordplay
+Difficulty Score: 93.7/100
+Tier: Tier 4: Master
+Quote: "Everywhere is walking distance if you have the time."
+Author: Steven Wright
+Stats: [Unique Letters: 20, Total Letters: 43, Redundancy: 2.15x, Words: 9]
+
+57.
+Category: Wordplay
+Difficulty Score: 95.0/100
+Tier: Tier 4: Master
+Quote: "I never forget a face, but in your case I'll be glad to make an exception."
+Author: Groucho Marx
+Stats: [Unique Letters: 21, Total Letters: 56, Redundancy: 2.67x, Words: 16]
+
+58.
+Category: Wordplay
+Difficulty Score: 96.4/100
+Tier: Tier 4: Master
+Quote: "I am free of all prejudices. I hate everyone equally."
+Author: W.C. Fields
+Stats: [Unique Letters: 20, Total Letters: 42, Redundancy: 2.10x, Words: 10]
+
+59.
+Category: Wordplay
+Difficulty Score: 97.7/100
+Tier: Tier 4: Master
+Quote: "I haven't slept for ten days, because that would be too long."
+Author: Mitch Hedberg
+Stats: [Unique Letters: 20, Total Letters: 47, Redundancy: 2.35x, Words: 12]
+
+60.
+Category: Wordplay
+Difficulty Score: 99.0/100
+Tier: Tier 4: Master
+Quote: "I have an inferiority complex, but it's not a very good one."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 46, Redundancy: 2.19x, Words: 12]
+
+--------------------------------------------------------------------------------
+COMPACT SUMMARY (ALL 540 PUZZLES ACROSS CATEGORIES)
+--------------------------------------------------------------------------------
+[1.0] [Quotes #1]: "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that." - Martin Luther King Jr.
+[10.6] [Quotes #2]: "Ask not what your country can do for you; ask what you can do for your country." - John F. Kennedy
+[10.8] [Quotes #3]: "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel." - Maya Angelou
+[14.2] [Quotes #4]: "When you have seen one, you have seen all." - Terence
+[18.5] [Quotes #5]: "To know that we know what we know, and that we do not know what we do not know, that is true knowledge." - Confucius
+[22.4] [Quotes #6]: "Tell me and I forget. Teach me and I remember. Involve me and I learn." - Benjamin Franklin
+[25.6] [Quotes #7]: "In the end, it's not the years in your life that count. It's the life in your years." - Abraham Lincoln
+[27.8] [Quotes #8]: "An eye for an eye only ends up making the whole world blind." - Mahatma Gandhi
+[29.6] [Quotes #9]: "Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill
+[31.2] [Quotes #10]: "There is nothing either good or bad, but thinking makes it so." - William Shakespeare
+[32.5] [Quotes #11]: "No act of kindness, no matter how small, is ever wasted." - Aesop
+[33.3] [Quotes #12]: "I dream my painting and I paint my dream." - Vincent van Gogh
+[34.1] [Quotes #13]: "It always takes two to tell the truth - one to speak, and another to hear." - Henry David Thoreau
+[34.8] [Quotes #14]: "Where there is love there is life." - Mahatma Gandhi
+[35.4] [Quotes #15]: "Do not go gentle into that good night. Rage, rage against the dying of the light." - Dylan Thomas
+[35.5] [Quotes #16]: "The fool doth think he is wise, but the wise man knows himself to be a fool." - William Shakespeare
+[36.2] [Quotes #17]: "If you cannot do great things, do small things in a great way." - Napoleon Hill
+[37.1] [Quotes #18]: "The only journey is the one within." - Rainer Maria Rilke
+[37.4] [Quotes #19]: "Government of the people, by the people, for the people, shall not perish from the earth." - Abraham Lincoln
+[37.9] [Quotes #20]: "Better three hours too soon than a minute too late." - William Shakespeare
+[38.5] [Quotes #21]: "Give me six hours to chop down a tree and I will spend the first four sharpening the axe." - Abraham Lincoln
+[38.9] [Quotes #22]: "If you want to go fast, go alone. If you want to go far, go together." - African Proverb
+[39.2] [Quotes #23]: "In the middle of every difficulty lies opportunity." - Albert Einstein
+[39.8] [Quotes #24]: "Live as if you were to die tomorrow. Learn as if you were to live forever." - Mahatma Gandhi
+[39.8] [Quotes #25]: "Two roads diverged in a wood, and I - I took the one less traveled by, and that has made all the difference." - Robert Frost
+[40.1] [Quotes #26]: "What we achieve inwardly will change outer reality." - Plutarch
+[40.8] [Quotes #27]: "A person who never made a mistake never tried anything new." - Albert Einstein
+[41.4] [Quotes #28]: "The roots of education are bitter, but the fruit is sweet." - Aristotle
+[41.7] [Quotes #29]: "All the world's a stage, and all the men and women merely players." - William Shakespeare
+[42.0] [Quotes #30]: "It is not in the stars to hold our destiny but in ourselves." - William Shakespeare
+[42.6] [Quotes #31]: "We do not remember days, we remember moments." - Cesare Pavese
+[43.1] [Quotes #32]: "Simplicity is the keynote of all true elegance." - Coco Chanel
+[43.5] [Quotes #33]: "To live is the rarest thing in the world. Most people exist, that is all." - Oscar Wilde
+[43.9] [Quotes #34]: "Honesty is the first chapter in the book of wisdom." - Thomas Jefferson
+[44.2] [Quotes #35]: "An unexamined life is not worth living." - Socrates
+[44.5] [Quotes #36]: "Kind words do not cost much. Yet they accomplish much." - Blaise Pascal
+[44.8] [Quotes #37]: "Act as if what you do makes a difference. It does." - William James
+[45.0] [Quotes #38]: "The quieter you become, the more you are able to hear." - Rumi
+[45.3] [Quotes #39]: "The two most important days in your life are the day you are born and the day you find out why." - Mark Twain
+[45.5] [Quotes #40]: "He who lives in harmony with himself lives in harmony with the universe." - Marcus Aurelius
+[45.8] [Quotes #41]: "Knowing is not enough, we must apply. Willing is not enough, we must do." - Bruce Lee
+[45.9] [Quotes #42]: "To be, or not to be, that is the question." - William Shakespeare
+[46.4] [Quotes #43]: "The secret of getting ahead is getting started." - Mark Twain
+[46.5] [Quotes #44]: "Hell is other people." - Jean-Paul Sartre
+[46.7] [Quotes #45]: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do." - Mark Twain
+[47.2] [Quotes #46]: "In three words I can sum up everything I've learned about life: it goes on." - Robert Frost
+[48.1] [Quotes #47]: "Not all those who wander are lost." - J.R.R. Tolkien
+[48.7] [Quotes #48]: "Educating the mind without educating the heart is no education at all." - Aristotle
+[49.6] [Quotes #49]: "Genius is one percent inspiration and ninety-nine percent perspiration." - Thomas Edison
+[50.2] [Quotes #50]: "All that we are is the result of what we have thought." - Buddha
+[50.5] [Quotes #51]: "Look up at the stars and not down at your feet. Try to make sense of what you see." - Stephen Hawking
+[50.9] [Quotes #52]: "Strive not to be a success, but rather to be of value." - Albert Einstein
+[50.9] [Quotes #53]: "We are all in the gutter, but some of us are looking at the stars." - Oscar Wilde
+[51.5] [Quotes #54]: "It is during our darkest moments that we must focus to see the light." - Aristotle
+[52.4] [Quotes #55]: "I think, therefore I am." - Rene Descartes
+[52.9] [Quotes #56]: "A room without books is like a body without a soul." - Marcus Tullius Cicero
+[53.8] [Quotes #57]: "Do what you can, with what you have, where you are." - Theodore Roosevelt
+[54.4] [Quotes #58]: "Early to bed and early to rise makes a man healthy, wealthy, and wise." - Benjamin Franklin
+[54.5] [Quotes #59]: "There is no charm equal to tenderness of heart." - Jane Austen
+[55.2] [Quotes #60]: "The only true test of friendship is the time it takes to forgive." - Arthur Conan Doyle
+[55.6] [Quotes #61]: "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin." - Martin Luther King Jr.
+[55.8] [Quotes #62]: "There are no shortcuts to any place worth going." - Beverly Sills
+[56.0] [Quotes #63]: "If your actions inspire others to dream more, learn more, do more and become more, you are a leader." - John Quincy Adams
+[56.3] [Quotes #64]: "Turn your face to the sun and the shadows fall behind you." - Maori Proverb
+[56.5] [Quotes #65]: "It does not matter how slowly you go as long as you do not stop." - Confucius
+[56.9] [Quotes #66]: "He who fears being conquered is sure of defeat." - Napoleon Bonaparte
+[57.2] [Quotes #67]: "Wise men speak because they have something to say; fools because they have to say something." - Plato
+[57.5] [Quotes #68]: "What lies behind us and what lies before us are tiny matters compared to what lies within us." - Ralph Waldo Emerson
+[57.9] [Quotes #69]: "Science without religion is lame, religion without science is blind." - Albert Einstein
+[58.2] [Quotes #70]: "The power of imagination makes us infinite." - John Muir
+[58.6] [Quotes #71]: "Waste no more time arguing what a good man should be. Be one." - Marcus Aurelius
+[59.2] [Quotes #72]: "Nothing in life is to be feared, it is only to be understood." - Marie Curie
+[59.9] [Quotes #73]: "Life is long if you know how to use it." - Seneca
+[60.1] [Quotes #74]: "Simplicity is the ultimate sophistication." - Leonardo da Vinci
+[60.4] [Quotes #75]: "A leader is one who knows the way, goes the way, and shows the way." - John C. Maxwell
+[60.6] [Quotes #76]: "If you're going through hell, keep going." - Winston Churchill
+[60.9] [Quotes #77]: "Knowledge speaks, but wisdom listens." - Jimi Hendrix
+[61.2] [Quotes #78]: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment." - Buddha
+[61.4] [Quotes #79]: "The people who are crazy enough to think they can change the world are the ones who do." - Steve Jobs
+[61.6] [Quotes #80]: "The greatest wealth is to live content with little." - Plato
+[61.7] [Quotes #81]: "That's one small step for a man, one giant leap for mankind." - Neil Armstrong
+[61.7] [Quotes #82]: "If I have seen further it is by standing on the shoulders of giants." - Isaac Newton
+[61.9] [Quotes #83]: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking." - Marcus Aurelius
+[62.5] [Quotes #84]: "I am not afraid of storms, for I am learning how to sail my ship." - Louisa May Alcott
+[62.8] [Quotes #85]: "Courage is resistance to fear, mastery of fear - not absence of fear." - Mark Twain
+[63.0] [Quotes #86]: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe." - Albert Einstein
+[63.2] [Quotes #87]: "Not how long, but how well you have lived is the main thing." - Seneca
+[63.5] [Quotes #88]: "Beware the barrenness of a busy life." - Socrates
+[63.7] [Quotes #89]: "We do not see things as they are, we see them as we are." - Anais Nin
+[63.9] [Quotes #90]: "You miss 100% of the shots you don't take." - Wayne Gretzky
+[64.1] [Quotes #91]: "The soul becomes dyed with the color of its thoughts." - Marcus Aurelius
+[64.3] [Quotes #92]: "It is not death that a man should fear, but he should fear never beginning to live." - Marcus Aurelius
+[64.4] [Quotes #93]: "The only thing we have to fear is fear itself." - Franklin D. Roosevelt
+[64.5] [Quotes #94]: "If you wish to be loved, love." - Seneca
+[64.7] [Quotes #95]: "To know thyself is the beginning of wisdom." - Socrates
+[64.8] [Quotes #96]: "Whatever you are, be a good one." - Abraham Lincoln
+[64.8] [Quotes #97]: "Whatever the mind of man can conceive and believe, it can achieve." - Napoleon Hill
+[64.9] [Quotes #98]: "There is no greater agony than bearing an untold story inside you." - Maya Angelou
+[64.9] [Quotes #99]: "He who conquers himself is the mightiest warrior." - Confucius
+[65.0] [Quotes #100]: "Happiness depends upon ourselves." - Aristotle
+[65.1] [Quotes #101]: "A rose by any other name would smell as sweet." - William Shakespeare
+[65.2] [Quotes #102]: "The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson Mandela
+[65.3] [Quotes #103]: "The purpose of our lives is to be happy." - Dalai Lama
+[65.4] [Quotes #104]: "I have no special talent. I am only passionately curious." - Albert Einstein
+[65.5] [Quotes #105]: "Get busy living or get busy dying." - Stephen King
+[65.6] [Quotes #106]: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." - Helen Keller
+[65.9] [Quotes #107]: "The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt
+[66.0] [Quotes #108]: "There is nothing impossible to him who will try." - Alexander the Great
+[66.2] [Quotes #109]: "When one door of happiness closes, another opens." - Helen Keller
+[66.2] [Quotes #110]: "Everything has beauty, but not everyone can see it." - Confucius
+[66.6] [Quotes #111]: "Be water, my friend." - Bruce Lee
+[66.6] [Quotes #112]: "We are what we repeatedly do. Excellence, then, is not an act, but a habit." - Aristotle
+[66.8] [Quotes #113]: "The question isn't who is going to let me; it's who is going to stop me." - Ayn Rand
+[67.1] [Quotes #114]: "Stay hungry, stay foolish." - Steve Jobs
+[67.7] [Quotes #115]: "He who has a why to live can bear almost any how." - Friedrich Nietzsche
+[67.7] [Quotes #116]: "Great things are done by a series of small things brought together." - Vincent van Gogh
+[67.7] [Quotes #117]: "I can calculate the motion of heavenly bodies, but not the madness of people." - Isaac Newton
+[68.2] [Quotes #118]: "Real knowledge is to know the extent of one's ignorance." - Confucius
+[68.4] [Quotes #119]: "Intelligence is the ability to adapt to change." - Stephen Hawking
+[68.9] [Quotes #120]: "The good thing about science is that it's true whether or not you believe in it." - Neil deGrasse Tyson
+[69.1] [Quotes #121]: "Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree." - Martin Luther
+[69.5] [Quotes #122]: "The impediment to action advances action. What stands in the way becomes the way." - Marcus Aurelius
+[69.8] [Quotes #123]: "It always seems impossible until it's done." - Nelson Mandela
+[69.9] [Quotes #124]: "You only live once, but if you do it right, once is enough." - Mae West
+[70.0] [Quotes #125]: "It is our choices that show what we truly are, far more than our abilities." - J.K. Rowling
+[70.4] [Quotes #126]: "We are a way for the cosmos to know itself." - Carl Sagan
+[71.0] [Quotes #127]: "Doubt is the origin of wisdom." - Rene Descartes
+[71.5] [Quotes #128]: "Fortune favors the bold." - Virgil
+[72.1] [Quotes #129]: "Science may set limits to knowledge, but should not set limits to imagination." - Bertrand Russell
+[72.4] [Quotes #130]: "Nature does not hurry, yet everything is accomplished." - Lao Tzu
+[73.1] [Quotes #131]: "Change is the end result of all true learning." - Leo Buscaglia
+[73.5] [Quotes #132]: "Be the change that you wish to see in the world." - Mahatma Gandhi
+[73.8] [Quotes #133]: "We suffer more often in imagination than in reality." - Seneca
+[74.5] [Quotes #134]: "Life is a question and how we live it is our answer." - Gary Keller
+[75.2] [Quotes #135]: "We find in life exactly what we put into it." - Ralph Waldo Emerson
+[75.8] [Quotes #136]: "One day your life will flash before your eyes. Make sure it's worth watching." - Gerard Way
+[76.1] [Quotes #137]: "There is no substitute for hard work." - Thomas Edison
+[76.5] [Quotes #138]: "The energy of the mind is the essence of life." - Aristotle
+[76.8] [Quotes #139]: "Character is destiny." - Heraclitus
+[77.1] [Quotes #140]: "The only true wisdom is in knowing you know nothing." - Socrates
+[77.1] [Quotes #141]: "Every child is an artist. The problem is how to remain an artist once we grow up." - Pablo Picasso
+[77.4] [Quotes #142]: "Freedom lies in being bold." - Robert Frost
+[77.7] [Quotes #143]: "Impossible is a word to be found only in the dictionary of fools." - Napoleon Bonaparte
+[77.9] [Quotes #144]: "A smooth sea never made a skilled sailor." - Franklin D. Roosevelt
+[78.0] [Quotes #145]: "Many of life's failures are people who did not realize how close they were to success when they gave up." - Thomas Edison
+[78.1] [Quotes #146]: "Peace begins with a smile." - Mother Teresa
+[78.2] [Quotes #147]: "The soul should always stand ajar, ready to welcome the ecstatic experience." - Emily Dickinson
+[78.4] [Quotes #148]: "If you judge people, you have no time to love them." - Mother Teresa
+[78.5] [Quotes #149]: "Life must be understood backward. But it must be lived forward." - Soren Kierkegaard
+[78.8] [Quotes #150]: "Those who cannot remember the past are condemned to repeat it." - George Santayana
+[79.1] [Quotes #151]: "To understand everything is to forgive everything." - Leo Tolstoy
+[79.3] [Quotes #152]: "Beware that, when fighting monsters, you yourself do not become a monster." - Friedrich Nietzsche
+[79.4] [Quotes #153]: "Man is condemned to be free." - Jean-Paul Sartre
+[79.5] [Quotes #154]: "Knowing others is intelligence; knowing yourself is true wisdom." - Lao Tzu
+[79.6] [Quotes #155]: "No one can make you feel inferior without your consent." - Eleanor Roosevelt
+[79.7] [Quotes #156]: "The only real mistake is the one from which we learn nothing." - Henry Ford
+[79.8] [Quotes #157]: "He who has overcome his fears will truly be free." - Aristotle
+[79.9] [Quotes #158]: "Patience is bitter, but its fruit is sweet." - Jean-Jacques Rousseau
+[80.0] [Quotes #159]: "Order is the shape upon which beauty depends." - Pearl S. Buck
+[80.3] [Quotes #160]: "In the depth of winter, I finally learned that within me there lay an invincible summer." - Albert Camus
+[81.1] [Quotes #161]: "Knowing what must be done does away with fear." - Rosa Parks
+[81.5] [Quotes #162]: "Silence is a source of great strength." - Lao Tzu
+[82.3] [Quotes #163]: "Be yourself; everyone else is already taken." - Oscar Wilde
+[82.8] [Quotes #164]: "No wind favors he who has no destined port." - Michel de Montaigne
+[83.1] [Quotes #165]: "Life is a mirror and will reflect back to the thinker what he thinks into it." - Ernest Holmes
+[83.3] [Quotes #166]: "The way to get started is to quit talking and begin doing." - Walt Disney
+[83.6] [Quotes #167]: "Your time is limited, don't waste it living someone else's life." - Steve Jobs
+[83.7] [Quotes #168]: "Education is the most powerful weapon which you can use to change the world." - Nelson Mandela
+[83.9] [Quotes #169]: "Without music, life would be a mistake." - Friedrich Nietzsche
+[84.2] [Quotes #170]: "Whatever is begun in anger ends in shame." - Benjamin Franklin
+[84.5] [Quotes #171]: "Somewhere, something incredible is waiting to be known." - Carl Sagan
+[84.8] [Quotes #172]: "The eye sees only what the mind is prepared to comprehend." - Robertson Davies
+[85.2] [Quotes #173]: "The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt
+[85.5] [Quotes #174]: "What you seek is seeking you." - Rumi
+[85.9] [Quotes #175]: "The most courageous act is still to think for yourself. Aloud." - Coco Chanel
+[85.9] [Quotes #176]: "All our dreams can come true, if we have the courage to pursue them." - Walt Disney
+[86.1] [Quotes #177]: "Life is like riding a bicycle. To keep your balance, you must keep moving." - Albert Einstein
+[86.4] [Quotes #178]: "In the midst of chaos, there is also opportunity." - Sun Tzu
+[86.8] [Quotes #179]: "Believe you can and you're halfway there." - Theodore Roosevelt
+[87.2] [Quotes #180]: "A truth that's told with bad intent beats all the lies you can invent." - William Blake
+[87.5] [Quotes #181]: "Turn your wounds into wisdom." - Oprah Winfrey
+[88.2] [Quotes #182]: "Genius is eternal patience." - Michelangelo
+[88.6] [Quotes #183]: "Nothing great was ever achieved without enthusiasm." - Ralph Waldo Emerson
+[88.9] [Quotes #184]: "You have power over your mind - not outside events. Realize this, and you will find strength." - Marcus Aurelius
+[89.4] [Quotes #185]: "The present is theirs; the future, for which I really worked, is mine." - Nikola Tesla
+[90.1] [Quotes #186]: "Life shrinks or expands in proportion to one's courage." - Anais Nin
+[91.2] [Quotes #187]: "Do not go where the path may lead, go instead where there is no path and leave a trail." - Ralph Waldo Emerson
+[91.8] [Quotes #188]: "It is quality rather than quantity that matters." - Lucius Annaeus Seneca
+[92.1] [Quotes #189]: "Everything is theoretically impossible, until it is done." - Robert A. Heinlein
+[93.0] [Quotes #190]: "Difficulties strengthen the mind, as labor does the body." - Seneca
+[93.5] [Quotes #191]: "Those who know do not speak. Those who speak do not know." - Lao Tzu
+[94.2] [Quotes #192]: "The art of living is more like wrestling than dancing." - Marcus Aurelius
+[95.2] [Quotes #193]: "Dare to know! Have the courage to use your own understanding." - Immanuel Kant
+[96.0] [Quotes #194]: "Wisdom begins in wonder." - Socrates
+[96.5] [Quotes #195]: "I am become death, the destroyer of worlds." - J. Robert Oppenheimer
+[97.1] [Quotes #196]: "A journey of a thousand miles begins with a single step." - Lao Tzu
+[97.3] [Quotes #197]: "The mind is everything. What you think you become." - Buddha
+[97.8] [Quotes #198]: "To see a world in a grain of sand and a heaven in a wild flower." - William Blake
+[98.5] [Quotes #199]: "Mystery creates wonder and wonder is the basis of man's desire to understand." - Neil Armstrong
+[99.0] [Quotes #200]: "Life is what happens when you're busy making other plans." - John Lennon
+[1.0] [Proverbs #1]: "Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime."
+[2.3] [Proverbs #2]: "A friend in need is a friend indeed."
+[17.0] [Proverbs #3]: "Where there is a will, there is a way."
+[22.6] [Proverbs #4]: "When the going gets tough, the tough get going."
+[24.4] [Proverbs #5]: "A penny saved is a penny earned."
+[25.1] [Proverbs #6]: "Do unto others as you would have them do unto you."
+[27.5] [Proverbs #7]: "Slow and steady wins the race."
+[28.0] [Proverbs #8]: "Blood is thicker than water."
+[30.2] [Proverbs #9]: "Better late than never."
+[31.8] [Proverbs #10]: "Two wrongs do not make a right."
+[34.0] [Proverbs #11]: "Two heads are better than one."
+[36.5] [Proverbs #12]: "If the shoe fits, wear it."
+[38.2] [Proverbs #13]: "Birds of a feather flock together."
+[40.5] [Proverbs #14]: "All good things must come to an end."
+[43.8] [Proverbs #15]: "Practice makes perfect."
+[46.2] [Proverbs #16]: "A picture is worth a thousand words."
+[47.5] [Proverbs #17]: "Look before you leap."
+[48.9] [Proverbs #18]: "No pain, no gain."
+[50.1] [Proverbs #19]: "Better safe than sorry."
+[51.4] [Proverbs #20]: "All that glitters is not gold."
+[53.0] [Proverbs #21]: "When in Rome, do as the Romans do."
+[54.2] [Proverbs #22]: "A stitch in time saves nine."
+[55.6] [Proverbs #23]: "Every cloud has a silver lining."
+[57.0] [Proverbs #24]: "Strike while the iron is hot."
+[58.5] [Proverbs #25]: "Rome was not built in a day."
+[59.8] [Proverbs #26]: "The early bird catches the worm."
+[61.2] [Proverbs #27]: "Do not judge a book by its cover."
+[62.5] [Proverbs #28]: "Honesty is the best policy."
+[63.8] [Proverbs #29]: "Barking dogs seldom bite."
+[64.9] [Proverbs #30]: "Time heals all wounds."
+[66.2] [Proverbs #31]: "A bird in the hand is worth two in the bush."
+[67.5] [Proverbs #32]: "Do not count your chickens before they hatch."
+[68.8] [Proverbs #33]: "Do not cry over spilled milk."
+[70.0] [Proverbs #34]: "Do not put all your eggs in one basket."
+[71.4] [Proverbs #35]: "Cleanliness is next to godliness."
+[72.8] [Proverbs #36]: "Curiosity killed the cat."
+[73.9] [Proverbs #37]: "Do not bite the hand that feeds you."
+[75.0] [Proverbs #38]: "Every dog has its day."
+[76.1] [Proverbs #39]: "Good things come to those who wait."
+[77.0] [Proverbs #40]: "Haste makes waste."
+[78.0] [Proverbs #41]: "Hope for the best, prepare for the worst."
+[78.8] [Proverbs #42]: "It takes a village to raise a child."
+[79.2] [Proverbs #43]: "Laughter is the best medicine."
+[79.6] [Proverbs #44]: "Make hay while the sun shines."
+[80.0] [Proverbs #45]: "Necessity is the mother of invention."
+[81.5] [Proverbs #46]: "Out of sight, out of mind."
+[82.8] [Proverbs #47]: "Patience is a virtue."
+[84.0] [Proverbs #48]: "Silence is golden."
+[85.2] [Proverbs #49]: "The grass is always greener on the other side."
+[86.5] [Proverbs #50]: "The pen is mightier than the sword."
+[88.0] [Proverbs #51]: "There is no place like home."
+[89.4] [Proverbs #52]: "Too many cooks spoil the broth."
+[91.0] [Proverbs #53]: "You cannot teach an old dog new tricks."
+[92.5] [Proverbs #54]: "You reap what you sow."
+[94.0] [Proverbs #55]: "Beauty is in the eye of the beholder."
+[95.2] [Proverbs #56]: "Fall seven times, stand up eight."
+[96.5] [Proverbs #57]: "A watched pot never boils."
+[97.8] [Proverbs #58]: "Actions speak louder than words."
+[98.6] [Proverbs #59]: "Many hands make light work."
+[99.0] [Proverbs #60]: "Absence makes the heart grow fonder."
+[1.0] [Riddles #1]: "I turn once, what is out will not get in. I turn again, what is in will not get out. What am I? A key."
+[10.3] [Riddles #2]: "It cannot be seen, cannot be felt, cannot be heard, cannot be smelt. It lies behind stars and under hills. What is it? Darkness."
+[17.3] [Riddles #3]: "If you have me, you want to share me; if you share me, you do not have me. What am I? A secret."
+[25.0] [Riddles #4]: "The person who makes it has no need of it; the person who buys it has no use for it. What is it? A coffin."
+[31.1] [Riddles #5]: "I am tall when I am young, and I am short when I am old. What am I? A candle."
+[33.5] [Riddles #6]: "Thirty white horses on a red hill; first they champ, then they stamp, then they stand still. What are they? Teeth."
+[38.8] [Riddles #7]: "What goes on four legs in the morning, two legs at noon, and three legs in the evening? Man."
+[39.0] [Riddles #8]: "I shave every day, but my beard stays the same. What am I? A barber."
+[39.3] [Riddles #9]: "I have many teeth, but I cannot bite. What am I? A comb."
+[39.6] [Riddles #10]: "Feed me and I live, yet give me a drink and I die. What am I? Fire."
+[41.4] [Riddles #11]: "What has a head and a foot but no body? A bed."
+[43.1] [Riddles #12]: "I follow you all day, but when the sun goes down I am gone. What am I? A shadow."
+[43.3] [Riddles #13]: "What kind of room has no doors or windows? A mushroom."
+[44.7] [Riddles #14]: "What has a tongue but cannot taste? A shoe."
+[45.0] [Riddles #15]: "What flies when it is born, lies when it is alive, and runs when it is dead? A snowflake."
+[45.5] [Riddles #16]: "I have cities, but no houses; forests, but no trees; and water, but no fish. What am I? A map."
+[53.0] [Riddles #17]: "What has a bark but no bite? A tree."
+[53.1] [Riddles #18]: "What begins with T, finishes with T, and has T in it? A teapot."
+[53.5] [Riddles #19]: "What has an eye but cannot see? A needle."
+[53.9] [Riddles #20]: "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I? An echo."
+[53.9] [Riddles #21]: "There is a house. One enters it blind and comes out seeing. What is it? A school."
+[54.9] [Riddles #22]: "I am an odd number. Take away a letter and I become even. What number am I? Seven."
+[58.7] [Riddles #23]: "If you drop me I am sure to crack, but give me a smile and I will always smile back. What am I? A mirror."
+[59.0] [Riddles #24]: "I belong to you, but others use me more than you do. What am I? Your name."
+[59.8] [Riddles #25]: "What runs but never walks, has a mouth but never talks? A river."
+[59.9] [Riddles #26]: "The more you take away, the larger I become. What am I? A hole."
+[61.8] [Riddles #27]: "What comes once in a minute, twice in a moment, but never in a thousand years? The letter M."
+[62.4] [Riddles #28]: "What has a neck but no head? A bottle."
+[63.4] [Riddles #29]: "What has a head and a tail but no body? A coin."
+[64.9] [Riddles #30]: "Poor people have it. Rich people need it. If you eat it, you die. What is it? Nothing."
+[65.5] [Riddles #31]: "What can you catch, but never throw? A cold."
+[65.5] [Riddles #32]: "What has to be broken before you can use it? An egg."
+[66.3] [Riddles #33]: "What can be swallowed, but can also swallow you? Pride."
+[68.2] [Riddles #34]: "What loses its head in the morning and gets it back at night? A pillow."
+[68.4] [Riddles #35]: "What has a spine, but no bones? An encyclopedia."
+[69.0] [Riddles #36]: "What can you break, even if you never pick it up or touch it? A promise."
+[70.1] [Riddles #37]: "What has thirteen hearts, but no other organs? A deck of cards."
+[70.6] [Riddles #38]: "What has a ring but no finger? A telephone."
+[72.0] [Riddles #39]: "What begins with P, ends with E, and has thousands of letters? The post office."
+[72.1] [Riddles #40]: "What is full of holes but still holds water? A sponge."
+[72.4] [Riddles #41]: "What begins with an E but only has one letter? An envelope."
+[73.5] [Riddles #42]: "What flies without wings and cries without eyes? A cloud."
+[73.8] [Riddles #43]: "I am light as a feather, yet the strongest person cannot hold me for five minutes. What am I? Breath."
+[79.5] [Riddles #44]: "The more you take, the more you leave behind. What am I? Footsteps."
+[79.9] [Riddles #45]: "What has a thumb and four fingers but is not alive? A glove."
+[80.5] [Riddles #46]: "What five-letter word becomes shorter when you add two letters to it? Short."
+[80.7] [Riddles #47]: "What gets sharper the more you use it? Your brain."
+[81.3] [Riddles #48]: "What has many keys but cannot open a single lock? A piano."
+[81.7] [Riddles #49]: "What disappears the moment you say its name? Silence."
+[82.6] [Riddles #50]: "What has many needles, but cannot sew? A pine tree."
+[84.5] [Riddles #51]: "What goes up and down without moving? A staircase."
+[84.5] [Riddles #52]: "What can travel around the world while staying in a corner? A stamp."
+[84.6] [Riddles #53]: "What has one horn and gives milk? A milk truck."
+[84.7] [Riddles #54]: "What building has the most stories? The library."
+[86.6] [Riddles #55]: "What can fill a room but takes up no space? Light."
+[87.3] [Riddles #56]: "What can run around the whole yard without moving? A fence."
+[88.2] [Riddles #57]: "What has four wheels and flies? A garbage truck."
+[92.9] [Riddles #58]: "What goes through cities and over fields, but never moves? A road."
+[95.4] [Riddles #59]: "What goes up but never comes down? Your age."
+[99.0] [Riddles #60]: "What kind of band never plays music? A rubber band."
+[1.0] [Movie Lines #1]: "Listen to me, mister. You're my knight in shining armor. Don't you forget it. You're going to get back on that horse, and I'm going to be right behind you, holding on tight, and away we're gonna go, go, go!" - On Golden Pond
+[7.8] [Movie Lines #2]: "Cinderella story. Outta nowhere. It looks like a miracle. It's in the hole!" - Caddyshack
+[12.4] [Movie Lines #3]: "You don't understand! I coulda had class. I coulda been a contender. I could've been somebody, instead of a bum, which is what I am." - On the Waterfront
+[15.0] [Movie Lines #4]: "My mother thanks you. My father thanks you. My sister thanks you. And I thank you." - Yankee Doodle Dandy
+[16.2] [Movie Lines #5]: "La-dee-da, la-dee-da." - Annie Hall
+[19.7] [Movie Lines #6]: "Badges? We ain't got no badges! We don't need no badges! I don't have to show you any stinking badges!" - The Treasure of the Sierra Madre
+[27.5] [Movie Lines #7]: "Soylent Green is people!" - Soylent Green
+[35.5] [Movie Lines #8]: "It's alive! It's alive!" - Frankenstein
+[36.5] [Movie Lines #9]: "Stella! Hey, Stella!" - A Streetcar Named Desire
+[36.8] [Movie Lines #10]: "Shane. Shane. Come back!" - Shane
+[37.5] [Movie Lines #11]: "Today, I consider myself the luckiest man on the face of the Earth." - The Pride of the Yankees
+[37.9] [Movie Lines #12]: "I feel the need - the need for speed!" - Top Gun
+[38.5] [Movie Lines #13]: "Attica! Attica!" - Dog Day Afternoon
+[39.4] [Movie Lines #14]: "Greed, for lack of a better word, is good." - Wall Street
+[40.9] [Movie Lines #15]: "Of all the gin joints in all the towns in all the world, she walks into mine." - Casablanca
+[41.5] [Movie Lines #16]: "One morning I shot an elephant in my pajamas. How he got in my pajamas, I don't know." - Animal Crackers
+[41.9] [Movie Lines #17]: "I see dead people." - The Sixth Sense
+[42.2] [Movie Lines #18]: "Bond. James Bond." - Dr. No
+[42.5] [Movie Lines #19]: "I'll have what she's having." - When Harry Met Sally...
+[42.6] [Movie Lines #20]: "A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti." - The Silence of the Lambs
+[42.9] [Movie Lines #21]: "Yo, Adrian!" - Rocky
+[43.3] [Movie Lines #22]: "I'm as mad as hell, and I'm not going to take this anymore!" - Network
+[44.9] [Movie Lines #23]: "Wait a minute, wait a minute. You ain't heard nothin' yet!" - The Jazz Singer
+[45.0] [Movie Lines #24]: "There is no spoon." - The Matrix
+[45.0] [Movie Lines #25]: "Here's Johnny!" - The Shining
+[45.5] [Movie Lines #26]: "Is it safe?" - Marathon Man
+[47.5] [Movie Lines #27]: "Surely you can't be serious. I am serious, and don't call me Shirley." - Airplane!
+[48.0] [Movie Lines #28]: "The stuff that dreams are made of." - The Maltese Falcon
+[48.4] [Movie Lines #29]: "The first rule of Fight Club is: you do not talk about Fight Club." - Fight Club
+[48.7] [Movie Lines #30]: "Life moves pretty fast. If you don't stop and look around once in a while, you could miss it." - Ferris Bueller's Day Off
+[53.4] [Movie Lines #31]: "Toga! Toga!" - National Lampoon's Animal House
+[54.1] [Movie Lines #32]: "You had me at 'hello." - Jerry Maguire
+[55.3] [Movie Lines #33]: "To infinity and beyond!" - Toy Story
+[55.5] [Movie Lines #34]: "Play it, Sam. Play 'As Time Goes By." - Casablanca
+[55.6] [Movie Lines #35]: "I'll be back." - The Terminator
+[55.6] [Movie Lines #36]: "Love means never having to say you're sorry." - Love Story
+[55.7] [Movie Lines #37]: "They're here!" - Poltergeist
+[56.1] [Movie Lines #38]: "You know how to whistle, don't you, Steve? You just put your lips together and blow." - To Have and Have Not
+[57.6] [Movie Lines #39]: "I'll get you, my pretty, and your little dog too!" - The Wizard of Oz
+[57.7] [Movie Lines #40]: "Hello, gorgeous." - Funny Girl
+[57.8] [Movie Lines #41]: "Made it, Ma! Top of the world!" - White Heat
+[58.0] [Movie Lines #42]: "Open the pod bay doors, HAL." - 2001: A Space Odyssey
+[58.4] [Movie Lines #43]: "I want to be alone." - Grand Hotel
+[59.2] [Movie Lines #44]: "E.T. phone home." - E.T. the Extra-Terrestrial
+[59.4] [Movie Lines #45]: "I'm gonna make him an offer he can't refuse." - The Godfather
+[60.1] [Movie Lines #46]: "Sawyer, you're going out a youngster, but you've got to come back a star!" - 42nd Street
+[60.5] [Movie Lines #47]: "Snap out of it!" - Moonstruck
+[60.8] [Movie Lines #48]: "Mother of mercy, is this the end of Rico?" - Little Caesar
+[61.3] [Movie Lines #49]: "Forget it, Jake, it's Chinatown." - Chinatown
+[64.9] [Movie Lines #50]: "You're gonna need a bigger boat." - Jaws
+[65.5] [Movie Lines #51]: "Great Scott!" - Back to the Future
+[66.8] [Movie Lines #52]: "You either die a hero or you live long enough to see yourself become the villain." - The Dark Knight
+[67.3] [Movie Lines #53]: "They call me Mister Tibbs!" - In the Heat of the Night
+[68.4] [Movie Lines #54]: "Say 'hello' to my little friend!" - Scarface
+[69.6] [Movie Lines #55]: "After all, tomorrow is another day!" - Gone with the Wind
+[70.4] [Movie Lines #56]: "As God is my witness, I'll never be hungry again." - Gone with the Wind
+[70.6] [Movie Lines #57]: "Oh, Jerry, don't let's ask for the moon. We have the stars." - Now, Voyager
+[71.0] [Movie Lines #58]: "We'll always have Paris." - Casablanca
+[71.2] [Movie Lines #59]: "Mrs. Robinson, you're trying to seduce me. Aren't you?" - The Graduate
+[71.6] [Movie Lines #60]: "We rob banks." - Bonnie and Clyde
+[71.9] [Movie Lines #61]: "No wire hangers, ever!" - Mommie Dearest
+[72.5] [Movie Lines #62]: "Who's on first?" - The Naughty Nineties
+[73.1] [Movie Lines #63]: "Tell 'em to go out there with all they got and win just one for the Gipper." - Knute Rockne, All American
+[74.4] [Movie Lines #64]: "Why don't you come up sometime and see me?" - She Done Him Wrong
+[74.4] [Movie Lines #65]: "I'm walkin' here! I'm walkin' here!" - Midnight Cowboy
+[75.0] [Movie Lines #66]: "A martini. Shaken, not stirred." - Goldfinger
+[75.3] [Movie Lines #67]: "Oh, no, it wasn't the airplanes. It was Beauty killed the Beast." - King Kong
+[77.2] [Movie Lines #68]: "I love the smell of napalm in the morning." - Apocalypse Now
+[77.6] [Movie Lines #69]: "Houston, we have a problem." - Apollo 13
+[77.9] [Movie Lines #70]: "Toto, I've a feeling we're not in Kansas anymore." - The Wizard of Oz
+[77.9] [Movie Lines #71]: "Winter is coming." - Game of Thrones
+[78.0] [Movie Lines #72]: "Louis, I think this is the beginning of a beautiful friendship." - Casablanca
+[78.0] [Movie Lines #73]: "Round up the usual suspects." - Casablanca
+[78.9] [Movie Lines #74]: "Plastics." - The Graduate
+[79.9] [Movie Lines #75]: "You talkin' to me?" - Taxi Driver
+[80.5] [Movie Lines #76]: "Frankly, my dear, I don't give a damn." - Gone with the Wind
+[81.3] [Movie Lines #77]: "Show me the money!" - Jerry Maguire
+[81.8] [Movie Lines #78]: "There's no crying in baseball!" - A League of Their Own
+[82.3] [Movie Lines #79]: "Nobody puts Baby in a corner." - Dirty Dancing
+[82.7] [Movie Lines #80]: "You can't handle the truth!" - A Few Good Men
+[82.8] [Movie Lines #81]: "I'm the king of the world!" - Titanic
+[83.9] [Movie Lines #82]: "Fasten your seatbelts. It's going to be a bumpy night." - All About Eve
+[84.7] [Movie Lines #83]: "Why so serious?" - The Dark Knight
+[85.5] [Movie Lines #84]: "Just keep swimming." - Finding Nemo
+[85.8] [Movie Lines #85]: "If you build it, he will come." - Field of Dreams
+[86.6] [Movie Lines #86]: "May the Force be with you." - Star Wars
+[87.7] [Movie Lines #87]: "I have always depended on the kindness of strangers." - A Streetcar Named Desire
+[88.1] [Movie Lines #88]: "Inconceivable!" - The Princess Bride
+[89.4] [Movie Lines #89]: "Go ahead, make my day." - Sudden Impact
+[89.5] [Movie Lines #90]: "Every time a bell rings, an angel gets his wings." - It's a Wonderful Life
+[89.8] [Movie Lines #91]: "Well, here's another nice mess you've gotten me into!" - Sons of the Desert
+[90.0] [Movie Lines #92]: "I am your father." - The Empire Strikes Back
+[91.9] [Movie Lines #93]: "My precious." - The Lord of the Rings: The Two Towers
+[92.2] [Movie Lines #94]: "Rosebud." - Citizen Kane
+[93.3] [Movie Lines #95]: "A boy's best friend is his mother." - Psycho
+[94.2] [Movie Lines #96]: "As you wish." - The Princess Bride
+[94.3] [Movie Lines #97]: "You've got to ask yourself one question: 'Do I feel lucky?' Well, do ya, punk?" - Dirty Harry
+[95.2] [Movie Lines #98]: "I am big! It's the pictures that got small." - Sunset Boulevard
+[98.4] [Movie Lines #99]: "Gentlemen, you can't fight in here! This is the War Room!" - Dr. Strangelove
+[99.0] [Movie Lines #100]: "Elementary, my dear Watson." - The Adventures of Sherlock Holmes
+[1.0] [Trivia #1]: "There is an island in a lake on an island in a lake on an island in Canada."
+[4.1] [Trivia #2]: "Antarctica is technically the largest and driest desert on planet Earth."
+[7.3] [Trivia #3]: "Maine is the closest United States state to the African continent."
+[10.4] [Trivia #4]: "More historical artifacts rest at the bottom of the ocean than in all the world's museums combined."
+[13.6] [Trivia #5]: "Australia is wider in diameter than the Moon."
+[16.7] [Trivia #6]: "Nearly ninety percent of the entire human population lives in the Northern Hemisphere."
+[19.9] [Trivia #7]: "Scotland chose the mythical unicorn as its official national animal in the twelfth century."
+[23.0] [Trivia #8]: "Sunset on Mars appears blue to the human eye due to fine dust in its thin atmosphere."
+[26.1] [Trivia #9]: "The Sun contains over ninety-nine percent of all the mass in our solar system."
+[29.3] [Trivia #10]: "There are more trees on Earth than stars in the Milky Way galaxy."
+[32.4] [Trivia #11]: "Mount Chimborazo in Ecuador is the closest point on Earth to the Moon due to the equatorial bulge."
+[35.6] [Trivia #12]: "An octopus has three hearts, nine brains, and blue blood."
+[38.7] [Trivia #13]: "The Pacific Ocean is larger in surface area than all of the Earth's land masses combined."
+[41.9] [Trivia #14]: "A day on Venus is longer than its year; it takes 243 Earth days to rotate once."
+[45.0] [Trivia #15]: "Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid."
+[45.5] [Trivia #16]: "The shortest war in recorded human history lasted only thirty-eight minutes."
+[46.9] [Trivia #17]: "The Mid-Atlantic Ridge is the longest mountain chain on Earth, spanning forty thousand miles underwater."
+[48.3] [Trivia #18]: "The footprint left by Apollo astronauts on the Moon could last for a million years."
+[49.7] [Trivia #19]: "Elephants are the only mammals that cannot jump."
+[51.0] [Trivia #20]: "Babies are born with three hundred bones, but adults have only two hundred and six."
+[52.4] [Trivia #21]: "A bolt of lightning is roughly five times hotter than the surface of the Sun."
+[53.8] [Trivia #22]: "Your skin is the largest and heaviest organ in your entire body."
+[55.2] [Trivia #23]: "Butterflies taste their food with tiny sensors on their feet."
+[56.6] [Trivia #24]: "A snail can sleep continuously for up to three years without eating."
+[58.0] [Trivia #25]: "Ancient Romans used heated hollow floors called hypocausts to warm their homes in winter."
+[59.4] [Trivia #26]: "The Eiffel Tower grows up to six inches taller during the heat of summer due to thermal expansion."
+[60.7] [Trivia #27]: "The inventor of the stop sign never learned how to drive a motor vehicle."
+[62.1] [Trivia #28]: "Your stomach lining completely replaces itself every three to four days to avoid digesting itself."
+[63.5] [Trivia #29]: "Saturn is less dense than water; if placed in a giant bathtub, it would float."
+[64.9] [Trivia #30]: "The lighter was invented before the modern friction match was created in 1826."
+[65.5] [Trivia #31]: "In 1913, Hitler, Stalin, Trotsky, and Freud all lived within a few miles of each other in Vienna."
+[66.5] [Trivia #32]: "Russia spans eleven different time zones across Europe and Asia."
+[67.6] [Trivia #33]: "Human bones are gram for gram roughly five times stronger than structural steel."
+[68.6] [Trivia #34]: "A group of flamingos is officially known as a flamboyance."
+[69.6] [Trivia #35]: "Bubble wrap was originally invented in 1957 to serve as textured wallpaper."
+[70.6] [Trivia #36]: "The Moon is lemon-shaped, with flattened poles and a slight equatorial bulge."
+[71.7] [Trivia #37]: "Continents drift across tectonic plates at about the same rate human fingernails grow."
+[72.7] [Trivia #38]: "Sound travels four times faster through water than it does through open air."
+[73.7] [Trivia #39]: "Honey never spoils; pots found in ancient Egyptian tombs are over three thousand years old and still edible."
+[74.8] [Trivia #40]: "One million Earths could comfortably fit inside the Sun."
+[75.8] [Trivia #41]: "Space is completely silent because there is no atmosphere to carry sound waves."
+[76.8] [Trivia #42]: "A hummingbird weighs less than a single penny."
+[77.8] [Trivia #43]: "Honeybees can be trained to recognize and remember human faces."
+[78.9] [Trivia #44]: "Neutron stars spin so fast they can rotate hundreds of times every single second."
+[79.9] [Trivia #45]: "Male seahorses carry the eggs and give birth to up to two thousand babies at once."
+[80.5] [Trivia #46]: "Canned food was invented in 1810, but the can opener was not invented until forty-eight years later."
+[81.8] [Trivia #47]: "Wombats are the only known animals in the world that produce cube-shaped droppings."
+[83.1] [Trivia #48]: "Polar bears have black skin underneath their thick white fur to absorb heat from the sun."
+[84.5] [Trivia #49]: "Sloths can hold their breath underwater for forty minutes, four times longer than dolphins."
+[85.8] [Trivia #50]: "Bananas are naturally radioactive because they contain high levels of potassium forty."
+[87.1] [Trivia #51]: "Water can boil and freeze simultaneously at a unique temperature called the triple point."
+[88.4] [Trivia #52]: "Sharks existed on Earth before trees; sharks appeared four hundred million years ago."
+[89.8] [Trivia #53]: "Atoms are ninety-nine percent empty space; all humanity would fit inside a sugar cube."
+[91.1] [Trivia #54]: "Cows have best friends and experience measurable stress when separated from them."
+[92.4] [Trivia #55]: "The Great Wall of China is held together in part by sticky rice mortar."
+[93.7] [Trivia #56]: "Woolly mammoths were still walking the Earth while the Great Pyramid of Giza was being built."
+[95.0] [Trivia #57]: "A single fluffy cumulus cloud can weigh over one million pounds."
+[96.4] [Trivia #58]: "Archaeologists have found five-thousand-year-old chewing gum made from birch bark tar."
+[97.7] [Trivia #59]: "The immortal jellyfish can revert back to its juvenile polyp stage when injured or aging."
+[99.0] [Trivia #60]: "Dolphins call each other by unique signature whistles that act just like individual names."
+[1.0] [Wordplay #1]: "I used to do drugs. I still do, but I used to, too." - Mitch Hedberg
+[4.1] [Wordplay #2]: "Outside of a dog, a book is a man's best friend. Inside of a dog, it's too dark to read." - Groucho Marx
+[7.3] [Wordplay #3]: "I'm on a seafood diet. Every time I see food, I eat it."
+[10.4] [Wordplay #4]: "I used to be a banker, but then I lost interest."
+[13.6] [Wordplay #5]: "I intend to live forever. So far, so good." - Steven Wright
+[16.7] [Wordplay #6]: "A bicycle cannot stand on its own because it is two-tired."
+[19.9] [Wordplay #7]: "Knowledge is knowing a tomato is a fruit; wisdom is not putting it in a fruit salad." - Miles Kington
+[23.0] [Wordplay #8]: "My wife and I were happy for twenty years; then we met." - Rodney Dangerfield
+[26.1] [Wordplay #9]: "The tallest building in town is the library; it has thousands of stories."
+[29.3] [Wordplay #10]: "The future ain't what it used to be." - Yogi Berra
+[32.4] [Wordplay #11]: "I used to be addicted to soap, but I'm clean now."
+[35.6] [Wordplay #12]: "Baseball is ninety percent mental. The other half is physical." - Yogi Berra
+[38.7] [Wordplay #13]: "I was wondering why the baseball was getting bigger. Then it hit me."
+[41.9] [Wordplay #14]: "A day without sunshine is like, you know, night." - Steve Martin
+[45.0] [Wordplay #15]: "Time flies like an arrow, but fruit flies like a banana." - Groucho Marx
+[45.5] [Wordplay #16]: "The rotation of Earth really makes my day."
+[46.9] [Wordplay #17]: "Parallel lines have so much in common. It is a shame they will never meet."
+[48.3] [Wordplay #18]: "Right now I'm having amnesia and deja vu at the same time." - Steven Wright
+[49.7] [Wordplay #19]: "I used to work in a blanket factory, but it folded."
+[51.0] [Wordplay #20]: "I spilled spot remover on my dog, and now he is gone." - Steven Wright
+[52.4] [Wordplay #21]: "My math teacher called me average. How mean."
+[53.8] [Wordplay #22]: "I told my doctor that I broke my arm in two places. He told me to stop going to those places." - Henny Youngman
+[55.2] [Wordplay #23]: "A pessimist's blood type is always B-negative."
+[56.6] [Wordplay #24]: "We never really grow up; we only learn how to act in public." - Bryan White
+[58.0] [Wordplay #25]: "If I agreed with you, we would both be wrong."
+[59.4] [Wordplay #26]: "I want to die peacefully in my sleep like my grandfather, not screaming like the passengers in his car." - Bob Monkhouse
+[60.7] [Wordplay #27]: "If at first you don't succeed, then skydiving definitely isn't for you." - Steven Wright
+[62.1] [Wordplay #28]: "The early bird gets the worm, but the second mouse gets the cheese." - Steven Wright
+[63.5] [Wordplay #29]: "I find television very educating. Every time someone turns it on, I go and read a book." - Groucho Marx
+[64.9] [Wordplay #30]: "I can resist everything except temptation." - Oscar Wilde
+[65.5] [Wordplay #31]: "It's deja vu all over again." - Yogi Berra
+[66.5] [Wordplay #32]: "A clear conscience is usually the sign of a bad memory." - Steven Wright
+[67.6] [Wordplay #33]: "I told my suitcase there will be no vacation this year. Now I'm dealing with emotional baggage."
+[68.6] [Wordplay #34]: "There are two types of people: those who can extrapolate from incomplete data."
+[69.6] [Wordplay #35]: "I wanted to buy a candle holder, but the store didn't have one, so I got a cake." - Mitch Hedberg
+[70.6] [Wordplay #36]: "I used to think I was indecisive, but now I am not quite sure."
+[71.7] [Wordplay #37]: "I asked my dog what's on top of the house. He said roof."
+[72.7] [Wordplay #38]: "Some cause happiness wherever they go; others whenever they go." - Oscar Wilde
+[73.7] [Wordplay #39]: "Behind every great man is a woman rolling her eyes." - Jim Carrey
+[74.8] [Wordplay #40]: "Artificial intelligence is no match for natural stupidity."
+[75.8] [Wordplay #41]: "A conscience is what hurts when all your other parts feel so good."
+[76.8] [Wordplay #42]: "Never trust an atom; they make up everything."
+[77.8] [Wordplay #43]: "I refused to believe my dad was stealing from his road work job, but when I got home all the signs were there."
+[78.9] [Wordplay #44]: "Nobody goes there anymore because it's too crowded." - Yogi Berra
+[79.9] [Wordplay #45]: "I bought a ceiling fan the other day. Complete waste of money; he just stands there applauding."
+[80.5] [Wordplay #46]: "I'm reading a book on anti-gravity. It's impossible to put down!"
+[81.8] [Wordplay #47]: "Always borrow money from a pessimist. He won't expect it back." - Oscar Wilde
+[83.1] [Wordplay #48]: "I don't care to belong to any club that will have me as a member." - Groucho Marx
+[84.5] [Wordplay #49]: "My doctor gave me six months to live, but when I couldn't pay the bill he gave me six months more." - Walter Matthau
+[85.8] [Wordplay #50]: "Those are my principles. If you don't like them, I have others." - Groucho Marx
+[87.1] [Wordplay #51]: "You can observe a lot just by watching." - Yogi Berra
+[88.4] [Wordplay #52]: "Change is inevitable, except from a vending machine."
+[89.8] [Wordplay #53]: "A bank is a place that will lend you money if you can prove that you don't need it." - Bob Hope
+[91.1] [Wordplay #54]: "If you don't know where you are going, you might wind up someplace else." - Yogi Berra
+[92.4] [Wordplay #55]: "If you think nobody cares if you are alive, try missing a couple of payments." - Flip Wilson
+[93.7] [Wordplay #56]: "Everywhere is walking distance if you have the time." - Steven Wright
+[95.0] [Wordplay #57]: "I never forget a face, but in your case I'll be glad to make an exception." - Groucho Marx
+[96.4] [Wordplay #58]: "I am free of all prejudices. I hate everyone equally." - W.C. Fields
+[97.7] [Wordplay #59]: "I haven't slept for ten days, because that would be too long." - Mitch Hedberg
+[99.0] [Wordplay #60]: "I have an inferiority complex, but it's not a very good one."
