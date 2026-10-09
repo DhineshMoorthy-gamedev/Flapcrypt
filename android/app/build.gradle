@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
 
+// Single source of truth: repository-root package.json ("version" + "versionCode").
+// Bump with: npm run bump -- <semver> [versionCode]
+def packageJsonFile = file('../../package.json')
+def packageJson = new groovy.json.JsonSlurper().parseText(packageJsonFile.getText('UTF-8'))
+
 android {
     namespace = "com.olaidigitalstudios.flapcrypt"
     compileSdk = rootProject.ext.compileSdkVersion
@@ -7,8 +12,8 @@ android {
         applicationId "com.olaidigitalstudios.flapcrypt"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "0.0.1"
+        versionCode packageJson.versionCode as Integer
+        versionName packageJson.version.toString()
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -35,6 +40,8 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
     implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation "com.google.android.play:review:2.0.2"
+    implementation "com.android.billingclient:billing:8.0.0"
     implementation project(':capacitor-android')
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"

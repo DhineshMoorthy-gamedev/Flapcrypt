@@ -5,7 +5,9 @@
 
 import { TargetConfig } from "./target-config.js";
 
-const isCapacitor = typeof window !== "undefined" && Boolean(window.Capacitor?.isNativePlatform?.());
+let _hapticsEnabled = true;
+
+const checkCapacitor = () => typeof window !== "undefined" && Boolean(window.Capacitor?.isNativePlatform?.() || window.Capacitor?.Plugins?.Haptics);
 
 let hasUserInteracted = false;
 if (typeof window !== "undefined") {
@@ -25,6 +27,17 @@ let onResumeCallback = null;
 let onBackActionCallback = null;
 
 export const PlatformBridge = {
+  /**
+   * Enables or disables haptic vibration feedback dynamically from settings.
+   */
+  setHapticsEnabled(enabled) {
+    _hapticsEnabled = Boolean(enabled);
+  },
+
+  isHapticsEnabled() {
+    return _hapticsEnabled;
+  },
+
   /**
    * Initializes lifecycle listeners for Web, Desktop, and Capacitor mobile.
    */
@@ -64,7 +77,7 @@ export const PlatformBridge = {
     }
 
     // 3. Native Capacitor Bridge (if running inside native Android/iOS shell)
-    if (isCapacitor && window.Capacitor?.Plugins?.App) {
+    if (typeof window !== "undefined" && window.Capacitor?.Plugins?.App) {
       try {
         const App = window.Capacitor.Plugins.App;
         App.addListener("appStateChange", ({ isActive }) => {
@@ -83,7 +96,7 @@ export const PlatformBridge = {
       }
     }
 
-    if (isCapacitor && window.Capacitor?.Plugins?.StatusBar) {
+    if (typeof window !== "undefined" && window.Capacitor?.Plugins?.StatusBar) {
       try {
         const StatusBar = window.Capacitor.Plugins.StatusBar;
         await StatusBar.hide();
@@ -97,7 +110,7 @@ export const PlatformBridge = {
   handleBackButton() {
     if (typeof onBackActionCallback === "function") {
       const handled = onBackActionCallback();
-      if (!handled && isCapacitor && window.Capacitor?.Plugins?.App) {
+      if (!handled && typeof window !== "undefined" && window.Capacitor?.Plugins?.App) {
         window.Capacitor.Plugins.App.minimizeApp();
       } else if (!handled) {
         try {
@@ -117,24 +130,36 @@ export const PlatformBridge = {
   },
 
   async vibrateLight() {
-    if (!TargetConfig.features.haptics) return;
-    if (isCapacitor && window.Capacitor?.Plugins?.Haptics) {
+    if (!_hapticsEnabled) return;
+
+    if (typeof window !== "undefined" && window.Capacitor?.Plugins?.Haptics) {
       try {
         await window.Capacitor.Plugins.Haptics.impact({ style: "LIGHT" });
+        return;
       } catch (_) {}
-    } else if (this.canVibrate()) {
-      try { navigator.vibrate(12); } catch (_) {}
+    }
+
+    if (this.canVibrate()) {
+      try {
+        navigator.vibrate(15);
+      } catch (_) {}
     }
   },
 
   async vibrateSuccess() {
-    if (!TargetConfig.features.haptics) return;
-    if (isCapacitor && window.Capacitor?.Plugins?.Haptics) {
+    if (!_hapticsEnabled) return;
+
+    if (typeof window !== "undefined" && window.Capacitor?.Plugins?.Haptics) {
       try {
         await window.Capacitor.Plugins.Haptics.notification({ type: "SUCCESS" });
+        return;
       } catch (_) {}
-    } else if (this.canVibrate()) {
-      try { navigator.vibrate([25, 60, 30]); } catch (_) {}
+    }
+
+    if (this.canVibrate()) {
+      try {
+        navigator.vibrate([30, 50, 30]);
+      } catch (_) {}
     }
   },
 
@@ -167,5 +192,40 @@ export const PlatformBridge = {
     }
   },
 
-  isCapacitor: () => isCapacitor
+  // ── Native In-App Review & Store ───────────────────────────────────────────
+  async requestInAppReview() {
+    const playStoreUrl = "https://play.google.com/store/apps/details?id=com.olaidigitalstudios.flapcrypt";
+
+    if (typeof window !== "undefined" && window.Capacitor?.Plugins?.InAppReview) {
+      try {
+        const res = await window.Capacitor.Plugins.InAppReview.requestReview();
+        return res;
+      } catch (err) {
+        console.warn("[PlatformBridge] InAppReview plugin error, falling back to URL:", err);
+        this.openExternalUrl(playStoreUrl);
+        return { success: false, fallback: true };
+      }
+    }
+
+    // Web / Desktop fallback
+    this.openExternalUrl(playStoreUrl);
+    return { success: true, fallback: true };
+  },
+
+  // ── Support Email ──────────────────────────────────────────────────────────
+  openSupportMail({ email = "olaidigitalstudios@gmail.com", subject = `Flapcrypt Support & Feedback (v${TargetConfig.version})`, body = "" } = {}) {
+    const defaultBody = body || `Hi Olai Digital Studios team,\n\n[Describe your feedback, bug report, or idea here]\n\n-------------------------\nApp: Flapcrypt (v${TargetConfig.version})\nPlatform: ${typeof navigator !== "undefined" ? navigator.userAgent : "Unknown"}\n`;
+    const mailtoUrl = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(defaultBody)}`;
+
+    if (typeof window !== "undefined") {
+      try {
+        window.location.href = mailtoUrl;
+      } catch (_) {
+        this.openExternalUrl(mailtoUrl);
+      }
+    }
+  },
+
+  isCapacitor: () => typeof window !== "undefined" && Boolean(window.Capacitor?.isNativePlatform?.())
 };
+

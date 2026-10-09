@@ -21,7 +21,7 @@ const activeMode = Object.values(TARGET_MODES).includes(rawMode) ? rawMode : TAR
 export const TargetConfig = {
   mode: activeMode,
   title: import.meta.env?.VITE_APP_TITLE || "FlapCrypt",
-  version: "1.0.0",
+  version: typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "0.0.0-dev",
 
   isWeb: activeMode === TARGET_MODES.WEB,
   isItch: activeMode === TARGET_MODES.ITCH,
@@ -31,8 +31,8 @@ export const TargetConfig = {
   features: {
     // Desktop and web browser fullscreen capability
     fullscreenControl: activeMode === TARGET_MODES.ITCH || activeMode === TARGET_MODES.WEB || activeMode === TARGET_MODES.DESKTOP,
-    // Native haptic feedback for drum flips & solve celebrations
-    haptics: activeMode === TARGET_MODES.PLAYSTORE,
+    // Native haptic feedback for drum flips & solve celebrations (enabled for supported mobile & web runtimes)
+    haptics: true,
     // Keyboard instructions banner display
     keyboardHints: true,
     // Mobile viewport & safe-area handling

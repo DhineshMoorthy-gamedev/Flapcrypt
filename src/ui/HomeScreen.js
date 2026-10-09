@@ -17,22 +17,17 @@ export class HomeScreen {
     this.container = document.getElementById('homeScreen');
     this.heroBoard = document.getElementById('heroFlapBoard');
     this.levelTextEl = document.getElementById('campaignLevelText');
-    this.tierBadgeEl = document.getElementById('campaignTierBadge');
+    this.campaignProgressBadge = document.getElementById('campaignProgressBadge');
     this.progressFillEl = document.getElementById('campaignProgressFill');
-    this.progressPctEl = document.getElementById('campaignProgressPct');
-    this.continueSubtextEl = document.getElementById('continueBtnSubtext');
-    this.campaignSelectSubtext = document.getElementById('campaignLevelSelectSubtext');
 
     // Daily Challenge elements
     this.dailyCard = document.getElementById('dailyCard');
-    this.dailyDateBadge = document.getElementById('dailyDateBadge');
     this.dailyStreakText = document.getElementById('dailyStreakText');
-    this.dailyStatusHeading = document.getElementById('dailyStatusHeading');
-    this.dailyTierBadge = document.getElementById('dailyTierBadge');
+    this.dailyDateHeading = document.getElementById('dailyDateHeading');
+    this.dailyStatusSubtext = document.getElementById('dailyStatusSubtext');
     this.btnPlayDaily = document.getElementById('btnPlayDaily');
     this.dailyPlayIcon = document.getElementById('dailyPlayIcon');
     this.dailyBtnMainLabel = document.getElementById('dailyBtnMainLabel');
-    this.dailyBtnSubLabel = document.getElementById('dailyBtnSubLabel');
 
     this.initHeroFlaps();
     this.initButtons();
@@ -219,6 +214,10 @@ export class HomeScreen {
         if (this.audio) this.audio.playClick();
         if (this.onOpenLevelSelect) {
           this.onOpenLevelSelect();
+        } else {
+          this.modals.open('levelSelect', {
+            onSelectLevel: (idx) => this.onStartGame(idx, { mode: 'campaign' })
+          });
         }
       });
     }
@@ -229,32 +228,40 @@ export class HomeScreen {
         if (this.audio) this.audio.playClick();
         if (this.onOpenLevelSelect) {
           this.onOpenLevelSelect();
-        }
-      });
-    }
-
-    if (this.btnPlayDaily) {
-      this.btnPlayDaily.addEventListener('click', () => {
-        const dailyInfo = DailyChallengeService.getDailyLevelInfo();
-        if (this.onStartGame) {
-          this.onStartGame(dailyInfo.levelIndex, {
-            mode: 'daily',
-            dateStr: dailyInfo.dateStr,
-            displayDate: dailyInfo.shortDate,
-            level: dailyInfo.level
+        } else {
+          this.modals.open('levelSelect', {
+            onSelectLevel: (idx) => this.onStartGame(idx, { mode: 'campaign' })
           });
         }
       });
     }
 
-    const btnAchievements = document.getElementById('btnAchievements');
-    if (btnAchievements) {
-      btnAchievements.addEventListener('click', () => this.modals.open('achievements'));
+    const openDailyCalendar = (e) => {
+      if (e) e.stopPropagation();
+      if (this.audio) this.audio.playClick();
+      this.modals.open('dailyCalendar', {
+        onStartDailyGame: (levelIndex, dailyOptions) => {
+          if (this.onStartGame) {
+            this.onStartGame(levelIndex, dailyOptions);
+          }
+        }
+      });
+    };
+
+    if (this.btnPlayDaily) {
+      this.btnPlayDaily.addEventListener('click', openDailyCalendar);
     }
 
-    const btnHowToPlay = document.getElementById('btnHowToPlay');
-    if (btnHowToPlay) {
-      btnHowToPlay.addEventListener('click', () => this.modals.open('howToPlay'));
+    if (this.dailyCard) {
+      this.dailyCard.addEventListener('click', openDailyCalendar);
+    }
+
+    const btnAchievements = document.getElementById('btnAchievements');
+    if (btnAchievements) {
+      btnAchievements.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
+        this.modals.open('achievements');
+      });
     }
 
     const btnSettings = document.getElementById('btnSettings');
@@ -285,18 +292,13 @@ export class HomeScreen {
     const dailyState = this.storage ? this.storage.getDailyState() : { currentStreak: 0 };
     const streak = dailyState.currentStreak || 0;
 
-    if (this.dailyDateBadge) {
-      this.dailyDateBadge.textContent = dailyInfo.shortDate;
-    }
-
     if (this.dailyStreakText) {
       this.dailyStreakText.textContent = `${streak} ${streak === 1 ? 'DAY' : 'DAYS'}`;
     }
 
-    if (this.dailyTierBadge && dailyInfo.level) {
-      const category = (dailyInfo.level.category || 'Quotes').toUpperCase();
-      const tierShort = (dailyInfo.level.tier || 'BEGINNER').replace(/Tier \d+:\s*/i, '').toUpperCase();
-      this.dailyTierBadge.textContent = `${category} • ${tierShort}`;
+    if (this.dailyDateHeading) {
+      const now = new Date();
+      this.dailyDateHeading.textContent = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase();
     }
 
     if (this.dailyCard) {
@@ -304,30 +306,26 @@ export class HomeScreen {
     }
 
     if (isCompleted) {
-      if (this.dailyStatusHeading) {
-        this.dailyStatusHeading.textContent = 'TODAY DECODED';
+      if (this.dailyStatusSubtext) {
+        this.dailyStatusSubtext.textContent = 'DECODED ✔';
+        this.dailyStatusSubtext.classList.add('completed');
       }
       if (this.dailyPlayIcon) {
         this.dailyPlayIcon.innerHTML = Icons.check(16);
       }
       if (this.dailyBtnMainLabel) {
-        this.dailyBtnMainLabel.textContent = 'COMPLETED';
-      }
-      if (this.dailyBtnSubLabel) {
-        this.dailyBtnSubLabel.textContent = `REPLAY PUZZLE`;
+        this.dailyBtnMainLabel.textContent = 'REPLAY DAILY';
       }
     } else {
-      if (this.dailyStatusHeading) {
-        this.dailyStatusHeading.textContent = "TODAY'S PUZZLE";
+      if (this.dailyStatusSubtext) {
+        this.dailyStatusSubtext.textContent = "TODAY'S PUZZLE";
+        this.dailyStatusSubtext.classList.remove('completed');
       }
       if (this.dailyPlayIcon) {
         this.dailyPlayIcon.innerHTML = Icons.calendar(16);
       }
       if (this.dailyBtnMainLabel) {
         this.dailyBtnMainLabel.textContent = 'PLAY DAILY';
-      }
-      if (this.dailyBtnSubLabel) {
-        this.dailyBtnSubLabel.textContent = `DAILY CIPHER`;
       }
     }
   }
@@ -342,33 +340,18 @@ export class HomeScreen {
 
     const category = currentLevel.category || 'Quotes';
     const catUpper = category.toUpperCase();
-    const catTotal = LEVEL_DATA.filter(l => (l.category || 'Quotes') === category).length;
-    const catLabel = `${catUpper} ${currentLevel.num}`;
     const pct = Math.min(100, Math.round((solvedCount / totalLevels) * 100));
 
     if (this.levelTextEl) {
-      this.levelTextEl.textContent = `${catLabel} OF ${catTotal}`;
+      this.levelTextEl.textContent = `${catUpper} ${currentLevel.num}`;
     }
 
-    if (this.tierBadgeEl && currentLevel) {
-      const tierClean = (currentLevel.tier || 'BEGINNER').replace(/Tier \d+:\s*/i, '').toUpperCase();
-      this.tierBadgeEl.textContent = `${catUpper} • ${tierClean}`;
+    if (this.campaignProgressBadge) {
+      this.campaignProgressBadge.textContent = `${solvedCount} / ${totalLevels}`;
     }
 
     if (this.progressFillEl) {
-      this.progressFillEl.style.width = `${Math.max(2, pct)}%`;
-    }
-
-    if (this.progressPctEl) {
-      this.progressPctEl.textContent = `${solvedCount} / ${totalLevels} SOLVED • ${pct}%`;
-    }
-
-    if (this.campaignSelectSubtext) {
-      this.campaignSelectSubtext.textContent = `ALL ${totalLevels} PUZZLES`;
-    }
-
-    if (this.continueSubtextEl) {
-      this.continueSubtextEl.textContent = `RESUME ${catLabel}`;
+      this.progressFillEl.style.width = `${Math.max(3, pct)}%`;
     }
   }
 }

@@ -9,6 +9,8 @@ import com.getcapacitor.BridgeActivity;
 public class MainActivity extends BridgeActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        registerPlugin(InAppReviewPlugin.class);
+        registerPlugin(BillingPlugin.class);
         super.onCreate(savedInstanceState);
         hideSystemBars();
     }

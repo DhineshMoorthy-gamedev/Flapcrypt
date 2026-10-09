@@ -7,6 +7,8 @@ import { LEVEL_DATA } from '../data/levels.js';
  * automatically expands the daily challenge puzzle pool without code changes.
  */
 export class DailyChallengeService {
+  static ARCHIVE_START_DATE = '2026-10-01';
+
   /**
    * Returns calendar date components in player's local timezone.
    */
@@ -68,6 +70,55 @@ export class DailyChallengeService {
       epochDays,
       levelIndex,
       level
+    };
+  }
+
+  /**
+   * Generates calendar grid cells for a given month (default: October 2026).
+   */
+  static getMonthCalendarData(year = 2026, month = 9) {
+    const todayStr = this.getDateStr();
+    const firstDay = new Date(year, month, 1);
+    const startingDayOfWeek = firstDay.getDay(); // 0 = Sun, 1 = Mon ... 4 = Thu
+    const totalDaysInMonth = new Date(year, month + 1, 0).getDate(); // 31 for October
+
+    const cells = [];
+
+    // Empty lead-in padding cells
+    for (let p = 0; p < startingDayOfWeek; p++) {
+      cells.push({ isPadding: true, dayNum: null });
+    }
+
+    for (let d = 1; d <= totalDaysInMonth; d++) {
+      const dayDate = new Date(year, month, d);
+      const dateStr = this.getDateStr(dayDate);
+      const isBeforeArchive = dateStr < this.ARCHIVE_START_DATE;
+      const isToday = dateStr === todayStr;
+      const isFuture = dateStr > todayStr;
+      const isPlayable = !isBeforeArchive && !isFuture;
+      const levelInfo = this.getDailyLevelInfo(dayDate);
+
+      cells.push({
+        isPadding: false,
+        dayNum: d,
+        dateStr,
+        dayDate,
+        isBeforeArchive,
+        isToday,
+        isFuture,
+        isPlayable,
+        levelInfo
+      });
+    }
+
+    return {
+      year,
+      month,
+      monthName: 'OCTOBER',
+      yearLabel: '2026',
+      startingDayOfWeek,
+      totalDaysInMonth,
+      cells
     };
   }
 }

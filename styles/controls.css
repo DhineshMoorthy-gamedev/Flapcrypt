@@ -93,12 +93,12 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-button:hover:not(:disabled) {
+button:not(.tier-tab-btn):hover:not(:disabled) {
   background: var(--btn-hover);
   color: #ffffff;
 }
 
-button:active:not(:disabled) {
+button:not(.tier-tab-btn):active:not(:disabled) {
   transform: scale(0.96);
   background: var(--btn-active);
 }

@@ -421,7 +421,204 @@ export const Icons = {
       <line x1="5" y1="12" x2="19" y2="12"/>
       <polyline points="12 5 19 12 12 19"/>
     </svg>
+  `,
+
+  /**
+   * Gift Box (Free Daily Hint)
+   */
+  gift: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="20 12 20 22 4 22 4 12"/>
+      <rect x="2" y="7" width="20" height="5"/>
+      <line x1="12" y1="22" x2="12" y2="7"/>
+      <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+      <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+    </svg>
+  `,
+
+  /**
+   * Lightning Bolt (Boost / Hints Pack)
+   */
+  bolt: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    </svg>
+  `,
+
+  /**
+   * Sparkles (Premium / Remove Ads)
+   */
+  sparkles: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3z"/>
+    </svg>
+  `,
+
+  /**
+   * Flap Rotation (Stats)
+   */
+  rotate: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+    </svg>
+  `,
+
+  /**
+   * Word / Document (Words Solved)
+   */
+  word: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      <line x1="9" y1="7" x2="15" y2="7"/>
+      <line x1="9" y1="11" x2="13" y2="11"/>
+    </svg>
+  `,
+
+  /**
+   * Letter / Alphabet (Letters Solved)
+   */
+  letter: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 20l7-16h2l7 16"/>
+      <line x1="6.5" y1="14" x2="17.5" y2="14"/>
+    </svg>
+  `,
+
+  /**
+   * Timer Fast / Lightning Stopwatch (Best Time)
+   */
+  timerFast: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="13" r="8"/>
+      <path d="M12 9v4l2.5 1.5"/>
+      <path d="M5 3L2 6"/>
+      <path d="M22 6l-3-3"/>
+      <line x1="12" y1="2" x2="12" y2="4"/>
+    </svg>
+  `,
+
+  /**
+   * Flawless Shield (Flawless Solves)
+   */
+  flawlessShield: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <polyline points="9 12 11 14 15 10"/>
+    </svg>
+  `,
+
+  /**
+   * Ban / No-Ads Icon
+   */
+  ban: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+    </svg>
+  `,
+
+  /**
+   * Scroll (Campaign Decoder)
+   */
+  scroll: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C20.7 9.5 20.3 8 19 8h-1V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v13c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3v-1h-2"/>
+      <line x1="8" y1="8" x2="14" y2="8"/>
+      <line x1="8" y1="12" x2="14" y2="12"/>
+    </svg>
+  `,
+
+  /**
+   * Key (Enigma Specialist)
+   */
+  key: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="7.5" cy="15.5" r="4.5"/>
+      <path d="m21 3-9.5 9.5"/>
+      <path d="m15.5 7.5 3 3"/>
+    </svg>
+  `,
+
+  /**
+   * Brain (Silent Cipher)
+   */
+  brain: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-5.04z"/>
+      <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-5.04z"/>
+    </svg>
+  `,
+
+  /**
+   * Compass (Daily Archive Explorer)
+   */
+  compass: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="10"/>
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="currentColor"/>
+    </svg>
+  `,
+
+  /**
+   * Crown (Fortnight Devotion)
+   */
+  crown: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/>
+      <circle cx="12" cy="18" r="1"/>
+    </svg>
+  `,
+
+  /**
+   * Owl (Wisdom of Ages)
+   */
+  owl: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 2C8 2 5 5 5 9c0 6 3 11 7 13 4-2 7-7 7-13 0-4-3-7-7-7z"/>
+      <circle cx="9" cy="9" r="2"/>
+      <circle cx="15" cy="9" r="2"/>
+      <path d="M12 11v3"/>
+    </svg>
+  `,
+
+  /**
+   * Film Clapper (Silver Screen)
+   */
+  film: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+      <line x1="7" y1="2" x2="7" y2="22"/>
+      <line x1="17" y1="2" x2="17" y2="22"/>
+      <line x1="2" y1="12" x2="22" y2="12"/>
+      <line x1="2" y1="7" x2="7" y2="7"/>
+      <line x1="2" y1="17" x2="7" y2="17"/>
+      <line x1="17" y1="17" x2="22" y2="17"/>
+      <line x1="17" y1="7" x2="22" y2="7"/>
+    </svg>
+  `,
+
+  /**
+   * Theater Masks (Pun Intended / Wordplay)
+   */
+  masks: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M2 10a8 8 0 0 1 16 0c0 4.4-3.6 8-8 8s-8-3.6-8-8z"/>
+      <circle cx="7" cy="8" r="1" fill="currentColor"/>
+      <circle cx="13" cy="8" r="1" fill="currentColor"/>
+      <path d="M7 13c1 1.5 3 1.5 4 0"/>
+    </svg>
+  `,
+
+  /**
+   * Hourglass (Accumulated Time)
+   */
+  hourglass: (size = 18) => `
+    <svg class="ui-icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M5 22h14M5 2h14M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/>
+    </svg>
   `
 };
+
 
 

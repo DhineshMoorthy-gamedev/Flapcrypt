@@ -14,12 +14,12 @@ import { BoardRenderer } from './rendering/BoardRenderer.js';
 import { UIController } from './ui/UIController.js';
 import { HomeScreen } from './ui/HomeScreen.js';
 import { SettingsScreen } from './ui/SettingsScreen.js';
-import { LevelSelectScreen } from './ui/LevelSelectScreen.js';
 import { ModalManager } from './ui/ModalManager.js';
 import { InputManager } from './input/InputManager.js';
 import { Game } from './core/Game.js';
 import { TargetConfig } from './platform/target-config.js';
 import { PlatformBridge } from './platform/lifecycle.js';
+import { IAPService } from './core/IAPService.js';
 import { Confetti } from './ui/Confetti.js';
 
 function initApp() {
@@ -73,8 +73,10 @@ function initApp() {
     };
   }
 
-  // Sync initial sound preference
+  // Sync initial sound and haptic preferences
   audioService.setSoundEnabled(storageService.isSoundEnabled());
+  PlatformBridge.setHapticsEnabled(storageService.isHapticsEnabled());
+  IAPService.init(storageService, audioService);
 
   const renderer = new BoardRenderer(elements.board, elements.quoteArea, elements.authorRow);
   const uiController = new UIController(elements);
@@ -115,15 +117,16 @@ function initApp() {
         homeScreenInstance.clearAnimation();
       }
     } else if (screenName === 'levelSelect') {
-      if (elements.levelSelectScreen) {
-        elements.levelSelectScreen.classList.add('active');
-      }
-      if (levelSelectScreenInstance) {
-        levelSelectScreenInstance.render();
-      }
-      if (homeScreenInstance) {
-        homeScreenInstance.clearAnimation();
-      }
+      activeScreen = previousScreen;
+      modalManager.open('levelSelect', {
+        onSelectLevel: (idx) => {
+          showScreen('game');
+          requestAnimationFrame(() => {
+            game.start(idx, { mode: 'campaign' });
+          });
+        }
+      });
+      return;
     } else {
       elements.homeScreen.classList.add('active');
       if (homeScreenInstance) {
@@ -139,6 +142,8 @@ function initApp() {
     }
   }
 
+  let game = null;
+
   const modalManager = new ModalManager({
     storageService,
     audioService,
@@ -146,15 +151,23 @@ function initApp() {
       if (homeScreenInstance) {
         homeScreenInstance.updateProgress();
       }
+    },
+    onHintInventoryChanged: () => {
+      if (game) {
+        game.refreshHintButton();
+      }
     }
   });
 
-  const game = new Game({
+  game = new Game({
     gameState,
     audioService,
     renderer,
     uiController,
     storageService,
+    onRequestShop: () => {
+      modalManager.open('shop');
+    },
     onReturnToHome: () => {
       modalManager.open('returnHome', {
         onConfirm: () => {
@@ -180,7 +193,20 @@ function initApp() {
           });
         },
         onLevelSelect: () => {
-          showScreen('levelSelect');
+          modalManager.open('levelSelect', {
+            onSelectLevel: (nextIdx) => {
+              showScreen('game');
+              requestAnimationFrame(() => {
+                game.start(nextIdx, { mode: 'campaign' });
+              });
+            }
+          });
+        },
+        onStartDailyGame: (levelIndex, dailyOptions) => {
+          showScreen('game');
+          requestAnimationFrame(() => {
+            game.start(levelIndex, dailyOptions);
+          });
         },
         onHome: () => {
           showScreen('home');
@@ -214,21 +240,6 @@ function initApp() {
     }
   });
 
-  levelSelectScreenInstance = new LevelSelectScreen({
-    container: elements.levelSelectScreen,
-    storageService,
-    audioService,
-    onSelectLevel: (levelIndex) => {
-      showScreen('game');
-      requestAnimationFrame(() => {
-        game.start(levelIndex, { mode: 'campaign' });
-      });
-    },
-    onBack: () => {
-      showScreen('home');
-    }
-  });
-
   homeScreenInstance = new HomeScreen({
     storageService,
     audioService,
@@ -237,7 +248,14 @@ function initApp() {
       showScreen('settings');
     },
     onOpenLevelSelect: () => {
-      showScreen('levelSelect');
+      modalManager.open('levelSelect', {
+        onSelectLevel: (levelIndex) => {
+          showScreen('game');
+          requestAnimationFrame(() => {
+            game.start(levelIndex, { mode: 'campaign' });
+          });
+        }
+      });
     },
     onStartGame: (levelIndex, options = {}) => {
       showScreen('game');

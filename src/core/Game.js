@@ -6,7 +6,7 @@ import { PlatformBridge } from '../platform/lifecycle.js';
 import { DailyChallengeService } from './DailyChallengeService.js';
 
 export class Game {
-  constructor({ gameState, audioService, renderer, uiController, storageService, onReturnToHome, onRequestResetLevel, onLevelCompleted }) {
+  constructor({ gameState, audioService, renderer, uiController, storageService, onReturnToHome, onRequestResetLevel, onRequestShop, onLevelCompleted }) {
     this.state = gameState;
     this.audio = audioService;
     this.renderer = renderer;
@@ -14,6 +14,7 @@ export class Game {
     this.storage = storageService;
     this.onReturnToHome = onReturnToHome;
     this.onRequestResetLevel = onRequestResetLevel;
+    this.onRequestShop = onRequestShop;
     this.onLevelCompleted = onLevelCompleted;
     this.gameMode = 'campaign';
     this.gameOptions = {};
@@ -32,7 +33,7 @@ export class Game {
   }
 
   saveCurrentLevelState() {
-    if (!this.storage || this.gameMode !== 'campaign') return;
+    if (!this.storage) return;
     const idx = this.state.levelIndex;
     if (idx === null || idx === undefined || !this.state.groups.length) return;
 
@@ -48,13 +49,22 @@ export class Game {
       }
     }
 
-    this.storage.saveLevelProgress(idx, {
+    const saveData = {
       drums: drumsToSave,
       hintsRemaining: this.state.hintsRemaining,
       isWon: this.state.isWon,
       selectedGroup: this.state.selectedGroup,
       updatedAt: Date.now()
-    });
+    };
+
+    if (this.gameMode === 'daily') {
+      const dateStr = this.gameOptions?.dateStr;
+      if (dateStr) {
+        this.storage.saveDailyProgress(dateStr, saveData);
+      }
+    } else if (this.gameMode === 'campaign') {
+      this.storage.saveLevelProgress(idx, saveData);
+    }
   }
 
   loadLevel(index, { delayIntroMs = 0 } = {}) {
@@ -86,8 +96,10 @@ export class Game {
     );
 
     // Check for saved midway progress for this level
-    const saved = (this.storage && this.gameMode === 'campaign')
-      ? this.storage.getLevelProgress(index)
+    const saved = this.storage
+      ? (this.gameMode === 'daily'
+          ? this.storage.getDailyProgress(this.gameOptions?.dateStr)
+          : this.storage.getLevelProgress(index))
       : null;
 
     if (saved && saved.drums && Object.keys(saved.drums).length > 0) {
@@ -170,7 +182,7 @@ export class Game {
       ? `DAILY • ${this.gameOptions.displayDate || 'TODAY'} (${catLabel})`
       : catLabel;
     this.ui.updateLevelInfo(index, LEVEL_DATA.length, level.diff, level.tier, this.gameMode, customTitle, level.category);
-    this.ui.updateHintButton(this.state.hintsRemaining);
+    this.ui.updateHintButton(this.storage ? this.storage.getHintBalance() : Infinity);
     this.ui.updateSoundButton(this.audio.isSoundEnabled());
 
     this.refreshBoardAndUI();
@@ -317,19 +329,35 @@ export class Game {
     }
 
     if (this.storage) {
-      this.storage.recordHintUsed();
+      const balance = this.storage.getHintBalance();
+      if (balance <= 0) {
+        this.ui.setStatus("💡 No hints left! Open Shop to claim 1 free daily hint or get more.");
+        PlatformBridge.vibrateLight();
+        if (this.onRequestShop) {
+          this.onRequestShop();
+        }
+        return;
+      }
+      this.storage.consumeHint();
     }
     this.hintsUsedInLevel = (this.hintsUsedInLevel || 0) + 1;
 
-    const { cipherChar, hintsRemaining } = hint;
+    const { cipherChar } = hint;
     const sol = this.state.drums[cipherChar].sol;
     this.renderer.fixHalfVisual(cipherChar, 't', sol);
     this.renderer.fixHalfVisual(cipherChar, 'b', sol);
-    this.ui.updateHintButton(hintsRemaining);
+    const remainingBalance = this.storage ? this.storage.getHintBalance() : Infinity;
+    this.ui.updateHintButton(remainingBalance);
     this.refreshBoardAndUI();
     this.saveCurrentLevelState();
     this.ui.setStatus(`💡 Letter '${sol}' fully revealed.`);
     PlatformBridge.vibrateLight();
+  }
+
+  refreshHintButton() {
+    if (this.ui && this.storage) {
+      this.ui.updateHintButton(this.storage.getHintBalance());
+    }
   }
 
   handleToggleLinked() {
@@ -468,8 +496,16 @@ export class Game {
       PlatformBridge.vibrateSuccess();
       this.audio.playVictoryFanfare();
 
+      const elapsedSeconds = Math.max(1, Math.floor((Date.now() - (this.levelStartTime || Date.now())) / 1000));
+      if (this.storage && this.state.currentLevel) {
+        this.storage.recordLevelVictory({
+          quote: this.state.currentLevel.quote || '',
+          elapsedSeconds,
+          hintsUsedThisLevel: this.hintsUsedInLevel || 0
+        });
+      }
+
       if (this.onLevelCompleted) {
-        const elapsedSeconds = Math.max(1, Math.floor((Date.now() - (this.levelStartTime || Date.now())) / 1000));
         const completionData = {
           level: this.state.currentLevel,
           levelIndex: this.state.levelIndex,

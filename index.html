@@ -19,21 +19,9 @@
       <!-- Top Header: Branding Tag & Icons for Achievements, How to Play, Settings -->
       <header class="home-header">
         <div class="home-header-left">
-          <span class="home-version-tag">FLAPCRYPT v0.0.1</span>
+          <span class="home-version-tag">FLAPCRYPT v%APP_VERSION%</span>
         </div>
         <div class="home-header-actions">
-          <button id="btnAchievements" class="btn-header-icon" title="Achievements" aria-label="Achievements">
-            <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6 M18 9h1.5a2.5 2.5 0 0 0 0-5H18 M4 22h16 M10 14.66V17c0 .55-.45 1-1 1H7 M14 14.66V17c0 .55.45 1 1 1h2 M18 2H6v7a6 6 0 0 0 12 0V2z"/>
-            </svg>
-          </button>
-          <button id="btnHowToPlay" class="btn-header-icon" title="How to Play" aria-label="How to Play">
-            <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-              <line x1="12" y1="17" x2="12.01" y2="17" stroke-width="2.6"/>
-            </svg>
-          </button>
           <button id="btnSettings" class="btn-header-icon" title="Settings" aria-label="Settings">
             <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="3"/>
@@ -46,24 +34,21 @@
       <!-- Top 2-Column Mode Cards (Daily Challenge & Campaign Progress) -->
       <div class="home-top-grid">
         <!-- Card 1: Daily Challenge -->
-        <div class="home-top-card daily-card" id="dailyCard">
+        <div class="home-top-card daily-card" id="dailyCard" role="button" tabindex="0" aria-label="Open Daily Challenge Calendar">
           <div class="top-card-header">
-            <div class="top-card-title-group">
-              <span class="daily-title-label">DAILY DISPATCH</span>
-              <span id="dailyDateBadge" class="daily-date-badge">OCT 7</span>
-            </div>
+            <span class="daily-title-label">DAILY DISPATCH</span>
             <div id="dailyStreakBadge" class="daily-streak-badge" title="Daily Completion Streak">
-              <svg class="ui-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+              <svg class="ui-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
                 <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z"/>
               </svg>
               <span id="dailyStreakText">0 DAYS</span>
             </div>
           </div>
           <div class="top-card-body">
-            <span id="dailyStatusHeading" class="daily-status-heading">TODAY'S PUZZLE</span>
-            <span id="dailyTierBadge" class="daily-tier-badge">BEGINNER</span>
+            <h2 id="dailyDateHeading" class="daily-date-heading">TODAY</h2>
+            <span id="dailyStatusSubtext" class="daily-status-subtext">TODAY'S PUZZLE</span>
           </div>
-          <button id="btnPlayDaily" class="btn-daily-play" aria-label="Play Daily Challenge">
+          <button id="btnPlayDaily" class="btn-daily-play" aria-label="Open Daily Calendar">
             <span class="btn-icon" id="dailyPlayIcon">
               <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
@@ -72,30 +57,20 @@
                 <line x1="3" y1="10" x2="21" y2="10"/>
               </svg>
             </span>
-            <div class="btn-text-group">
-              <span id="dailyBtnMainLabel" class="btn-main-label">PLAY DAILY</span>
-              <span id="dailyBtnSubLabel" class="btn-sub-label">DAILY CIPHER</span>
-            </div>
+            <span id="dailyBtnMainLabel" class="btn-main-label">PLAY DAILY</span>
           </button>
         </div>
 
         <!-- Card 2: Campaign Progress -->
-        <div class="home-top-card campaign-card" id="campaignCard">
+        <div class="home-top-card campaign-card" id="campaignCard" role="button" tabindex="0" aria-label="Open Level Select">
           <div class="top-card-header">
-            <div class="top-card-title-group">
-              <span class="campaign-title-label">CAMPAIGN</span>
-              <span id="campaignTierBadge" class="campaign-tier-badge">BEGINNER</span>
-            </div>
+            <span class="campaign-title-label">CAMPAIGN</span>
+            <span id="campaignProgressBadge" class="campaign-progress-badge">0 / 540</span>
           </div>
           <div class="top-card-body">
-            <h2 id="campaignLevelText" class="campaign-level-text">QUOTES 1 OF 200</h2>
-            <div class="campaign-progress-bar-container">
-              <div class="campaign-progress-track">
-                <div id="campaignProgressFill" class="campaign-progress-fill"></div>
-              </div>
-              <div class="campaign-stats-row">
-                <span id="campaignProgressPct">0 / 540 SOLVED • 0%</span>
-              </div>
+            <h2 id="campaignLevelText" class="campaign-level-text">QUOTES 1</h2>
+            <div class="campaign-progress-track">
+              <div id="campaignProgressFill" class="campaign-progress-fill"></div>
             </div>
           </div>
           <button id="btnLevelSelect" class="btn-campaign-select" aria-label="Open Level Select">
@@ -107,10 +82,7 @@
                 <rect x="3" y="14" width="7" height="7" rx="1.5"/>
               </svg>
             </span>
-            <div class="btn-text-group">
-              <span class="btn-main-label">LEVEL SELECT</span>
-              <span id="campaignLevelSelectSubtext" class="btn-sub-label">ALL 540 PUZZLES</span>
-            </div>
+            <span class="btn-main-label">LEVEL SELECT</span>
           </button>
         </div>
       </div>
@@ -129,10 +101,7 @@
               <polygon points="6 3 20 12 6 21 6 3"/>
             </svg>
           </span>
-          <div class="btn-text-group">
-            <span class="btn-main-label">CONTINUE CAMPAIGN</span>
-            <span id="continueBtnSubtext" class="btn-sub-label">RESUME LEVEL 1</span>
-          </div>
+          <span class="btn-main-label">CONTINUE CAMPAIGN</span>
         </button>
 
         <div class="secondary-btn-grid">
@@ -156,6 +125,14 @@
               </svg>
             </span>
             <span class="btn-label">STATISTICS</span>
+          </button>
+          <button id="btnAchievements" class="btn-secondary-home">
+            <span class="btn-icon">
+              <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6 M18 9h1.5a2.5 2.5 0 0 0 0-5H18 M4 22h16 M10 14.66V17c0 .55-.45 1-1 1H7 M14 14.66V17c0 .55.45 1 1 1h2 M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+              </svg>
+            </span>
+            <span class="btn-label">ACHIEVEMENTS</span>
           </button>
         </div>
       </div>
@@ -346,14 +323,15 @@
             </div>
           </div>
 
-          <!-- Section 2: Upgrades -->
+          <!-- Section 2: Upgrades & In-App Purchases -->
           <div class="settings-group-section">
             <div class="settings-group-header">
-              <span class="settings-group-title">UPGRADES</span>
+              <span class="settings-group-title">UPGRADES & PURCHASES</span>
               <div class="settings-group-rule"></div>
             </div>
             <div class="settings-group">
-              <div class="settings-row">
+              <!-- Remove Ads -->
+              <div id="rowRemoveAds" class="settings-row row-interactive" role="button" tabindex="0" aria-label="Remove Ads In-App Purchase">
                 <div class="settings-item-left">
                   <div class="settings-icon-box">
                     <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -363,9 +341,9 @@
                   <span class="settings-item-title">Remove Ads</span>
                 </div>
                 <div class="settings-item-right">
-                  <button id="btnRemoveAds" class="btn-iap-dummy" aria-label="Remove Ads for 1.99 dollars">
-                    <span>UPGRADE</span>
-                    <span class="btn-iap-price">$1.99</span>
+                  <button id="btnRemoveAds" class="btn-iap-dummy" aria-label="Remove Ads for 4.90 dollars">
+                    <span id="labelRemoveAdsBtn">UPGRADE</span>
+                    <span id="priceRemoveAdsBtn" class="btn-iap-price">$4.90</span>
                   </button>
                 </div>
               </div>
@@ -380,7 +358,7 @@
             </div>
             <div class="settings-group">
               <!-- Rate Flapcrypt -->
-              <div class="settings-row">
+              <div id="rowRateUs" class="settings-row row-interactive" role="button" tabindex="0" aria-label="Rate Flapcrypt on Store">
                 <div class="settings-item-left">
                   <div class="settings-icon-box">
                     <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -390,19 +368,24 @@
                   <span class="settings-item-title">Rate Flapcrypt</span>
                 </div>
                 <div class="settings-item-right">
-                  <button id="btnRateUs" class="btn-external-dummy" aria-label="Rate Flapcrypt on Store">
-                    <svg class="ui-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                      <polyline points="15 3 21 3 21 9"/>
-                      <line x1="10" y1="14" x2="21" y2="3"/>
-                    </svg>
-                    <span>OPEN</span>
+                  <button id="btnRateUs" class="btn-external-dummy" aria-label="Rate Flapcrypt">
+                    <span class="btn-idle-content">
+                      <svg class="ui-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                      </svg>
+                      <span>RATE</span>
+                    </span>
+                    <span class="btn-loading-content" aria-hidden="true">
+                      <svg class="ui-spinner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+                        <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                      </svg>
+                    </span>
                   </button>
                 </div>
               </div>
 
               <!-- Contact Support -->
-              <div class="settings-row">
+              <div id="rowContactSupport" class="settings-row row-interactive" role="button" tabindex="0" aria-label="Contact Support by Email">
                 <div class="settings-item-left">
                   <div class="settings-icon-box">
                     <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -415,11 +398,10 @@
                 <div class="settings-item-right">
                   <button id="btnContactSupport" class="btn-external-dummy" aria-label="Contact Support by Email">
                     <svg class="ui-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                      <polyline points="15 3 21 3 21 9"/>
-                      <line x1="10" y1="14" x2="21" y2="3"/>
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
                     </svg>
-                    <span>SEND</span>
+                    <span>MAIL</span>
                   </button>
                 </div>
               </div>
@@ -477,7 +459,7 @@
 
           <!-- Settings Footer -->
           <footer class="settings-footer">
-            <span class="settings-footer-text">FLAPCRYPT • v0.0.1 • OLAI DIGITAL STUDIOS</span>
+            <span class="settings-footer-text">FLAPCRYPT • v%APP_VERSION% • OLAI DIGITAL STUDIOS</span>
           </footer>
 
         </div>
@@ -503,47 +485,6 @@
 
     </div>
 
-    <!-- ====================================================================
-         VIEW 4: LEVEL SELECT SCREEN (DEDICATED FULL SCREEN)
-         ==================================================================== -->
-    <div id="levelSelectScreen" class="view-screen level-select-screen">
-      <!-- Fixed Header -->
-      <header class="level-select-header">
-        <div class="level-select-header-inner">
-          <button id="btnLevelSelectBack" class="btn-header-action" title="Back" aria-label="Return to Home Screen">
-            <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-          </button>
-          <div class="level-select-title-group">
-            <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="7" height="7" rx="1.5"/>
-              <rect x="14" y="3" width="7" height="7" rx="1.5"/>
-              <rect x="14" y="14" width="7" height="7" rx="1.5"/>
-              <rect x="3" y="14" width="7" height="7" rx="1.5"/>
-            </svg>
-            <span>LEVEL SELECT</span>
-          </div>
-          <span id="levelSelectProgressBadge" class="level-select-progress-badge">0 / 264</span>
-        </div>
-      </header>
-
-      <!-- Sticky Tier Filter Tabs -->
-      <nav class="level-select-tabs-bar" aria-label="Tier Filter">
-        <div class="level-select-tabs-inner" id="levelSelectTabs">
-          <!-- Dynamic Tier Buttons -->
-        </div>
-      </nav>
-
-      <!-- Scrollable Grid Body -->
-      <main class="level-select-scroll" id="levelSelectScroll">
-        <div class="level-select-content" id="levelSelectContent">
-          <!-- Dynamic Level Grid Content -->
-        </div>
-      </main>
-
-      <!-- Toast Feedback -->
-      <div id="levelSelectToast" class="level-select-toast" role="status" aria-live="polite"></div>
     </div>
 
     <!-- ====================================================================
@@ -551,6 +492,9 @@
          ==================================================================== -->
     <div id="modalOverlay" class="modal-overlay" aria-hidden="true">
       <div class="modal-container" role="dialog" aria-modal="true">
+        <div id="modalDragHandle" class="modal-drag-zone" aria-hidden="true">
+          <div class="modal-drag-pill"></div>
+        </div>
         <div class="modal-header">
           <h3 id="modalTitle" class="modal-title">MODAL TITLE</h3>
           <button id="modalCloseBtn" class="btn-modal-close" aria-label="Close Modal">

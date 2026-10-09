@@ -227,6 +227,44 @@
   background: rgba(245, 158, 11, 0.25);
 }
 
+.btn-external-dummy .btn-idle-content,
+.btn-external-dummy .btn-loading-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-external-dummy .btn-loading-content {
+  display: none;
+}
+
+.btn-external-dummy.loading {
+  opacity: 0.92;
+  cursor: wait;
+  pointer-events: none;
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.35);
+}
+
+.btn-external-dummy.loading .btn-idle-content {
+  display: none;
+}
+
+.btn-external-dummy.loading .btn-loading-content {
+  display: inline-flex;
+}
+
+.ui-spinner {
+  animation: uiSpin 0.75s linear infinite;
+  display: block;
+}
+
+@keyframes uiSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* In-App Purchase Dummy Button (Remove Ads) */
 .btn-iap-dummy {
   height: 34px;
@@ -266,6 +304,20 @@
 
 .btn-iap-dummy:active {
   transform: scale(0.95);
+}
+
+.btn-iap-dummy.purchased {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #10B981;
+  box-shadow: none;
+  cursor: default;
+}
+
+.btn-iap-dummy.purchased:hover {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: none;
 }
 
 /* Chevron indicator */

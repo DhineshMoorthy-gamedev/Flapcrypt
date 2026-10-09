@@ -115,8 +115,8 @@ Tauri packages the compiled HTML/JS/CSS into a native OS window with no browser 
 2. **Configure `src-tauri/tauri.conf.json`**:
    ```json
    {
-     "productName": "FlapCrypt",
-     "version": "1.0.0",
+      "productName": "FlapCrypt",
+      "version": "0.0.2",
      "identifier": "com.flapcrypt.desktop",
      "build": {
        "frontendDist": "../dist/desktop",
