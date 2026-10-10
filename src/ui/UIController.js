@@ -3,6 +3,10 @@ import { Icons } from './Icons.js';
 export class UIController {
   constructor(elements) {
     this.levelTitleText = elements.levelTitleText;
+    this.chipWords = elements.chipWords;
+    this.chipWordsText = elements.chipWordsText;
+    this.chipLetters = elements.chipLetters;
+    this.chipLettersText = elements.chipLettersText;
     this.levelBadge = elements.levelBadge;
     this.headerProgressFill = elements.headerProgressFill;
     this.letterBadge = elements.letterBadge;
@@ -15,19 +19,53 @@ export class UIController {
     this.stepDownBtn = elements.td;
   }
 
+  updateProgressChips({ solvedWords, totalWords, solvedLetters, totalLetters }) {
+    if (this.chipWordsText) {
+      const prevSolved = parseInt(this.chipWordsText.getAttribute('data-prev-solved') || '-1', 10);
+      this.chipWordsText.textContent = `${solvedWords} / ${totalWords} WORDS`;
+      this.chipWordsText.setAttribute('data-prev-solved', solvedWords);
+
+      if (this.chipWords) {
+        const isWordsComplete = totalWords > 0 && solvedWords === totalWords;
+        this.chipWords.classList.toggle('completed', isWordsComplete);
+
+        // Pulse with celebratory animation if a new word was solved during gameplay
+        if (prevSolved >= 0 && solvedWords > prevSolved) {
+          this.chipWords.classList.remove('pulse');
+          void this.chipWords.offsetWidth;
+          this.chipWords.classList.add('pulse');
+        }
+      }
+    }
+
+    if (this.chipLettersText) {
+      this.chipLettersText.textContent = `${solvedLetters} / ${totalLetters} LETTERS`;
+      if (this.chipLetters) {
+        const isLettersComplete = totalLetters > 0 && solvedLetters === totalLetters;
+        this.chipLetters.classList.toggle('completed', isLettersComplete);
+      }
+    }
+  }
+
   updateLevelInfo(levelIndex, totalLevels, diff, tier = "", mode = 'campaign', customTitle = "", category = "") {
     if (this.levelTitleText) {
       this.levelTitleText.textContent = customTitle || `LEVEL ${levelIndex + 1}`;
     }
     if (this.levelBadge) {
-      const isSpecial = category && category !== 'Quotes';
-      if (isSpecial) {
-        this.levelBadge.textContent = `${category.toUpperCase()} • ${diff}`;
-        this.levelBadge.title = `Level ${levelIndex + 1} of ${totalLevels} (${category} • Diff ${diff})`;
-      } else {
+      if (mode === 'daily') {
         const shortTier = tier ? tier.replace(/Tier \d+:\s*/i, '').toUpperCase() : '';
         this.levelBadge.textContent = shortTier ? `${shortTier} • ${diff}` : `DIFF ${diff}`;
-        this.levelBadge.title = `Level ${levelIndex + 1} of ${totalLevels} (${tier || diff})`;
+        this.levelBadge.title = `Daily Challenge • Diff ${diff}`;
+      } else {
+        const isSpecial = category && category !== 'Quotes';
+        if (isSpecial) {
+          this.levelBadge.textContent = `${category.toUpperCase()} • ${diff}`;
+          this.levelBadge.title = `Level ${levelIndex + 1} of ${totalLevels} (${category} • Diff ${diff})`;
+        } else {
+          const shortTier = tier ? tier.replace(/Tier \d+:\s*/i, '').toUpperCase() : '';
+          this.levelBadge.textContent = shortTier ? `${shortTier} • ${diff}` : `DIFF ${diff}`;
+          this.levelBadge.title = `Level ${levelIndex + 1} of ${totalLevels} (${tier || diff})`;
+        }
       }
     }
   }

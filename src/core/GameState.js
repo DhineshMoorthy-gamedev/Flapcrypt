@@ -82,6 +82,39 @@ export class GameState {
     return this.groups.length;
   }
 
+  getWordsProgress() {
+    if (!this.currentLevel) {
+      return { solvedWords: 0, totalWords: 0 };
+    }
+
+    const textToScan = [
+      this.currentLevel.quote || '',
+      this.currentLevel.author || ''
+    ].filter(Boolean).join(' ');
+
+    const rawWords = textToScan.trim().split(/\s+/);
+    let totalWords = 0;
+    let solvedWords = 0;
+
+    for (const rawWord of rawWords) {
+      const letters = rawWord.toUpperCase().replace(/[^A-Z]/g, '');
+      if (!letters.length) continue;
+      totalWords++;
+
+      const isWordSolved = Array.from(letters).every(char => {
+        const cipher = this.cipherMap ? this.cipherMap[char] : null;
+        if (!cipher) return true;
+        return this.isLetterCorrect(cipher);
+      });
+
+      if (isWordSolved) {
+        solvedWords++;
+      }
+    }
+
+    return { solvedWords, totalWords };
+  }
+
   isLevelSolved() {
     return this.groups.length > 0 && this.groups.every(c => this.isLetterCorrect(c));
   }
@@ -105,17 +138,8 @@ export class GameState {
     let startIdx = this.groups.indexOf(currentGroup);
     if (startIdx === -1) startIdx = 0;
 
-    // 1. Prioritize cells that still have an empty flap
-    for (let step = 1; step <= total; step++) {
-      const idx = (startIdx + dir * step + total * 100) % total;
-      const candidate = this.groups[idx];
-      if (this.hasEmptyFlap(candidate)) {
-        return candidate;
-      }
-    }
-
-    // 2. Fallback: If no empty flaps remain, search for any unsolved letter
-    for (let step = 1; step <= total; step++) {
+    // 1. Search for any other unsolved letter group
+    for (let step = 1; step < total; step++) {
       const idx = (startIdx + dir * step + total * 100) % total;
       const candidate = this.groups[idx];
       if (!this.isLetterCorrect(candidate)) {
@@ -123,7 +147,7 @@ export class GameState {
       }
     }
 
-    // 3. Fallback: If all are solved, cycle sequentially
+    // 2. Fallback: If only current is unsolved or all solved, cycle sequentially
     return this.groups[(startIdx + dir + total * 100) % total];
   }
 

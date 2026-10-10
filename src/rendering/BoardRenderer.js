@@ -13,6 +13,8 @@ export class BoardRenderer {
     this.quoteAreaEl = quoteAreaEl;
     this.authorRowEl = authorRowEl;
     this.cellsByCipherChar = {};
+    this.letterCells = [];
+    this.activeCellIndex = 0;
     this.introTimer = null;
     this.onCellClick = null;
 
@@ -20,7 +22,8 @@ export class BoardRenderer {
     this.boardEl.addEventListener('click', (e) => {
       const cell = e.target.closest('.cell');
       if (cell && cell.dataset.c && typeof this.onCellClick === 'function') {
-        this.onCellClick(cell.dataset.c);
+        const idx = parseInt(cell.dataset.idx, 10);
+        this.onCellClick(cell.dataset.c, Number.isNaN(idx) ? -1 : idx);
       }
     });
   }
@@ -46,6 +49,8 @@ export class BoardRenderer {
     this.authorRowEl.style.display = '';
     this.boardEl.classList.remove('won');
     this.cellsByCipherChar = {};
+    this.letterCells = [];
+    this.activeCellIndex = 0;
   }
 
   buildBoard(level, cipherMap, onCellClick, onRegisterLetter) {
@@ -98,11 +103,14 @@ export class BoardRenderer {
           this.cellsByCipherChar[cipherChar] = [];
         }
 
+        const cellIndex = this.letterCells.length;
         const cellEl = letterTemplate.content.firstElementChild.cloneNode(true);
         cellEl.dataset.c = cipherChar;
+        cellEl.dataset.idx = String(cellIndex);
         cellEl.lastElementChild.textContent = cipherChar;
 
         this.cellsByCipherChar[cipherChar].push(cellEl);
+        this.letterCells.push(cellEl);
         wordEl.appendChild(cellEl);
       } else {
         // Punctuation Mark (Fixed)
@@ -114,6 +122,12 @@ export class BoardRenderer {
     }
 
     container.appendChild(wordEl);
+  }
+
+  setActiveCell(cellIndex) {
+    if (typeof cellIndex === 'number' && cellIndex >= 0 && cellIndex < this.letterCells.length) {
+      this.activeCellIndex = cellIndex;
+    }
   }
 
   fixHalfVisual(cipherChar, whichHalf, solutionChar) {
@@ -158,14 +172,21 @@ export class BoardRenderer {
 
     groups.forEach(c => {
       const agreed = gameState.isAgreed(c);
+      const isCorrect = gameState.isLetterCorrect(c);
       const letter = gameState.drums[c] ? gameState.drums[c].t : null;
       const clash = agreed && letter && letterUsage[letter] && letterUsage[letter].length > 1;
 
       const cells = this.cellsByCipherChar[c] || [];
       cells.forEach(cell => {
+        const isSel = c === selectedGroup;
+        const cellIdx = parseInt(cell.dataset.idx, 10);
+        const isActive = isSel && cellIdx === this.activeCellIndex;
+
         cell.classList.toggle("lock", agreed && !clash);
         cell.classList.toggle("clash", clash);
-        cell.classList.toggle("sel", c === selectedGroup);
+        cell.classList.toggle("sel", isSel);
+        cell.classList.toggle("active-cell", isActive);
+        cell.classList.toggle("solved", isCorrect);
       });
     });
   }
@@ -209,7 +230,23 @@ export class BoardRenderer {
     }, totalDurationMs);
   }
 
+  scrollToCellIndex(index, behavior = 'smooth') {
+    if (typeof index === 'number' && index >= 0 && index < this.letterCells.length) {
+      const targetCell = this.letterCells[index];
+      if (targetCell) {
+        targetCell.scrollIntoView({ behavior, block: 'nearest', inline: 'nearest' });
+      }
+    }
+  }
+
   scrollToCell(cipherChar) {
+    if (this.activeCellIndex >= 0 && this.activeCellIndex < this.letterCells.length) {
+      const activeCell = this.letterCells[this.activeCellIndex];
+      if (activeCell && activeCell.dataset.c === cipherChar) {
+        activeCell.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        return;
+      }
+    }
     const cells = this.cellsByCipherChar[cipherChar];
     if (cells && cells[0]) {
       cells[0].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });

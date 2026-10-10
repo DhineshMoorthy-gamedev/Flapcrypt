@@ -118,20 +118,38 @@ export class AudioService {
   playClick() {
     const ctx = this.getAudioContext();
     if (!ctx) return;
-    this._playClickAtTime(ctx, ctx.currentTime);
+    if (ctx.state === 'suspended') {
+      ctx.resume().then(() => {
+        this._playClickAtTime(ctx, ctx.currentTime);
+      }).catch(() => {
+        this._playClickAtTime(ctx, ctx.currentTime);
+      });
+    } else {
+      this._playClickAtTime(ctx, ctx.currentTime);
+    }
   }
 
   /**
    * Schedules a crisp, rhythmic split-flap departure roll on WebAudio's native clock.
    * Consumes virtually 0 main-thread CPU and avoids audio-thread stutter during animations.
    */
-  playCascadeSequence(count = 7, intervalMs = 45) {
+  playCascadeSequence(count = 5, intervalMs = 55) {
     const ctx = this.getAudioContext();
     if (!ctx) return;
-    const startTime = ctx.currentTime;
-    for (let i = 0; i < count; i++) {
-      const t = startTime + (i * intervalMs) / 1000;
-      this._playClickAtTime(ctx, t);
+
+    const schedule = () => {
+      // Small safety headroom ensures Android mixer never receives timestamps in the past
+      const startTime = ctx.currentTime + 0.025;
+      for (let i = 0; i < count; i++) {
+        const t = startTime + (i * intervalMs) / 1000;
+        this._playClickAtTime(ctx, t);
+      }
+    };
+
+    if (ctx.state === 'suspended') {
+      ctx.resume().then(schedule).catch(() => schedule());
+    } else {
+      schedule();
     }
   }
 
@@ -139,22 +157,30 @@ export class AudioService {
     const ctx = this.getAudioContext();
     if (!ctx) return;
 
-    const t = ctx.currentTime + delayMs / 1000;
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
+    const play = () => {
+      const t = ctx.currentTime + Math.max(0.01, delayMs / 1000);
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
 
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(freq, t);
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, t);
 
-    gain.gain.setValueAtTime(0.001, t);
-    gain.gain.exponentialRampToValueAtTime(0.12, t + 0.015);
-    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.35);
+      gain.gain.setValueAtTime(0.001, t);
+      gain.gain.exponentialRampToValueAtTime(0.12, t + 0.015);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.35);
 
-    osc.connect(gain);
-    gain.connect(ctx.destination);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
 
-    osc.start(t);
-    osc.stop(t + 0.38);
+      osc.start(t);
+      osc.stop(t + 0.38);
+    };
+
+    if (ctx.state === 'suspended') {
+      ctx.resume().then(play).catch(() => play());
+    } else {
+      play();
+    }
   }
 
   playVictoryFanfare() {

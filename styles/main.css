@@ -101,10 +101,12 @@ html, body {
 
 .header-center {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex: 1;
-  gap: 10px;
+  gap: 4px;
+  min-width: 0;
 }
 
 
@@ -128,11 +130,13 @@ html, body {
   flex-shrink: 0;
 }
 
-.btn-header-action:hover {
-  background: rgba(245, 158, 11, 0.18);
-  border-color: rgba(245, 158, 11, 0.5);
-  color: #F59E0B;
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+@media (hover: hover) and (pointer: fine) {
+  .btn-header-action:hover {
+    background: rgba(245, 158, 11, 0.18);
+    border-color: rgba(245, 158, 11, 0.5);
+    color: #F59E0B;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+  }
 }
 
 .btn-header-action:active {
@@ -144,15 +148,99 @@ html, body {
 /* Minimal Level # Title */
 .level-title-text {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #F59E0B;
   text-shadow: 0 0 10px rgba(245, 158, 11, 0.35);
   margin: 0;
-  line-height: 1;
+  line-height: 1.1;
   user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Sub-Header Dual Progress Chips (Words & Letters) */
+.header-progress-chips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  padding: 0 11px;
+  border-radius: 13px;
+  background: #14221a;
+  border: 1px solid #254031;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  user-select: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.header-chip .chip-text {
+  color: #f3ede2;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.header-chip.pulse {
+  animation: chipPulse 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes chipPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); border-color: #f59e0b; box-shadow: 0 0 12px rgba(245, 158, 11, 0.45); }
+  100% { transform: scale(1); }
+}
+
+.header-chip.completed {
+  background: rgba(16, 185, 129, 0.16);
+  border-color: #10b981;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.28);
+}
+
+.header-chip.completed .chip-text {
+  color: #34d399;
+}
+
+@media (max-width: 480px) {
+  .level-title-text {
+    font-size: 1.08rem;
+  }
+  .header-progress-chips {
+    gap: 7px;
+  }
+  .header-chip {
+    height: 23px;
+    padding: 0 9px;
+    font-size: 0.76rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-progress-chips {
+    gap: 5px;
+  }
+  .header-chip {
+    height: 22px;
+    padding: 0 7px;
+    font-size: 0.72rem;
+    gap: 4px;
+  }
 }
 
 /* 2. Scrollable Play Stage */

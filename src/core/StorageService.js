@@ -196,10 +196,7 @@ export class StorageService {
   }
 
   getHintBalance() {
-    if (!this.data.hints) {
-      this.data.hints = { ...DEFAULT_STATE.hints };
-    }
-    return this.data.hints.balance ?? 3;
+    return Infinity;
   }
 
   addHints(qty) {
@@ -209,21 +206,16 @@ export class StorageService {
     const current = this.data.hints.balance ?? 3;
     this.data.hints.balance = Math.max(0, current + qty);
     this.save();
-    return this.data.hints.balance;
+    return Infinity;
   }
 
   consumeHint() {
-    if (!this.data.hints) {
-      this.data.hints = { ...DEFAULT_STATE.hints };
+    if (!this.data.stats) {
+      this.data.stats = { ...DEFAULT_STATE.stats };
     }
-    const current = this.data.hints.balance ?? 3;
-    if (current > 0) {
-      this.data.hints.balance = current - 1;
-      this.data.stats.hintsUsed = (this.data.stats.hintsUsed || 0) + 1;
-      this.save();
-      return true;
-    }
-    return false;
+    this.data.stats.hintsUsed = (this.data.stats.hintsUsed || 0) + 1;
+    this.save();
+    return true;
   }
 
   getFreeHintCooldown() {

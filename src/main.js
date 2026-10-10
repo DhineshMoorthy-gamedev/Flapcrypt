@@ -38,6 +38,10 @@ function initApp() {
     quoteArea: $('quoteArea'),
     authorRow: $('authorRow'),
     levelTitleText: $('levelTitleText'),
+    chipWords: $('chipWords'),
+    chipWordsText: $('chipWordsText'),
+    chipLetters: $('chipLetters'),
+    chipLettersText: $('chipLettersText'),
     levelSubBadge: $('levelSubBadge'),
     levelBadge: $('levelBadge'),
     headerProgressFill: $('headerProgressFill'),
@@ -78,6 +82,19 @@ function initApp() {
   PlatformBridge.setHapticsEnabled(storageService.isHapticsEnabled());
   IAPService.init(storageService, audioService);
 
+  // Pre-warm AudioContext and procedural click buffers on first user gesture
+  const prewarmAudio = () => {
+    window.removeEventListener('pointerdown', prewarmAudio, true);
+    window.removeEventListener('touchstart', prewarmAudio, true);
+    window.removeEventListener('keydown', prewarmAudio, true);
+    if (audioService.isSoundEnabled()) {
+      audioService.getAudioContext();
+    }
+  };
+  window.addEventListener('pointerdown', prewarmAudio, true);
+  window.addEventListener('touchstart', prewarmAudio, true);
+  window.addEventListener('keydown', prewarmAudio, true);
+
   const renderer = new BoardRenderer(elements.board, elements.quoteArea, elements.authorRow);
   const uiController = new UIController(elements);
 
@@ -87,10 +104,16 @@ function initApp() {
   let activeScreen = 'home';
   let previousScreen = 'home';
 
-  function showScreen(screenName) {
+  function showScreen(screenName, { instant = false } = {}) {
     if (activeScreen === screenName) return;
     previousScreen = activeScreen;
     activeScreen = screenName;
+
+    if (instant) {
+      elements.homeScreen.classList.add('no-transition');
+      elements.gameScreen.classList.add('no-transition');
+      if (elements.settingsScreen) elements.settingsScreen.classList.add('no-transition');
+    }
 
     elements.homeScreen.classList.remove('active');
     elements.gameScreen.classList.remove('active');
@@ -120,10 +143,8 @@ function initApp() {
       activeScreen = previousScreen;
       modalManager.open('levelSelect', {
         onSelectLevel: (idx) => {
-          showScreen('game');
-          requestAnimationFrame(() => {
-            game.start(idx, { mode: 'campaign' });
-          });
+          game.start(idx, { mode: 'campaign' });
+          showScreen('game', { instant: true });
         }
       });
       return;
@@ -139,6 +160,14 @@ function initApp() {
           }
         }, 260);
       }
+    }
+
+    if (instant) {
+      requestAnimationFrame(() => {
+        elements.homeScreen.classList.remove('no-transition');
+        elements.gameScreen.classList.remove('no-transition');
+        if (elements.settingsScreen) elements.settingsScreen.classList.remove('no-transition');
+      });
     }
   }
 
@@ -187,26 +216,20 @@ function initApp() {
       modalManager.open('levelComplete', {
         ...data,
         onNextLevel: (nextIdx) => {
+          game.start(nextIdx, { mode: 'campaign' });
           showScreen('game');
-          requestAnimationFrame(() => {
-            game.start(nextIdx, { mode: 'campaign' });
-          });
         },
         onLevelSelect: () => {
           modalManager.open('levelSelect', {
             onSelectLevel: (nextIdx) => {
-              showScreen('game');
-              requestAnimationFrame(() => {
-                game.start(nextIdx, { mode: 'campaign' });
-              });
+              game.start(nextIdx, { mode: 'campaign' });
+              showScreen('game', { instant: true });
             }
           });
         },
         onStartDailyGame: (levelIndex, dailyOptions) => {
-          showScreen('game');
-          requestAnimationFrame(() => {
-            game.start(levelIndex, dailyOptions);
-          });
+          game.start(levelIndex, dailyOptions);
+          showScreen('game', { instant: true });
         },
         onHome: () => {
           showScreen('home');
@@ -221,12 +244,14 @@ function initApp() {
 
   if (elements.gameHelpBtn) {
     elements.gameHelpBtn.addEventListener('click', () => {
+      if (audioService) audioService.playClick();
       modalManager.open('howToPlay');
     });
   }
 
   if (elements.gameSettingsBtn) {
     elements.gameSettingsBtn.addEventListener('click', () => {
+      if (audioService) audioService.playClick();
       showScreen('settings');
     });
   }
@@ -235,6 +260,7 @@ function initApp() {
     container: elements.settingsScreen,
     storageService,
     audioService,
+    modalManager,
     onBack: () => {
       showScreen(previousScreen === 'game' ? 'game' : 'home');
     }
@@ -250,18 +276,14 @@ function initApp() {
     onOpenLevelSelect: () => {
       modalManager.open('levelSelect', {
         onSelectLevel: (levelIndex) => {
-          showScreen('game');
-          requestAnimationFrame(() => {
-            game.start(levelIndex, { mode: 'campaign' });
-          });
+          game.start(levelIndex, { mode: 'campaign' });
+          showScreen('game', { instant: true });
         }
       });
     },
     onStartGame: (levelIndex, options = {}) => {
-      showScreen('game');
-      requestAnimationFrame(() => {
-        game.start(levelIndex, options);
-      });
+      game.start(levelIndex, options);
+      showScreen('game', { instant: true });
     }
   });
 
@@ -278,6 +300,16 @@ function initApp() {
     window.addEventListener('beforeunload', () => {
       game.saveCurrentLevelState();
     });
+
+    // Prevent sticky hover and focus on touch press across all buttons and interactive cards
+    window.addEventListener('pointerup', (e) => {
+      if (e.pointerType === 'touch') {
+        const btn = e.target.closest('button, [role="button"], .hero-split-flap-board');
+        if (btn) {
+          btn.blur();
+        }
+      }
+    }, { passive: true });
   }
 
   PlatformBridge.init({

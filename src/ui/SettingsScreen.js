@@ -2,12 +2,16 @@ import { Icons } from './Icons.js';
 import { PlatformBridge } from '../platform/lifecycle.js';
 import { TargetConfig } from '../platform/target-config.js';
 import { IAPService, IAP_PRODUCTS } from '../core/IAPService.js';
+import { Toast } from './Toast.js';
+import { AppUpdateService } from '../core/AppUpdateService.js';
+import { NotificationService } from '../core/NotificationService.js';
 
 export class SettingsScreen {
-  constructor({ container, storageService, audioService, onBack }) {
+  constructor({ container, storageService, audioService, modalManager, onBack }) {
     this.container = container || document.getElementById('settingsScreen');
     this.storage = storageService;
     this.audio = audioService;
+    this.modals = modalManager;
     this.onBack = onBack;
 
     this.subview = document.getElementById('settingsSubview');
@@ -69,6 +73,9 @@ export class SettingsScreen {
           }
         }
         PlatformBridge.vibrateLight();
+        Toast.show(val ? 'Sound Effects Enabled' : 'Sound Effects Muted', {
+          type: val ? 'success' : 'info'
+        });
       });
     }
 
@@ -86,6 +93,9 @@ export class SettingsScreen {
         if (this.audio && this.storage.isSoundEnabled()) {
           this.audio.playClick();
         }
+        Toast.show(val ? 'Haptic Feedback Enabled' : 'Haptic Feedback Disabled', {
+          type: val ? 'success' : 'info'
+        });
       });
     }
 
@@ -93,13 +103,29 @@ export class SettingsScreen {
     const remindersToggle = document.getElementById('settingsRemindersToggle');
     if (remindersToggle) {
       bindRowClickToToggle('settingsRemindersToggle');
-      remindersToggle.addEventListener('change', (e) => {
+      remindersToggle.addEventListener('change', async (e) => {
         const val = e.target.checked;
-        this.storage.setRemindersEnabled(val);
         if (this.audio && this.storage.isSoundEnabled()) {
           this.audio.playClick();
         }
         PlatformBridge.vibrateLight();
+
+        if (val) {
+          const granted = await NotificationService.requestPermission();
+          if (granted) {
+            this.storage.setRemindersEnabled(true);
+            await NotificationService.scheduleDailyReminder({ hour: 9, minute: 0 });
+            Toast.show('Daily Reminders Scheduled (9:00 AM)', { type: 'success' });
+          } else {
+            this.storage.setRemindersEnabled(false);
+            remindersToggle.checked = false;
+            Toast.show('Notification permission was not granted', { type: 'warning' });
+          }
+        } else {
+          this.storage.setRemindersEnabled(false);
+          await NotificationService.cancelDailyReminder();
+          Toast.show('Daily Reminders Turned Off', { type: 'info' });
+        }
       });
     }
 
@@ -219,6 +245,8 @@ export class SettingsScreen {
     const rowPrivacy = document.getElementById('rowPrivacyPolicy');
     if (rowPrivacy) {
       rowPrivacy.addEventListener('click', () => {
+        if (this.audio && this.storage.isSoundEnabled()) this.audio.playClick();
+        PlatformBridge.vibrateLight();
         this.openSubview('privacy');
       });
     }
@@ -227,6 +255,8 @@ export class SettingsScreen {
     const rowAbout = document.getElementById('rowAbout');
     if (rowAbout) {
       rowAbout.addEventListener('click', () => {
+        if (this.audio && this.storage.isSoundEnabled()) this.audio.playClick();
+        PlatformBridge.vibrateLight();
         this.openSubview('about');
       });
     }
@@ -285,41 +315,124 @@ export class SettingsScreen {
       this.subviewTitle.innerHTML = `${Icons.shield(20)} <span>PRIVACY POLICY</span>`;
       this.subviewBody.innerHTML = `
         <div class="subview-section">
-            <h4 class="subview-section-title">1. ZERO DATA COLLECTION</h4>
-            <p class="subview-text">
-              Flapcrypt is committed to complete user privacy. We do not harvest, track, sell, or transmit any personal data, identifiable metrics, or puzzle solving habits.
-            </p>
-          </div>
+          <h4 class="subview-section-title">1. INTRODUCTION & SCOPE</h4>
+          <p class="subview-text">
+            This Privacy Policy applies to the game <strong class="highlight-text">Flapcrypt</strong> across Mobile (Google Play Store / Android), Web, and Standalone platforms operated by <strong class="highlight-text">OLAI Digital Studios</strong> (Effective October 10, 2026).
+          </p>
+          <p class="subview-text">
+            Flapcrypt is engineered with an offline-first architecture to provide an enjoyable, distraction-free, and privacy-respecting cryptogram puzzle experience. We do not collect, sell, rent, or trade your personally identifiable information (PII).
+          </p>
+        </div>
 
-          <div class="subview-section">
-            <h4 class="subview-section-title">2. OFFLINE & LOCAL STORAGE</h4>
-            <p class="subview-text">
-              All campaign level progression, statistics, daily challenge streaks, and preferences (such as audio and haptics) are stored exclusively in your device's local storage sandbox. Your data remains on your device at all times.
-            </p>
-          </div>
+        <div class="subview-section">
+          <h4 class="subview-section-title">2. INFORMATION WE DO NOT COLLECT</h4>
+          <p class="subview-text">
+            Flapcrypt does not require account creation, login, or social authentication. We do not harvest, track, or store:
+          </p>
+          <p class="subview-text">
+            &bull; Real names, physical home addresses, or phone numbers<br>
+            &bull; Email addresses (unless you voluntarily contact support)<br>
+            &bull; Contacts, camera, photos, or microphone data<br>
+            &bull; Precise geolocation or GPS coordinates<br>
+            &bull; Biometric or financial banking credentials
+          </p>
+        </div>
 
-          <div class="subview-section">
-            <h4 class="subview-section-title">3. PERMISSIONS</h4>
-            <p class="subview-text">
-              Flapcrypt requires no sensitive Android runtime permissions (no camera, microphone, contacts, location, or file system access). Haptic vibration is utilized solely for tactile mechanical feedback during flap rotations.
-            </p>
-          </div>
+        <div class="subview-section">
+          <h4 class="subview-section-title">3. LOCAL ON-DEVICE STORAGE</h4>
+          <p class="subview-text">
+            All puzzle progression and preferences are stored exclusively on your local device (HTML5 localStorage / isolated app sandbox):
+          </p>
+          <p class="subview-text">
+            &bull; Campaign puzzle progression, unlocked levels, and solved cryptograms across all categories<br>
+            &bull; Solved cryptograms, midway flap positions, and daily streaks<br>
+            &bull; In-game hint inventory balance<br>
+            &bull; Audio, haptic vibration, and daily reminder preferences<br>
+            &bull; In-app purchase entitlement status (e.g. Ad-Free mode)
+          </p>
+          <p class="subview-text">
+            This data remains strictly on your device and is never transmitted to cloud servers. You may erase or reset your data at any time via in-game Reset options or device storage settings.
+          </p>
+        </div>
 
-          <div class="subview-section">
-            <h4 class="subview-section-title">4. THIRD-PARTY SERVICES</h4>
-            <p class="subview-text">
-              External links to the Google Play Store or support email do not transfer device identifiers. No third-party behavioral analytics SDKs are embedded.
-            </p>
-          </div>
+        <div class="subview-section">
+          <h4 class="subview-section-title">4. LOCAL NOTIFICATIONS</h4>
+          <p class="subview-text">
+            Optional Daily Reminder alerts (default 10:00 AM) are generated and scheduled locally on your device by the operating system. No remote push notification servers, device tokens, or external tracking systems are utilized.
+          </p>
+        </div>
 
-          <div class="subview-section">
-            <h4 class="subview-section-title">5. CONTACT</h4>
-            <p class="subview-text">
-              Questions regarding privacy may be directed to our development team at <strong class="highlight-text">privacy@flapcrypt.game</strong>.
-            </p>
-          </div>
+        <div class="subview-section">
+          <h4 class="subview-section-title">5. IN-APP PURCHASES & ADS</h4>
+          <p class="subview-text">
+            <strong class="highlight-text">Google Play Billing:</strong> Optional upgrades (Remove Ads, 25 Hints, 50 Hints) are processed exclusively and securely by Google Play Billing (Google LLC). OLAI Digital Studios never receives, processes, or stores your financial or credit card information.
+          </p>
+          <p class="subview-text">
+            <strong class="highlight-text">Advertising:</strong> Where active on mobile/web, non-intrusive advertisements may be served by Google AdMob/AdSense using pseudonymous identifiers in compliance with Google policies. Desktop standalone builds are 100% offline and ad-free.
+          </p>
+        </div>
+
+        <div class="subview-section">
+          <h4 class="subview-section-title">6. THIRD-PARTY LIBRARIES</h4>
+          <p class="subview-text">
+            Flapcrypt integrates standard Google Play Core and Capacitor APIs for native features:
+          </p>
+          <p class="subview-text">
+            &bull; Google Play Billing (@capgo/native-purchases)<br>
+            &bull; Google Play In-App Review (@capawesome/capacitor-app-review)<br>
+            &bull; Google Play In-App Update (@capawesome/capacitor-app-update)<br>
+            &bull; Capacitor Framework (Haptics, status bar, local notifications)
+          </p>
+        </div>
+
+        <div class="subview-section">
+          <h4 class="subview-section-title">7. CHILDREN’S PRIVACY & DATA RIGHTS</h4>
+          <p class="subview-text">
+            Flapcrypt is a family-friendly educational word puzzle suitable for general audiences. In compliance with COPPA and GDPR, we do not knowingly collect personal data from children under 13 (or 16 in the EU).
+          </p>
+          <p class="subview-text">
+            We honor GDPR (EEA/UK) and CCPA/CPRA rights. We do not sell personal information or share personal data for monetary consideration.
+          </p>
+        </div>
+
+        <div class="subview-section">
+          <h4 class="subview-section-title">8. CONTACT US</h4>
+          <p class="subview-text">
+            If you have questions, feedback, or privacy-related inquiries regarding Flapcrypt, please contact our team:
+          </p>
+          <p class="subview-text">
+            <strong class="highlight-text">Studio:</strong> OLAI Digital Studios<br>
+            <strong class="highlight-text">Lead Developer:</strong> Dhinesh<br>
+            <strong class="highlight-text">Location:</strong> Chennai, Tamil Nadu, India<br>
+            <strong class="highlight-text">Email:</strong> <strong class="highlight-text">olaidigitalstudios@gmail.com</strong>
+          </p>
+        </div>
+
+        <div class="subview-action-footer">
+          <button id="btnViewPrivacySite" class="btn-about-pill" aria-label="View Privacy Policy Online">
+            <span>View Privacy Policy Online</span>
+            <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </button>
         </div>
       `;
+
+      // Wire View Privacy Policy Website button
+      const btnViewPrivacy = document.getElementById('btnViewPrivacySite');
+      if (btnViewPrivacy) {
+        btnViewPrivacy.addEventListener('click', () => {
+          if (this.audio && this.storage.isSoundEnabled()) this.audio.playClick();
+          PlatformBridge.vibrateLight();
+          try {
+            PlatformBridge.openExternalUrl('https://sites.google.com/view/flapcrypt-privacy-policy/home');
+          } catch (_) {
+            window.open('https://sites.google.com/view/flapcrypt-privacy-policy/home', '_blank');
+          }
+        });
+      }
     } else if (type === 'about') {
       this.subviewBody.className = 'subview-article about-mode';
       this.subviewTitle.innerHTML = `<span>ABOUT</span>`;
@@ -385,21 +498,60 @@ export class SettingsScreen {
       // Wire action buttons
       const btnCheckUpdates = document.getElementById('btnCheckUpdates');
       if (btnCheckUpdates) {
-        btnCheckUpdates.addEventListener('click', () => {
-          this.showFeedbackNotice(
-            'CHECK FOR UPDATES',
-            `You are running the latest version of Flapcrypt (v${TargetConfig.version}).\n\nNo updates are currently available.`
-          );
+        btnCheckUpdates.addEventListener('click', async () => {
+          if (this.audio && this.storage.isSoundEnabled()) this.audio.playClick();
+          PlatformBridge.vibrateLight();
+
+          const originalContent = btnCheckUpdates.innerHTML;
+          btnCheckUpdates.disabled = true;
+          btnCheckUpdates.innerHTML = `
+            <span class="btn-spinner-icon">
+              <svg class="ui-icon spinning" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="2" x2="12" y2="6"/>
+                <line x1="12" y1="18" x2="12" y2="22"/>
+                <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+                <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+                <line x1="2" y1="12" x2="6" y2="12"/>
+                <line x1="18" y1="12" x2="22" y2="12"/>
+                <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
+                <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+              </svg>
+            </span>
+            <span>Checking...</span>
+          `;
+
+          try {
+            const updateInfo = await AppUpdateService.checkForUpdate();
+            btnCheckUpdates.disabled = false;
+            btnCheckUpdates.innerHTML = originalContent;
+
+            if (updateInfo.available || updateInfo.isDownloaded) {
+              if (this.modals) {
+                this.modals.open('appUpdate', updateInfo);
+              }
+            } else if (updateInfo.error && !updateInfo.currentVersion) {
+              Toast.show('Unable to connect to update service. Check connection.', { type: 'warning' });
+            } else {
+              Toast.show(`You're running the latest version (v${updateInfo.currentVersion || TargetConfig.version})!`, { type: 'success' });
+            }
+          } catch (err) {
+            btnCheckUpdates.disabled = false;
+            btnCheckUpdates.innerHTML = originalContent;
+            Toast.show(`You're running the latest version (v${TargetConfig.version})!`, { type: 'success' });
+          }
         });
       }
 
       const btnMoreGames = document.getElementById('btnMoreGames');
       if (btnMoreGames) {
         btnMoreGames.addEventListener('click', () => {
-          this.showFeedbackNotice(
-            'MORE GAMES BY OLAI',
-            'Simulating store link to OLAI Digital Studios catalog on Google Play:\nhttps://play.google.com/store/apps/dev?id=OlaiDigitalStudios'
-          );
+          if (this.audio && this.storage.isSoundEnabled()) this.audio.playClick();
+          PlatformBridge.vibrateLight();
+          try {
+            PlatformBridge.openExternalUrl('https://play.google.com/store/apps/developer?id=OlaiDigitalStudios');
+          } catch (_) {
+            window.open('https://play.google.com/store/apps/developer?id=OlaiDigitalStudios', '_blank');
+          }
         });
       }
     }
@@ -435,6 +587,8 @@ export class SettingsScreen {
       const btnDismiss = document.getElementById('btnNoticeDismiss');
       if (btnDismiss) {
         btnDismiss.addEventListener('click', () => {
+          if (this.audio && this.storage.isSoundEnabled()) this.audio.playClick();
+          PlatformBridge.vibrateLight();
           overlay.classList.remove('active');
         }, { once: true });
       }

@@ -2,6 +2,9 @@ import { Icons } from './Icons.js';
 import { LEVEL_DATA } from '../data/levels.js';
 import { DailyChallengeService } from '../core/DailyChallengeService.js';
 import { IAPService, IAP_PRODUCTS } from '../core/IAPService.js';
+import { AppUpdateService } from '../core/AppUpdateService.js';
+import { TargetConfig } from '../platform/target-config.js';
+import { Confetti } from './Confetti.js';
 
 export class ModalManager {
   constructor({ storageService, audioService, onProgressReset, onHintInventoryChanged }) {
@@ -27,6 +30,7 @@ export class ModalManager {
     if (this.closeBtn) {
       this.closeBtn.addEventListener('click', () => {
         if (!this.isVictory()) {
+          if (this.audio) this.audio.playClick();
           this.close();
         }
       });
@@ -148,11 +152,17 @@ export class ModalManager {
       let isBodyDragging = false;
       let canBodyDrag = false;
 
+      const getScrollTop = () => {
+        const scrollTarget = this.containerEl ? this.containerEl.querySelector('.achieve-rows-list') : null;
+        if (scrollTarget) return scrollTarget.scrollTop;
+        return this.bodyEl ? this.bodyEl.scrollTop : 0;
+      };
+
       this.bodyEl.addEventListener('touchstart', (e) => {
         if (!this.isOpen() || !this.isDrawer()) return;
         if (e.target.closest('button, input, a, .btn-shop-pill')) return;
 
-        if (this.bodyEl.scrollTop <= 0) {
+        if (getScrollTop() <= 0) {
           canBodyDrag = true;
           bodyStartY = e.touches[0].clientY;
           bodyCurrentY = bodyStartY;
@@ -165,7 +175,7 @@ export class ModalManager {
 
       this.bodyEl.addEventListener('touchmove', (e) => {
         if (!canBodyDrag || !this.isOpen() || !this.isDrawer()) return;
-        if (this.bodyEl.scrollTop > 0) {
+        if (getScrollTop() > 0) {
           canBodyDrag = false;
           return;
         }
@@ -252,7 +262,8 @@ export class ModalManager {
     return this.overlay && this.overlay.classList.contains('active');
   }
 
-  close() {
+  close({ immediate = false } = {}) {
+    Confetti.stop();
     if (this.shopTickerInterval) {
       clearInterval(this.shopTickerInterval);
       this.shopTickerInterval = null;
@@ -264,17 +275,6 @@ export class ModalManager {
 
     if (!this.overlay) return;
 
-    const isDrawer = this.isDrawer();
-
-    // Reset backdrop inline styling
-    if (this.overlay) {
-      this.overlay.style.backgroundColor = '';
-      this.overlay.style.transition = '';
-    }
-
-    // Remove active state so overlay fades out and drawer slides down (translateY(100%))
-    this.overlay.classList.remove('active');
-
     if (this.containerEl) {
       const confirmOverlay = this.containerEl.querySelector('.drawer-confirm-overlay');
       if (confirmOverlay) {
@@ -283,31 +283,61 @@ export class ModalManager {
       this.containerEl.classList.remove('is-dragging');
     }
 
-    if (isDrawer) {
-      // Retain .drawer-mode and .modal-drawer for the duration of the slide-down transition (320ms)
-      this.closeTimeout = setTimeout(() => {
-        if (!this.isOpen()) {
-          if (this.overlay) {
-            this.overlay.classList.remove('drawer-mode');
-          }
-          if (this.containerEl) {
-            this.containerEl.classList.remove('modal-drawer', 'modal-drawer-tall', 'modal-victory', 'modal-center-level-select', 'modal-center-calendar', 'modal-center-achievements');
-            this.containerEl.style.transform = '';
-            this.containerEl.style.transition = '';
-          }
-        }
-        this.closeTimeout = null;
-      }, 340);
-    } else {
-      if (this.overlay) {
-        this.overlay.classList.remove('drawer-mode');
-      }
+    if (this._victoryKeyNavHandler) {
+      window.removeEventListener('keydown', this._victoryKeyNavHandler);
+      this._victoryKeyNavHandler = null;
+    }
+
+    // Reset backdrop inline styling
+    if (this.overlay) {
+      this.overlay.style.backgroundColor = '';
+      this.overlay.style.transition = '';
+    }
+
+    if (immediate) {
+      this.overlay.classList.remove('active', 'drawer-mode');
+      if (this.dragHandleEl) this.dragHandleEl.style.display = '';
+      if (this.closeBtn) this.closeBtn.style.display = '';
       if (this.containerEl) {
-        this.containerEl.classList.remove('modal-victory', 'modal-drawer', 'modal-drawer-tall', 'modal-center-level-select', 'modal-center-calendar', 'modal-center-achievements');
+        this.containerEl.classList.remove('modal-victory', 'modal-drawer', 'modal-drawer-tall', 'modal-center-level-select', 'modal-center-calendar', 'modal-center-achievements', 'modal-drawer-achievements', 'modal-center-how-to-play', 'modal-center-app-update', 'modal-center-dialog');
         this.containerEl.style.transform = '';
         this.containerEl.style.transition = '';
       }
+      return;
     }
+
+    const isDrawer = this.isDrawer();
+
+    // Remove active state so overlay fades out (and drawer slides down)
+    this.overlay.classList.remove('active');
+
+    const exitDuration = isDrawer ? 340 : 220;
+    this.closeTimeout = setTimeout(() => {
+      if (!this.isOpen()) {
+        if (this.overlay) {
+          this.overlay.classList.remove('drawer-mode');
+        }
+        if (this.dragHandleEl) this.dragHandleEl.style.display = '';
+        if (this.closeBtn) this.closeBtn.style.display = '';
+        if (this.containerEl) {
+          this.containerEl.classList.remove(
+            'modal-drawer',
+            'modal-drawer-tall',
+            'modal-victory',
+            'modal-center-level-select',
+            'modal-center-calendar',
+            'modal-center-achievements',
+            'modal-drawer-achievements',
+            'modal-center-how-to-play',
+            'modal-center-app-update',
+            'modal-center-dialog'
+          );
+          this.containerEl.style.transform = '';
+          this.containerEl.style.transition = '';
+        }
+      }
+      this.closeTimeout = null;
+    }, exitDuration);
   }
 
   open(type, options = {}) {
@@ -322,12 +352,15 @@ export class ModalManager {
       this.shopTickerInterval = null;
     }
 
-    const isDrawer = ['shop', 'stats'].includes(type);
+    if (this.dragHandleEl) this.dragHandleEl.style.display = '';
+    if (this.closeBtn) this.closeBtn.style.display = '';
+
+    const isDrawer = ['shop', 'stats', 'achievements'].includes(type);
 
     if (this.containerEl) {
       this.containerEl.style.transform = '';
       this.containerEl.style.transition = '';
-      this.containerEl.classList.remove('modal-victory', 'modal-center-level-select', 'modal-center-calendar', 'modal-center-achievements', 'modal-center-how-to-play');
+      this.containerEl.classList.remove('modal-victory', 'modal-center-level-select', 'modal-center-calendar', 'modal-center-achievements', 'modal-drawer-achievements', 'modal-center-how-to-play', 'modal-center-app-update', 'modal-center-dialog');
       if (isDrawer) {
         this.containerEl.classList.add('modal-drawer');
         this.containerEl.classList.remove('modal-drawer-tall');
@@ -340,9 +373,13 @@ export class ModalManager {
       } else if (type === 'dailyCalendar') {
         this.containerEl.classList.add('modal-center-calendar');
       } else if (type === 'achievements') {
-        this.containerEl.classList.add('modal-center-achievements');
+        this.containerEl.classList.add('modal-drawer-achievements');
       } else if (type === 'howToPlay') {
         this.containerEl.classList.add('modal-center-how-to-play');
+      } else if (type === 'appUpdate') {
+        this.containerEl.classList.add('modal-center-app-update');
+      } else if (type === 'resetLevel' || type === 'returnHome') {
+        this.containerEl.classList.add('modal-center-dialog');
       }
 
       const confirmOverlay = this.containerEl.querySelector('.drawer-confirm-overlay');
@@ -361,6 +398,9 @@ export class ModalManager {
     }
 
     switch (type) {
+      case 'appUpdate':
+        this.renderAppUpdate(options);
+        break;
       case 'howToPlay':
         this.renderHowToPlay();
         break;
@@ -651,7 +691,7 @@ export class ModalManager {
   }
 
   renderAchievements() {
-    this.titleEl.innerHTML = '';
+    this.titleEl.innerHTML = `${Icons.trophy(20)} <span>ACHIEVEMENTS</span>`;
     const data = this.storage ? this.storage.getAchievementsData() : { items: [], unlockedCount: 0, totalCount: 30, percentCompleted: 0 };
     const { items, unlockedCount, totalCount, percentCompleted } = data;
 
@@ -733,12 +773,8 @@ export class ModalManager {
 
     this.bodyEl.innerHTML = `
       <div class="modal-achievements-container">
-        <!-- 1. Hero Showcase Header (Top Center + Top Right Close) -->
+        <!-- 1. Hero Showcase Header (Progress Ring + Summary Counter) -->
         <div class="achieve-hero-header">
-          <button id="achieveCloseBtn" class="achieve-close-btn" aria-label="Close Achievements" title="Close">
-            ${Icons.close(20)}
-          </button>
-
           <!-- Circular SVG Progress Ring with Trophy -->
           <div class="achieve-ring-wrapper">
             <svg class="achieve-ring-svg" viewBox="0 0 76 76" width="76" height="76">
@@ -757,7 +793,6 @@ export class ModalManager {
             </div>
           </div>
 
-          <h2 class="achieve-hero-title">ACHIEVEMENTS</h2>
           <div class="achieve-summary-counter">
             <span class="achieve-summary-unlocked">${unlockedCount} / ${totalCount} Unlocked</span>
             <span class="achieve-summary-dot">•</span>
@@ -859,10 +894,12 @@ export class ModalManager {
     };
 
     okBtn.onclick = () => {
+      if (this.audio) this.audio.playClick();
       removeDialog();
       if (onConfirm) onConfirm();
     };
     cancelBtn.onclick = () => {
+      if (this.audio) this.audio.playClick();
       removeDialog();
     };
   }
@@ -887,6 +924,7 @@ export class ModalManager {
 
     const okBtn = confirmOverlay.querySelector('.btn-confirm-ok');
     okBtn.onclick = () => {
+      if (this.audio) this.audio.playClick();
       confirmOverlay.classList.remove('visible');
       setTimeout(() => confirmOverlay.remove(), 200);
     };
@@ -1014,6 +1052,7 @@ export class ModalManager {
       const btnRemoveAds = document.getElementById('btnRemoveAds');
       if (btnRemoveAds && !hasNoAds) {
         btnRemoveAds.onclick = async () => {
+          if (this.audio) this.audio.playClick();
           try {
             const res = await IAPService.purchase(IAP_PRODUCTS.REMOVE_ADS.id);
             if (res && res.success) {
@@ -1033,6 +1072,7 @@ export class ModalManager {
       const btnBuy25 = document.getElementById('btnBuyHints25');
       if (btnBuy25) {
         btnBuy25.onclick = async () => {
+          if (this.audio) this.audio.playClick();
           try {
             const res = await IAPService.purchase(IAP_PRODUCTS.HINTS_25.id);
             if (res && res.success) {
@@ -1056,6 +1096,7 @@ export class ModalManager {
       const btnBuy50 = document.getElementById('btnBuyHints50');
       if (btnBuy50) {
         btnBuy50.onclick = async () => {
+          if (this.audio) this.audio.playClick();
           try {
             const res = await IAPService.purchase(IAP_PRODUCTS.HINTS_50.id);
             if (res && res.success) {
@@ -1237,22 +1278,23 @@ export class ModalManager {
   renderReturnHome(onConfirm) {
     this.titleEl.innerHTML = `${Icons.home(20)} <span>RETURN TO HOME</span>`;
     this.bodyEl.innerHTML = `
-      <div style="text-align: center; padding: 8px 0;">
-        <p style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: #F3EDE2; margin-bottom: 8px; letter-spacing: 0.02em;">
-          Leave current puzzle?
-        </p>
-        <p style="font-family: var(--font-ui); font-size: 0.9rem; color: #7B9487; margin-bottom: 22px;">
+      <div class="modal-dialog-content">
+        <div class="modal-dialog-icon-disc">
+          ${Icons.home(26)}
+        </div>
+        <h3 class="modal-dialog-heading">Leave current puzzle?</h3>
+        <p class="modal-dialog-text">
           Your flap positions and progress are saved automatically.
         </p>
 
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-          <button id="btnResumeGame" class="btn-primary-campaign" style="height: 48px;">
+        <div class="modal-dialog-actions">
+          <button id="btnResumeGame" class="btn-dialog-primary">
             <span class="btn-icon">${Icons.play(16)}</span>
-            <span class="btn-main-label" style="font-size: 1.05rem;">RESUME PUZZLE</span>
+            <span>RESUME PUZZLE</span>
           </button>
-          <button id="btnConfirmHome" class="btn-secondary-home" style="height: 48px; background: #182620; border-color: #2D4438;">
-            <span class="btn-icon">${Icons.home(18)}</span>
-            <span class="btn-label" style="font-size: 0.95rem;">RETURN TO MAIN MENU</span>
+          <button id="btnConfirmHome" class="btn-dialog-cancel">
+            <span class="btn-icon">${Icons.home(16)}</span>
+            <span>RETURN TO MAIN MENU</span>
           </button>
         </div>
       </div>
@@ -1261,6 +1303,7 @@ export class ModalManager {
     const resumeBtn = document.getElementById('btnResumeGame');
     if (resumeBtn) {
       resumeBtn.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
         this.close();
       });
     }
@@ -1268,7 +1311,8 @@ export class ModalManager {
     const homeBtn = document.getElementById('btnConfirmHome');
     if (homeBtn) {
       homeBtn.addEventListener('click', () => {
-        this.close();
+        if (this.audio) this.audio.playClick();
+        this.close({ immediate: true });
         if (onConfirm) {
           onConfirm();
         }
@@ -1279,21 +1323,22 @@ export class ModalManager {
   renderResetLevel(onConfirm) {
     this.titleEl.innerHTML = `${Icons.restart(20)} <span>RESET PUZZLE</span>`;
     this.bodyEl.innerHTML = `
-      <div style="text-align: center; padding: 8px 0;">
-        <p style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: #F3EDE2; margin-bottom: 8px; letter-spacing: 0.02em;">
-          Reset this puzzle?
-        </p>
-        <p style="font-family: var(--font-ui); font-size: 0.9rem; color: #7B9487; margin-bottom: 22px;">
+      <div class="modal-dialog-content">
+        <div class="modal-dialog-icon-disc warning">
+          ${Icons.restart(26)}
+        </div>
+        <h3 class="modal-dialog-heading">Reset this puzzle?</h3>
+        <p class="modal-dialog-text">
           All rotated flaps will be cleared back to starting clue state.
         </p>
 
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-          <button id="btnConfirmResetLevel" class="btn-primary-campaign" style="height: 48px; background: linear-gradient(135deg, #d97706 0%, #b45309 100%);">
+        <div class="modal-dialog-actions">
+          <button id="btnConfirmResetLevel" class="btn-dialog-warning">
             <span class="btn-icon">${Icons.restart(18)}</span>
-            <span class="btn-main-label" style="font-size: 1.05rem;">RESET ALL FLAPS</span>
+            <span>RESET ALL FLAPS</span>
           </button>
-          <button id="btnCancelResetLevel" class="btn-secondary-home" style="height: 48px; background: #182620; border-color: #2D4438;">
-            <span class="btn-label" style="font-size: 0.95rem;">CANCEL</span>
+          <button id="btnCancelResetLevel" class="btn-dialog-cancel">
+            <span>CANCEL</span>
           </button>
         </div>
       </div>
@@ -1302,7 +1347,8 @@ export class ModalManager {
     const confirmBtn = document.getElementById('btnConfirmResetLevel');
     if (confirmBtn) {
       confirmBtn.addEventListener('click', () => {
-        this.close();
+        if (this.audio) this.audio.playClick();
+        this.close({ immediate: true });
         if (onConfirm) {
           onConfirm();
         }
@@ -1312,6 +1358,7 @@ export class ModalManager {
     const cancelBtn = document.getElementById('btnCancelResetLevel');
     if (cancelBtn) {
       cancelBtn.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
         this.close();
       });
     }
@@ -1329,8 +1376,10 @@ export class ModalManager {
       totalLetters = 0,
       dailyStreak = 1,
       dailyDisplayDate = '',
+      dailyDateStr = '',
       onNextLevel,
       onLevelSelect,
+      onStartDailyGame,
       onHome
     } = options;
 
@@ -1341,20 +1390,55 @@ export class ModalManager {
     }
 
     const isDaily = mode === 'daily';
+    let prevDay = null;
+    let nextDay = null;
+
+    if (isDaily) {
+      const activeDateStr = dailyDateStr || options.dateStr || DailyChallengeService.getDateStr();
+      const [y, m, d] = activeDateStr.split('-').map(Number);
+      const todayStr = DailyChallengeService.getDateStr();
+
+      // Previous Day (1 day earlier)
+      const prevDateObj = new Date(y, m - 1, d - 1);
+      const prevDateStr = DailyChallengeService.getDateStr(prevDateObj);
+      if (prevDateStr >= DailyChallengeService.ARCHIVE_START_DATE) {
+        prevDay = {
+          dateStr: prevDateStr,
+          dateObj: prevDateObj,
+          ...DailyChallengeService.getDailyLevelInfo(prevDateObj)
+        };
+      }
+
+      // Next Day (1 day later)
+      const nextDateObj = new Date(y, m - 1, d + 1);
+      const nextDateStr = DailyChallengeService.getDateStr(nextDateObj);
+      if (nextDateStr <= todayStr) {
+        nextDay = {
+          dateStr: nextDateStr,
+          dateObj: nextDateObj,
+          ...DailyChallengeService.getDailyLevelInfo(nextDateObj)
+        };
+      }
+    }
     const category = level.category || 'Quotes';
     const catUpper = category.toUpperCase();
-    const catTotal = LEVEL_DATA.filter(l => (l.category || 'Quotes') === category).length;
+    const catLevels = LEVEL_DATA.filter(l => (l.category || 'Quotes') === category);
+    const catTotal = catLevels.length || 1;
+    let catSolvedCount = 0;
+    if (this.storage) {
+      for (let i = 0; i < catLevels.length; i++) {
+        if (this.storage.isLevelCompleted(catLevels[i].id - 1)) {
+          catSolvedCount++;
+        }
+      }
+    }
+    const catPct = Math.min(100, Math.round((catSolvedCount / catTotal) * 100));
     const tierClean = (level.tier || 'Beginner').replace(/Tier \d+:\s*/i, '').toUpperCase();
 
     // Time formatting MM:SS
     const mins = Math.floor(elapsedSeconds / 60);
     const secs = elapsedSeconds % 60;
     const timeStr = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-
-    // Category progress count & percentage
-    const catLevels = LEVEL_DATA.filter(l => (l.category || 'Quotes') === category);
-    const catSolvedCount = catLevels.filter(l => this.storage && this.storage.isLevelCompleted(l.id - 1)).length;
-    const catPct = Math.min(100, Math.round((catSolvedCount / catTotal) * 100));
 
     // Category badge text
     const badgeCategoryText = isDaily
@@ -1452,30 +1536,49 @@ export class ModalManager {
           </div>
         </div>
 
-        <!-- 6. Ergonomic 3-Button Action Dock -->
+        <!-- 6. Ergonomic Action Dock -->
         <div class="mockup-action-dock">
-          <!-- Left: Circular Button (Level Select for campaign, Daily Calendar for daily) -->
-          <button id="btnVictorySelect" class="mockup-btn-circle" title="${isDaily ? 'Daily Calendar Archive' : 'Level Select'}" aria-label="${isDaily ? 'Daily Calendar Archive' : 'Level Select'}">
-            ${isDaily ? Icons.calendar(20) : Icons.gridFourDots(20)}
-          </button>
-
-          <!-- Center: Primary Glowing Next Level Pill Button -->
           ${!isDaily ? `
+            <!-- Left: Circular Main Menu Button -->
+            <button id="btnVictoryHome" class="mockup-btn-circle" title="Main Menu" aria-label="Main Menu">
+              ${Icons.home(20)}
+            </button>
+
+            <!-- Right: Primary Glowing Next Level Pill Button -->
             <button id="btnVictoryNext" class="mockup-btn-pill-primary">
               <span>${hasNextLevel ? 'NEXT LEVEL' : 'CAMPAIGN FINISHED'}</span>
               ${Icons.arrowRight(18)}
             </button>
           ` : `
-            <button id="btnVictoryHome" class="mockup-btn-pill-primary">
-              <span>RETURN TO MENU</span>
-              ${Icons.arrowRight(18)}
+            <!-- Daily Challenge Action Dock: Prev Day Arrow + Home / Next Day Arrow -->
+            <button id="btnVictoryPrevDay" class="mockup-btn-daily-nav ${!prevDay ? 'disabled' : ''}" 
+                    title="${prevDay ? `Play Previous Day (${prevDay.shortDate})` : 'No Previous Day Available'}" 
+                    aria-label="${prevDay ? `Play Previous Day (${prevDay.shortDate})` : 'No Previous Day Available'}" 
+                    ${!prevDay ? 'disabled' : ''}>
+              ${Icons.arrowLeft(18)}
+              <span>${prevDay ? prevDay.shortDate : 'PREV'}</span>
             </button>
-          `}
 
-          <!-- Right: Circular Main Menu Button -->
-          <button id="btnVictoryHomeAlt" class="mockup-btn-circle" title="Main Menu" aria-label="Main Menu">
-            ${Icons.home(20)}
-          </button>
+            ${nextDay ? `
+              <button id="btnVictoryHome" class="mockup-btn-circle" title="Main Menu" aria-label="Main Menu">
+                ${Icons.home(20)}
+              </button>
+
+              <button id="btnVictoryNextDay" class="mockup-btn-daily-nav primary" 
+                      title="Play Next Day (${nextDay.shortDate})" 
+                      aria-label="Play Next Day (${nextDay.shortDate})">
+                <span>${nextDay.shortDate}</span>
+                ${Icons.arrowRight(18)}
+              </button>
+            ` : `
+              <button id="btnVictoryHome" class="mockup-btn-daily-nav primary" 
+                      title="Main Menu" 
+                      aria-label="Main Menu">
+                <span>MAIN MENU</span>
+                ${Icons.home(18)}
+              </button>
+            `}
+          `}
         </div>
       </div>
     `;
@@ -1484,52 +1587,90 @@ export class ModalManager {
     const btnNext = document.getElementById('btnVictoryNext');
     if (btnNext) {
       btnNext.addEventListener('click', () => {
-        this.close();
         if (this.audio) this.audio.playClick();
-        if (hasNextLevel && onNextLevel) {
-          onNextLevel(nextLevelIndex);
-        } else if (!hasNextLevel && onLevelSelect) {
-          onLevelSelect();
-        }
+        Confetti.stop();
+        this.close();
+        setTimeout(() => {
+          if (!isDaily && hasNextLevel && onNextLevel) {
+            onNextLevel(nextLevelIndex);
+          } else if (onHome) {
+            onHome();
+          }
+        }, 160);
       });
     }
 
-    const btnSelect = document.getElementById('btnVictorySelect');
-    if (btnSelect) {
-      btnSelect.addEventListener('click', () => {
-        this.close();
+    const btnNextDay = document.getElementById('btnVictoryNextDay');
+    if (btnNextDay && nextDay) {
+      btnNextDay.addEventListener('click', () => {
         if (this.audio) this.audio.playClick();
-        if (isDaily) {
-          if (options.onDailyCalendar) {
-            options.onDailyCalendar();
-          } else {
-            this.open('dailyCalendar', {
-              onStartDailyGame: options.onStartDailyGame
+        Confetti.stop();
+        this.close();
+        setTimeout(() => {
+          if (onStartDailyGame) {
+            onStartDailyGame(nextDay.levelIndex, {
+              mode: 'daily',
+              dateStr: nextDay.dateStr,
+              displayDate: nextDay.shortDate,
+              level: nextDay.level
             });
           }
-        } else if (onLevelSelect) {
-          onLevelSelect();
-        }
+        }, 160);
+      });
+    }
+
+    const btnPrevDay = document.getElementById('btnVictoryPrevDay');
+    if (btnPrevDay && prevDay) {
+      btnPrevDay.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
+        Confetti.stop();
+        this.close();
+        setTimeout(() => {
+          if (onStartDailyGame) {
+            onStartDailyGame(prevDay.levelIndex, {
+              mode: 'daily',
+              dateStr: prevDay.dateStr,
+              displayDate: prevDay.shortDate,
+              level: prevDay.level
+            });
+          }
+        }, 160);
       });
     }
 
     const btnHome = document.getElementById('btnVictoryHome');
     if (btnHome) {
       btnHome.addEventListener('click', () => {
-        this.close();
         if (this.audio) this.audio.playClick();
-        if (onHome) onHome();
+        Confetti.stop();
+        this.close();
+        setTimeout(() => {
+          if (onHome) onHome();
+        }, 140);
       });
     }
 
-    const btnHomeAlt = document.getElementById('btnVictoryHomeAlt');
-    if (btnHomeAlt) {
-      btnHomeAlt.addEventListener('click', () => {
-        this.close();
-        if (this.audio) this.audio.playClick();
-        if (onHome) onHome();
-      });
-    }
+    // Keyboard arrow keys navigation support (ArrowLeft for previous day, ArrowRight for next day/next level/home)
+    this._victoryKeyNavHandler = (e) => {
+      if (e.key === 'ArrowLeft') {
+        if (btnPrevDay && prevDay) {
+          e.preventDefault();
+          btnPrevDay.click();
+        }
+      } else if (e.key === 'ArrowRight') {
+        if (btnNextDay && nextDay) {
+          e.preventDefault();
+          btnNextDay.click();
+        } else if (btnNext) {
+          e.preventDefault();
+          btnNext.click();
+        } else if (btnHome && isDaily && !nextDay) {
+          e.preventDefault();
+          btnHome.click();
+        }
+      }
+    };
+    window.addEventListener('keydown', this._victoryKeyNavHandler);
   }
 
   renderLevelSelect(options = {}) {
@@ -1654,10 +1795,10 @@ export class ModalManager {
         card.addEventListener('click', () => {
           const idx = parseInt(card.getAttribute('data-index'), 10);
           if (this.audio) this.audio.playClick();
-          this.close();
           if (options.onSelectLevel) {
             options.onSelectLevel(idx);
           }
+          this.close();
         });
       });
     };
@@ -1789,7 +1930,7 @@ export class ModalManager {
               </div>
               ${isPlayable ? `
                 <button id="btnLaunchDailyPuzzle" class="btn-calendar-launch ${isSelectedSolved ? 'replay' : ''}">
-                  ${isSelectedSolved ? Icons.replay(16) : Icons.play(16)}
+                  ${isSelectedSolved ? (Icons.replay ? Icons.replay(16) : Icons.restart(16)) : Icons.play(16)}
                   <span>${isSelectedSolved ? 'REPLAY PUZZLE' : 'PLAY PUZZLE'}</span>
                 </button>
               ` : `
@@ -1817,7 +1958,6 @@ export class ModalManager {
       if (launchBtn) {
         launchBtn.addEventListener('click', () => {
           if (this.audio) this.audio.playClick();
-          this.close();
           if (options.onStartDailyGame && selectedCell) {
             options.onStartDailyGame(selectedCell.levelInfo.levelIndex, {
               mode: 'daily',
@@ -1826,11 +1966,101 @@ export class ModalManager {
               level: selectedCell.levelInfo.level
             });
           }
+          this.close();
         });
       }
     };
 
     render();
+  }
+
+  renderAppUpdate(options = {}) {
+    this.titleEl.innerHTML = `
+      <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      <span>UPDATE AVAILABLE</span>
+    `;
+
+    const currentVer = options.currentVersion || TargetConfig.version;
+    const newVer = options.availableVersionName || (options.availableVersionCode ? `0.0.${options.availableVersionCode}` : TargetConfig.version);
+    const isDownloaded = Boolean(options.isDownloaded);
+    const releaseNotes = options.releaseNotes || [
+      'New Cryptogram Puzzle Categories & Quotes',
+      'Sleek 3-Column Home Navigation Dock',
+      'Mechanical Split-Flap Animation Polish',
+      'Performance Improvements & Bug Fixes'
+    ];
+
+    this.bodyEl.innerHTML = `
+      <div class="app-update-container">
+        <!-- Hero Header -->
+        <div class="app-update-hero">
+          <div class="app-update-chip-badge">${isDownloaded ? 'READY TO INSTALL' : 'NEW VERSION READY'}</div>
+          <div class="app-update-version-row">
+            <span class="version-chip old-version">v${currentVer}</span>
+            <span class="version-arrow">➔</span>
+            <span class="version-chip new-version">v${newVer}</span>
+          </div>
+        </div>
+
+        <!-- Release Notes Section -->
+        <div class="app-update-notes-card">
+          <div class="notes-header">WHAT'S NEW</div>
+          <ul class="notes-list">
+            ${releaseNotes.map(note => `
+              <li>
+                <span class="note-bullet">✦</span>
+                <span class="note-text">${note}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="app-update-actions">
+          <button id="btnConfirmUpdate" class="btn-primary-update" aria-label="Update Now">
+            <span class="btn-icon">
+              <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </span>
+            <span class="btn-text">${isDownloaded ? 'RESTART & INSTALL' : 'UPDATE NOW'}</span>
+          </button>
+          <button id="btnDismissUpdate" class="btn-secondary-update" aria-label="Dismiss Update">
+            <span>MAYBE LATER</span>
+          </button>
+        </div>
+      </div>
+    `;
+
+    const btnConfirm = this.bodyEl.querySelector('#btnConfirmUpdate');
+    if (btnConfirm) {
+      btnConfirm.addEventListener('click', async () => {
+        if (this.audio) this.audio.playClick();
+        if (isDownloaded) {
+          await AppUpdateService.completeUpdate();
+          this.close();
+        } else {
+          btnConfirm.disabled = true;
+          btnConfirm.innerHTML = `<span>LAUNCHING GOOGLE PLAY...</span>`;
+          await AppUpdateService.startUpdate('immediate');
+          this.close();
+        }
+      });
+    }
+
+    const btnDismiss = this.bodyEl.querySelector('#btnDismissUpdate');
+    if (btnDismiss) {
+      btnDismiss.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
+        this.close();
+      });
+    }
   }
 }
 

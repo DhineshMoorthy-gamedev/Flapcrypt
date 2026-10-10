@@ -1,17 +1,33 @@
 /**
  * Flapcrypt Lightweight Celebration Confetti
  * Spawns mechanical split-flap style rectangular confetti with physics and tumbling.
- * Zero external dependencies. Self-cleaning after 2.5 seconds.
+ * Zero external dependencies. Self-cleaning after 2.5 seconds or instantly stopped.
  */
 
 export class Confetti {
+  static _animFrameId = null;
+
+  static stop() {
+    if (Confetti._animFrameId) {
+      cancelAnimationFrame(Confetti._animFrameId);
+      Confetti._animFrameId = null;
+    }
+    const canvas = document.getElementById('confettiCanvas');
+    if (canvas && canvas.parentNode) {
+      canvas.parentNode.removeChild(canvas);
+    }
+  }
+
   static burst(options = {}) {
     if (typeof window === 'undefined') return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
     }
 
-    const count = options.count || 75;
+    // Stop any existing celebration first
+    Confetti.stop();
+
+    const count = options.count || 45;
     const colors = options.colors || [
       '#F59E0B', // Bright Gold
       '#10B981', // Emerald
@@ -77,6 +93,7 @@ export class Confetti {
         if (canvas.parentNode) {
           canvas.parentNode.removeChild(canvas);
         }
+        Confetti._animFrameId = null;
         return;
       }
 
@@ -107,9 +124,9 @@ export class Confetti {
         ctx.restore();
       }
 
-      requestAnimationFrame(render);
+      Confetti._animFrameId = requestAnimationFrame(render);
     }
 
-    requestAnimationFrame(render);
+    Confetti._animFrameId = requestAnimationFrame(render);
   }
 }

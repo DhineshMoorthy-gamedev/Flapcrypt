@@ -158,9 +158,17 @@
             </button>
           </div>
 
-          <!-- Center: Level Title -->
+          <!-- Center: Level Title & Dual Progress Chips -->
           <div class="header-center">
             <span id="levelTitleText" class="level-title-text">LEVEL 1</span>
+            <div class="header-progress-chips" id="headerProgressChips">
+              <div class="header-chip chip-words" id="chipWords" title="Words Decoded">
+                <span class="chip-text" id="chipWordsText">0 / 0 WORDS</span>
+              </div>
+              <div class="header-chip chip-letters" id="chipLetters" title="Letters Solved">
+                <span class="chip-text" id="chipLettersText">0 / 0 LETTERS</span>
+              </div>
+            </div>
           </div>
 
           <!-- Right: Restart -->
@@ -464,6 +472,9 @@
 
         </div>
       </main>
+
+      <!-- Reserved Bottom Ad Banner Slot for Settings Screen -->
+      <div id="settingsAdBannerSlot" class="ad-banner-slot" aria-label="Ad Banner Space"></div>
 
       <!-- Nested Sliding Subview (Privacy Policy & About) -->
       <div id="settingsSubview" class="settings-subview" aria-hidden="true">

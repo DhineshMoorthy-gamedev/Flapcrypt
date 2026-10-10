@@ -88,11 +88,13 @@
   margin-top: 3px;
   font-weight: 600;
   height: 16px;
-  transition: color 0.15s ease;
+  transition: color 0.15s ease, opacity 0.15s ease;
 }
 
-.cell.has-fixed .tag {
+.cell.has-fixed .tag,
+.cell.solved .tag {
   visibility: hidden;
+  opacity: 0;
 }
 
 .cell.punct .tag {

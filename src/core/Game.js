@@ -24,18 +24,24 @@ export class Game {
   }
 
   start(levelIndex = null, options = {}) {
+    // 1. Auto-save active level under its EXISTING mode and options before switching
+    if (this.state && this.state.currentLevel && this.state.groups && this.state.groups.length) {
+      this.saveCurrentLevelState();
+    }
+
+    // 2. Set new mode and options
     this.gameMode = options.mode || 'campaign';
     this.gameOptions = options;
     const idx = levelIndex !== null 
       ? levelIndex 
       : (this.storage ? this.storage.getCurrentLevel() : 0);
-    this.loadLevel(idx, { delayIntroMs: 250 });
+    this.loadLevel(idx, { skipAutoSave: true });
   }
 
   saveCurrentLevelState() {
     if (!this.storage) return;
     const idx = this.state.levelIndex;
-    if (idx === null || idx === undefined || !this.state.groups.length) return;
+    if (idx === null || idx === undefined || !this.state.groups || !this.state.groups.length) return;
 
     const drumsToSave = {};
     for (const c of this.state.groups) {
@@ -50,15 +56,17 @@ export class Game {
     }
 
     const saveData = {
+      levelIndex: idx,
       drums: drumsToSave,
       hintsRemaining: this.state.hintsRemaining,
       isWon: this.state.isWon,
       selectedGroup: this.state.selectedGroup,
+      selectedCellIndex: this.renderer ? this.renderer.activeCellIndex : 0,
       updatedAt: Date.now()
     };
 
     if (this.gameMode === 'daily') {
-      const dateStr = this.gameOptions?.dateStr;
+      const dateStr = this.gameOptions?.dateStr || DailyChallengeService.getDateStr();
       if (dateStr) {
         this.storage.saveDailyProgress(dateStr, saveData);
       }
@@ -67,7 +75,7 @@ export class Game {
     }
   }
 
-  loadLevel(index, { delayIntroMs = 0 } = {}) {
+  loadLevel(index, { skipAutoSave = false } = {}) {
     const level = LEVEL_DATA[index];
     if (this.victoryTimer) {
       clearTimeout(this.victoryTimer);
@@ -77,7 +85,7 @@ export class Game {
     this.hintsUsedInLevel = 0;
 
     // Save previous level progress if switching
-    if (this.state && this.state.currentLevel && this.state.groups.length) {
+    if (!skipAutoSave && this.state && this.state.currentLevel && this.state.groups && this.state.groups.length) {
       this.saveCurrentLevelState();
     }
 
@@ -91,16 +99,35 @@ export class Game {
     this.renderer.buildBoard(
       level,
       cipherMap,
-      (cipherChar) => this.handleCellSelect(cipherChar),
+      (cipherChar, cellIndex) => this.handleCellSelect(cipherChar, cellIndex, false),
       (cipherChar, solChar) => this.state.registerCipherChar(cipherChar, solChar)
     );
 
-    // Check for saved midway progress for this level
-    const saved = this.storage
-      ? (this.gameMode === 'daily'
-          ? this.storage.getDailyProgress(this.gameOptions?.dateStr)
-          : this.storage.getLevelProgress(index))
-      : null;
+    // Check for saved midway progress strictly matching the active mode
+    let saved = null;
+    if (this.storage) {
+      if (this.gameMode === 'daily') {
+        const dateStr = this.gameOptions?.dateStr || DailyChallengeService.getDateStr();
+        saved = this.storage.getDailyProgress(dateStr);
+        // Guard against mismatched level index or corrupt cross-mode saves
+        if (saved && saved.levelIndex !== undefined && saved.levelIndex !== index) {
+          saved = null;
+        }
+      } else {
+        saved = this.storage.getLevelProgress(index);
+        if (saved && saved.levelIndex !== undefined && saved.levelIndex !== index) {
+          saved = null;
+        }
+      }
+    }
+
+    // Integrity check: verify saved drums match this puzzle's groups
+    if (saved && saved.drums) {
+      const hasMismatch = this.state.groups.some(c => !saved.drums[c]);
+      if (hasMismatch) {
+        saved = null;
+      }
+    }
 
     if (saved && saved.drums && Object.keys(saved.drums).length > 0) {
       // Restore saved drum positions and fixed halves
@@ -131,9 +158,6 @@ export class Game {
         if (this.state.isWon) {
           this.renderer.setVictory(true);
         }
-      }
-      if (saved.selectedGroup && this.state.groups.includes(saved.selectedGroup)) {
-        this.state.selectedGroup = saved.selectedGroup;
       }
     } else {
       // Fresh level: Distribute Given Fixed Clue Halves
@@ -176,49 +200,59 @@ export class Game {
       });
     }
 
+    // Always ensure an appropriate flap cell is selected when loading any level
+    if (this.state.groups.length > 0) {
+      const initialGroup = (saved && saved.selectedGroup && this.state.groups.includes(saved.selectedGroup))
+        ? saved.selectedGroup
+        : this.state.groups[0];
+      const initialCellIdx = (saved && typeof saved.selectedCellIndex === 'number' && saved.selectedCellIndex >= 0)
+        ? saved.selectedCellIndex
+        : 0;
+      this.handleCellSelect(initialGroup, initialCellIdx, false);
+    }
+
     const isSpecial = level.category && level.category !== 'Quotes';
     const catLabel = isSpecial ? `${level.category.toUpperCase()} ${level.num}` : `LEVEL ${level.num}`;
     const customTitle = this.gameMode === 'daily'
-      ? `DAILY • ${this.gameOptions.displayDate || 'TODAY'} (${catLabel})`
+      ? `DAILY • ${this.gameOptions.displayDate || 'TODAY'}`
       : catLabel;
     this.ui.updateLevelInfo(index, LEVEL_DATA.length, level.diff, level.tier, this.gameMode, customTitle, level.category);
     this.ui.updateHintButton(this.storage ? this.storage.getHintBalance() : Infinity);
     this.ui.updateSoundButton(this.audio.isSoundEnabled());
 
-    this.refreshBoardAndUI();
+    this.refreshBoardAndUI({ suppressLockTones: true });
 
+    const statusLabel = this.gameMode === 'daily' ? 'Daily Challenge' : catLabel;
     if (this.state.isWon) {
       const authorText = (level.author || "").trim();
       const authorSpan = authorText ? ` <span class="status-author">— ${authorText}</span>` : '';
-      this.ui.setStatus(`🎉 ${catLabel} Decoded!${authorSpan}`);
+      this.ui.setStatus(`🎉 ${statusLabel} Decoded!${authorSpan}`);
     } else if (saved) {
-      this.ui.setStatus(`Resumed ${catLabel} progress.`);
+      this.ui.setStatus(`Resumed ${statusLabel} progress.`);
     } else {
       this.ui.setStatus("Tap a letter cell to rotate flaps.");
     }
-
-    // Trigger authentic mechanical split-flap cascade wave across the board on level load
-    const triggerIntro = () => {
-      this.renderer.animateLevelIntro(() => {
-        if (this.audio && this.audio.isSoundEnabled()) {
-          this.audio.playCascadeSequence(6, 42);
-        }
-        PlatformBridge.vibrateLight();
-      });
-    };
-
-    if (delayIntroMs > 0) {
-      setTimeout(triggerIntro, delayIntroMs);
-    } else {
-      triggerIntro();
-    }
   }
 
-  handleCellSelect(cipherChar, shouldScroll = true) {
+  handleCellSelect(cipherChar, cellIndex = -1, shouldScroll = true) {
     this.state.selectGroup(cipherChar);
+
+    if (typeof cellIndex === 'number' && cellIndex >= 0) {
+      this.renderer.setActiveCell(cellIndex);
+    } else {
+      const cells = this.renderer.letterCells;
+      const currentActive = cells[this.renderer.activeCellIndex];
+      if (!currentActive || currentActive.dataset.c !== cipherChar) {
+        const matchingIdx = cells.findIndex(cell => cell.dataset.c === cipherChar);
+        if (matchingIdx !== -1) {
+          this.renderer.setActiveCell(matchingIdx);
+        }
+      }
+    }
+
     this.renderer.updateBoardState(this.state.groups, this.state);
     if (shouldScroll) {
-      this.renderer.scrollToCell(cipherChar);
+      this.renderer.scrollToCellIndex(this.renderer.activeCellIndex);
     }
   }
 
@@ -305,18 +339,26 @@ export class Game {
   }
 
   handleHint() {
-    // If no group is currently selected, auto-select first unsolved letter group
-    if (!this.state.selectedGroup) {
-      const unsolved = this.state.groups.find(c => {
-        const d = this.state.drums[c];
-        const f = d.fx || {};
-        return !(f.t && f.b && d.t === d.sol && d.b === d.sol);
-      });
-      if (unsolved) {
-        this.handleCellSelect(unsolved, true);
-      } else {
-        this.ui.setStatus("🎉 All letters already solved!");
-        return;
+    if (this.audio) this.audio.playClick();
+    // If no group is selected or currently selected letter is already solved, auto-select next unsolved letter cell
+    if (!this.state.selectedGroup || this.state.isLetterCorrect(this.state.selectedGroup)) {
+      const cells = this.renderer.letterCells;
+      if (cells && cells.length > 0) {
+        let foundCell = null;
+        for (let step = 0; step < cells.length; step++) {
+          const idx = (this.renderer.activeCellIndex + step) % cells.length;
+          const c = cells[idx].dataset.c;
+          if (!this.state.isLetterCorrect(c)) {
+            foundCell = cells[idx];
+            break;
+          }
+        }
+        if (foundCell) {
+          this.handleCellSelect(foundCell.dataset.c, parseInt(foundCell.dataset.idx, 10), true);
+        } else {
+          this.ui.setStatus("🎉 All letters already solved!");
+          return;
+        }
       }
     }
 
@@ -373,6 +415,7 @@ export class Game {
   }
 
   handleReturnToHome() {
+    if (this.audio) this.audio.playClick();
     this.saveCurrentLevelState();
     if (this.onReturnToHome) {
       this.onReturnToHome();
@@ -380,6 +423,7 @@ export class Game {
   }
 
   handleRequestResetLevel() {
+    if (this.audio) this.audio.playClick();
     if (this.onRequestResetLevel) {
       this.onRequestResetLevel();
     } else {
@@ -388,10 +432,25 @@ export class Game {
   }
 
   handleResetLevel() {
+    const idx = this.state.levelIndex;
+    if (idx === null || idx === undefined) return;
+
     if (this.storage) {
-      this.storage.clearLevelProgress(this.state.levelIndex);
+      if (this.gameMode === 'daily') {
+        const dateStr = this.gameOptions?.dateStr;
+        if (dateStr) {
+          this.storage.clearDailyProgress(dateStr);
+        }
+      } else {
+        this.storage.clearLevelProgress(idx);
+      }
     }
-    this.loadLevel(this.state.levelIndex);
+
+    this.loadLevel(idx, { skipAutoSave: true });
+    this.saveCurrentLevelState();
+
+    if (this.audio) this.audio.playClick();
+    PlatformBridge.vibrateLight();
     this.ui.setStatus("Puzzle reset to initial state.");
   }
 
@@ -410,28 +469,53 @@ export class Game {
   }
 
   handleMoveSelection(delta) {
-    const groups = this.state.groups;
-    if (!groups.length) return;
-    const currIdx = groups.indexOf(this.state.selectedGroup);
-    const nextIdx = (currIdx + delta + groups.length) % groups.length;
-    this.handleCellSelect(groups[nextIdx]);
+    const cells = this.renderer.letterCells;
+    if (!cells || cells.length === 0) return;
+    const totalCells = cells.length;
+    let currIdx = this.renderer.activeCellIndex;
+    if (currIdx < 0 || currIdx >= totalCells) currIdx = 0;
+    const nextIdx = (currIdx + delta + totalCells) % totalCells;
+    const nextCipher = cells[nextIdx].dataset.c;
+    this.handleCellSelect(nextCipher, nextIdx, true);
   }
 
   handleNavigateUnsolved(delta) {
-    if (!this.state.groups.length) return;
-    const nextGroup = this.state.getNextEmptyGroup(this.state.selectedGroup, delta);
-    if (nextGroup) {
-      this.handleCellSelect(nextGroup, true);
-      PlatformBridge.vibrateLight();
-      this.audio.playClick();
+    if (this.audio) this.audio.playClick();
+    const cells = this.renderer.letterCells;
+    if (!cells || cells.length === 0) return;
+
+    const totalCells = cells.length;
+    let currIdx = this.renderer.activeCellIndex;
+    if (currIdx < 0 || currIdx >= totalCells) {
+      currIdx = 0;
     }
+
+    // 1. Search for next/prev unsolved cell in linear reading order across the board
+    let targetIndex = -1;
+    for (let step = 1; step < totalCells; step++) {
+      const candidateIdx = (currIdx + delta * step + totalCells * 100) % totalCells;
+      const candidateCipher = cells[candidateIdx].dataset.c;
+      if (!this.state.isLetterCorrect(candidateCipher)) {
+        targetIndex = candidateIdx;
+        break;
+      }
+    }
+
+    // 2. Fallback: If all cells are solved, advance sequentially
+    if (targetIndex === -1) {
+      targetIndex = (currIdx + delta + totalCells * 100) % totalCells;
+    }
+
+    const targetCipher = cells[targetIndex].dataset.c;
+    this.handleCellSelect(targetCipher, targetIndex, true);
+    PlatformBridge.vibrateLight();
   }
 
   handleNavigateEmpty(delta) {
     this.handleNavigateUnsolved(delta);
   }
 
-  refreshBoardAndUI() {
+  refreshBoardAndUI({ suppressLockTones = false } = {}) {
     const groups = this.state.groups;
     const letterUsage = this.state.getLetterUsage();
 
@@ -441,7 +525,7 @@ export class Game {
       const letter = this.state.drums[c] ? this.state.drums[c].t : null;
       const clash = agreed && letter && letterUsage[letter] && letterUsage[letter].length > 1;
 
-      if (agreed && !this.state.lockedPreviously[c] && !clash) {
+      if (!suppressLockTones && agreed && !this.state.lockedPreviously[c] && !clash) {
         const toneFreq = AUDIO_CONFIG.TONE_BASE_FREQ + groups.indexOf(c) * AUDIO_CONFIG.TONE_STEP_FREQ;
         this.audio.playTone(toneFreq, 0);
       }
@@ -453,6 +537,14 @@ export class Game {
     const solvedCount = this.state.getSolvedLettersCount();
     const totalCount = this.state.getTotalLettersCount();
     this.ui.updateLetterProgress(solvedCount, totalCount);
+
+    const wordsProg = this.state.getWordsProgress();
+    this.ui.updateProgressChips({
+      solvedWords: wordsProg.solvedWords,
+      totalWords: wordsProg.totalWords,
+      solvedLetters: solvedCount,
+      totalLetters: totalCount
+    });
 
     const isSolved = this.state.isLevelSolved();
 
@@ -474,6 +566,7 @@ export class Game {
         const dailyState = this.storage ? this.storage.completeDailyChallenge(todayDateStr, yesterdayDateStr) : { currentStreak: 1 };
         dailyStreak = dailyState ? dailyState.currentStreak : 1;
         this.ui.setStatus(`🎉 Daily Dispatch Decoded! Streak: ${dailyStreak} ${dailyStreak === 1 ? 'day' : 'days'}${authorSpan}`);
+        this.saveCurrentLevelState();
       } else {
         if (this.storage) {
           this.storage.completeLevel(this.state.levelIndex);
@@ -488,6 +581,7 @@ export class Game {
         const statusNextBtn = document.getElementById('statusNextBtn');
         if (statusNextBtn) {
           statusNextBtn.onclick = () => {
+            if (this.audio) this.audio.playClick();
             this.start(nextLevelIndex, { mode: 'campaign' });
           };
         }
@@ -517,7 +611,8 @@ export class Game {
           totalLetters: totalCount,
           solvedLetters: solvedCount,
           dailyStreak,
-          dailyDisplayDate: this.gameOptions.displayDate || ''
+          dailyDisplayDate: this.gameOptions.displayDate || '',
+          dailyDateStr: this.gameOptions.dateStr || DailyChallengeService.getDateStr()
         };
 
         if (this.victoryTimer) clearTimeout(this.victoryTimer);
@@ -525,7 +620,7 @@ export class Game {
           if (this.state.isWon) {
             this.onLevelCompleted(completionData);
           }
-        }, 750);
+        }, 400);
       }
     } else if (!isSolved && this.state.isWon) {
       this.state.isWon = false;

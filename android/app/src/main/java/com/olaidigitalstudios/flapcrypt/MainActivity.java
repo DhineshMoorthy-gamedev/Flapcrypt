@@ -11,6 +11,8 @@ public class MainActivity extends BridgeActivity {
     public void onCreate(Bundle savedInstanceState) {
         registerPlugin(InAppReviewPlugin.class);
         registerPlugin(BillingPlugin.class);
+        registerPlugin(AppUpdatePlugin.class);
+        registerPlugin(NotificationPlugin.class);
         super.onCreate(savedInstanceState);
         hideSystemBars();
     }

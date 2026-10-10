@@ -93,9 +93,20 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-button:not(.tier-tab-btn):hover:not(:disabled) {
-  background: var(--btn-hover);
-  color: #ffffff;
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--sel-color);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  button:not(.tier-tab-btn):hover:not(:disabled) {
+    background: var(--btn-hover);
+    color: #ffffff;
+  }
 }
 
 button:not(.tier-tab-btn):active:not(:disabled) {
@@ -126,18 +137,11 @@ button:disabled {
   color: #a7f3d0;
   flex: 1.2 !important;
 }
-.btn-hint:hover:not(:disabled) {
-  background: #204434;
-}
 
 .btn-nav {
   background: #18232c;
   border-color: #273746;
   color: #94a3b8;
-}
-.btn-nav:hover:not(:disabled) {
-  background: #20313e;
-  color: #e2e8f0;
 }
 
 .btn-next {
@@ -145,9 +149,19 @@ button:disabled {
   border-color: #2e5488;
   color: #60a5fa;
 }
-.btn-next:hover:not(:disabled) {
-  background: #264a78;
-  color: #93c5fd;
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-hint:hover:not(:disabled) {
+    background: #204434;
+  }
+  .btn-nav:hover:not(:disabled) {
+    background: #20313e;
+    color: #e2e8f0;
+  }
+  .btn-next:hover:not(:disabled) {
+    background: #264a78;
+    color: #93c5fd;
+  }
 }
 
 /* Primary Steppers: Two Ergonomic Forward & Reverse Arrow Steppers */
@@ -176,11 +190,13 @@ button:disabled {
   -webkit-tap-highlight-color: transparent;
 }
 
-.btn-stepper-btn:hover:not(:disabled) {
-  background: #1d3326;
-  border-color: rgba(245, 158, 11, 0.45);
-  color: #fbbf24;
-  box-shadow: 0 0 14px rgba(245, 158, 11, 0.2);
+@media (hover: hover) and (pointer: fine) {
+  .btn-stepper-btn:hover:not(:disabled) {
+    background: #1d3326;
+    border-color: rgba(245, 158, 11, 0.45);
+    color: #fbbf24;
+    box-shadow: 0 0 14px rgba(245, 158, 11, 0.2);
+  }
 }
 
 .btn-stepper-btn:active:not(:disabled) {

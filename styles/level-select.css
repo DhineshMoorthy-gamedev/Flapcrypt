@@ -121,10 +121,12 @@
   pointer-events: none;
 }
 
-.tier-tab-btn:hover:not(.active) {
-  background: #192C22;
-  border-color: #2D4C3C;
-  color: #B2C4BB;
+@media (hover: hover) and (pointer: fine) {
+  .tier-tab-btn:hover:not(.active) {
+    background: #192C22;
+    border-color: #2D4C3C;
+    color: #B2C4BB;
+  }
 }
 
 .tier-tab-btn:focus {

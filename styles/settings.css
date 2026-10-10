@@ -77,16 +77,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 18px 14px 40px;
+  padding: 16px 14px max(12px, env(safe-area-inset-bottom));
   box-sizing: border-box;
 }
 
 .settings-content-wrapper {
   width: 100%;
   max-width: 580px;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 20px;
 }
 
 /* Section Header */
@@ -142,8 +143,10 @@
   cursor: pointer;
 }
 
-.settings-row.row-interactive:hover {
-  background-color: rgba(245, 158, 11, 0.04);
+@media (hover: hover) and (pointer: fine) {
+  .settings-row.row-interactive:hover {
+    background-color: rgba(245, 158, 11, 0.04);
+  }
 }
 
 .settings-row.row-interactive:active {
@@ -173,9 +176,11 @@
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.settings-row:hover .settings-icon-box {
-  color: #F59E0B;
-  border-color: rgba(245, 158, 11, 0.4);
+@media (hover: hover) and (pointer: fine) {
+  .settings-row:hover .settings-icon-box {
+    color: #F59E0B;
+    border-color: rgba(245, 158, 11, 0.4);
+  }
 }
 
 .settings-item-title {
@@ -216,10 +221,12 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.btn-external-dummy:hover {
-  background: rgba(245, 158, 11, 0.18);
-  border-color: rgba(245, 158, 11, 0.7);
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
+@media (hover: hover) and (pointer: fine) {
+  .btn-external-dummy:hover {
+    background: rgba(245, 158, 11, 0.18);
+    border-color: rgba(245, 158, 11, 0.7);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
+  }
 }
 
 .btn-external-dummy:active {
@@ -296,10 +303,12 @@
   letter-spacing: 0.04em;
 }
 
-.btn-iap-dummy:hover {
-  background: linear-gradient(180deg, #355243 0%, #24382e 100%);
-  border-color: #34D399;
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+@media (hover: hover) and (pointer: fine) {
+  .btn-iap-dummy:hover {
+    background: linear-gradient(180deg, #355243 0%, #24382e 100%);
+    border-color: #34D399;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+  }
 }
 
 .btn-iap-dummy:active {
@@ -314,10 +323,12 @@
   cursor: default;
 }
 
-.btn-iap-dummy.purchased:hover {
-  background: rgba(16, 185, 129, 0.12);
-  border-color: rgba(16, 185, 129, 0.4);
-  box-shadow: none;
+@media (hover: hover) and (pointer: fine) {
+  .btn-iap-dummy.purchased:hover {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: none;
+  }
 }
 
 /* Chevron indicator */
@@ -328,15 +339,17 @@
   transition: transform 0.15s ease, color 0.15s ease;
 }
 
-.row-interactive:hover .row-chevron {
-  color: #F59E0B;
-  transform: translateX(2px);
+@media (hover: hover) and (pointer: fine) {
+  .row-interactive:hover .row-chevron {
+    color: #F59E0B;
+    transform: translateX(2px);
+  }
 }
 
 /* Minimalist Monospace Footer (matching Grid Leap / bug.png) */
 .settings-footer {
-  margin-top: 14px;
-  padding: 24px 0 16px;
+  margin-top: auto;
+  padding: 14px 0 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,8 +358,8 @@
 
 .settings-footer-text {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
   color: #55665d;
   text-transform: uppercase;
   user-select: none;
@@ -409,9 +422,11 @@
   box-shadow: none;
 }
 
-.subview-header .btn-header-action:hover {
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.08);
+@media (hover: hover) and (pointer: fine) {
+  .subview-header .btn-header-action:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.08);
+  }
 }
 
 .subview-stage {
@@ -433,6 +448,14 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.subview-action-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+  margin-bottom: 24px;
 }
 
 .subview-article.about-mode {
@@ -729,10 +752,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.btn-about-pill:hover {
-  background: #202930;
-  border-color: rgba(255, 255, 255, 0.22);
-  color: #38BDF8;
+@media (hover: hover) and (pointer: fine) {
+  .btn-about-pill:hover {
+    background: #202930;
+    border-color: rgba(255, 255, 255, 0.22);
+    color: #38BDF8;
+  }
 }
 
 .btn-about-pill:active {

@@ -200,6 +200,7 @@ export class HomeScreen {
     const btnContinue = document.getElementById('btnContinueCampaign');
     if (btnContinue) {
       btnContinue.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
         const levelIndex = this.storage.getCurrentLevel();
         if (this.onStartGame) {
           this.onStartGame(levelIndex, { mode: 'campaign' });
@@ -267,6 +268,7 @@ export class HomeScreen {
     const btnSettings = document.getElementById('btnSettings');
     if (btnSettings) {
       btnSettings.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
         if (this.onOpenSettings) {
           this.onOpenSettings();
         } else {
@@ -277,12 +279,18 @@ export class HomeScreen {
 
     const btnShop = document.getElementById('btnShop');
     if (btnShop) {
-      btnShop.addEventListener('click', () => this.modals.open('shop'));
+      btnShop.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
+        this.modals.open('shop');
+      });
     }
 
     const btnStats = document.getElementById('btnStats');
     if (btnStats) {
-      btnStats.addEventListener('click', () => this.modals.open('stats'));
+      btnStats.addEventListener('click', () => {
+        if (this.audio) this.audio.playClick();
+        this.modals.open('stats');
+      });
     }
   }
 
@@ -305,27 +313,22 @@ export class HomeScreen {
       this.dailyCard.classList.toggle('completed', isCompleted);
     }
 
+    if (this.dailyBtnMainLabel) {
+      this.dailyBtnMainLabel.textContent = 'PLAY DAILY';
+    }
+    if (this.dailyPlayIcon) {
+      this.dailyPlayIcon.innerHTML = Icons.calendar(16);
+    }
+
     if (isCompleted) {
       if (this.dailyStatusSubtext) {
         this.dailyStatusSubtext.textContent = 'DECODED ✔';
         this.dailyStatusSubtext.classList.add('completed');
       }
-      if (this.dailyPlayIcon) {
-        this.dailyPlayIcon.innerHTML = Icons.check(16);
-      }
-      if (this.dailyBtnMainLabel) {
-        this.dailyBtnMainLabel.textContent = 'REPLAY DAILY';
-      }
     } else {
       if (this.dailyStatusSubtext) {
         this.dailyStatusSubtext.textContent = "TODAY'S PUZZLE";
         this.dailyStatusSubtext.classList.remove('completed');
-      }
-      if (this.dailyPlayIcon) {
-        this.dailyPlayIcon.innerHTML = Icons.calendar(16);
-      }
-      if (this.dailyBtnMainLabel) {
-        this.dailyBtnMainLabel.textContent = 'PLAY DAILY';
       }
     }
   }

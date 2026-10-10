@@ -22,6 +22,7 @@ export const TargetConfig = {
   mode: activeMode,
   title: import.meta.env?.VITE_APP_TITLE || "FlapCrypt",
   version: typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "0.0.0-dev",
+  versionCode: typeof __APP_VERSION_CODE__ !== "undefined" ? __APP_VERSION_CODE__ : 0,
 
   isWeb: activeMode === TARGET_MODES.WEB,
   isItch: activeMode === TARGET_MODES.ITCH,
