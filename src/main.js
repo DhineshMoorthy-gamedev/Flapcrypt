@@ -21,6 +21,7 @@ import { TargetConfig } from './platform/target-config.js';
 import { PlatformBridge } from './platform/lifecycle.js';
 import { IAPService } from './core/IAPService.js';
 import { Confetti } from './ui/Confetti.js';
+import { AdService } from './core/AdService.js';
 
 function initApp() {
   // Expose config for runtime inspection and set DOM attributes
@@ -81,6 +82,11 @@ function initApp() {
   audioService.setSoundEnabled(storageService.isSoundEnabled());
   PlatformBridge.setHapticsEnabled(storageService.isHapticsEnabled());
   IAPService.init(storageService, audioService);
+  IAPService.addListener((event) => {
+    if (event === 'purchase_remove_ads' || event === 'restore_success') {
+      AdService.onAdsRemoved();
+    }
+  });
 
   // Pre-warm AudioContext and procedural click buffers on first user gesture
   const prewarmAudio = () => {
@@ -169,6 +175,11 @@ function initApp() {
         if (elements.settingsScreen) elements.settingsScreen.classList.remove('no-transition');
       });
     }
+
+    // Ensure active screen banner is displayed
+    if (AdService && !AdService.hasAdsRemoved()) {
+      AdService.showBanner();
+    }
   }
 
   let game = null;
@@ -188,21 +199,41 @@ function initApp() {
     }
   });
 
+  // Initialize central Google AdMob service
+  AdService.init({
+    storageService,
+    audioService,
+    modalManager,
+    uiController
+  });
+
   game = new Game({
     gameState,
     audioService,
     renderer,
     uiController,
     storageService,
+    modalManager,
     onRequestShop: () => {
       modalManager.open('shop');
     },
     onReturnToHome: () => {
-      modalManager.open('returnHome', {
-        onConfirm: () => {
+      if (gameState.isWon) {
+        const proceed = () => {
           showScreen('home');
+        };
+        if (AdService.shouldShowInterstitial({ force: true })) {
+          AdService.showInterstitial({ onComplete: proceed });
+        } else {
+          proceed();
         }
-      });
+      } else {
+        modalManager.open('returnHome', {
+          onConfirm: () => {
+            showScreen('home');
+          }
+        });
+      }
     },
     onRequestResetLevel: () => {
       modalManager.open('resetLevel', {
@@ -216,23 +247,51 @@ function initApp() {
       modalManager.open('levelComplete', {
         ...data,
         onNextLevel: (nextIdx) => {
-          game.start(nextIdx, { mode: 'campaign' });
-          showScreen('game');
+          const proceed = () => {
+            game.start(nextIdx, { mode: 'campaign' });
+            showScreen('game');
+          };
+          if (AdService.shouldShowInterstitial()) {
+            AdService.showInterstitial({ onComplete: proceed });
+          } else {
+            proceed();
+          }
         },
         onLevelSelect: () => {
-          modalManager.open('levelSelect', {
-            onSelectLevel: (nextIdx) => {
-              game.start(nextIdx, { mode: 'campaign' });
-              showScreen('game', { instant: true });
-            }
-          });
+          const proceed = () => {
+            modalManager.open('levelSelect', {
+              onSelectLevel: (nextIdx) => {
+                game.start(nextIdx, { mode: 'campaign' });
+                showScreen('game', { instant: true });
+              }
+            });
+          };
+          if (AdService.shouldShowInterstitial()) {
+            AdService.showInterstitial({ onComplete: proceed });
+          } else {
+            proceed();
+          }
         },
         onStartDailyGame: (levelIndex, dailyOptions) => {
-          game.start(levelIndex, dailyOptions);
-          showScreen('game', { instant: true });
+          const proceed = () => {
+            game.start(levelIndex, dailyOptions);
+            showScreen('game', { instant: true });
+          };
+          if (AdService.shouldShowInterstitial()) {
+            AdService.showInterstitial({ onComplete: proceed });
+          } else {
+            proceed();
+          }
         },
         onHome: () => {
-          showScreen('home');
+          const proceed = () => {
+            showScreen('home');
+          };
+          if (AdService.shouldShowInterstitial()) {
+            AdService.showInterstitial({ onComplete: proceed });
+          } else {
+            proceed();
+          }
         }
       });
     }
@@ -353,6 +412,20 @@ function initApp() {
           renderer.updateBoardState(gameState.groups, gameState);
           return true;
         }
+
+        // If level has already been completed/won, return to home with interstitial ad
+        if (gameState.isWon) {
+          const proceed = () => {
+            showScreen('home');
+          };
+          if (AdService.shouldShowInterstitial({ force: true })) {
+            AdService.showInterstitial({ onComplete: proceed });
+          } else {
+            proceed();
+          }
+          return true;
+        }
+
         // Show confirmation modal to return to home
         modalManager.open('returnHome', {
           onConfirm: () => {

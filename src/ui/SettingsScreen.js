@@ -5,6 +5,7 @@ import { IAPService, IAP_PRODUCTS } from '../core/IAPService.js';
 import { Toast } from './Toast.js';
 import { AppUpdateService } from '../core/AppUpdateService.js';
 import { NotificationService } from '../core/NotificationService.js';
+import { AdService } from '../core/AdService.js';
 
 export class SettingsScreen {
   constructor({ container, storageService, audioService, modalManager, onBack }) {
@@ -136,10 +137,18 @@ export class SettingsScreen {
     const triggerRemoveAds = async (e) => {
       if (e) e.stopPropagation();
       if (this.storage.hasRemovedAds()) {
-        this.showFeedbackNotice(
-          'AD-FREE STATUS ACTIVE',
-          'You already own the Ad-Free upgrade!\n\nAll banner advertisements and intermissions are permanently disabled.'
+        const isConfirmReenable = window.confirm(
+          "Ads are currently permanently disabled on this device.\n\nWould you like to re-enable advertisements for testing purposes?"
         );
+        if (isConfirmReenable) {
+          this.storage.setRemoveAds(false);
+          AdService.showBanner();
+          this.syncState();
+          this.showFeedbackNotice(
+            'ADS RE-ENABLED',
+            'Advertisements and banners have been restored for testing.'
+          );
+        }
         return;
       }
 
@@ -149,6 +158,8 @@ export class SettingsScreen {
       try {
         const res = await IAPService.purchase(IAP_PRODUCTS.REMOVE_ADS.id);
         if (res && res.success) {
+          AdService.hideBanner();
+          AdService.destroyBanner();
           this.syncState();
           this.showFeedbackNotice(
             'PURCHASE SUCCESSFUL',

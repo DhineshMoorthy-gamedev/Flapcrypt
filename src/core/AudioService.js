@@ -183,6 +183,79 @@ export class AudioService {
     }
   }
 
+  playCorrectNote(delayMs = 0) {
+    const ctx = this.getAudioContext();
+    if (!ctx) return;
+
+    const play = () => {
+      const t = ctx.currentTime + Math.max(0.01, delayMs / 1000);
+
+      // Bright dual-harmonic chime: upward melodic lift from A5 (880Hz) to C6 (1046.5Hz) with E6 (1318.5Hz) shimmer
+      const osc1 = ctx.createOscillator();
+      const osc2 = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(AUDIO_CONFIG.CORRECT_NOTE_START || 880, t);
+      osc1.frequency.exponentialRampToValueAtTime(AUDIO_CONFIG.CORRECT_NOTE_END || 1046.5, t + 0.06);
+
+      osc2.type = 'triangle';
+      osc2.frequency.setValueAtTime(AUDIO_CONFIG.CORRECT_NOTE_HARMONIC || 1318.5, t);
+
+      gain.gain.setValueAtTime(0.001, t);
+      gain.gain.exponentialRampToValueAtTime(0.16, t + 0.015);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.28);
+
+      osc1.connect(gain);
+      osc2.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc1.start(t);
+      osc2.start(t);
+      osc1.stop(t + 0.3);
+      osc2.stop(t + 0.3);
+    };
+
+    if (ctx.state === 'suspended') {
+      ctx.resume().then(play).catch(() => play());
+    } else {
+      play();
+    }
+  }
+
+  playIncorrectNote(delayMs = 0) {
+    const ctx = this.getAudioContext();
+    if (!ctx) return;
+
+    const play = () => {
+      const t = ctx.currentTime + Math.max(0.01, delayMs / 1000);
+
+      // Subtle, muted low mechanical thud / downward tap from 220Hz to 160Hz
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(AUDIO_CONFIG.INCORRECT_NOTE_START || 220, t);
+      osc.frequency.exponentialRampToValueAtTime(AUDIO_CONFIG.INCORRECT_NOTE_END || 160, t + 0.1);
+
+      gain.gain.setValueAtTime(0.001, t);
+      gain.gain.exponentialRampToValueAtTime(0.08, t + 0.012);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.14);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(t);
+      osc.stop(t + 0.16);
+    };
+
+    if (ctx.state === 'suspended') {
+      ctx.resume().then(play).catch(() => play());
+    } else {
+      play();
+    }
+  }
+
   playVictoryFanfare() {
     AUDIO_CONFIG.VICTORY_DELAYS.forEach((delay, idx) => {
       this.playTone(AUDIO_CONFIG.VICTORY_NOTES[idx], delay);

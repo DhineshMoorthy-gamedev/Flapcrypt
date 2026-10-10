@@ -5,6 +5,9 @@ import { IAPService, IAP_PRODUCTS } from '../core/IAPService.js';
 import { AppUpdateService } from '../core/AppUpdateService.js';
 import { TargetConfig } from '../platform/target-config.js';
 import { Confetti } from './Confetti.js';
+import { Toast } from './Toast.js';
+import { AdService } from '../core/AdService.js';
+import { PlatformBridge } from '../platform/lifecycle.js';
 
 export class ModalManager {
   constructor({ storageService, audioService, onProgressReset, onHintInventoryChanged }) {
@@ -378,7 +381,7 @@ export class ModalManager {
         this.containerEl.classList.add('modal-center-how-to-play');
       } else if (type === 'appUpdate') {
         this.containerEl.classList.add('modal-center-app-update');
-      } else if (type === 'resetLevel' || type === 'returnHome') {
+      } else if (type === 'resetLevel' || type === 'returnHome' || type === 'claimReward' || type === 'hintPrompt') {
         this.containerEl.classList.add('modal-center-dialog');
       }
 
@@ -424,6 +427,12 @@ export class ModalManager {
         break;
       case 'resetLevel':
         this.renderResetLevel(options.onConfirm);
+        break;
+      case 'claimReward':
+        this.renderClaimReward(options);
+        break;
+      case 'hintPrompt':
+        this.renderHintPrompt(options);
         break;
       case 'levelComplete':
         this.renderLevelComplete(options);
@@ -939,6 +948,8 @@ export class ModalManager {
     }
 
     const updateShopView = () => {
+      const currentBal = this.storage ? this.storage.getHintBalance() : 0;
+      this.titleEl.innerHTML = `${Icons.shop(20)} <span>SHOP • ${currentBal} HINT${currentBal === 1 ? '' : 'S'}</span>`;
       const cooldown = this.storage ? this.storage.getFreeHintCooldown() : { canClaim: true, remainingSeconds: 0 };
       const hasNoAds = this.storage ? this.storage.hasRemovedAds() : false;
       const priceRemoveAds = IAPService.getPrice(IAP_PRODUCTS.REMOVE_ADS.id) || '$4.90';
@@ -962,22 +973,33 @@ export class ModalManager {
               </div>
               <div class="shop-row-info">
                 <span class="shop-row-title">1 Free Hint</span>
-                <span class="shop-row-desc">
-                  ${cooldown.canClaim 
-                    ? 'Available every 24 hours'
-                    : `Next in <span class="shop-countdown-pill" id="freeHintCountdown">${formatTime(cooldown.remainingSeconds)}</span>`
-                  }
-                </span>
               </div>
             </div>
             <div class="shop-row-right">
               <button id="btnClaimFreeHint" class="btn-shop-pill ${cooldown.canClaim ? 'ready' : 'disabled'}" ${cooldown.canClaim ? '' : 'disabled'}>
-                ${cooldown.canClaim ? 'FREE' : '24H'}
+                ${cooldown.canClaim ? 'FREE' : `<span id="freeHintCountdown">${formatTime(cooldown.remainingSeconds)}</span>`}
               </button>
             </div>
           </div>
 
-          <!-- 2. Remove Ads -->
+          <!-- 2. Watch Video for Free Hint -->
+          <div class="shop-row">
+            <div class="shop-row-left">
+              <div class="shop-row-icon shop-video-icon">
+                <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </div>
+              <div class="shop-row-info">
+                <span class="shop-row-title">Watch Video (+1 Hint)</span>
+              </div>
+            </div>
+            <div class="shop-row-right">
+              <button id="btnWatchAdForHint" class="btn-shop-pill highlight">WATCH</button>
+            </div>
+          </div>
+
+          <!-- 3. Remove Ads -->
           <div class="shop-row">
             <div class="shop-row-left">
               <div class="shop-row-icon">
@@ -985,7 +1007,6 @@ export class ModalManager {
               </div>
               <div class="shop-row-info">
                 <span class="shop-row-title">Remove Ads</span>
-                <span class="shop-row-desc">Permanently disable banner ads & intermissions</span>
               </div>
             </div>
             <div class="shop-row-right">
@@ -995,7 +1016,7 @@ export class ModalManager {
             </div>
           </div>
 
-          <!-- 3. 25 Hints Pack -->
+          <!-- 4. 25 Hints Pack -->
           <div class="shop-row">
             <div class="shop-row-left">
               <div class="shop-row-icon">
@@ -1003,7 +1024,6 @@ export class ModalManager {
               </div>
               <div class="shop-row-info">
                 <span class="shop-row-title">25 Hints Pack</span>
-                <span class="shop-row-desc">Letter decryption assists</span>
               </div>
             </div>
             <div class="shop-row-right">
@@ -1011,7 +1031,7 @@ export class ModalManager {
             </div>
           </div>
 
-          <!-- 4. 50 Hints Pack -->
+          <!-- 5. 50 Hints Pack -->
           <div class="shop-row">
             <div class="shop-row-left">
               <div class="shop-row-icon">
@@ -1019,7 +1039,6 @@ export class ModalManager {
               </div>
               <div class="shop-row-info">
                 <span class="shop-row-title">50 Hints Pack</span>
-                <span class="shop-row-desc">Generous boost for marathon solves</span>
               </div>
             </div>
             <div class="shop-row-right">
@@ -1049,6 +1068,18 @@ export class ModalManager {
         };
       }
 
+      const btnWatchAd = document.getElementById('btnWatchAdForHint');
+      if (btnWatchAd) {
+        btnWatchAd.onclick = () => {
+          if (this.audio) this.audio.playClick();
+          AdService.showRewarded({
+            onRewardEarned: () => {
+              updateShopView();
+            }
+          });
+        };
+      }
+
       const btnRemoveAds = document.getElementById('btnRemoveAds');
       if (btnRemoveAds && !hasNoAds) {
         btnRemoveAds.onclick = async () => {
@@ -1056,6 +1087,8 @@ export class ModalManager {
           try {
             const res = await IAPService.purchase(IAP_PRODUCTS.REMOVE_ADS.id);
             if (res && res.success) {
+              AdService.hideBanner();
+              AdService.destroyBanner();
               this.showShopPopup({
                 title: "Ads Removed!",
                 message: "All advertisements disabled permanently. Enjoy pure mechanical split-flap decryption!",
@@ -1361,6 +1394,95 @@ export class ModalManager {
         if (this.audio) this.audio.playClick();
         this.close();
       });
+    }
+  }
+
+  renderClaimReward(options = {}) {
+    this.titleEl.innerHTML = `<span class="dialog-title-text">REWARD READY</span>`;
+    const amount = options.amount || 1;
+
+    this.bodyEl.innerHTML = `
+      <div class="reward-claim-container">
+        <div class="reward-claim-card">
+          <div class="reward-claim-icon">
+            <svg class="ui-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 13.72A6 6 0 1 0 8.91 13.72 M12 2v2"/>
+            </svg>
+          </div>
+          <div class="reward-claim-amount">+${amount} HINT</div>
+        </div>
+        <div class="reward-claim-actions">
+          <button id="btnClaimRewardConfirm" class="btn-primary-claim">CLAIM ${amount} HINT</button>
+        </div>
+      </div>
+    `;
+
+    const btnConfirm = document.getElementById('btnClaimRewardConfirm');
+    if (btnConfirm) {
+      btnConfirm.onclick = () => {
+        if (this.audio) this.audio.playVictoryFanfare?.();
+        PlatformBridge.vibrateSuccess?.();
+        if (typeof options.onClaim === 'function') {
+          options.onClaim();
+        }
+        if (this.onHintInventoryChanged && this.storage) {
+          this.onHintInventoryChanged(this.storage.getHintBalance());
+        }
+        this.close();
+        Toast.show(`+${amount} Hint added to inventory!`, { type: 'success' });
+      };
+    }
+  }
+
+  renderHintPrompt(options = {}) {
+    this.titleEl.innerHTML = `<span class="dialog-title-text">NEED A HINT?</span>`;
+
+    this.bodyEl.innerHTML = `
+      <div class="hint-prompt-container">
+        <div class="hint-prompt-icon">
+          <svg class="ui-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 13.72A6 6 0 1 0 8.91 13.72 M12 2v2"/>
+          </svg>
+        </div>
+        <div class="hint-prompt-desc">
+          You currently have <strong>0 hints</strong> in your inventory. Watch a short video to earn a free hint or visit the shop.
+        </div>
+        <div class="hint-prompt-actions">
+          <button id="btnPromptWatchAd" class="btn-prompt-primary">
+            <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <span>WATCH AD (+1 HINT)</span>
+          </button>
+          <button id="btnPromptShop" class="btn-prompt-secondary">VISIT SHOP</button>
+          <button id="btnPromptDismiss" class="btn-prompt-cancel">CANCEL</button>
+        </div>
+      </div>
+    `;
+
+    const btnWatch = document.getElementById('btnPromptWatchAd');
+    const btnShop = document.getElementById('btnPromptShop');
+    const btnDismiss = document.getElementById('btnPromptDismiss');
+
+    if (btnWatch) {
+      btnWatch.onclick = () => {
+        if (this.audio) this.audio.playClick();
+        this.close({ immediate: true });
+        if (typeof options.onWatchAd === 'function') options.onWatchAd();
+      };
+    }
+    if (btnShop) {
+      btnShop.onclick = () => {
+        if (this.audio) this.audio.playClick();
+        this.close({ immediate: true });
+        if (typeof options.onOpenShop === 'function') options.onOpenShop();
+      };
+    }
+    if (btnDismiss) {
+      btnDismiss.onclick = () => {
+        if (this.audio) this.audio.playClick();
+        this.close();
+      };
     }
   }
 

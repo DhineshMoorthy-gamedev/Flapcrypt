@@ -8,7 +8,7 @@ export class GameState {
     this.drums = {};
     this.groups = [];
     this.selectedGroup = null;
-    this.hintsRemaining = Infinity;
+    this.hintsRemaining = 5;
     this.isWon = false;
     this.bothFlapsLinked = true;
     this.lockedPreviously = {};
@@ -21,7 +21,7 @@ export class GameState {
     this.drums = {};
     this.groups = [];
     this.selectedGroup = null;
-    this.hintsRemaining = Infinity;
+    this.hintsRemaining = 5;
     this.isWon = false;
     this.bothFlapsLinked = true;
     this.lockedPreviously = {};
@@ -225,6 +225,14 @@ export class GameState {
     };
   }
 
+  canHintGroup(cipherChar = this.selectedGroup) {
+    if (!cipherChar) return false;
+    const d = this.drums[cipherChar];
+    if (!d) return false;
+    const f = d.fx || {};
+    return !(f.t && f.b && d.t === d.sol && d.b === d.sol);
+  }
+
   getHintPayload() {
     if (!this.selectedGroup) return null;
     const d = this.drums[this.selectedGroup];
@@ -240,7 +248,7 @@ export class GameState {
 
     return {
       cipherChar: this.selectedGroup,
-      hintsRemaining: Infinity
+      hintsRemaining: this.hintsRemaining
     };
   }
 }

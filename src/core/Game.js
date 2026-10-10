@@ -4,14 +4,16 @@ import { createRng } from '../utils/prng.js';
 import { ANIMATION_CONFIG, AUDIO_CONFIG } from '../config/constants.js';
 import { PlatformBridge } from '../platform/lifecycle.js';
 import { DailyChallengeService } from './DailyChallengeService.js';
+import { AdService } from './AdService.js';
 
 export class Game {
-  constructor({ gameState, audioService, renderer, uiController, storageService, onReturnToHome, onRequestResetLevel, onRequestShop, onLevelCompleted }) {
+  constructor({ gameState, audioService, renderer, uiController, storageService, modalManager, onReturnToHome, onRequestResetLevel, onRequestShop, onLevelCompleted }) {
     this.state = gameState;
     this.audio = audioService;
     this.renderer = renderer;
     this.ui = uiController;
     this.storage = storageService;
+    this.modalManager = modalManager;
     this.onReturnToHome = onReturnToHome;
     this.onRequestResetLevel = onRequestResetLevel;
     this.onRequestShop = onRequestShop;
@@ -80,6 +82,9 @@ export class Game {
     if (this.victoryTimer) {
       clearTimeout(this.victoryTimer);
       this.victoryTimer = null;
+    }
+    if (this.ui) {
+      this.ui.setControlsLocked(false);
     }
     this.levelStartTime = Date.now();
     this.hintsUsedInLevel = 0;
@@ -152,7 +157,7 @@ export class Game {
         }
       });
 
-      this.state.hintsRemaining = Infinity;
+      this.state.hintsRemaining = this.storage ? this.storage.getHintBalance() : 5;
       if (saved.isWon !== undefined) {
         this.state.isWon = saved.isWon;
         if (this.state.isWon) {
@@ -217,7 +222,7 @@ export class Game {
       ? `DAILY • ${this.gameOptions.displayDate || 'TODAY'}`
       : catLabel;
     this.ui.updateLevelInfo(index, LEVEL_DATA.length, level.diff, level.tier, this.gameMode, customTitle, level.category);
-    this.ui.updateHintButton(this.storage ? this.storage.getHintBalance() : Infinity);
+    this.ui.updateHintButton(this.storage ? this.storage.getHintBalance() : 5);
     this.ui.updateSoundButton(this.audio.isSoundEnabled());
 
     this.refreshBoardAndUI({ suppressLockTones: true });
@@ -235,6 +240,17 @@ export class Game {
   }
 
   handleCellSelect(cipherChar, cellIndex = -1, shouldScroll = true) {
+    if (this.state.isWon) return;
+    // Safety auto-repair: if drum was marked fixed in memory but cell was never visually fixed by hint, unfix flags
+    const d = this.state.drums[cipherChar];
+    if (d && d.fx?.t && d.fx?.b) {
+      const renderedCells = this.renderer.cellsByCipherChar ? this.renderer.cellsByCipherChar[cipherChar] : null;
+      if (renderedCells && renderedCells.length > 0 && !renderedCells[0].classList.contains("has-fixed")) {
+        delete d.fx.t;
+        delete d.fx.b;
+      }
+    }
+
     this.state.selectGroup(cipherChar);
 
     if (typeof cellIndex === 'number' && cellIndex >= 0) {
@@ -257,6 +273,19 @@ export class Game {
   }
 
   handleStep(whichHalf, dir) {
+    if (this.state.isWon) return;
+    const activeChar = this.state.selectedGroup;
+    if (activeChar) {
+      const d = this.state.drums[activeChar];
+      if (d && d.fx?.t && d.fx?.b) {
+        const renderedCells = this.renderer.cellsByCipherChar ? this.renderer.cellsByCipherChar[activeChar] : null;
+        if (renderedCells && renderedCells.length > 0 && !renderedCells[0].classList.contains("has-fixed")) {
+          delete d.fx.t;
+          delete d.fx.b;
+        }
+      }
+    }
+
     const payload = this.state.getStepPayload(whichHalf, dir);
     if (!payload) return;
 
@@ -285,7 +314,7 @@ export class Game {
         if (this.storage) this.storage.recordFlapRotation();
         PlatformBridge.vibrateLight();
         setTimeout(() => {
-          this.refreshBoardAndUI();
+          this.refreshBoardAndUI({ changedCipherChar: cipherChar });
           this.saveCurrentLevelState();
         }, 180);
       }
@@ -298,13 +327,14 @@ export class Game {
       PlatformBridge.vibrateLight();
       this.renderer.animateDrumHalf(cipherChar, whichHalf, targetChar, 0, () => this.audio.playClick());
       setTimeout(() => {
-        this.refreshBoardAndUI();
+        this.refreshBoardAndUI({ changedCipherChar: cipherChar });
         this.saveCurrentLevelState();
       }, 180);
     }
   }
 
   handleTypeLetter(char) {
+    if (this.state.isWon) return;
     const payload = this.state.getSetBothPayload(char);
     if (!payload) return;
 
@@ -328,17 +358,19 @@ export class Game {
       if (this.storage) this.storage.recordFlapRotation();
       PlatformBridge.vibrateLight();
       setTimeout(() => {
-        this.refreshBoardAndUI();
+        this.refreshBoardAndUI({ changedCipherChar: cipherChar });
         this.saveCurrentLevelState();
       }, 180);
     }
   }
 
   handleClear() {
+    if (this.state.isWon) return;
     this.handleTypeLetter(" ");
   }
 
   handleHint() {
+    if (this.state.isWon) return;
     if (this.audio) this.audio.playClick();
     // If no group is selected or currently selected letter is already solved, auto-select next unsolved letter cell
     if (!this.state.selectedGroup || this.state.isLetterCorrect(this.state.selectedGroup)) {
@@ -362,10 +394,20 @@ export class Game {
       }
     }
 
-    const hint = this.state.getHintPayload();
-    if (!hint) return;
+    if (!this.state.selectedGroup) return;
 
-    if (hint.alreadyFixed) {
+    // Safety auto-repair: if drum was marked fixed in memory but cell was never visually fixed, unfix flags
+    const activeChar = this.state.selectedGroup;
+    const activeDrum = this.state.drums[activeChar];
+    if (activeDrum && activeDrum.fx?.t && activeDrum.fx?.b) {
+      const renderedCells = this.renderer.cellsByCipherChar ? this.renderer.cellsByCipherChar[activeChar] : null;
+      if (renderedCells && renderedCells.length > 0 && !renderedCells[0].classList.contains("has-fixed")) {
+        delete activeDrum.fx.t;
+        delete activeDrum.fx.b;
+      }
+    }
+
+    if (!this.state.canHintGroup(this.state.selectedGroup)) {
       this.ui.setStatus("🔒 Letter already solved.");
       return;
     }
@@ -373,24 +415,41 @@ export class Game {
     if (this.storage) {
       const balance = this.storage.getHintBalance();
       if (balance <= 0) {
-        this.ui.setStatus("💡 No hints left! Open Shop to claim 1 free daily hint or get more.");
         PlatformBridge.vibrateLight();
-        if (this.onRequestShop) {
-          this.onRequestShop();
+        if (this.modalManager) {
+          this.modalManager.open('hintPrompt', {
+            onWatchAd: () => {
+              AdService.showRewarded();
+            },
+            onOpenShop: () => {
+              if (this.onRequestShop) {
+                this.onRequestShop();
+              }
+            }
+          });
+        } else {
+          this.ui.setStatus("💡 No hints left! Open Shop to claim 1 free daily hint or get more.");
+          if (this.onRequestShop) {
+            this.onRequestShop();
+          }
         }
         return;
       }
       this.storage.consumeHint();
     }
+
+    const hint = this.state.getHintPayload();
+    if (!hint || hint.alreadyFixed) return;
+
     this.hintsUsedInLevel = (this.hintsUsedInLevel || 0) + 1;
 
     const { cipherChar } = hint;
     const sol = this.state.drums[cipherChar].sol;
     this.renderer.fixHalfVisual(cipherChar, 't', sol);
     this.renderer.fixHalfVisual(cipherChar, 'b', sol);
-    const remainingBalance = this.storage ? this.storage.getHintBalance() : Infinity;
+    const remainingBalance = this.storage ? this.storage.getHintBalance() : 0;
     this.ui.updateHintButton(remainingBalance);
-    this.refreshBoardAndUI();
+    this.refreshBoardAndUI({ changedCipherChar: cipherChar });
     this.saveCurrentLevelState();
     this.ui.setStatus(`💡 Letter '${sol}' fully revealed.`);
     PlatformBridge.vibrateLight();
@@ -423,6 +482,7 @@ export class Game {
   }
 
   handleRequestResetLevel() {
+    if (this.state.isWon) return;
     if (this.audio) this.audio.playClick();
     if (this.onRequestResetLevel) {
       this.onRequestResetLevel();
@@ -469,6 +529,7 @@ export class Game {
   }
 
   handleMoveSelection(delta) {
+    if (this.state.isWon) return;
     const cells = this.renderer.letterCells;
     if (!cells || cells.length === 0) return;
     const totalCells = cells.length;
@@ -480,6 +541,7 @@ export class Game {
   }
 
   handleNavigateUnsolved(delta) {
+    if (this.state.isWon) return;
     if (this.audio) this.audio.playClick();
     const cells = this.renderer.letterCells;
     if (!cells || cells.length === 0) return;
@@ -515,22 +577,40 @@ export class Game {
     this.handleNavigateUnsolved(delta);
   }
 
-  refreshBoardAndUI({ suppressLockTones = false } = {}) {
+  refreshBoardAndUI({ suppressLockTones = false, changedCipherChar = null } = {}) {
     const groups = this.state.groups;
     const letterUsage = this.state.getLetterUsage();
 
-    // Trigger lock sound for newly agreed letters
-    groups.forEach(c => {
-      const agreed = this.state.isAgreed(c);
-      const letter = this.state.drums[c] ? this.state.drums[c].t : null;
-      const clash = agreed && letter && letterUsage[letter] && letterUsage[letter].length > 1;
+    // Trigger audio notes for correct / incorrect letter landing
+    if (!suppressLockTones && this.audio) {
+      const targetChar = changedCipherChar || (groups ? groups.find(c => {
+        const prev = this.previousDrumLetters ? this.previousDrumLetters[c] : null;
+        const curr = this.state.drums[c] ? this.state.drums[c].t : null;
+        return prev !== null && prev !== undefined && prev !== curr;
+      }) : null);
 
-      if (!suppressLockTones && agreed && !this.state.lockedPreviously[c] && !clash) {
-        const toneFreq = AUDIO_CONFIG.TONE_BASE_FREQ + groups.indexOf(c) * AUDIO_CONFIG.TONE_STEP_FREQ;
-        this.audio.playTone(toneFreq, 0);
+      if (targetChar) {
+        const agreed = this.state.isAgreed(targetChar);
+        const drum = this.state.drums[targetChar];
+        const letter = drum ? drum.t : null;
+        if (agreed && letter && letter !== " ") {
+          const isCorrect = this.state.isLetterCorrect(targetChar);
+          if (isCorrect) {
+            this.audio.playCorrectNote();
+          } else {
+            this.audio.playIncorrectNote();
+          }
+        }
       }
-      this.state.lockedPreviously[c] = agreed && !clash;
-    });
+    }
+
+    // Maintain snapshot of drum letters for delta detection
+    if (!this.previousDrumLetters) this.previousDrumLetters = {};
+    if (groups) {
+      groups.forEach(c => {
+        this.previousDrumLetters[c] = this.state.drums[c] ? this.state.drums[c].t : " ";
+      });
+    }
 
     this.renderer.updateBoardState(groups, this.state);
 
@@ -551,6 +631,7 @@ export class Game {
     if (isSolved && !this.state.isWon) {
       this.state.isWon = true;
       this.renderer.setVictory(true);
+      if (this.ui) this.ui.setControlsLocked(true);
       const author = this.state.currentLevel.author;
 
       const authorText = (author || "").trim();
@@ -582,7 +663,14 @@ export class Game {
         if (statusNextBtn) {
           statusNextBtn.onclick = () => {
             if (this.audio) this.audio.playClick();
-            this.start(nextLevelIndex, { mode: 'campaign' });
+            const proceed = () => {
+              this.start(nextLevelIndex, { mode: 'campaign' });
+            };
+            if (AdService.shouldShowInterstitial()) {
+              AdService.showInterstitial({ onComplete: proceed });
+            } else {
+              proceed();
+            }
           };
         }
       }
@@ -616,15 +704,31 @@ export class Game {
         };
 
         if (this.victoryTimer) clearTimeout(this.victoryTimer);
-        this.victoryTimer = setTimeout(() => {
-          if (this.state.isWon) {
+
+        const openVictoryModal = () => {
+          if (this.victoryTimer) {
+            clearTimeout(this.victoryTimer);
+            this.victoryTimer = null;
+          }
+          window.removeEventListener('pointerdown', openVictoryModal, true);
+          window.removeEventListener('keydown', openVictoryModal, true);
+          if (this.state.isWon && this.onLevelCompleted) {
             this.onLevelCompleted(completionData);
           }
-        }, 400);
+        };
+
+        // If the player taps the screen or presses a key during celebration, immediately show victory modal
+        window.addEventListener('pointerdown', openVictoryModal, true);
+        window.addEventListener('keydown', openVictoryModal, true);
+
+        this.victoryTimer = setTimeout(() => {
+          openVictoryModal();
+        }, 300);
       }
     } else if (!isSolved && this.state.isWon) {
       this.state.isWon = false;
       this.renderer.setVictory(false);
+      if (this.ui) this.ui.setControlsLocked(false);
       if (this.victoryTimer) {
         clearTimeout(this.victoryTimer);
         this.victoryTimer = null;

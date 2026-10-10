@@ -12,7 +12,7 @@ const DEFAULT_STATE = {
   remindersEnabled: false,
   removeAds: false,
   hints: {
-    balance: 3,
+    balance: 5,
     lastFreeHintClaimTimestamp: 0
   },
   stats: {
@@ -67,10 +67,14 @@ export class StorageService {
       if (!parsed.dailySaves) {
         parsed.dailySaves = {};
       }
+      const loadedHints = { ...DEFAULT_STATE.hints, ...(parsed.hints || {}) };
+      if (loadedHints.balance === Infinity || typeof loadedHints.balance !== 'number' || isNaN(loadedHints.balance)) {
+        loadedHints.balance = 5;
+      }
       return {
         ...DEFAULT_STATE,
         ...parsed,
-        hints: { ...DEFAULT_STATE.hints, ...(parsed.hints || {}) },
+        hints: loadedHints,
         stats: { ...DEFAULT_STATE.stats, ...(parsed.stats || {}) },
         daily: { ...DEFAULT_STATE.daily, ...(parsed.daily || {}) },
         dailySaves: { ...(parsed.dailySaves || {}) },
@@ -196,20 +200,40 @@ export class StorageService {
   }
 
   getHintBalance() {
-    return Infinity;
+    if (!this.data.hints) {
+      this.data.hints = { ...DEFAULT_STATE.hints };
+    }
+    const bal = this.data.hints.balance;
+    if (bal === Infinity || typeof bal !== 'number' || isNaN(bal)) {
+      this.data.hints.balance = 5;
+      this.save();
+    }
+    return this.data.hints.balance;
   }
 
   addHints(qty) {
     if (!this.data.hints) {
       this.data.hints = { ...DEFAULT_STATE.hints };
     }
-    const current = this.data.hints.balance ?? 3;
+    const current = (typeof this.data.hints.balance === 'number' && this.data.hints.balance !== Infinity)
+      ? this.data.hints.balance
+      : 5;
     this.data.hints.balance = Math.max(0, current + qty);
     this.save();
-    return Infinity;
+    return this.data.hints.balance;
   }
 
   consumeHint() {
+    if (!this.data.hints) {
+      this.data.hints = { ...DEFAULT_STATE.hints };
+    }
+    const current = (typeof this.data.hints.balance === 'number' && this.data.hints.balance !== Infinity)
+      ? this.data.hints.balance
+      : 5;
+    if (current <= 0) {
+      return false;
+    }
+    this.data.hints.balance = Math.max(0, current - 1);
     if (!this.data.stats) {
       this.data.stats = { ...DEFAULT_STATE.stats };
     }
@@ -242,7 +266,10 @@ export class StorageService {
     if (!this.data.hints) {
       this.data.hints = { ...DEFAULT_STATE.hints };
     }
-    this.data.hints.balance = (this.data.hints.balance ?? 3) + 1;
+    const current = (typeof this.data.hints.balance === 'number' && this.data.hints.balance !== Infinity)
+      ? this.data.hints.balance
+      : 5;
+    this.data.hints.balance = current + 1;
     this.data.hints.lastFreeHintClaimTimestamp = Date.now();
     this.save();
     return { success: true, balance: this.data.hints.balance };
@@ -250,6 +277,10 @@ export class StorageService {
 
   hasRemovedAds() {
     return Boolean(this.data.removeAds);
+  }
+
+  isRemoveAds() {
+    return this.hasRemovedAds();
   }
 
   setRemoveAds(val = true) {

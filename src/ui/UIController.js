@@ -84,7 +84,7 @@ export class UIController {
 
   updateHintButton(hintsRemaining) {
     if (this.hintBtn) {
-      const display = (hintsRemaining === undefined || hintsRemaining === Infinity) ? '∞' : hintsRemaining;
+      const display = (hintsRemaining === undefined || hintsRemaining === null || hintsRemaining === Infinity) ? 5 : hintsRemaining;
       this.hintBtn.innerHTML = `${Icons.hint(16)} <span>HINT (${display})</span>`;
       this.hintBtn.disabled = false;
     }
@@ -103,6 +103,19 @@ export class UIController {
   setStatus(html) {
     if (this.statusBar) {
       this.statusBar.innerHTML = html;
+    }
+  }
+
+  setControlsLocked(locked = true) {
+    const btns = [this.stepUpBtn, this.stepDownBtn, this.hintBtn, this.prevBtn, this.nextBtn];
+    btns.forEach(btn => {
+      if (btn) {
+        btn.disabled = Boolean(locked);
+      }
+    });
+    const dock = typeof document !== 'undefined' ? document.querySelector('.action-dock') : null;
+    if (dock) {
+      dock.style.pointerEvents = locked ? 'none' : '';
     }
   }
 }

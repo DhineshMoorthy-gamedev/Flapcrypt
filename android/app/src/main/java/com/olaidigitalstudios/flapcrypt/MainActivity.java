@@ -13,6 +13,7 @@ public class MainActivity extends BridgeActivity {
         registerPlugin(BillingPlugin.class);
         registerPlugin(AppUpdatePlugin.class);
         registerPlugin(NotificationPlugin.class);
+        registerPlugin(AdMobPlugin.class);
         super.onCreate(savedInstanceState);
         hideSystemBars();
     }
