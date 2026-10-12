@@ -1,0 +1,58 @@
+{
+  "game_title": "Flapcrypt",
+  "genre": "word puzzle / mechanical cryptogram",
+  "card_width": 1080,
+  "card_height": 1920,
+  "default_background": "gradient:#0A1B14:#040907",
+  "default_text_colour": "#F3EDE2",
+  "default_highlight_colour": "#F59E0B",
+  "default_shadow_colour": "#000000",
+  "default_headline_position": "top",
+  "default_screenshot_scale": 0.72,
+  "default_bg_style": "speed_rays",
+  "default_bg_particles": "sparks",
+  "cards": [
+    {
+      "id": "card_01_hook",
+      "screenshot": "E:/PROTO/Flapcrypt/docs/raw-screenshots/hook.png",
+      "headline": "ROTATE THE **FLAPS**",
+      "subheadline": "Decipher cryptic quotes on mechanical boards"
+    },
+    {
+      "id": "card_02_reward",
+      "screenshot": "E:/PROTO/Flapcrypt/docs/raw-screenshots/reward.png",
+      "headline": "CRACK THE **CIPHER**",
+      "subheadline": "Reveal words of wisdom & iconic quotes"
+    },
+    {
+      "id": "card_03_levels",
+      "screenshot": "E:/PROTO/Flapcrypt/docs/raw-screenshots/content scale.png",
+      "headline": "HUNDREDS OF **LEVELS**",
+      "subheadline": "Quotes, proverbs, riddles & movie lines"
+    },
+    {
+      "id": "card_04_daily",
+      "screenshot": "E:/PROTO/Flapcrypt/docs/raw-screenshots/daily retention.png",
+      "headline": "DAILY **CHALLENGES**",
+      "subheadline": "Build streaks & solve calendar archive puzzles"
+    },
+    {
+      "id": "card_05_achievements",
+      "screenshot": "E:/PROTO/Flapcrypt/docs/raw-screenshots/mastery.png",
+      "headline": "PROVE YOUR **MASTERY**",
+      "subheadline": "Unlock 30+ achievements and cryptic honors"
+    },
+    {
+      "id": "card_06_stats",
+      "screenshot": "E:/PROTO/Flapcrypt/docs/raw-screenshots/intellect.png",
+      "headline": "TRACK YOUR **INTELLECT**",
+      "subheadline": "Detailed stats, solve times & flap rotation counts"
+    },
+    {
+      "id": "card_07_offline",
+      "screenshot": "E:/PROTO/Flapcrypt/docs/raw-screenshots/home screen.png",
+      "headline": "PLAY ANYTIME, **OFFLINE**",
+      "subheadline": "Pure tactile split-flap puzzling anywhere"
+    }
+  ]
+}

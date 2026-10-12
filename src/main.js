@@ -5,6 +5,7 @@ import '../styles/controls.css';
 import '../styles/home.css';
 import '../styles/settings.css';
 import '../styles/level-select.css';
+import '../styles/studio-intro.css';
 
 import { $ } from './utils/dom.js';
 import { GameState } from './core/GameState.js';
@@ -22,6 +23,7 @@ import { PlatformBridge } from './platform/lifecycle.js';
 import { IAPService } from './core/IAPService.js';
 import { Confetti } from './ui/Confetti.js';
 import { AdService } from './core/AdService.js';
+import { StudioIntro } from './ui/StudioIntro.js';
 
 function initApp() {
   // Expose config for runtime inspection and set DOM attributes
@@ -29,6 +31,11 @@ function initApp() {
     window.TargetConfig = TargetConfig;
   }
   document.body.setAttribute('data-target', TargetConfig.mode);
+
+  // Initialize and run Studio Intro sequence
+  StudioIntro.run(() => {
+    console.log('[Flapcrypt] Studio intro completed.');
+  });
 
   const elements = {
     homeScreen: $('homeScreen'),
@@ -380,6 +387,13 @@ function initApp() {
       audioService.resume();
     },
     onBackAction: () => {
+      // 0. If studio intro overlay is active, dismiss it on back press
+      const startupOverlay = document.getElementById('startupOverlay');
+      if (startupOverlay) {
+        startupOverlay.dispatchEvent(new PointerEvent('pointerdown'));
+        return true;
+      }
+
       // 1. If modal overlay is open, close modal
       if (modalManager.isOpen()) {
         modalManager.close();

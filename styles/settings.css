@@ -578,71 +578,27 @@
 }
 
 .about-squircle-icon {
-  width: 96px;
-  height: 96px;
-  background: radial-gradient(circle at 35% 30%, #1d3027 0%, #101c16 70%, #08100c 100%);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(16, 185, 129, 0.08);
+  width: 104px;
+  height: 104px;
+  margin: 0 auto;
+  border-radius: 26px;
+  border: 1.5px solid rgba(245, 158, 11, 0.32);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.75), 0 0 24px rgba(245, 158, 11, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  background: #070B09;
 }
 
-.about-icon-flap {
-  width: 50px;
-  height: 58px;
-  background: #090e0b;
-  border-radius: 6px;
-  border: 1px solid #1f3328;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.65);
-}
-
-.about-icon-flap-top,
-.about-icon-flap-bot {
+.about-app-icon-img {
   width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.about-icon-flap-top {
-  background: linear-gradient(180deg, #2c4437 0%, #203329 100%);
-  align-items: flex-end;
-}
-
-.about-icon-flap-bot {
-  background: linear-gradient(180deg, #18271f 0%, #121e18 100%);
-  align-items: flex-start;
-}
-
-.about-icon-flap-top span,
-.about-icon-flap-bot span {
-  font-family: var(--font-flap);
-  font-size: 2.35rem;
-  font-weight: 700;
-  color: #F3EDE2;
-  line-height: 58px;
-  text-shadow: 0 0 10px rgba(245, 158, 11, 0.45);
-}
-
-.about-icon-flap-seam {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 1.5px;
-  background: #090e0b;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.85);
-  z-index: 3;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
 }
 
 /* Game Title & Version Badge */

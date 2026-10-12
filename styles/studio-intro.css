@@ -1,0 +1,108 @@
+/* ====================================================================
+   STUDIO INTRO SCREEN — OLAI DIGITAL STUDIOS
+   Based on STUDIO_SCREEN_VISUAL_SPEC.txt
+   ==================================================================== */
+
+:root {
+  --cinematic-bg: #090a0f;
+  --cinematic-white: #f5f5dc;
+  --cinematic-fog: #b0b0b0;
+}
+
+body.light {
+  --cinematic-bg: #f5f0e8;
+  --cinematic-white: #1a1a1a;
+  --cinematic-fog: #6b6b6b;
+}
+
+/* Fullscreen Startup Overlay Container */
+.startup-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--cinematic-bg);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1.0s ease, visibility 1.0s ease;
+  opacity: 1;
+  visibility: visible;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* Slide Animation Container */
+.startup-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.startup-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Logo Content Layout */
+.startup-logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bodoni Moda', Georgia, serif;
+  color: var(--cinematic-white);
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Primary Studio Name: "OLAI" */
+.logo-text-olai {
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: clamp(48px, 14vw, 64px);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  margin-right: -0.12em; /* Compensate trailing letter-spacing for true center */
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--cinematic-white);
+  text-shadow: 0 4px 25px rgba(255, 255, 255, 0.08);
+}
+
+body.light .logo-text-olai {
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Subtitle Studio Text: "DIGITAL STUDIOS" */
+.logo-text-studios {
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: clamp(24px, 6.8vw, 32px);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-right: -0.1em; /* Compensate trailing letter-spacing */
+  line-height: 1.0;
+  margin-top: 8px;
+  color: var(--cinematic-white);
+  text-transform: uppercase;
+}
+
+/* "presents" Tag */
+.logo-presents {
+  font-family: 'JetBrains Mono', Monaco, Menlo, Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  margin-right: -0.3em; /* Compensate trailing letter-spacing */
+  color: var(--cinematic-fog);
+  margin-top: 20px;
+  text-transform: lowercase;
+  opacity: 0.6;
+}

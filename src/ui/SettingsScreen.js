@@ -452,11 +452,7 @@ export class SettingsScreen {
           <!-- App Icon (Center) -->
           <div class="about-icon-wrapper">
             <div class="about-squircle-icon">
-              <div class="about-icon-flap">
-                <div class="about-icon-flap-top"><span>F</span></div>
-                <div class="about-icon-flap-bot"><span>F</span></div>
-                <div class="about-icon-flap-seam"></div>
-              </div>
+              <img src="./icon-512.png" alt="Flapcrypt Icon" class="about-app-icon-img" />
             </div>
           </div>
 
