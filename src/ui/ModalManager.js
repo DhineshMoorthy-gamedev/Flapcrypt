@@ -2109,12 +2109,6 @@ export class ModalManager {
     const currentVer = options.currentVersion || TargetConfig.version;
     const newVer = options.availableVersionName || (options.availableVersionCode ? `0.0.${options.availableVersionCode}` : TargetConfig.version);
     const isDownloaded = Boolean(options.isDownloaded);
-    const releaseNotes = options.releaseNotes || [
-      'New Cryptogram Puzzle Categories & Quotes',
-      'Sleek 3-Column Home Navigation Dock',
-      'Mechanical Split-Flap Animation Polish',
-      'Performance Improvements & Bug Fixes'
-    ];
 
     this.bodyEl.innerHTML = `
       <div class="app-update-container">
@@ -2126,19 +2120,7 @@ export class ModalManager {
             <span class="version-arrow">➔</span>
             <span class="version-chip new-version">v${newVer}</span>
           </div>
-        </div>
-
-        <!-- Release Notes Section -->
-        <div class="app-update-notes-card">
-          <div class="notes-header">WHAT'S NEW</div>
-          <ul class="notes-list">
-            ${releaseNotes.map(note => `
-              <li>
-                <span class="note-bullet">✦</span>
-                <span class="note-text">${note}</span>
-              </li>
-            `).join('')}
-          </ul>
+          <p class="app-update-desc">A new version of Flapcrypt is available on Google Play. Update now to enjoy the latest puzzles and features.</p>
         </div>
 
         <!-- Action Buttons -->

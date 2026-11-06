@@ -8,6 +8,7 @@ export class InputManager {
   setupListeners() {
     // Keyboard listener
     document.addEventListener("keydown", (e) => {
+      if (document.body.classList.contains("tour-active")) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       const key = e.key;
 

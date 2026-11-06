@@ -5,6 +5,7 @@ import { ANIMATION_CONFIG, AUDIO_CONFIG } from '../config/constants.js';
 import { PlatformBridge } from '../platform/lifecycle.js';
 import { DailyChallengeService } from './DailyChallengeService.js';
 import { AdService } from './AdService.js';
+import { OnboardingTour } from '../ui/OnboardingTour.js';
 
 export class Game {
   constructor({ gameState, audioService, renderer, uiController, storageService, modalManager, onReturnToHome, onRequestResetLevel, onRequestShop, onLevelCompleted }) {
@@ -23,6 +24,7 @@ export class Game {
     this.levelStartTime = Date.now();
     this.hintsUsedInLevel = 0;
     this.victoryTimer = null;
+    this.tourTimer = null;
   }
 
   start(levelIndex = null, options = {}) {
@@ -79,6 +81,11 @@ export class Game {
 
   loadLevel(index, { skipAutoSave = false } = {}) {
     const level = LEVEL_DATA[index];
+    if (this.tourTimer) {
+      clearTimeout(this.tourTimer);
+      this.tourTimer = null;
+    }
+    OnboardingTour.dismiss();
     if (this.victoryTimer) {
       clearTimeout(this.victoryTimer);
       this.victoryTimer = null;
@@ -236,6 +243,36 @@ export class Game {
       this.ui.setStatus(`Resumed ${statusLabel} progress.`);
     } else {
       this.ui.setStatus("Tap a letter cell to rotate flaps.");
+    }
+
+    if (this.gameMode === 'campaign' && index === 0) {
+      this.tourTimer = setTimeout(() => {
+        if (this.gameMode === 'campaign' && this.state.levelIndex === 0) {
+          const playStage = document.getElementById('playStage');
+          if (playStage) {
+            playStage.scrollTop = 0;
+          }
+
+          const letterCells = document.querySelectorAll('.quote-area .cell:not(.punct)');
+          const secondCell = letterCells.length > 1 ? letterCells[1] : letterCells[0];
+          if (secondCell && secondCell.dataset.c) {
+            const cipherChar = secondCell.dataset.c;
+            const cellIdx = parseInt(secondCell.dataset.idx, 10);
+            const wasWon = this.state.isWon;
+            if (wasWon) this.state.isWon = false;
+            this.handleCellSelect(cipherChar, Number.isNaN(cellIdx) ? 1 : cellIdx, false);
+            if (wasWon) this.state.isWon = true;
+          } else if (this.state.groups && this.state.groups.length > 1) {
+            const secondGroup = this.state.groups[1];
+            const wasWon = this.state.isWon;
+            if (wasWon) this.state.isWon = false;
+            this.handleCellSelect(secondGroup, 1, false);
+            if (wasWon) this.state.isWon = true;
+          }
+
+          OnboardingTour.start({ audioService: this.audio });
+        }
+      }, 350);
     }
   }
 

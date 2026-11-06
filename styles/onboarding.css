@@ -1,0 +1,290 @@
+/* ====================================================================
+   FLAPCRYPT LEVEL 1 ONBOARDING INTERACTIVE TOUR (driver.js theme)
+   Visual Style: Mechanical Split-Flap Noir, Amber Gold & Emerald
+   ==================================================================== */
+
+:root {
+  --tour-bg: #0d1615;
+  --tour-border: rgba(212, 175, 55, 0.28);
+  --tour-glow: rgba(245, 158, 11, 0.2);
+  --tour-text: #e2e8f0;
+  --tour-accent: #f59e0b;
+  --tour-accent-hover: #fbbf24;
+  --tour-accent-text: #080e0d;
+  --tour-btn-bg: rgba(255, 255, 255, 0.08);
+  --tour-btn-border: rgba(255, 255, 255, 0.15);
+  --tour-btn-text: #cbd5e1;
+}
+
+/* ====================================================================
+   INPUT BLOCKING DURING ONBOARDING TOUR
+   Disables all game clicks and interactions until tour is done / skipped
+   ==================================================================== */
+body.tour-active {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+body.tour-active .app-header,
+body.tour-active .play-stage,
+body.tour-active .action-dock,
+body.tour-active .home-screen,
+body.tour-active .modal-overlay {
+  pointer-events: none !important;
+}
+
+/* Driver Popover and its Controls remain fully clickable */
+body.tour-active .driver-popover,
+body.tour-active .driver-popover * {
+  pointer-events: auto !important;
+}
+
+/* Driver.js Popover Container */
+.driver-popover.flapcrypt-tour-popover {
+  background: var(--tour-bg);
+  border: 1px solid var(--tour-border);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85), 0 0 24px var(--tour-glow);
+  border-radius: 12px;
+  padding: 16px 18px 14px;
+  color: var(--tour-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  width: 324px !important;
+  min-width: 280px !important;
+  max-width: calc(100vw - 28px) !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  z-index: 1000000;
+  animation: tourPopoverFadeIn 0.18s ease-out;
+}
+
+@keyframes tourPopoverFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Step 3: Position card safely above the bottom ad banner slot (68px) and clear of board cells */
+.driver-popover.step-active-flap {
+  top: auto !important;
+  bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Elegant Upward Arrow for Step 3 pointing toward the illuminated board */
+.driver-popover.step-active-flap .driver-popover-arrow {
+  display: block !important;
+  position: absolute !important;
+  top: -6px !important;
+  left: 50% !important;
+  transform: translateX(-50%) rotate(45deg) !important;
+  width: 10px !important;
+  height: 10px !important;
+  background: var(--tour-bg) !important;
+  border-top: 1px solid var(--tour-border) !important;
+  border-left: 1px solid var(--tour-border) !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Standard Popover Arrows for other steps */
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow {
+  border-color: var(--tour-bg) !important;
+}
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow-side-top {
+  border-top-color: var(--tour-border) !important;
+}
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow-side-bottom {
+  border-bottom-color: var(--tour-border) !important;
+}
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow-side-left {
+  border-left-color: var(--tour-border) !important;
+}
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow-side-right {
+  border-right-color: var(--tour-border) !important;
+}
+
+/* Popover Title */
+.driver-popover.flapcrypt-tour-popover .driver-popover-title {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--tour-accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  padding-right: 0;
+}
+
+/* Popover Description */
+.driver-popover.flapcrypt-tour-popover .driver-popover-description {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #d1d5db;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+/* Footer Section */
+.driver-popover.flapcrypt-tour-popover .driver-popover-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 8px;
+}
+
+/* Left Group in Footer (Progress + Skip button) */
+.driver-popover.flapcrypt-tour-popover .driver-popover-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Progress text (Step X of 7) */
+.driver-popover.flapcrypt-tour-popover .driver-popover-progress-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(245, 158, 11, 0.85);
+  letter-spacing: 0.04em;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* Dedicated "Skip Tour" button */
+.flapcrypt-tour-skip-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  display: inline-block;
+  transition: color 0.15s ease;
+}
+
+.flapcrypt-tour-skip-btn:hover,
+.flapcrypt-tour-skip-btn:active {
+  color: #cbd5e1;
+}
+
+/* Footer buttons group (Back + Next) */
+.driver-popover.flapcrypt-tour-popover .driver-popover-footer-buttons {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  flex-shrink: 0;
+}
+
+/* Next / Done Button */
+.driver-popover.flapcrypt-tour-popover .driver-popover-next-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: var(--tour-accent-text);
+  border: none;
+  border-radius: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 6px 12px;
+  cursor: pointer;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease, filter 0.12s ease;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+}
+
+.driver-popover.flapcrypt-tour-popover .driver-popover-next-btn:active {
+  transform: scale(0.96);
+  filter: brightness(0.9);
+}
+
+/* Previous Button */
+.driver-popover.flapcrypt-tour-popover .driver-popover-prev-btn {
+  background: var(--tour-btn-bg);
+  border: 1px solid var(--tour-btn-border);
+  color: var(--tour-btn-text);
+  border-radius: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 10px;
+  cursor: pointer;
+  white-space: nowrap !important;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s ease, transform 0.12s ease;
+}
+
+.driver-popover.flapcrypt-tour-popover .driver-popover-prev-btn:active {
+  transform: scale(0.96);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Close/Dismiss Button explicitly hidden & disabled */
+.driver-popover.flapcrypt-tour-popover .driver-popover-close-btn,
+.driver-popover .driver-popover-close-btn,
+.driver-popover-close-btn {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Stage Cutout Glow around highlighted element */
+.driver-overlay {
+  transition: opacity 0.25s ease !important;
+}
+
+.driver-active-element {
+  outline: 2px solid rgba(245, 158, 11, 0.75) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.35) !important;
+  border-radius: 6px;
+}
+
+/* All matching letter cells highlighted and dim-free in Step 3 */
+body.tour-matching-active .cell.sel {
+  outline: 2px solid rgba(245, 158, 11, 0.75) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.35) !important;
+  border-radius: 6px;
+  transition: outline 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.tour-matching-active .cell.active-cell {
+  outline: 2px solid rgba(251, 191, 36, 0.95) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.5) !important;
+}

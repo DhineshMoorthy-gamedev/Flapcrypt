@@ -6,6 +6,8 @@ import '../styles/home.css';
 import '../styles/settings.css';
 import '../styles/level-select.css';
 import '../styles/studio-intro.css';
+import 'driver.js/dist/driver.css';
+import '../styles/onboarding.css';
 
 import { $ } from './utils/dom.js';
 import { GameState } from './core/GameState.js';
@@ -24,6 +26,8 @@ import { IAPService } from './core/IAPService.js';
 import { Confetti } from './ui/Confetti.js';
 import { AdService } from './core/AdService.js';
 import { StudioIntro } from './ui/StudioIntro.js';
+import { OnboardingTour } from './ui/OnboardingTour.js';
+import { AppUpdateService } from './core/AppUpdateService.js';
 
 function initApp() {
   // Expose config for runtime inspection and set DOM attributes
@@ -33,8 +37,13 @@ function initApp() {
   document.body.setAttribute('data-target', TargetConfig.mode);
 
   // Initialize and run Studio Intro sequence
+  let introCompleted = false;
   StudioIntro.run(() => {
     console.log('[Flapcrypt] Studio intro completed.');
+    introCompleted = true;
+    if (typeof checkAutoUpdate === 'function') {
+      checkAutoUpdate();
+    }
   });
 
   const elements = {
@@ -118,6 +127,7 @@ function initApp() {
   let previousScreen = 'home';
 
   function showScreen(screenName, { instant = false } = {}) {
+    OnboardingTour.dismiss();
     if (activeScreen === screenName) return;
     previousScreen = activeScreen;
     activeScreen = screenName;
@@ -394,6 +404,12 @@ function initApp() {
         return true;
       }
 
+      // 0.5 If onboarding tour is active, dismiss tour on back press
+      if (OnboardingTour.isActive()) {
+        OnboardingTour.dismiss();
+        return true;
+      }
+
       // 1. If modal overlay is open, close modal
       if (modalManager.isOpen()) {
         modalManager.close();
@@ -453,6 +469,24 @@ function initApp() {
       return false;
     }
   });
+
+  // Automatically check for in-app updates upon opening app
+  async function checkAutoUpdate() {
+    try {
+      const updateInfo = await AppUpdateService.checkForUpdate();
+      if (updateInfo && (updateInfo.available || updateInfo.isDownloaded)) {
+        if (activeScreen === 'home' && !modalManager.isOpen()) {
+          modalManager.open('appUpdate', updateInfo);
+        }
+      }
+    } catch (err) {
+      console.warn('[Flapcrypt] Auto-update check error:', err);
+    }
+  }
+
+  if (introCompleted) {
+    checkAutoUpdate();
+  }
 }
 
 if (document.readyState === 'loading') {

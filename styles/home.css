@@ -3219,6 +3219,16 @@
   box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
 }
 
+.app-update-desc {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #94A3B8;
+  text-align: center;
+  margin: 6px 0 0 0;
+  max-width: 320px;
+}
+
 .app-update-notes-card {
   width: 100%;
   background: rgba(15, 26, 20, 0.7);

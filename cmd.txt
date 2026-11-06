@@ -1,1 +1,4 @@
 agy --conversation=3cc52bfa-b8be-44a4-a53a-b7b400b375ac - dev
+opencode --session ses_ee0ed9831ffe0jd1KRoTZ6gMPh
+codex resume 01a1aaf8-eff1-7f73-9c2d-718d34edd2fa
+
