@@ -2,3 +2,30 @@ agy --conversation=3cc52bfa-b8be-44a4-a53a-b7b400b375ac - dev
 opencode --session ses_ee0ed9831ffe0jd1KRoTZ6gMPh
 codex resume 01a1aaf8-eff1-7f73-9c2d-718d34edd2fa
 
+web:
+  npm run dev:web
+  npm run build:web
+
+desktop:
+  npm run tauri:dev
+  npm run build:desktop
+  npm run tauri:msixbundle
+
+android:
+  npm run dev:playstore
+  npm run build:playstore
+
+# ==============================================================================
+# ADMOB PRODUCTION CREDENTIALS (SAVED FOR LATER RESTORATION UPON STORE APPROVAL)
+# ==============================================================================
+# App ID:
+#   ca-app-pub-4890313674539327~5030519641
+#
+# Ad Unit IDs:
+#   Banner:       ca-app-pub-4890313674539327/3005982376
+#   Interstitial: ca-app-pub-4890313674539327/1754453765
+#   Rewarded:     ca-app-pub-4890313674539327/3997473727
+#
+# AndroidManifest.xml:
+#   <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-4890313674539327~5030519641"/>
+# ==============================================================================

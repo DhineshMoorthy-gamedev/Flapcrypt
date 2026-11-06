@@ -284,11 +284,31 @@ export class SettingsScreen {
       const isHapticsOn = this.storage.isHapticsEnabled();
       hapticsToggle.checked = isHapticsOn;
       PlatformBridge.setHapticsEnabled(isHapticsOn);
+      const hapticsRow = document.getElementById('rowHaptics') || hapticsToggle.closest('.settings-row');
+      if (hapticsRow && TargetConfig.capabilities.isStandaloneMode) {
+        hapticsRow.style.display = 'none';
+      }
     }
 
     const remindersToggle = document.getElementById('settingsRemindersToggle');
     if (remindersToggle) {
       remindersToggle.checked = this.storage.isRemindersEnabled();
+      const remindersRow = remindersToggle.closest('.settings-row');
+      if (remindersRow && !TargetConfig.capabilities.hasLocalNotifications) {
+        remindersRow.style.display = 'none';
+      }
+    }
+
+    // Platform-tailored adjustments: Hide Upgrades & Purchases on Standalone builds (Desktop / Web)
+    const sectionUpgrades = document.getElementById('sectionUpgrades') || document.getElementById('rowRemoveAds')?.closest('.settings-group-section');
+    if (sectionUpgrades && TargetConfig.capabilities.isStandaloneMode) {
+      sectionUpgrades.style.display = 'none';
+    }
+
+    // Platform-tailored adjustments: Hide Rate Flapcrypt on Standalone builds (Desktop / Web)
+    const rowRateUs = document.getElementById('rowRateUs');
+    if (rowRateUs && TargetConfig.capabilities.isStandaloneMode) {
+      rowRateUs.style.display = 'none';
     }
 
     // Sync Remove Ads Button State
@@ -481,9 +501,10 @@ export class SettingsScreen {
 
           <!-- Stacked Action Buttons -->
           <div class="about-buttons-stack">
+            ${TargetConfig.isPlayStore ? `
             <button id="btnCheckUpdates" class="btn-about-pill" aria-label="Check for Updates">
               <span>Check for Updates</span>
-            </button>
+            </button>` : ''}
             <button id="btnMoreGames" class="btn-about-pill" aria-label="More Games by OLAI">
               <span>More Games by OLAI</span>
               <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -526,6 +547,14 @@ export class SettingsScreen {
             </span>
             <span>Checking...</span>
           `;
+
+          if (TargetConfig.isDesktop) {
+            btnCheckUpdates.disabled = false;
+            btnCheckUpdates.innerHTML = originalContent;
+            Toast.show(`Running Flapcrypt Desktop v${TargetConfig.version}`, { type: 'info' });
+            PlatformBridge.openExternalUrl('https://olaidigitalstudios.itch.io/flapcrypt');
+            return;
+          }
 
           try {
             const updateInfo = await AppUpdateService.checkForUpdate();

@@ -66,16 +66,27 @@ body.tour-active .driver-popover * {
   }
 }
 
-/* Step 3: Position card safely above the bottom ad banner slot (68px) and clear of board cells */
+/* Step 1 & Step 3: Position card safely within bottom dock zone and clear of board cells */
+.driver-popover.step-cryptogram-quote,
 .driver-popover.step-active-flap {
   top: auto !important;
-  bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
   left: 50% !important;
   right: auto !important;
   transform: translateX(-50%) !important;
 }
 
-/* Elegant Upward Arrow for Step 3 pointing toward the illuminated board */
+body[data-target="playstore"] .driver-popover.step-cryptogram-quote,
+body[data-target="playstore"] .driver-popover.step-active-flap {
+  bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+}
+
+body:not([data-target="playstore"]) .driver-popover.step-cryptogram-quote,
+body:not([data-target="playstore"]) .driver-popover.step-active-flap {
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+}
+
+/* Elegant Upward Arrow for Step 1 & Step 3 pointing toward the illuminated board */
+.driver-popover.step-cryptogram-quote .driver-popover-arrow,
 .driver-popover.step-active-flap .driver-popover-arrow {
   display: block !important;
   position: absolute !important;
@@ -94,19 +105,19 @@ body.tour-active .driver-popover * {
 }
 
 /* Standard Popover Arrows for other steps */
-.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow {
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap):not(.step-cryptogram-quote) .driver-popover-arrow {
   border-color: var(--tour-bg) !important;
 }
-.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow-side-top {
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap):not(.step-cryptogram-quote) .driver-popover-arrow-side-top {
   border-top-color: var(--tour-border) !important;
 }
-.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow-side-bottom {
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap):not(.step-cryptogram-quote) .driver-popover-arrow-side-bottom {
   border-bottom-color: var(--tour-border) !important;
 }
-.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow-side-left {
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap):not(.step-cryptogram-quote) .driver-popover-arrow-side-left {
   border-left-color: var(--tour-border) !important;
 }
-.driver-popover.flapcrypt-tour-popover:not(.step-active-flap) .driver-popover-arrow-side-right {
+.driver-popover.flapcrypt-tour-popover:not(.step-active-flap):not(.step-cryptogram-quote) .driver-popover-arrow-side-right {
   border-right-color: var(--tour-border) !important;
 }
 

@@ -10,12 +10,10 @@ export class InputManager {
     document.addEventListener("keydown", (e) => {
       if (document.body.classList.contains("tour-active")) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
       const key = e.key;
 
-      if (key === "l" || key === "L") {
-        this.game.handleToggleLinked();
-        e.preventDefault();
-      } else if (/^[a-zA-Z]$/.test(key)) {
+      if (/^[a-zA-Z]$/.test(key)) {
         this.game.handleTypeLetter(key.toUpperCase());
         e.preventDefault();
       } else if (key === "ArrowUp") {

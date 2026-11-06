@@ -314,10 +314,10 @@ export class HomeScreen {
     }
 
     if (this.dailyBtnMainLabel) {
-      this.dailyBtnMainLabel.textContent = 'PLAY DAILY';
+      this.dailyBtnMainLabel.textContent = isCompleted ? 'REPLAY TODAY' : 'PLAY DAILY';
     }
     if (this.dailyPlayIcon) {
-      this.dailyPlayIcon.innerHTML = Icons.calendar(16);
+      this.dailyPlayIcon.innerHTML = isCompleted ? Icons.replay(16) : Icons.calendar(16);
     }
 
     if (isCompleted) {

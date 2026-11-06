@@ -96,8 +96,7 @@ export const OnboardingTour = {
         popover: {
           title: 'The Cryptogram',
           description: 'Rotate the split-flaps to decode the hidden quote.',
-          side: 'bottom',
-          align: 'center'
+          popoverClass: 'flapcrypt-tour-popover step-cryptogram-quote'
         }
       },
       {
@@ -232,7 +231,7 @@ export const OnboardingTour = {
               skipBtn.className = 'flapcrypt-tour-skip-btn';
               skipBtn.type = 'button';
               skipBtn.innerText = 'Skip Tour';
-              skipBtn.title = 'Skip the onboarding tour';
+              skipBtn.setAttribute('aria-label', 'Skip the onboarding tour');
               skipBtn.onclick = (e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -245,6 +244,18 @@ export const OnboardingTour = {
               } else {
                 popover.footer.prepend(skipBtn);
               }
+            }
+          }
+
+          // 4. Guarantee popover is never displaced horizontally outside .app-shell on widescreen desktop
+          const appShell = document.querySelector('.app-shell');
+          if (appShell && popover.wrapper) {
+            const shellRect = appShell.getBoundingClientRect();
+            const popoverRect = popover.wrapper.getBoundingClientRect();
+            if (popoverRect.left < shellRect.left - 4 || popoverRect.right > shellRect.right + 4) {
+              const targetLeft = shellRect.left + (shellRect.width - popoverRect.width) / 2;
+              popover.wrapper.style.left = `${Math.round(targetLeft)}px`;
+              popover.wrapper.style.right = 'auto';
             }
           }
         },

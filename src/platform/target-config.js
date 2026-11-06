@@ -28,17 +28,28 @@ export const TargetConfig = {
   isItch: activeMode === TARGET_MODES.ITCH,
   isDesktop: activeMode === TARGET_MODES.DESKTOP,
   isPlayStore: activeMode === TARGET_MODES.PLAYSTORE,
+  isStandalone: activeMode !== TARGET_MODES.PLAYSTORE,
+
+  capabilities: {
+    hasAds: activeMode === TARGET_MODES.PLAYSTORE,
+    hasIAP: activeMode === TARGET_MODES.PLAYSTORE,
+    hasLocalNotifications: activeMode === TARGET_MODES.PLAYSTORE,
+    hasInAppReview: activeMode === TARGET_MODES.PLAYSTORE,
+    hasInAppUpdate: activeMode === TARGET_MODES.PLAYSTORE,
+    hasDesktopStorage: activeMode === TARGET_MODES.DESKTOP,
+    isStandaloneMode: activeMode !== TARGET_MODES.PLAYSTORE
+  },
 
   features: {
     // Desktop and web browser fullscreen capability
     fullscreenControl: activeMode === TARGET_MODES.ITCH || activeMode === TARGET_MODES.WEB || activeMode === TARGET_MODES.DESKTOP,
-    // Native haptic feedback for drum flips & solve celebrations (enabled for supported mobile & web runtimes)
-    haptics: true,
+    // Native haptic feedback for drum flips & solve celebrations (enabled for supported mobile Play Store runtime)
+    haptics: activeMode === TARGET_MODES.PLAYSTORE,
     // Keyboard instructions banner display
     keyboardHints: true,
     // Mobile viewport & safe-area handling
     safeAreaPadding: activeMode === TARGET_MODES.PLAYSTORE || activeMode === TARGET_MODES.WEB,
-    // Bottom reserved banner ad slot (Play Store and Web)
-    showAdBanner: activeMode === TARGET_MODES.PLAYSTORE || activeMode === TARGET_MODES.WEB
+    // Bottom reserved banner ad slot (Play Store only)
+    showAdBanner: activeMode === TARGET_MODES.PLAYSTORE
   }
 };

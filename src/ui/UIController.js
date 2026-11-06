@@ -55,16 +55,13 @@ export class UIController {
       if (mode === 'daily') {
         const shortTier = tier ? tier.replace(/Tier \d+:\s*/i, '').toUpperCase() : '';
         this.levelBadge.textContent = shortTier ? `${shortTier} • ${diff}` : `DIFF ${diff}`;
-        this.levelBadge.title = `Daily Challenge • Diff ${diff}`;
       } else {
         const isSpecial = category && category !== 'Quotes';
         if (isSpecial) {
           this.levelBadge.textContent = `${category.toUpperCase()} • ${diff}`;
-          this.levelBadge.title = `Level ${levelIndex + 1} of ${totalLevels} (${category} • Diff ${diff})`;
         } else {
           const shortTier = tier ? tier.replace(/Tier \d+:\s*/i, '').toUpperCase() : '';
           this.levelBadge.textContent = shortTier ? `${shortTier} • ${diff}` : `DIFF ${diff}`;
-          this.levelBadge.title = `Level ${levelIndex + 1} of ${totalLevels} (${tier || diff})`;
         }
       }
     }

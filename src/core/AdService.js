@@ -10,6 +10,7 @@ const PROD_IDS = {
 
 // Official Google Sample Ad Unit IDs for safe local verification
 const TEST_IDS = {
+  appId: 'ca-app-pub-3940256099942544~3347511713',
   banner: 'ca-app-pub-3940256099942544/6300978111',
   interstitial: 'ca-app-pub-3940256099942544/1033173712',
   rewarded: 'ca-app-pub-3940256099942544/5224354917'
@@ -23,7 +24,7 @@ class AdServiceClass {
     this.uiController = null;
     this.isInitialized = false;
     this.isNative = false;
-    this.useTestAds = false; // Set to true if testing on unregistered test devices
+    this.useTestAds = true; // Active: using official Google AdMob test IDs until Play Store approval
 
     // Concurrency & timing guards for interstitial ads
     this.isShowingInterstitial = false;
@@ -41,9 +42,14 @@ class AdServiceClass {
     this.modalManager = modalManager;
     this.uiController = uiController;
 
-    // Desktop builds are completely offline and ad-free
-    if (TargetConfig.isDesktop) {
-      console.log('[AdService] Desktop build active — ads disabled.');
+    // Standalone builds (Desktop & Web) are completely ad-free
+    if (!TargetConfig.capabilities.hasAds) {
+      console.log('[AdService] Standalone build active — ads disabled.');
+      if (typeof document !== 'undefined') {
+        document.querySelectorAll('.ad-banner-slot').forEach(el => {
+          el.style.display = 'none';
+        });
+      }
       return;
     }
 

@@ -679,11 +679,19 @@ export class Game {
       const hasNextLevel = this.gameMode !== 'daily' && nextLevelIndex < LEVEL_DATA.length;
 
       if (this.gameMode === 'daily') {
-        const todayDateStr = this.gameOptions.dateStr || DailyChallengeService.getDateStr();
+        const todayRealDateStr = DailyChallengeService.getDateStr();
+        const puzzleDateStr = this.gameOptions.dateStr || todayRealDateStr;
+        const isTodayPuzzle = (puzzleDateStr === todayRealDateStr);
         const yesterdayDateStr = DailyChallengeService.getYesterdayDateStr();
-        const dailyState = this.storage ? this.storage.completeDailyChallenge(todayDateStr, yesterdayDateStr) : { currentStreak: 1 };
+
+        const dailyState = this.storage ? this.storage.completeDailyChallenge(puzzleDateStr, yesterdayDateStr) : { currentStreak: 1 };
         dailyStreak = dailyState ? dailyState.currentStreak : 1;
-        this.ui.setStatus(`🎉 Daily Dispatch Decoded! Streak: ${dailyStreak} ${dailyStreak === 1 ? 'day' : 'days'}${authorSpan}`);
+
+        if (isTodayPuzzle) {
+          this.ui.setStatus(`🎉 Daily Dispatch Decoded! Streak: ${dailyStreak} ${dailyStreak === 1 ? 'day' : 'days'}${authorSpan}`);
+        } else {
+          this.ui.setStatus(`🎉 Archive Puzzle Decoded!${authorSpan}`);
+        }
         this.saveCurrentLevelState();
       } else {
         if (this.storage) {

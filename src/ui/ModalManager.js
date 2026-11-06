@@ -748,7 +748,7 @@ export class ModalManager {
           : Icons.lock(16);
 
         const statusHtml = item.isUnlocked
-          ? `<span class="achieve-status-badge unlocked" title="Completed">${Icons.check(14)}</span>`
+          ? `<span class="achieve-status-badge unlocked" aria-label="Completed">${Icons.check(14)}</span>`
           : `<span class="achieve-status-pill">${item.progressText}</span>`;
 
         const dateHtml = item.isUnlocked && item.dateText
@@ -950,7 +950,11 @@ export class ModalManager {
     const updateShopView = () => {
       const currentBal = this.storage ? this.storage.getHintBalance() : 0;
       this.titleEl.innerHTML = `${Icons.shop(20)} <span>SHOP • ${currentBal} HINT${currentBal === 1 ? '' : 'S'}</span>`;
+      const isStandalone = TargetConfig.capabilities.isStandaloneMode;
       const cooldown = this.storage ? this.storage.getFreeHintCooldown() : { canClaim: true, remainingSeconds: 0 };
+      const tacticalCooldown = (isStandalone && this.storage?.getTacticalRefillCooldown)
+        ? this.storage.getTacticalRefillCooldown()
+        : { canClaim: true, remainingSeconds: 0 };
       const hasNoAds = this.storage ? this.storage.hasRemovedAds() : false;
       const priceRemoveAds = IAPService.getPrice(IAP_PRODUCTS.REMOVE_ADS.id) || '$4.90';
       const priceHints25 = IAPService.getPrice(IAP_PRODUCTS.HINTS_25.id) || '$2.45';
@@ -972,7 +976,7 @@ export class ModalManager {
                 ${Icons.gift(20)}
               </div>
               <div class="shop-row-info">
-                <span class="shop-row-title">1 Free Hint</span>
+                <span class="shop-row-title">Daily Free Hint</span>
               </div>
             </div>
             <div class="shop-row-right">
@@ -982,69 +986,88 @@ export class ModalManager {
             </div>
           </div>
 
-          <!-- 2. Watch Video for Free Hint -->
-          <div class="shop-row">
-            <div class="shop-row-left">
-              <div class="shop-row-icon shop-video-icon">
-                <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="5 3 19 12 5 21 5 3"/>
-                </svg>
+          ${isStandalone ? `
+            <!-- 2. Standalone Tactical Hint Refill -->
+            <div class="shop-row">
+              <div class="shop-row-left">
+                <div class="shop-row-icon shop-video-icon">
+                  ${Icons.bolt(20)}
+                </div>
+                <div class="shop-row-info">
+                  <span class="shop-row-title">Tactical Hint Refill</span>
+                </div>
               </div>
-              <div class="shop-row-info">
-                <span class="shop-row-title">Watch Video (+1 Hint)</span>
+              <div class="shop-row-right">
+                <button id="btnTacticalRefill" class="btn-shop-pill ${tacticalCooldown.canClaim ? 'ready' : 'disabled'}" ${tacticalCooldown.canClaim ? '' : 'disabled'}>
+                  ${tacticalCooldown.canClaim ? 'CLAIM' : `<span id="tacticalCountdown">${tacticalCooldown.remainingSeconds}s</span>`}
+                </button>
               </div>
             </div>
-            <div class="shop-row-right">
-              <button id="btnWatchAdForHint" class="btn-shop-pill highlight">WATCH</button>
+          ` : `
+            <!-- 2. Watch Video for Free Hint -->
+            <div class="shop-row">
+              <div class="shop-row-left">
+                <div class="shop-row-icon shop-video-icon">
+                  <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                </div>
+                <div class="shop-row-info">
+                  <span class="shop-row-title">Watch Video (+1 Hint)</span>
+                </div>
+              </div>
+              <div class="shop-row-right">
+                <button id="btnWatchAdForHint" class="btn-shop-pill highlight">WATCH</button>
+              </div>
             </div>
-          </div>
 
-          <!-- 3. Remove Ads -->
-          <div class="shop-row">
-            <div class="shop-row-left">
-              <div class="shop-row-icon">
-                ${Icons.ban(20)}
+            <!-- 3. Remove Ads -->
+            <div class="shop-row">
+              <div class="shop-row-left">
+                <div class="shop-row-icon">
+                  ${Icons.ban(20)}
+                </div>
+                <div class="shop-row-info">
+                  <span class="shop-row-title">Remove Ads</span>
+                </div>
               </div>
-              <div class="shop-row-info">
-                <span class="shop-row-title">Remove Ads</span>
+              <div class="shop-row-right">
+                <button id="btnRemoveAds" class="btn-shop-pill ${hasNoAds ? 'purchased' : ''}" ${hasNoAds ? 'disabled' : ''}>
+                  ${hasNoAds ? 'ACTIVE' : priceRemoveAds}
+                </button>
               </div>
             </div>
-            <div class="shop-row-right">
-              <button id="btnRemoveAds" class="btn-shop-pill ${hasNoAds ? 'purchased' : ''}" ${hasNoAds ? 'disabled' : ''}>
-                ${hasNoAds ? 'ACTIVE' : priceRemoveAds}
-              </button>
-            </div>
-          </div>
 
-          <!-- 4. 25 Hints Pack -->
-          <div class="shop-row">
-            <div class="shop-row-left">
-              <div class="shop-row-icon">
-                ${Icons.bolt(20)}
+            <!-- 4. 25 Hints Pack -->
+            <div class="shop-row">
+              <div class="shop-row-left">
+                <div class="shop-row-icon">
+                  ${Icons.bolt(20)}
+                </div>
+                <div class="shop-row-info">
+                  <span class="shop-row-title">25 Hints Pack</span>
+                </div>
               </div>
-              <div class="shop-row-info">
-                <span class="shop-row-title">25 Hints Pack</span>
+              <div class="shop-row-right">
+                <button id="btnBuyHints25" class="btn-shop-pill">${priceHints25}</button>
               </div>
             </div>
-            <div class="shop-row-right">
-              <button id="btnBuyHints25" class="btn-shop-pill">${priceHints25}</button>
-            </div>
-          </div>
 
-          <!-- 5. 50 Hints Pack -->
-          <div class="shop-row">
-            <div class="shop-row-left">
-              <div class="shop-row-icon">
-                ${Icons.sparkles(20)}
+            <!-- 5. 50 Hints Pack -->
+            <div class="shop-row">
+              <div class="shop-row-left">
+                <div class="shop-row-icon">
+                  ${Icons.sparkles(20)}
+                </div>
+                <div class="shop-row-info">
+                  <span class="shop-row-title">50 Hints Pack</span>
+                </div>
               </div>
-              <div class="shop-row-info">
-                <span class="shop-row-title">50 Hints Pack</span>
+              <div class="shop-row-right">
+                <button id="btnBuyHints50" class="btn-shop-pill highlight">${priceHints50}</button>
               </div>
             </div>
-            <div class="shop-row-right">
-              <button id="btnBuyHints50" class="btn-shop-pill highlight">${priceHints50}</button>
-            </div>
-          </div>
+          `}
         </div>
       `;
 
@@ -1059,6 +1082,25 @@ export class ModalManager {
               title: "Free Daily Hint Claimed!",
               message: "1 Hint has been added to your inventory. Check back in 24 hours for another free supply!",
               buttonText: "NICE!"
+            });
+            updateShopView();
+            if (this.onHintInventoryChanged) {
+              this.onHintInventoryChanged(res.balance);
+            }
+          }
+        };
+      }
+
+      const btnTactical = document.getElementById('btnTacticalRefill');
+      if (btnTactical && tacticalCooldown.canClaim) {
+        btnTactical.onclick = () => {
+          const res = this.storage.claimTacticalRefill();
+          if (res.success) {
+            if (this.audio) this.audio.playVictoryFanfare();
+            this.showShopPopup({
+              title: "Tactical Hint Refill!",
+              message: "1 Hint has been added to your inventory. Standalone supply replenished!",
+              buttonText: "EXCELLENT"
             });
             updateShopView();
             if (this.onHintInventoryChanged) {
@@ -1165,6 +1207,16 @@ export class ModalManager {
           const m = Math.floor((cooldown.remainingSeconds % 3600) / 60);
           const s = cooldown.remainingSeconds % 60;
           countdownEl.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+      }
+
+      const tacticalCountdownEl = document.getElementById('tacticalCountdown');
+      if (tacticalCountdownEl && this.storage?.getTacticalRefillCooldown) {
+        const tacticalCooldown = this.storage.getTacticalRefillCooldown();
+        if (tacticalCooldown.canClaim) {
+          updateShopView();
+        } else {
+          tacticalCountdownEl.textContent = `${tacticalCooldown.remainingSeconds}s`;
         }
       }
     }, 1000);
@@ -1436,6 +1488,7 @@ export class ModalManager {
 
   renderHintPrompt(options = {}) {
     this.titleEl.innerHTML = `<span class="dialog-title-text">NEED A HINT?</span>`;
+    const isStandalone = TargetConfig.capabilities.isStandaloneMode;
 
     this.bodyEl.innerHTML = `
       <div class="hint-prompt-container">
@@ -1445,14 +1498,19 @@ export class ModalManager {
           </svg>
         </div>
         <div class="hint-prompt-desc">
-          You currently have <strong>0 hints</strong> in your inventory. Watch a short video to earn a free hint or visit the shop.
+          ${isStandalone
+            ? 'You currently have <strong>0 hints</strong> in your inventory. Claim an immediate tactical refill (+1 Hint) or check your daily supply in the shop.'
+            : 'You currently have <strong>0 hints</strong> in your inventory. Watch a short video to earn a free hint or visit the shop.'
+          }
         </div>
         <div class="hint-prompt-actions">
           <button id="btnPromptWatchAd" class="btn-prompt-primary">
-            <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-              <polygon points="5 3 19 12 5 21 5 3"/>
-            </svg>
-            <span>WATCH AD (+1 HINT)</span>
+            ${isStandalone ? Icons.bolt(18) : `
+              <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            `}
+            <span>${isStandalone ? 'TACTICAL REFILL (+1 HINT)' : 'WATCH AD (+1 HINT)'}</span>
           </button>
           <button id="btnPromptShop" class="btn-prompt-secondary">VISIT SHOP</button>
           <button id="btnPromptDismiss" class="btn-prompt-cancel">CANCEL</button>
@@ -1662,7 +1720,7 @@ export class ModalManager {
         <div class="mockup-action-dock">
           ${!isDaily ? `
             <!-- Left: Circular Main Menu Button -->
-            <button id="btnVictoryHome" class="mockup-btn-circle" title="Main Menu" aria-label="Main Menu">
+            <button id="btnVictoryHome" class="mockup-btn-circle" aria-label="Main Menu">
               ${Icons.home(20)}
             </button>
 
@@ -1674,7 +1732,6 @@ export class ModalManager {
           ` : `
             <!-- Daily Challenge Action Dock: Prev Day Arrow + Home / Next Day Arrow -->
             <button id="btnVictoryPrevDay" class="mockup-btn-daily-nav ${!prevDay ? 'disabled' : ''}" 
-                    title="${prevDay ? `Play Previous Day (${prevDay.shortDate})` : 'No Previous Day Available'}" 
                     aria-label="${prevDay ? `Play Previous Day (${prevDay.shortDate})` : 'No Previous Day Available'}" 
                     ${!prevDay ? 'disabled' : ''}>
               ${Icons.arrowLeft(18)}
@@ -1682,19 +1739,17 @@ export class ModalManager {
             </button>
 
             ${nextDay ? `
-              <button id="btnVictoryHome" class="mockup-btn-circle" title="Main Menu" aria-label="Main Menu">
+              <button id="btnVictoryHome" class="mockup-btn-circle" aria-label="Main Menu">
                 ${Icons.home(20)}
               </button>
 
               <button id="btnVictoryNextDay" class="mockup-btn-daily-nav primary" 
-                      title="Play Next Day (${nextDay.shortDate})" 
                       aria-label="Play Next Day (${nextDay.shortDate})">
                 <span>${nextDay.shortDate}</span>
                 ${Icons.arrowRight(18)}
               </button>
             ` : `
               <button id="btnVictoryHome" class="mockup-btn-daily-nav primary" 
-                      title="Main Menu" 
                       aria-label="Main Menu">
                 <span>MAIN MENU</span>
                 ${Icons.home(18)}
@@ -1878,7 +1933,7 @@ export class ModalManager {
                 return `
                   <div class="${cardClasses}" data-index="${idx}" role="button" tabindex="0" aria-label="${l.category || 'Quotes'} ${l.num}">
                     ${isSolved ? `<div class="level-card-badge-solved">${Icons.check(14)}</div>` : ''}
-                    ${!isSolved && isInProgress ? `<div class="level-card-badge-progress" title="Saved Midway Progress">●</div>` : ''}
+                    ${!isSolved && isInProgress ? `<div class="level-card-badge-progress" aria-label="Saved Midway Progress">●</div>` : ''}
                     <span class="level-card-num">${l.num}</span>
                   </div>
                 `;
@@ -1928,6 +1983,14 @@ export class ModalManager {
     bindCardClicks();
 
     if (tabsEl) {
+      // Horizontal mouse wheel scrolling for desktop and web mouse users
+      tabsEl.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          tabsEl.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+
       tabsEl.querySelectorAll('.tier-tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           const cat = btn.getAttribute('data-cat');
@@ -1974,24 +2037,45 @@ export class ModalManager {
   renderDailyCalendar(options = {}) {
     this.titleEl.innerHTML = `${Icons.calendar(20)} <span>DAILY CHALLENGE</span>`;
 
-    const calData = DailyChallengeService.getMonthCalendarData(2026, 9); // October 2026
-    const completedDates = this.storage ? this.storage.getDailyCompletedDates() : {};
-    const todayStr = DailyChallengeService.getDateStr();
+    const now = new Date();
+    const todayStr = DailyChallengeService.getDateStr(now);
 
-    const playableCells = calData.cells.filter(c => c.isPlayable);
-    const solvedCount = playableCells.filter(c => completedDates[c.dateStr]).length;
-
+    let currentYear = (typeof options.year === 'number') ? options.year : now.getFullYear();
+    let currentMonth = (typeof options.month === 'number') ? options.month : now.getMonth();
     let selectedDateStr = options.dateStr || todayStr;
 
+    // If a specific dateStr was requested, align viewing year/month to it
+    if (options.dateStr) {
+      const [y, m] = options.dateStr.split('-').map(Number);
+      if (!isNaN(y) && !isNaN(m)) {
+        currentYear = y;
+        currentMonth = m - 1;
+      }
+    }
+
+    const completedDates = this.storage ? this.storage.getDailyCompletedDates() : {};
     const weekdays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
     const render = () => {
-      const selectedCell = calData.cells.find(c => c.dateStr === selectedDateStr) || playableCells[0];
+      const calData = DailyChallengeService.getMonthCalendarData(currentYear, currentMonth);
+      const playableCells = calData.cells.filter(c => c.isPlayable);
+      const solvedCount = playableCells.filter(c => completedDates[c.dateStr]).length;
+
+      // Ensure selected cell belongs to the currently viewed month
+      let selectedCell = calData.cells.find(c => c.dateStr === selectedDateStr);
+      if (!selectedCell) {
+        selectedCell = calData.cells.find(c => c.isToday)
+          || (playableCells.length > 0 ? playableCells[playableCells.length - 1] : calData.cells.find(c => !c.isPadding));
+        if (selectedCell) {
+          selectedDateStr = selectedCell.dateStr;
+        }
+      }
+
       const isSelectedSolved = Boolean(completedDates[selectedDateStr]);
       const level = selectedCell ? selectedCell.levelInfo.level : null;
       const isPlayable = selectedCell ? selectedCell.isPlayable : false;
 
-      const dateObj = selectedCell ? selectedCell.dayDate : new Date();
+      const dateObj = selectedCell ? selectedCell.dayDate : new Date(currentYear, currentMonth, 1);
       const fullDateLabel = dateObj.toLocaleDateString('en-US', {
         weekday: 'short',
         month: 'short',
@@ -2002,8 +2086,16 @@ export class ModalManager {
       this.bodyEl.innerHTML = `
         <div class="calendar-archive-container">
           <div class="calendar-month-bar">
-            <span class="calendar-month-title">${calData.monthName} ${calData.yearLabel}</span>
-            <span class="calendar-month-subtitle">${solvedCount} / ${playableCells.length} SOLVED</span>
+            <button id="btnCalPrevMonth" class="btn-cal-nav ${!calData.hasPrevMonth ? 'disabled' : ''}" aria-label="Previous Month" ${!calData.hasPrevMonth ? 'disabled' : ''}>
+              ${Icons.chevronLeft(16)}
+            </button>
+            <div class="calendar-month-info">
+              <span class="calendar-month-title">${calData.monthName} ${calData.yearLabel}</span>
+              <span class="calendar-month-subtitle">${solvedCount} / ${playableCells.length} SOLVED</span>
+            </div>
+            <button id="btnCalNextMonth" class="btn-cal-nav ${!calData.hasNextMonth ? 'disabled' : ''}" aria-label="Next Month" ${!calData.hasNextMonth ? 'disabled' : ''}>
+              ${Icons.chevronRight(16)}
+            </button>
           </div>
 
           <div class="calendar-weekdays-row">
@@ -2064,6 +2156,35 @@ export class ModalManager {
           ` : ''}
         </div>
       `;
+
+      // Month navigation click wiring
+      const prevMonthBtn = this.bodyEl.querySelector('#btnCalPrevMonth');
+      if (prevMonthBtn && calData.hasPrevMonth) {
+        prevMonthBtn.addEventListener('click', () => {
+          if (this.audio) this.audio.playClick();
+          currentMonth--;
+          if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+          }
+          selectedDateStr = null;
+          render();
+        });
+      }
+
+      const nextMonthBtn = this.bodyEl.querySelector('#btnCalNextMonth');
+      if (nextMonthBtn && calData.hasNextMonth) {
+        nextMonthBtn.addEventListener('click', () => {
+          if (this.audio) this.audio.playClick();
+          currentMonth++;
+          if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+          }
+          selectedDateStr = null;
+          render();
+        });
+      }
 
       this.bodyEl.querySelectorAll('.calendar-cell.is-playable').forEach(cellEl => {
         cellEl.addEventListener('click', () => {

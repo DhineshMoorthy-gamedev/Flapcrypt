@@ -784,3 +784,15 @@
   background: #121C17;
   transform: scale(0.98);
 }
+
+/* ==========================================================================
+   Platform Specific Overrides: Web & Desktop vs Mobile Play Store
+   Hide Haptic feedback, Rate Flapcrypt, Upgrades & Purchases, and Check for Updates on Web & Desktop
+   ========================================================================== */
+body:not([data-target="playstore"]) #rowHaptics,
+body:not([data-target="playstore"]) #sectionUpgrades,
+body:not([data-target="playstore"]) #rowRateUs,
+body:not([data-target="playstore"]) #btnCheckUpdates {
+  display: none !important;
+}
+

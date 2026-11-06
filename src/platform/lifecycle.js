@@ -164,17 +164,17 @@ export const PlatformBridge = {
   },
 
   // ── Safe URL Opener ────────────────────────────────────────────────────────
-  openExternalUrl(url) {
+  async openExternalUrl(url) {
     if (!url || typeof window === "undefined") return;
 
     // Tauri Desktop native URL opener
     const tauriInvoke = window.__TAURI_INTERNALS__?.invoke || window.__TAURI__?.core?.invoke;
     if (typeof tauriInvoke === "function") {
       try {
-        tauriInvoke("open_url", { url });
+        await tauriInvoke("open_url", { url });
         return;
       } catch (err) {
-        console.warn("[PlatformBridge] Tauri open_url error:", err);
+        console.warn("[PlatformBridge] Tauri open_url error, attempting fallback:", err);
       }
     }
 
@@ -226,6 +226,40 @@ export const PlatformBridge = {
     }
   },
 
-  isCapacitor: () => typeof window !== "undefined" && Boolean(window.Capacitor?.isNativePlatform?.())
+  isCapacitor: () => typeof window !== "undefined" && Boolean(window.Capacitor?.isNativePlatform?.()),
+
+  capabilities: TargetConfig.capabilities,
+
+  /**
+   * Save data synchronization hook for desktop %APPDATA%/Flapcrypt/save.json
+   */
+  async saveDesktopBackup(dataJson) {
+    if (!TargetConfig.capabilities.hasDesktopStorage || typeof window === "undefined") return;
+    try {
+      const invoke = window.__TAURI__?.core?.invoke || window.__TAURI__?.tauri?.invoke || window.__TAURI_INTERNALS__?.invoke;
+      if (typeof invoke === "function") {
+        await invoke("backup_save_data", { payload: dataJson });
+      }
+    } catch (err) {
+      console.warn("[PlatformBridge] Desktop backup failed:", err);
+    }
+  },
+
+  /**
+   * Loads save data from %APPDATA%/Flapcrypt/save.json if available
+   */
+  async loadDesktopBackup() {
+    if (!TargetConfig.capabilities.hasDesktopStorage || typeof window === "undefined") return null;
+    try {
+      const invoke = window.__TAURI__?.core?.invoke || window.__TAURI__?.tauri?.invoke || window.__TAURI_INTERNALS__?.invoke;
+      if (typeof invoke === "function") {
+        const raw = await invoke("load_save_data");
+        return raw ? JSON.parse(raw) : null;
+      }
+    } catch (err) {
+      console.warn("[PlatformBridge] Desktop save load failed:", err);
+    }
+    return null;
+  }
 };
 

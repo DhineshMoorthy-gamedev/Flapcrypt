@@ -28,10 +28,15 @@ export class DailyChallengeService {
   }
 
   /**
-   * Formats a Date object to yesterday's YYYY-MM-DD in local time.
+   * Formats a Date object or YYYY-MM-DD string to yesterday's YYYY-MM-DD in local time.
    */
   static getYesterdayDateStr(date = new Date()) {
-    const prev = new Date(date);
+    let d = date;
+    if (typeof date === 'string') {
+      const [y, m, day] = date.split('-').map(Number);
+      d = new Date(y, m - 1, day);
+    }
+    const prev = new Date(d);
     prev.setDate(prev.getDate() - 1);
     return this.getDateStr(prev);
   }
@@ -40,16 +45,26 @@ export class DailyChallengeService {
    * Returns short date string e.g. "OCT 7"
    */
   static getShortDate(date = new Date()) {
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase();
+    let d = date;
+    if (typeof date === 'string') {
+      const [y, m, day] = date.split('-').map(Number);
+      d = new Date(y, m - 1, day);
+    }
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase();
   }
 
   /**
    * Computes deterministic daily level info for a given date.
    */
   static getDailyLevelInfo(date = new Date()) {
-    const { year, month, day } = this.getLocalDateComponents(date);
-    const dateStr = this.getDateStr(date);
-    const shortDate = this.getShortDate(date);
+    let d = date;
+    if (typeof date === 'string') {
+      const [y, m, day] = date.split('-').map(Number);
+      d = new Date(y, m - 1, day);
+    }
+    const { year, month, day } = this.getLocalDateComponents(d);
+    const dateStr = this.getDateStr(d);
+    const shortDate = this.getShortDate(d);
 
     // Days since UTC epoch for local midnight
     const epochDays = Math.floor(Date.UTC(year, month, day) / 86400000);
@@ -74,13 +89,28 @@ export class DailyChallengeService {
   }
 
   /**
-   * Generates calendar grid cells for a given month (default: October 2026).
+   * Generates calendar grid cells for a given month.
+   * Defaults to player's current local year and month if omitted.
    */
-  static getMonthCalendarData(year = 2026, month = 9) {
+  static getMonthCalendarData(year, month) {
+    const now = new Date();
+    const targetYear = (typeof year === 'number') ? year : now.getFullYear();
+    const targetMonth = (typeof month === 'number') ? month : now.getMonth();
+
     const todayStr = this.getDateStr();
-    const firstDay = new Date(year, month, 1);
-    const startingDayOfWeek = firstDay.getDay(); // 0 = Sun, 1 = Mon ... 4 = Thu
-    const totalDaysInMonth = new Date(year, month + 1, 0).getDate(); // 31 for October
+    const firstDay = new Date(targetYear, targetMonth, 1);
+    const startingDayOfWeek = firstDay.getDay(); // 0 = Sun, 1 = Mon ... 6 = Sat
+    const totalDaysInMonth = new Date(targetYear, targetMonth + 1, 0).getDate();
+
+    const monthName = firstDay.toLocaleDateString('en-US', { month: 'long' }).toUpperCase();
+    const yearLabel = String(targetYear);
+
+    // Archive boundaries: start at October 2026, bounded up to current local month
+    const archiveStartDate = new Date(2026, 9, 1); // October 1, 2026
+    const currentMonthFirst = new Date(now.getFullYear(), now.getMonth(), 1);
+
+    const hasPrevMonth = firstDay > archiveStartDate;
+    const hasNextMonth = firstDay < currentMonthFirst;
 
     const cells = [];
 
@@ -90,7 +120,7 @@ export class DailyChallengeService {
     }
 
     for (let d = 1; d <= totalDaysInMonth; d++) {
-      const dayDate = new Date(year, month, d);
+      const dayDate = new Date(targetYear, targetMonth, d);
       const dateStr = this.getDateStr(dayDate);
       const isBeforeArchive = dateStr < this.ARCHIVE_START_DATE;
       const isToday = dateStr === todayStr;
@@ -112,12 +142,14 @@ export class DailyChallengeService {
     }
 
     return {
-      year,
-      month,
-      monthName: 'OCTOBER',
-      yearLabel: '2026',
+      year: targetYear,
+      month: targetMonth,
+      monthName,
+      yearLabel,
       startingDayOfWeek,
       totalDaysInMonth,
+      hasPrevMonth,
+      hasNextMonth,
       cells
     };
   }

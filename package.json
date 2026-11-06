@@ -1,8 +1,8 @@
 {
   "name": "flapcrypt",
   "private": true,
-  "version": "0.0.8",
-  "versionCode": 8,
+  "version": "0.0.9",
+  "versionCode": 9,
   "type": "module",
   "scripts": {
     "bump": "node scripts/bump-version.mjs",
@@ -20,9 +20,18 @@
     "build:bundle": "npm run build:playstore && cd android && .\\gradlew.bat bundleRelease",
     "cap:sync": "cap sync android",
     "cap:open": "cap open android",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "tauri:windows:init": "tauri-windows-bundle init --all-variants",
+    "tauri:msix": "tauri-windows-bundle build --arch x64 --runner npm",
+    "tauri:msixbundle": "npm run build:desktop && tauri-windows-bundle build --arch x64 --runner npm",
+    "tauri:cert": "powershell -ExecutionPolicy Bypass -File scripts/create-dev-cert.ps1",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@choochmeque/tauri-windows-bundle": "^0.2.0",
+    "@tauri-apps/cli": "^2.0.0",
     "vite": "^6.2.0"
   },
   "dependencies": {
@@ -32,6 +41,8 @@
     "@capacitor/core": "^8.5.2",
     "@capacitor/haptics": "^8.0.2",
     "@capacitor/status-bar": "^8.0.4",
+    "@tauri-apps/api": "^2.12.4",
+    "@tauri-apps/plugin-shell": "^2.6.0",
     "driver.js": "^1.10.2"
   }
 }

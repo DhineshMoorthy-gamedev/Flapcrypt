@@ -29,6 +29,15 @@ export class LevelSelectScreen {
         if (this.onBack) this.onBack();
       });
     }
+
+    if (this.tabsContainer) {
+      this.tabsContainer.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          this.tabsContainer.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+    }
   }
 
   showToast(message) {
@@ -296,7 +305,7 @@ export class LevelSelectScreen {
               return `
                 <div class="${cardClasses}" data-index="${idx}" role="button" tabindex="0" aria-label="${l.category} ${l.num}">
                   ${isSolved ? `<div class="level-card-badge-solved">${Icons.check(14)}</div>` : ''}
-                  ${!isSolved && isInProgress ? `<div class="level-card-badge-progress" title="Saved Midway Progress">●</div>` : ''}
+                  ${!isSolved && isInProgress ? `<div class="level-card-badge-progress" aria-label="Saved Midway Progress">●</div>` : ''}
                   <span class="level-card-num">${l.num}</span>
                   ${isSpecial ? `<span class="level-card-category-tag">${l.category}</span>` : ''}
                   <span class="level-card-diff">${l.diff}</span>

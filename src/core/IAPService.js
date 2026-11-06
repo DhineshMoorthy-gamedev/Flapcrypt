@@ -3,6 +3,8 @@
  * Bridges to Google Play Billing (v7.1.1) on native Android, with dev sandbox support for web/desktop.
  */
 
+import { TargetConfig } from '../platform/target-config.js';
+
 export const IAP_PRODUCTS = {
   REMOVE_ADS: {
     id: 'remove_ads',
@@ -45,6 +47,11 @@ class IAPServiceImpl {
     this.storage = storageService;
     this.audio = audioService;
     this.isInitialized = true;
+
+    if (!TargetConfig.capabilities.hasIAP) {
+      console.log('[IAPService] Standalone target active — billing disabled.');
+      return;
+    }
 
     // Prefetch live Google Play prices if on native Android
     this.queryProducts().catch(err => {

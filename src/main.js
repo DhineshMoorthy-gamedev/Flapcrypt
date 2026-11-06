@@ -30,6 +30,36 @@ import { OnboardingTour } from './ui/OnboardingTour.js';
 import { AppUpdateService } from './core/AppUpdateService.js';
 
 function initApp() {
+  // Completely suppress native browser hover tooltips across all targets
+  const stripTitles = (root = document) => {
+    root.querySelectorAll?.('[title]').forEach(el => el.removeAttribute('title'));
+  };
+  stripTitles();
+  if (typeof MutationObserver !== 'undefined') {
+    const titleObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type === 'childList') {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) {
+              if (node.hasAttribute('title')) node.removeAttribute('title');
+              node.querySelectorAll?.('[title]').forEach(el => el.removeAttribute('title'));
+            }
+          });
+        } else if (mutation.type === 'attributes' && mutation.attributeName === 'title') {
+          if (mutation.target.hasAttribute('title')) {
+            mutation.target.removeAttribute('title');
+          }
+        }
+      }
+    });
+    titleObserver.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['title']
+    });
+  }
+
   // Expose config for runtime inspection and set DOM attributes
   if (typeof window !== 'undefined') {
     window.TargetConfig = TargetConfig;

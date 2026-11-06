@@ -1,4 +1,6 @@
 import { LEVEL_DATA } from '../data/levels.js';
+import { TargetConfig } from '../platform/target-config.js';
+import { PlatformBridge } from '../platform/lifecycle.js';
 
 const STORAGE_KEY = 'flapcrypt_save_data';
 
@@ -39,6 +41,27 @@ const DEFAULT_STATE = {
 export class StorageService {
   constructor() {
     this.data = this.load();
+    if (TargetConfig.capabilities.hasDesktopStorage) {
+      this.syncDesktopBackup();
+    }
+  }
+
+  async syncDesktopBackup() {
+    if (!TargetConfig.capabilities.hasDesktopStorage) return;
+    try {
+      const backupData = await PlatformBridge.loadDesktopBackup();
+      if (backupData && typeof backupData === 'object') {
+        const hasLocalProgress = this.data.currentLevelIndex > 0 || Object.keys(this.data.completedLevels || {}).length > 0;
+        const hasBackupProgress = (backupData.currentLevelIndex || 0) > 0 || Object.keys(backupData.completedLevels || {}).length > 0;
+        if (!hasLocalProgress && hasBackupProgress) {
+          console.log('[StorageService] Restored progress from desktop %APPDATA% backup');
+          this.data = { ...DEFAULT_STATE, ...backupData };
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(this.data));
+        }
+      }
+    } catch (err) {
+      console.warn('[StorageService] Desktop backup sync failed:', err);
+    }
   }
 
   load() {
@@ -98,7 +121,11 @@ export class StorageService {
 
   save() {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(this.data));
+      const serialized = JSON.stringify(this.data);
+      localStorage.setItem(STORAGE_KEY, serialized);
+      if (TargetConfig.capabilities.hasDesktopStorage) {
+        PlatformBridge.saveDesktopBackup(serialized);
+      }
     } catch (e) {
       console.warn('StorageService: failed to write localStorage', e);
     }
@@ -275,7 +302,43 @@ export class StorageService {
     return { success: true, balance: this.data.hints.balance };
   }
 
+  getTacticalRefillCooldown() {
+    if (!this.data.hints) {
+      this.data.hints = { ...DEFAULT_STATE.hints };
+    }
+    const COOLDOWN_MS = 60 * 1000; // 60s tactical cooldown on standalone desktop/web
+    const lastClaim = this.data.hints.lastTacticalRefillTimestamp || 0;
+    const now = Date.now();
+    const elapsed = now - lastClaim;
+    const remainingMs = Math.max(0, COOLDOWN_MS - elapsed);
+    return {
+      canClaim: remainingMs <= 0,
+      remainingMs,
+      remainingSeconds: Math.ceil(remainingMs / 1000)
+    };
+  }
+
+  claimTacticalRefill() {
+    const cooldown = this.getTacticalRefillCooldown();
+    if (!cooldown.canClaim) {
+      return { success: false, remainingMs: cooldown.remainingMs, remainingSeconds: cooldown.remainingSeconds };
+    }
+    if (!this.data.hints) {
+      this.data.hints = { ...DEFAULT_STATE.hints };
+    }
+    const current = (typeof this.data.hints.balance === 'number' && this.data.hints.balance !== Infinity)
+      ? this.data.hints.balance
+      : 5;
+    this.data.hints.balance = current + 1;
+    this.data.hints.lastTacticalRefillTimestamp = Date.now();
+    this.save();
+    return { success: true, balance: this.data.hints.balance };
+  }
+
   hasRemovedAds() {
+    if (TargetConfig.capabilities.isStandaloneMode) {
+      return true;
+    }
     return Boolean(this.data.removeAds);
   }
 
@@ -328,7 +391,20 @@ export class StorageService {
     if (!this.data.daily) {
       this.data.daily = { ...DEFAULT_STATE.daily, completedDates: {} };
     }
-    return { ...this.data.daily };
+    const state = { ...this.data.daily };
+
+    // Validate if streak has lapsed
+    const now = new Date();
+    const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    const prev = new Date(now);
+    prev.setDate(prev.getDate() - 1);
+    const yesterdayStr = `${prev.getFullYear()}-${String(prev.getMonth() + 1).padStart(2, '0')}-${String(prev.getDate()).padStart(2, '0')}`;
+
+    const lastDate = state.lastCompletedDate;
+    const isStreakAlive = lastDate && (lastDate === todayStr || lastDate === yesterdayStr);
+    state.currentStreak = isStreakAlive ? (state.currentStreak || 0) : 0;
+
+    return state;
   }
 
   getDailyCompletedDates() {

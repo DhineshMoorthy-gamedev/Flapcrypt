@@ -32,6 +32,46 @@
   padding: 0;
 }
 
+/* ==========================================================================
+   MECHANICAL DARK-PINE SCROLLBAR SYSTEM
+   Replaces default OS scrollbars on Desktop (Windows, macOS, Linux, Web)
+   and Mobile Webviews with a tactile, theme-matched slim departure-track design.
+   ========================================================================== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #244233 rgba(13, 20, 16, 0.45);
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(13, 20, 16, 0.45);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #244233;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background-color 0.15s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #355a46;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: var(--sel-color, #f59e0b);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.35);
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 html, body {
   height: 100%;
   height: 100dvh;
@@ -64,6 +104,27 @@ html, body {
   background: radial-gradient(circle at 50% 15%, #172620, var(--bg) 85%);
   position: relative;
   overflow: hidden;
+}
+
+/* Widescreen Desktop / Browser Framing */
+@media (min-width: 601px) {
+  body:not([data-target="playstore"]) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 30%, #15221b 0%, #080c0a 100%);
+  }
+
+  body:not([data-target="playstore"]) .app-shell {
+    max-width: 520px;
+    height: 100%;
+    max-height: 960px;
+    border-left: 1px solid rgba(29, 44, 37, 0.8);
+    border-right: 1px solid rgba(29, 44, 37, 0.8);
+    box-shadow: 
+      0 0 60px rgba(0, 0, 0, 0.85),
+      0 0 0 1px rgba(245, 158, 11, 0.08);
+  }
 }
 
 /* 1. Fixed Minimal Header (Home | Level # | Restart) */
