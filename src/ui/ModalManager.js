@@ -1728,7 +1728,7 @@ export class ModalManager {
 
         <!-- 3. Decoded Quote Showcase Box -->
         <div class="mockup-quote-box">
-          <div class="mockup-quote-mark" aria-hidden="true">“</div>
+          <div class="mockup-quote-mark" aria-hidden="true">${Icons.quote(14)}</div>
           <blockquote class="mockup-quote-text">${level.quote}</blockquote>
           ${authorHtml}
         </div>
@@ -1931,7 +1931,8 @@ export class ModalManager {
       { id: 'Riddles', label: 'RIDDLES', count: LEVEL_DATA.filter(l => l.category === 'Riddles').length },
       { id: 'Movie Lines', label: 'MOVIE LINES', count: LEVEL_DATA.filter(l => l.category === 'Movie Lines').length },
       { id: 'Trivia', label: 'TRIVIA', count: LEVEL_DATA.filter(l => l.category === 'Trivia').length },
-      { id: 'Wordplay', label: 'WORDPLAY', count: LEVEL_DATA.filter(l => l.category === 'Wordplay').length }
+      { id: 'Wordplay', label: 'WORDPLAY', count: LEVEL_DATA.filter(l => l.category === 'Wordplay').length },
+      { id: 'Jokes', label: 'JOKES', count: LEVEL_DATA.filter(l => l.category === 'Jokes').length }
     ];
 
     const sectionsMeta = [
@@ -1958,7 +1959,11 @@ export class ModalManager {
       { id: 'Wordplay-Beginner', category: 'Wordplay', label: 'WORDPLAY — BEGINNER', filter: l => l.category === 'Wordplay' && l.tier === 'Tier 1: Beginner' },
       { id: 'Wordplay-Intermediate', category: 'Wordplay', label: 'WORDPLAY — INTERMEDIATE', filter: l => l.category === 'Wordplay' && l.tier === 'Tier 2: Intermediate' },
       { id: 'Wordplay-Advanced', category: 'Wordplay', label: 'WORDPLAY — ADVANCED', filter: l => l.category === 'Wordplay' && l.tier === 'Tier 3: Advanced' },
-      { id: 'Wordplay-Master', category: 'Wordplay', label: 'WORDPLAY — MASTER', filter: l => l.category === 'Wordplay' && l.tier === 'Tier 4: Master' }
+      { id: 'Wordplay-Master', category: 'Wordplay', label: 'WORDPLAY — MASTER', filter: l => l.category === 'Wordplay' && l.tier === 'Tier 4: Master' },
+      { id: 'Jokes-Beginner', category: 'Jokes', label: 'JOKES — BEGINNER', filter: l => l.category === 'Jokes' && l.tier === 'Tier 1: Beginner' },
+      { id: 'Jokes-Intermediate', category: 'Jokes', label: 'JOKES — INTERMEDIATE', filter: l => l.category === 'Jokes' && l.tier === 'Tier 2: Intermediate' },
+      { id: 'Jokes-Advanced', category: 'Jokes', label: 'JOKES — ADVANCED', filter: l => l.category === 'Jokes' && l.tier === 'Tier 3: Advanced' },
+      { id: 'Jokes-Master', category: 'Jokes', label: 'JOKES — MASTER', filter: l => l.category === 'Jokes' && l.tier === 'Tier 4: Master' }
     ];
 
     const currentLevelObj = LEVEL_DATA[currentIdx] || LEVEL_DATA[0];

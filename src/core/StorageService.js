@@ -558,7 +558,7 @@ export class StorageService {
   }
 
   getCategoryMastery() {
-    const categories = ['Quotes', 'Proverbs', 'Riddles', 'Movie Lines', 'Trivia', 'Wordplay'];
+    const categories = ['Quotes', 'Proverbs', 'Riddles', 'Movie Lines', 'Trivia', 'Wordplay', 'Jokes'];
     const result = {};
     for (const cat of categories) {
       const catLower = cat.toLowerCase();
@@ -582,6 +582,7 @@ export class StorageService {
     const moviesSolved = this.getCategorySolvedCount('Movie Lines');
     const triviaSolved = this.getCategorySolvedCount('Trivia');
     const wordplaySolved = this.getCategorySolvedCount('Wordplay');
+    const jokesSolved = this.getCategorySolvedCount('Jokes');
 
     const ctx = {
       completedCount,
@@ -595,6 +596,7 @@ export class StorageService {
       moviesSolved,
       triviaSolved,
       wordplaySolved,
+      jokesSolved,
       totalSecondsPlayed: stats.totalSecondsPlayed || 0,
       flapsRotated: stats.flapsRotated || 0
     };
@@ -855,6 +857,15 @@ export const ACHIEVEMENT_DEFINITIONS = [
     target: 3,
     icon: 'masks',
     getValue: (ctx) => ctx.wordplaySolved
+  },
+  {
+    id: 'strategy_jokes_3',
+    category: 'strategy',
+    name: 'Comic Timing',
+    desc: 'Solve 3 Jokes category puzzles',
+    target: 3,
+    icon: 'smile',
+    getValue: (ctx) => ctx.jokesSolved
   },
 
   // 5. TIME (Play Time Accumulation)

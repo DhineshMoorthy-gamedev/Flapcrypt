@@ -73,7 +73,8 @@ export class LevelSelectScreen {
       { id: 'Riddles', label: 'RIDDLES', count: LEVEL_DATA.filter(l => l.category === 'Riddles').length },
       { id: 'Movie Lines', label: 'MOVIE LINES', count: LEVEL_DATA.filter(l => l.category === 'Movie Lines').length },
       { id: 'Trivia', label: 'TRIVIA', count: LEVEL_DATA.filter(l => l.category === 'Trivia').length },
-      { id: 'Wordplay', label: 'WORDPLAY', count: LEVEL_DATA.filter(l => l.category === 'Wordplay').length }
+      { id: 'Wordplay', label: 'WORDPLAY', count: LEVEL_DATA.filter(l => l.category === 'Wordplay').length },
+      { id: 'Jokes', label: 'JOKES', count: LEVEL_DATA.filter(l => l.category === 'Jokes').length }
     ];
 
     // 3. Render Category Filter Tabs
@@ -266,6 +267,34 @@ export class LevelSelectScreen {
         label: 'WORDPLAY — MASTER',
         meta: 'DIFF 80.1 – 99.0',
         filter: l => l.category === 'Wordplay' && l.tier === 'Tier 4: Master'
+      },
+      {
+        id: 'Jokes-Beginner',
+        category: 'Jokes',
+        label: 'JOKES — BEGINNER',
+        meta: 'DIFF 1.0 – 45.0',
+        filter: l => l.category === 'Jokes' && l.tier === 'Tier 1: Beginner'
+      },
+      {
+        id: 'Jokes-Intermediate',
+        category: 'Jokes',
+        label: 'JOKES — INTERMEDIATE',
+        meta: 'DIFF 45.1 – 65.0',
+        filter: l => l.category === 'Jokes' && l.tier === 'Tier 2: Intermediate'
+      },
+      {
+        id: 'Jokes-Advanced',
+        category: 'Jokes',
+        label: 'JOKES — ADVANCED',
+        meta: 'DIFF 65.1 – 80.0',
+        filter: l => l.category === 'Jokes' && l.tier === 'Tier 3: Advanced'
+      },
+      {
+        id: 'Jokes-Master',
+        category: 'Jokes',
+        label: 'JOKES — MASTER',
+        meta: 'DIFF 80.1 – 99.0',
+        filter: l => l.category === 'Jokes' && l.tier === 'Tier 4: Master'
       }
     ];
 

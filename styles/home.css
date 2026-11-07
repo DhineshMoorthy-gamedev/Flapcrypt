@@ -2222,7 +2222,7 @@
   background: #0B1410;
   border: 1.5px solid rgba(245, 158, 11, 0.45);
   border-radius: 16px;
-  padding: 20px 18px 16px 18px;
+  padding: 22px 18px 16px 18px;
   box-shadow: 
     0 4px 16px rgba(0, 0, 0, 0.4),
     inset 0 0 20px rgba(245, 158, 11, 0.04);
@@ -2230,16 +2230,26 @@
 
 .mockup-quote-mark {
   position: absolute;
-  top: -14px;
-  left: 14px;
-  font-family: var(--font-serif);
-  font-size: 2.8rem;
-  line-height: 1;
-  color: #F59E0B;
+  top: 0;
+  left: 18px;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  padding: 0 7px;
   background: #0E1A14;
-  padding: 0 4px;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  border-radius: 6px;
+  color: #F59E0B;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   user-select: none;
   pointer-events: none;
+  z-index: 2;
+}
+
+.mockup-quote-mark .ui-icon {
+  display: block;
 }
 
 .mockup-quote-text {

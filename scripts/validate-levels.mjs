@@ -6,11 +6,11 @@ console.log(`Loaded ${LEVEL_DATA.length} levels.`);
 let errors = [];
 
 // 1. Check total count
-if (LEVEL_DATA.length !== 700) {
-  errors.push(`Expected 700 levels, found ${LEVEL_DATA.length}`);
+if (LEVEL_DATA.length !== 800) {
+  errors.push(`Expected 800 levels, found ${LEVEL_DATA.length}`);
 }
 
-// 2. Check sequential IDs 1..700
+// 2. Check sequential IDs 1..800
 LEVEL_DATA.forEach((level, idx) => {
   const expectedId = idx + 1;
   if (level.id !== expectedId) {
@@ -25,7 +25,8 @@ const expectedCats = {
   'Riddles': 100,
   'Movie Lines': 100,
   'Trivia': 100,
-  'Wordplay': 100
+  'Wordplay': 100,
+  'Jokes': 100
 };
 
 const catCounts = {};
@@ -97,8 +98,8 @@ if (errors.length > 0) {
   errors.forEach(err => console.error(" - " + err));
   process.exit(1);
 } else {
-  console.log("PASS! All 700 levels passed all validation checks with 0 errors!");
-  console.log("  - Exactly 700 levels sequentially numbered 1..700");
+  console.log("PASS! All 800 levels passed all validation checks with 0 errors!");
+  console.log("  - Exactly 800 levels sequentially numbered 1..800");
   console.log("  - Exactly 0 duplicates across all categories");
   console.log("  - Quotes: 200 (50 per tier)");
   console.log("  - Proverbs: 100 (25 per tier)");
@@ -106,4 +107,5 @@ if (errors.length > 0) {
   console.log("  - Movie Lines: 100 (25 per tier)");
   console.log("  - Trivia: 100 (25 per tier)");
   console.log("  - Wordplay: 100 (25 per tier)");
+  console.log("  - Jokes: 100 (25 per tier)");
 }

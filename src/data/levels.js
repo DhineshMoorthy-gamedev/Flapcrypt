@@ -1,12 +1,13 @@
 /**
  * Flapcrypt Levels Data
- * 700 Progressive Cryptograms Across Categories:
+ * 800 Progressive Cryptograms Across Categories:
  * - Quotes: 200 Puzzles (Levels 1 - 200, 4 Tiers, 50 each)
  * - Proverbs: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
  * - Riddles: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
  * - Movie Lines: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
  * - Trivia: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
  * - Wordplay: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
+ * - Jokes: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
  */
 
 export const LEVEL_DATA = [
@@ -7008,6 +7009,1006 @@ export const LEVEL_DATA = [
     "tier": "Tier 4: Master",
     "given": 3,
     "category": "Wordplay",
+    "num": 100
+  },
+  {
+    "id": 701,
+    "quote": "I told my doctor I broke my arm in two places. He told me to stop going to those places.",
+    "author": "Henny Youngman",
+    "diff": "1.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 1
+  },
+  {
+    "id": 702,
+    "quote": "I asked the waiter for something with zero calories. He brought me an empty plate.",
+    "author": "",
+    "diff": "2.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 2
+  },
+  {
+    "id": 703,
+    "quote": "I asked my dog what is on top of the house. He said, 'Roof!'",
+    "author": "",
+    "diff": "4.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 3
+  },
+  {
+    "id": 704,
+    "quote": "I bought a chameleon yesterday. I still have not found it.",
+    "author": "",
+    "diff": "6.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 4
+  },
+  {
+    "id": 705,
+    "quote": "I told my suitcase there will be no vacation this year. Now I am dealing with emotional baggage.",
+    "author": "",
+    "diff": "8.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 5
+  },
+  {
+    "id": 706,
+    "quote": "I told my wife she should embrace her mistakes. She gave me a hug.",
+    "author": "",
+    "diff": "10.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 6
+  },
+  {
+    "id": 707,
+    "quote": "My wife asked me to sync her phone. So I threw it in the ocean.",
+    "author": "",
+    "diff": "12.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 7
+  },
+  {
+    "id": 708,
+    "quote": "My bank balance is like a ghost story: terrifying, unexplained, and keeps me awake at night.",
+    "author": "",
+    "diff": "14.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 8
+  },
+  {
+    "id": 709,
+    "quote": "A termite walks into a bar and asks, 'Is the bar tender?'",
+    "author": "",
+    "diff": "16.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 9
+  },
+  {
+    "id": 710,
+    "quote": "I gave all my dead batteries away today. Free of charge.",
+    "author": "",
+    "diff": "18.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 10
+  },
+  {
+    "id": 711,
+    "quote": "My boss told me to have a good day, so I went home.",
+    "author": "",
+    "diff": "20.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 11
+  },
+  {
+    "id": 712,
+    "quote": "I ordered a chicken and an egg from Amazon. I will let you know.",
+    "author": "",
+    "diff": "22.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 12
+  },
+  {
+    "id": 713,
+    "quote": "I asked the surgeon if I could administer my own anesthetic. He said, 'Sure, knock yourself out.'",
+    "author": "",
+    "diff": "25.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 13
+  },
+  {
+    "id": 714,
+    "quote": "I used to think I was indecisive, but now I am not so sure.",
+    "author": "Tommy Cooper",
+    "diff": "27.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 14
+  },
+  {
+    "id": 715,
+    "quote": "I bought shoes from a drug dealer once. I do not know what he laced them with, but I was tripping all day.",
+    "author": "",
+    "diff": "30.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 15
+  },
+  {
+    "id": 716,
+    "quote": "A priest, a minister, and a rabbit walk into a blood bank. The rabbit says, 'I think I might be a type O.'",
+    "author": "",
+    "diff": "32.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 16
+  },
+  {
+    "id": 717,
+    "quote": "I lost my job at the bank on my very first day. A woman asked me to check her balance, so I pushed her over.",
+    "author": "",
+    "diff": "34.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 17
+  },
+  {
+    "id": 718,
+    "quote": "I invented a new golf ball that will automatically go in the hole if it gets within four inches. Unfortunately, it will not go in the golf bag.",
+    "author": "Milton Berle",
+    "diff": "36.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 18
+  },
+  {
+    "id": 719,
+    "quote": "I told the doctor that everyone ignores me. The doctor said, 'Next, please!'",
+    "author": "",
+    "diff": "38.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 19
+  },
+  {
+    "id": 720,
+    "quote": "I tried to catch fog yesterday. I mist.",
+    "author": "",
+    "diff": "40.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 20
+  },
+  {
+    "id": 721,
+    "quote": "My wife told me to put the ketchup on the shopping list. Now I cannot read anything else.",
+    "author": "",
+    "diff": "41.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 21
+  },
+  {
+    "id": 722,
+    "quote": "I asked the librarian if the library had any books on paranoia. She whispered, 'They are right behind you.'",
+    "author": "",
+    "diff": "43.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 22
+  },
+  {
+    "id": 723,
+    "quote": "I told my doctor I get heartburn every time I eat birthday cake. He told me to take the candles off first.",
+    "author": "",
+    "diff": "44.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 23
+  },
+  {
+    "id": 724,
+    "quote": "I asked my physical therapist if I could do lunges to improve my mood. He said that is a big step forward.",
+    "author": "",
+    "diff": "44.5",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 24
+  },
+  {
+    "id": 725,
+    "quote": "I asked the gym instructor if he could teach me to do the splits. He asked, 'How flexible are you?' I said, 'I cannot make Tuesdays.'",
+    "author": "",
+    "diff": "45.0",
+    "tier": "Tier 1: Beginner",
+    "given": 4,
+    "category": "Jokes",
+    "num": 25
+  },
+  {
+    "id": 726,
+    "quote": "I want to die peacefully in my sleep like my grandfather. Not screaming in terror like the passengers in his car.",
+    "author": "Bob Monkhouse",
+    "diff": "45.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 26
+  },
+  {
+    "id": 727,
+    "quote": "I used to think the brain was the most important organ, but then I realized who was telling me that.",
+    "author": "Emo Philips",
+    "diff": "46.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 27
+  },
+  {
+    "id": 728,
+    "quote": "I have a lot of growing up to do. I realized that the other day inside a fort I made out of couch cushions.",
+    "author": "Zach Galifianakis",
+    "diff": "47.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 28
+  },
+  {
+    "id": 729,
+    "quote": "My therapist told me the way to achieve true inner peace is to finish what I start. So far I have finished two bags of chips and a chocolate cake.",
+    "author": "",
+    "diff": "48.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 29
+  },
+  {
+    "id": 730,
+    "quote": "I like long walks, especially when they are taken by people who annoy me.",
+    "author": "Fred Allen",
+    "diff": "50.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 30
+  },
+  {
+    "id": 731,
+    "quote": "I have not spoken to my wife in years. I did not want to interrupt her.",
+    "author": "Rodney Dangerfield",
+    "diff": "51.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 31
+  },
+  {
+    "id": 732,
+    "quote": "I do not need a hair stylist, my pillow gives me a new hairstyle every morning.",
+    "author": "",
+    "diff": "52.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 32
+  },
+  {
+    "id": 733,
+    "quote": "My wife told me that sex is better on vacation. That was not a very nice postcard to receive.",
+    "author": "Rodney Dangerfield",
+    "diff": "53.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 33
+  },
+  {
+    "id": 734,
+    "quote": "I got a new car for my spouse. Best trade I have ever made.",
+    "author": "Henny Youngman",
+    "diff": "54.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 34
+  },
+  {
+    "id": 735,
+    "quote": "If I had a dollar for every person who found me unattractive, they would eventually find me attractive.",
+    "author": "",
+    "diff": "55.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 35
+  },
+  {
+    "id": 736,
+    "quote": "My wife and I decided to never go to bed angry. We have been awake for three weeks.",
+    "author": "",
+    "diff": "56.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 36
+  },
+  {
+    "id": 737,
+    "quote": "I asked the librarian where the self-help section was. She said that if she told me, it would defeat the purpose.",
+    "author": "",
+    "diff": "57.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 37
+  },
+  {
+    "id": 738,
+    "quote": "The easiest way to find something lost around the house is to buy a replacement.",
+    "author": "",
+    "diff": "58.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 38
+  },
+  {
+    "id": 739,
+    "quote": "My doctor told me to avoid all stress, so I told my boss I could not come in anymore.",
+    "author": "",
+    "diff": "59.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 39
+  },
+  {
+    "id": 740,
+    "quote": "I told my wife our house was haunted. She said, 'Do not be silly, there are no ghosts here.' The ghost agreed.",
+    "author": "",
+    "diff": "60.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 40
+  },
+  {
+    "id": 741,
+    "quote": "I asked my wife what she wanted for dinner. She said, 'Nothing.' So I made nothing. Now she is furious.",
+    "author": "",
+    "diff": "61.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 41
+  },
+  {
+    "id": 742,
+    "quote": "I told my dentist that my teeth were turning yellow. He suggested wearing a brown tie.",
+    "author": "Rodney Dangerfield",
+    "diff": "61.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 42
+  },
+  {
+    "id": 743,
+    "quote": "I asked my wife if I was the only one she ever loved. She said yes, all the others were nines and tens.",
+    "author": "Rodney Dangerfield",
+    "diff": "62.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 43
+  },
+  {
+    "id": 744,
+    "quote": "A plateau is the highest form of flattery.",
+    "author": "",
+    "diff": "62.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 44
+  },
+  {
+    "id": 745,
+    "quote": "I am reading a book on the history of glue. I cannot seem to put it down.",
+    "author": "",
+    "diff": "63.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 45
+  },
+  {
+    "id": 746,
+    "quote": "My wife says I am too nosy. At least that is what she wrote in her diary.",
+    "author": "",
+    "diff": "63.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 46
+  },
+  {
+    "id": 747,
+    "quote": "I told my computer I needed a break. It said, 'No problem, here is a frozen screen.'",
+    "author": "",
+    "diff": "64.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 47
+  },
+  {
+    "id": 748,
+    "quote": "I told my doctor I hear buzzing noises everywhere I go. He said, 'Do not worry, it is just a bug going around.'",
+    "author": "",
+    "diff": "64.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 48
+  },
+  {
+    "id": 749,
+    "quote": "My wife told me that she needs more space. So I locked her outside.",
+    "author": "",
+    "diff": "64.8",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 49
+  },
+  {
+    "id": 750,
+    "quote": "I was going to tell a joke about time travel, but you did not like it.",
+    "author": "",
+    "diff": "65.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 50
+  },
+  {
+    "id": 751,
+    "quote": "I asked the hotel clerk for a wake-up call. He knocked on my door at seven and shouted, 'Wake up!'",
+    "author": "",
+    "diff": "65.5",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 51
+  },
+  {
+    "id": 752,
+    "quote": "I am on a diet where I only eat food that begins with the letter W: waffles, watermelon, and whiskey.",
+    "author": "",
+    "diff": "66.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 52
+  },
+  {
+    "id": 753,
+    "quote": "I asked my dad how he knew we were lost. He said, 'Because the compass is pointing at my knee.'",
+    "author": "",
+    "diff": "67.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 53
+  },
+  {
+    "id": 754,
+    "quote": "I asked the waiter if the fish was fresh. He said, 'Lady, two minutes ago it was taking a swim.'",
+    "author": "",
+    "diff": "68.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 54
+  },
+  {
+    "id": 755,
+    "quote": "My wife told me she was leaving because of my obsession with monorails. I said, 'Well, there is only one track you can take.'",
+    "author": "",
+    "diff": "69.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 55
+  },
+  {
+    "id": 756,
+    "quote": "I told my wife I saw a moose on the way to work. She said, 'How do you know it was going to work?'",
+    "author": "",
+    "diff": "70.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 56
+  },
+  {
+    "id": 757,
+    "quote": "I told my boss that three companies were after me and I needed a raise. When he asked which ones, I said the gas, electric, and water companies.",
+    "author": "",
+    "diff": "71.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 57
+  },
+  {
+    "id": 758,
+    "quote": "I bought a world map, gave my wife a dart, and said, 'Wherever it lands, we will go.' Turns out we are spending two weeks behind the fridge.",
+    "author": "",
+    "diff": "72.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 58
+  },
+  {
+    "id": 759,
+    "quote": "I am very good at sleeping. In fact, I can do it with my eyes closed.",
+    "author": "",
+    "diff": "73.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 59
+  },
+  {
+    "id": 760,
+    "quote": "My wife told me that I talk in my sleep. I told her that is the only chance I get.",
+    "author": "",
+    "diff": "73.5",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 60
+  },
+  {
+    "id": 761,
+    "quote": "I asked my doctor for something for persistent daydreams. He said, 'In your dreams.'",
+    "author": "",
+    "diff": "74.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 61
+  },
+  {
+    "id": 762,
+    "quote": "I told my wife our car was making a strange ticking sound. She said, 'That is the turn signal.'",
+    "author": "",
+    "diff": "74.5",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 62
+  },
+  {
+    "id": 763,
+    "quote": "I went to a restaurant with a sign that said Breakfast Anytime. So I ordered French toast during the Renaissance.",
+    "author": "Steven Wright",
+    "diff": "75.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 63
+  },
+  {
+    "id": 764,
+    "quote": "I bought a universal remote control. It does not control the universe, but it is a step in the right direction.",
+    "author": "",
+    "diff": "75.5",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 64
+  },
+  {
+    "id": 765,
+    "quote": "I put my phone on airplane mode, but it did not fly. Complete false advertising.",
+    "author": "",
+    "diff": "76.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 65
+  },
+  {
+    "id": 766,
+    "quote": "I tried water aerobics, but I could not keep my head above water long enough to sweat.",
+    "author": "",
+    "diff": "76.5",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 66
+  },
+  {
+    "id": 767,
+    "quote": "I had an appointment with the psychic tomorrow, but she called to cancel because of unforeseen events.",
+    "author": "",
+    "diff": "77.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 67
+  },
+  {
+    "id": 768,
+    "quote": "I asked the barista how much caffeine was in the dark roast. He said, 'Enough to hear colors.'",
+    "author": "",
+    "diff": "77.5",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 68
+  },
+  {
+    "id": 769,
+    "quote": "My wife told me to take the spider out instead of killing it. We went out, had a few drinks, nice guy, wants to be a web designer.",
+    "author": "",
+    "diff": "78.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 69
+  },
+  {
+    "id": 770,
+    "quote": "I told my doctor that whenever I drink coffee, I get a sharp pain in my eye. He told me to take the spoon out of the cup.",
+    "author": "",
+    "diff": "78.5",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 70
+  },
+  {
+    "id": 771,
+    "quote": "My grandfather has the heart of a lion and a lifetime ban from the city zoo.",
+    "author": "",
+    "diff": "79.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 71
+  },
+  {
+    "id": 772,
+    "quote": "I asked my wife what she wanted for her birthday. She said, 'Something with diamonds.' So I bought her a deck of cards.",
+    "author": "",
+    "diff": "79.3",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 72
+  },
+  {
+    "id": 773,
+    "quote": "I told my friend that I was worried about my memory. He asked me what I was worried about. I forgot.",
+    "author": "",
+    "diff": "79.6",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 73
+  },
+  {
+    "id": 774,
+    "quote": "I bought a pen that can write underwater. It can write other words, too.",
+    "author": "",
+    "diff": "79.8",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 74
+  },
+  {
+    "id": 775,
+    "quote": "My wife told me that I have no sense of direction. So I packed up my bags and right.",
+    "author": "",
+    "diff": "80.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 75
+  },
+  {
+    "id": 776,
+    "quote": "I told my doctor I think I have amnesia. He said, 'When did this start?' I said, 'When did what start?'",
+    "author": "",
+    "diff": "80.5",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 76
+  },
+  {
+    "id": 777,
+    "quote": "I asked the clerk if the milk was organic. He said, 'Sir, it came from a cow, not a laboratory.'",
+    "author": "",
+    "diff": "81.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 77
+  },
+  {
+    "id": 778,
+    "quote": "I asked my boss if I could leave early today. He said, 'Only if you do not come back tomorrow.'",
+    "author": "",
+    "diff": "82.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 78
+  },
+  {
+    "id": 779,
+    "quote": "I bought a dictionary the other day. It was terrible; every single page had words on it.",
+    "author": "",
+    "diff": "83.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 79
+  },
+  {
+    "id": 780,
+    "quote": "My wife asked me why I carry a gun around the house. I said, 'Decepticons.' She laughed, I laughed, the toaster laughed, I shot the toaster.",
+    "author": "",
+    "diff": "84.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 80
+  },
+  {
+    "id": 781,
+    "quote": "I asked my financial advisor what the best investment was right now. He whispered, 'Canned goods and shotguns.'",
+    "author": "",
+    "diff": "85.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 81
+  },
+  {
+    "id": 782,
+    "quote": "I went to buy some camouflage trousers yesterday, but I could not find any.",
+    "author": "",
+    "diff": "86.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 82
+  },
+  {
+    "id": 783,
+    "quote": "I told my doctor that I only feel sick when I stand on my head. He told me to stand on my feet.",
+    "author": "",
+    "diff": "87.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 83
+  },
+  {
+    "id": 784,
+    "quote": "My wife told me that men are from Mars and women are from Venus. I told her that explains why the heating bill is so high.",
+    "author": "",
+    "diff": "88.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 84
+  },
+  {
+    "id": 785,
+    "quote": "I asked my teenage son to take out the trash. He looked at me like I had asked him to defuse a bomb.",
+    "author": "",
+    "diff": "89.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 85
+  },
+  {
+    "id": 786,
+    "quote": "I bought a book called How to Solve Fifty Percent of Your Problems. So I bought two copies.",
+    "author": "",
+    "diff": "90.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 86
+  },
+  {
+    "id": 787,
+    "quote": "I told my wife I could predict the future. She asked me what tomorrow's weather was. I said, 'Outside.'",
+    "author": "",
+    "diff": "91.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 87
+  },
+  {
+    "id": 788,
+    "quote": "I went to a seafood disco last night and pulled a mussel.",
+    "author": "",
+    "diff": "92.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 88
+  },
+  {
+    "id": 789,
+    "quote": "I told my doctor that I cannot stop eating sponges. He asked me how they tasted. I said, 'Not bad, but they soak up all the gravy.'",
+    "author": "",
+    "diff": "93.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 89
+  },
+  {
+    "id": 790,
+    "quote": "I told my friend that my wife was an angel. He said, 'You are lucky, mine is still alive.'",
+    "author": "",
+    "diff": "94.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 90
+  },
+  {
+    "id": 791,
+    "quote": "I asked my GPS which way home was. It replied, 'Even I have given up on you.'",
+    "author": "",
+    "diff": "95.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 91
+  },
+  {
+    "id": 792,
+    "quote": "I bought my friend an elephant for his room. He said, 'Thank you.' I said, 'Do not mention it.'",
+    "author": "",
+    "diff": "95.5",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 92
+  },
+  {
+    "id": 793,
+    "quote": "I told my wife that a penny saved is a penny earned. She asked if that was why I was broke.",
+    "author": "",
+    "diff": "96.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 93
+  },
+  {
+    "id": 794,
+    "quote": "I asked the waiter for a table near the water. He seated me next to the kitchen sink.",
+    "author": "",
+    "diff": "96.5",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 94
+  },
+  {
+    "id": 795,
+    "quote": "I told my wife that I needed space. She sent me a picture of the moon.",
+    "author": "",
+    "diff": "97.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 95
+  },
+  {
+    "id": 796,
+    "quote": "My uncle named his two dogs Rolex and Timex. They are his watch dogs.",
+    "author": "",
+    "diff": "97.5",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 96
+  },
+  {
+    "id": 797,
+    "quote": "I asked my doctor if there was any hope. He said, 'Well, the payment cleared.'",
+    "author": "",
+    "diff": "98.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 97
+  },
+  {
+    "id": 798,
+    "quote": "I told my wife I wanted to be cremated. She made an appointment for Tuesday.",
+    "author": "",
+    "diff": "98.5",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 98
+  },
+  {
+    "id": 799,
+    "quote": "I asked the store clerk where the candles were. She said, 'In the dark section.'",
+    "author": "",
+    "diff": "99.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
+    "num": 99
+  },
+  {
+    "id": 800,
+    "quote": "I told my friend I was writing a novel about a broken pencil. He said, 'What is the point?'",
+    "author": "",
+    "diff": "99.0",
+    "tier": "Tier 4: Master",
+    "given": 4,
+    "category": "Jokes",
     "num": 100
   }
 ];

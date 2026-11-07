@@ -29,6 +29,19 @@ import { StudioIntro } from './ui/StudioIntro.js';
 import { OnboardingTour } from './ui/OnboardingTour.js';
 import { AppUpdateService } from './core/AppUpdateService.js';
 
+// Global early fallback aliases for console debugging
+if (typeof window !== 'undefined') {
+  const earlyReset = () => {
+    try {
+      localStorage.clear();
+      console.log('%c[Flapcrypt] Storage cleared. Reloading...', 'color: #34D399; font-weight: bold;');
+    } catch (e) {}
+    location.reload();
+  };
+  window.resetFlapcrypt = earlyReset;
+  window.resetflapcrypt = earlyReset;
+}
+
 function initApp() {
   // Completely suppress native browser hover tooltips across all targets
   const stripTitles = (root = document) => {
@@ -112,15 +125,31 @@ function initApp() {
 
   // Expose global debug & reset helper in dev/console
   if (typeof window !== 'undefined') {
-    window.resetFlapcrypt = () => {
-      localStorage.clear();
-      console.log('%c[Flapcrypt] All game data, campaign progress, daily streaks, and settings have been completely reset.', 'color: #34D399; font-weight: bold;');
-      location.reload();
+    const doReset = () => {
+      try {
+        if (storageService) {
+          storageService.resetProgress();
+        }
+        localStorage.clear();
+        if (storageService) {
+          storageService.save();
+        }
+        console.log('%c[Flapcrypt] All game data, campaign progress, daily streaks, and settings have been completely reset.', 'color: #34D399; font-weight: bold;');
+      } catch (err) {
+        console.error('[Flapcrypt] Reset error:', err);
+      }
+      setTimeout(() => {
+        location.reload();
+      }, 100);
     };
+
+    window.resetFlapcrypt = doReset;
+    window.resetflapcrypt = doReset;
     window.flapcrypt = {
       storage: storageService,
       game: null, // assigned below
-      resetAll: window.resetFlapcrypt
+      resetAll: doReset,
+      reset: doReset
     };
   }
 

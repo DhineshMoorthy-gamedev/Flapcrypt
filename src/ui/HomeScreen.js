@@ -370,7 +370,7 @@ export class HomeScreen {
     }
 
     // Category Mastery Pips
-    const categoryOrder = ['Quotes', 'Proverbs', 'Riddles', 'Movie Lines', 'Trivia', 'Wordplay'];
+    const categoryOrder = ['Quotes', 'Proverbs', 'Riddles', 'Movie Lines', 'Trivia', 'Wordplay', 'Jokes'];
     const mastery = this.storage ? this.storage.getCategoryMastery() : {};
     if (this.masteryPipsEl) {
       this.masteryPipsEl.innerHTML = categoryOrder.map(cat => {
