@@ -100,3 +100,27 @@
 .cell.punct .tag {
   visibility: hidden;
 }
+
+/* Word-lock: subtle green glow when entire word is solved */
+.word.word-locked {
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.word.word-locked .cell .flap-container {
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+.word.word-locked .cell .half {
+  color: #a7f3d0;
+}
+
+/* One-shot pop animation on word completion */
+@keyframes wordLockPop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.045); }
+  100% { transform: scale(1); }
+}
+
+.word.word-lock-pop {
+  animation: wordLockPop 260ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}

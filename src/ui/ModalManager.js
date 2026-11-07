@@ -1672,6 +1672,7 @@ export class ModalManager {
       }
     }
     const catPct = Math.min(100, Math.round((catSolvedCount / catTotal) * 100));
+    const isCategoryMastered = catSolvedCount >= catTotal && catTotal > 0;
     const tierClean = (level.tier || 'Beginner').replace(/Tier \d+:\s*/i, '').toUpperCase();
 
     // Time formatting MM:SS
@@ -1774,6 +1775,13 @@ export class ModalManager {
             ${tickElements}
           </div>
         </div>
+
+        ${isCategoryMastered ? `
+          <div class="victory-mastery-callout">
+            ${Icons.crown(16)}
+            <span>${catUpper} MASTERED!</span>
+          </div>
+        ` : ''}
 
         <!-- 6. Ergonomic Action Dock -->
         <div class="mockup-action-dock">
@@ -1915,6 +1923,8 @@ export class ModalManager {
 
     this.titleEl.innerHTML = `${Icons.grid(20)} <span>LEVEL SELECT</span>`;
 
+    const mastery = this.storage ? this.storage.getCategoryMastery() : {};
+
     const categoryTabs = [
       { id: 'Quotes', label: 'QUOTES', count: LEVEL_DATA.filter(l => (l.category || 'Quotes') === 'Quotes').length },
       { id: 'Proverbs', label: 'PROVERBS', count: LEVEL_DATA.filter(l => l.category === 'Proverbs').length },
@@ -2008,12 +2018,16 @@ export class ModalManager {
     this.bodyEl.innerHTML = `
       <div class="modal-level-select-container">
         <div class="modal-level-select-tabs" id="modalLevelTabs">
-          ${categoryTabs.map(t => `
-            <button class="tier-tab-btn ${currentFilter === t.id ? 'active' : ''}" data-cat="${t.id}">
-              <span>${t.label}</span>
-              <span class="tier-tab-count">(${t.count})</span>
-            </button>
-          `).join('')}
+          ${categoryTabs.map(t => {
+            const isMastered = Boolean(mastery[t.id]);
+            return `
+              <button class="tier-tab-btn ${currentFilter === t.id ? 'active' : ''} ${isMastered ? 'mastered' : ''}" data-cat="${t.id}">
+                <span>${t.label}</span>
+                <span class="tier-tab-count">(${t.count})</span>
+                ${isMastered ? `<span class="cat-mastery-crown" title="Category Mastered">${Icons.crown(13)}</span>` : ''}
+              </button>
+            `;
+          }).join('')}
         </div>
         <div class="modal-level-select-grid" id="modalLevelGrid">
           ${renderGrid()}

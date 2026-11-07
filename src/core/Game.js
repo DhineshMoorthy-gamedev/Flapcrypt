@@ -6,6 +6,7 @@ import { PlatformBridge } from '../platform/lifecycle.js';
 import { DailyChallengeService } from './DailyChallengeService.js';
 import { AdService } from './AdService.js';
 import { OnboardingTour } from '../ui/OnboardingTour.js';
+import { Toast } from '../ui/Toast.js';
 
 export class Game {
   constructor({ gameState, audioService, renderer, uiController, storageService, modalManager, onReturnToHome, onRequestResetLevel, onRequestShop, onLevelCompleted }) {
@@ -686,6 +687,22 @@ export class Game {
 
         const dailyState = this.storage ? this.storage.completeDailyChallenge(puzzleDateStr, yesterdayDateStr) : { currentStreak: 1 };
         dailyStreak = dailyState ? dailyState.currentStreak : 1;
+
+        if (dailyState && dailyState.shieldAwarded) {
+          setTimeout(() => {
+            Toast.show(`🛡️ ${dailyState.milestoneReached}-Day Streak! Streak Shield earned.`, {
+              type: 'success',
+              duration: 4000
+            });
+          }, 1200);
+        } else if (dailyState && dailyState.shieldUsed) {
+          setTimeout(() => {
+            Toast.show(`🛡️ Streak Shield saved your streak!`, {
+              type: 'info',
+              duration: 3500
+            });
+          }, 1200);
+        }
 
         if (isTodayPuzzle) {
           this.ui.setStatus(`🎉 Daily Dispatch Decoded! Streak: ${dailyStreak} ${dailyStreak === 1 ? 'day' : 'days'}${authorSpan}`);

@@ -189,6 +189,21 @@ export class BoardRenderer {
         cell.classList.toggle("solved", isCorrect);
       });
     });
+
+    // Word-level lock detection and pop animation
+    const wordEls = this.boardEl.querySelectorAll('.word');
+    wordEls.forEach(wordEl => {
+      const cells = wordEl.querySelectorAll('.cell[data-c]');
+      if (!cells.length) return;
+      const allSolved = Array.from(cells).every(c => c.classList.contains('solved'));
+      const wasLocked = wordEl.classList.contains('word-locked');
+      wordEl.classList.toggle('word-locked', allSolved);
+      if (allSolved && !wasLocked) {
+        wordEl.classList.remove('word-lock-pop');
+        void wordEl.offsetWidth; // Force reflow to re-trigger one-shot animation
+        wordEl.classList.add('word-lock-pop');
+      }
+    });
   }
 
   setVictory(isWon) {

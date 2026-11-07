@@ -19,9 +19,11 @@ export class HomeScreen {
     this.levelTextEl = document.getElementById('campaignLevelText');
     this.campaignProgressBadge = document.getElementById('campaignProgressBadge');
     this.progressFillEl = document.getElementById('campaignProgressFill');
+    this.masteryPipsEl = document.getElementById('masteryPips');
 
     // Daily Challenge elements
     this.dailyCard = document.getElementById('dailyCard');
+    this.dailyStreakBadge = document.getElementById('dailyStreakBadge');
     this.dailyStreakText = document.getElementById('dailyStreakText');
     this.dailyDateHeading = document.getElementById('dailyDateHeading');
     this.dailyStatusSubtext = document.getElementById('dailyStatusSubtext');
@@ -299,8 +301,18 @@ export class HomeScreen {
     const isCompleted = this.storage ? this.storage.isDailyCompletedToday(dailyInfo.dateStr) : false;
     const dailyState = this.storage ? this.storage.getDailyState() : { currentStreak: 0 };
     const streak = dailyState.currentStreak || 0;
+    const shields = this.storage ? this.storage.getStreakShieldCount() : 0;
+    const flameLevel = streak >= 30 ? 4 : streak >= 14 ? 3 : streak >= 7 ? 2 : streak >= 3 ? 1 : 0;
 
-    if (this.dailyStreakText) {
+    if (this.dailyStreakBadge) {
+      this.dailyStreakBadge.className = `daily-streak-badge flame-${flameLevel}`;
+      this.dailyStreakBadge.innerHTML = `
+        <span class="streak-flame">${Icons.flame(13)}</span>
+        <span id="dailyStreakText">${streak} ${streak === 1 ? 'DAY' : 'DAYS'}</span>
+        ${shields > 0 ? `<span class="streak-shield-pip" title="${shields} Streak Shield active">🛡️${shields > 1 ? ` ×${shields}` : ''}</span>` : ''}
+      `;
+      this.dailyStreakText = document.getElementById('dailyStreakText');
+    } else if (this.dailyStreakText) {
       this.dailyStreakText.textContent = `${streak} ${streak === 1 ? 'DAY' : 'DAYS'}`;
     }
 
@@ -355,6 +367,16 @@ export class HomeScreen {
 
     if (this.progressFillEl) {
       this.progressFillEl.style.width = `${Math.max(3, pct)}%`;
+    }
+
+    // Category Mastery Pips
+    const categoryOrder = ['Quotes', 'Proverbs', 'Riddles', 'Movie Lines', 'Trivia', 'Wordplay'];
+    const mastery = this.storage ? this.storage.getCategoryMastery() : {};
+    if (this.masteryPipsEl) {
+      this.masteryPipsEl.innerHTML = categoryOrder.map(cat => {
+        const isMastered = Boolean(mastery[cat]);
+        return `<span class="mastery-pip ${isMastered ? 'mastered' : ''}" title="${cat}${isMastered ? ' (Mastered)' : ''}"></span>`;
+      }).join('');
     }
   }
 }

@@ -32,7 +32,9 @@ const DEFAULT_STATE = {
     completedDates: {},
     currentStreak: 0,
     maxStreak: 0,
-    totalCompleted: 0
+    totalCompleted: 0,
+    streakShields: 0,
+    awardedShieldMilestones: []
   },
   dailySaves: {},
   unlockedAchievements: {}
@@ -402,9 +404,34 @@ export class StorageService {
 
     const lastDate = state.lastCompletedDate;
     const isStreakAlive = lastDate && (lastDate === todayStr || lastDate === yesterdayStr);
-    state.currentStreak = isStreakAlive ? (state.currentStreak || 0) : 0;
+    if (!isStreakAlive) {
+      if ((state.streakShields || 0) > 0 && (state.currentStreak || 0) > 0) {
+        state.streakProtected = true;
+      } else {
+        state.currentStreak = 0;
+      }
+    }
 
     return state;
+  }
+
+  getStreakShieldCount() {
+    return this.data.daily?.streakShields || 0;
+  }
+
+  addStreakShield(count = 1) {
+    if (!this.data.daily) {
+      this.data.daily = { ...DEFAULT_STATE.daily, completedDates: {} };
+    }
+    this.data.daily.streakShields = (this.data.daily.streakShields || 0) + count;
+    this.save();
+  }
+
+  consumeStreakShield() {
+    if (!this.data.daily || !this.data.daily.streakShields) return false;
+    this.data.daily.streakShields = Math.max(0, (this.data.daily.streakShields || 0) - 1);
+    this.save();
+    return true;
   }
 
   getDailyCompletedDates() {
@@ -464,12 +491,23 @@ export class StorageService {
     const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
     const isToday = (dateStr === todayStr);
 
+    let shieldUsed = false;
+    let shieldAwarded = false;
+    let milestoneReached = null;
+
     if (isToday) {
       const prevDate = this.data.daily.lastCompletedDate;
       if (prevDate && prevDate === yesterdayDateStr) {
         this.data.daily.currentStreak = (this.data.daily.currentStreak || 0) + 1;
       } else if (prevDate !== todayStr) {
-        this.data.daily.currentStreak = 1;
+        // If missed a day, check if streak shield can protect the current streak
+        if ((this.data.daily.streakShields || 0) > 0 && (this.data.daily.currentStreak || 0) > 0) {
+          this.data.daily.streakShields = Math.max(0, this.data.daily.streakShields - 1);
+          this.data.daily.currentStreak = (this.data.daily.currentStreak || 0) + 1;
+          shieldUsed = true;
+        } else {
+          this.data.daily.currentStreak = 1;
+        }
       }
 
       this.data.daily.maxStreak = Math.max(
@@ -477,6 +515,21 @@ export class StorageService {
         this.data.daily.currentStreak
       );
       this.data.daily.lastCompletedDate = dateStr;
+
+      // Shield milestones: awarded at streak 7, 14, 30
+      const SHIELD_MILESTONES = [7, 14, 30];
+      if (!this.data.daily.awardedShieldMilestones) {
+        this.data.daily.awardedShieldMilestones = [];
+      }
+      for (const milestone of SHIELD_MILESTONES) {
+        if (this.data.daily.currentStreak >= milestone && !this.data.daily.awardedShieldMilestones.includes(milestone)) {
+          this.data.daily.streakShields = (this.data.daily.streakShields || 0) + 1;
+          this.data.daily.awardedShieldMilestones.push(milestone);
+          shieldAwarded = true;
+          milestoneReached = milestone;
+          break;
+        }
+      }
     }
 
     if (!wasAlreadyCompleted) {
@@ -489,7 +542,12 @@ export class StorageService {
 
     this.clearDailyProgress(dateStr);
     this.save();
-    return this.getDailyState();
+    return {
+      ...this.getDailyState(),
+      shieldAwarded,
+      milestoneReached,
+      shieldUsed
+    };
   }
 
   getCategorySolvedCount(category) {
@@ -497,6 +555,18 @@ export class StorageService {
     const catLower = (category || '').toLowerCase();
     const catLevels = LEVEL_DATA.filter(l => (l.category || 'Quotes').toLowerCase() === catLower);
     return catLevels.filter(l => Boolean(this.data.completedLevels[l.id - 1])).length;
+  }
+
+  getCategoryMastery() {
+    const categories = ['Quotes', 'Proverbs', 'Riddles', 'Movie Lines', 'Trivia', 'Wordplay'];
+    const result = {};
+    for (const cat of categories) {
+      const catLower = cat.toLowerCase();
+      const total = LEVEL_DATA.filter(l => (l.category || 'Quotes').toLowerCase() === catLower).length;
+      const solved = this.getCategorySolvedCount(cat);
+      result[cat] = total > 0 && solved >= total;
+    }
+    return result;
   }
 
   getAchievementsData() {
