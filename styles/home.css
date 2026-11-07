@@ -844,6 +844,11 @@
   pointer-events: auto;
 }
 
+.modal-overlay.no-transition,
+.modal-overlay.no-transition .modal-container {
+  transition: none !important;
+}
+
 /* Bottom-Sheet Drawer Mode */
 .modal-overlay.drawer-mode {
   align-items: flex-end;

@@ -110,7 +110,7 @@ Stats: [Unique Letters: 14, Total Letters: 63, Redundancy: 4.50x, Words: 16]
 Difficulty Score: 35.5/100
 Quote: "The fool doth think he is wise, but the wise man knows himself to be a fool."
 Author: William Shakespeare
-Stats: [Unique Letters: 16, Total Letters: 58, Redundancy: 3.62x, Words: 17]
+Stats: [Unique Letters: 16, Total Letters: 58, Redundancy: 3.63x, Words: 17]
 
 17.
 Difficulty Score: 36.2/100
@@ -306,7 +306,7 @@ Stats: [Unique Letters: 11, Total Letters: 27, Redundancy: 2.45x, Words: 7]
 Difficulty Score: 48.7/100
 Quote: "Educating the mind without educating the heart is no education at all."
 Author: Aristotle
-Stats: [Unique Letters: 16, Total Letters: 58, Redundancy: 3.62x, Words: 12]
+Stats: [Unique Letters: 16, Total Letters: 58, Redundancy: 3.63x, Words: 12]
 
 49.
 Difficulty Score: 49.6/100
@@ -754,7 +754,7 @@ Stats: [Unique Letters: 21, Total Letters: 73, Redundancy: 3.48x, Words: 19]
 Difficulty Score: 69.5/100
 Quote: "The impediment to action advances action. What stands in the way becomes the way."
 Author: Marcus Aurelius
-Stats: [Unique Letters: 16, Total Letters: 66, Redundancy: 4.12x, Words: 14]
+Stats: [Unique Letters: 16, Total Letters: 66, Redundancy: 4.13x, Words: 14]
 
 123.
 Difficulty Score: 69.8/100
@@ -832,7 +832,7 @@ Stats: [Unique Letters: 16, Total Letters: 40, Redundancy: 2.50x, Words: 12]
 Difficulty Score: 75.2/100
 Quote: "We find in life exactly what we put into it."
 Author: Ralph Waldo Emerson
-Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.12x, Words: 10]
+Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.13x, Words: 10]
 
 136.
 Difficulty Score: 75.8/100
@@ -862,7 +862,7 @@ Stats: [Unique Letters: 11, Total Letters: 18, Redundancy: 1.64x, Words: 3]
 Difficulty Score: 77.1/100
 Quote: "The only true wisdom is in knowing you know nothing."
 Author: Socrates
-Stats: [Unique Letters: 16, Total Letters: 42, Redundancy: 2.62x, Words: 10]
+Stats: [Unique Letters: 16, Total Letters: 42, Redundancy: 2.63x, Words: 10]
 
 141.
 Difficulty Score: 77.1/100
@@ -1196,7 +1196,7 @@ Stats: [Unique Letters: 11, Total Letters: 20, Redundancy: 1.82x, Words: 4]
 Difficulty Score: 96.5/100
 Quote: "I am become death, the destroyer of worlds."
 Author: J. Robert Oppenheimer
-Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.12x, Words: 8]
+Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.13x, Words: 8]
 
 196.
 Difficulty Score: 97.1/100
@@ -1229,7 +1229,7 @@ Author: John Lennon
 Stats: [Unique Letters: 19, Total Letters: 46, Redundancy: 2.42x, Words: 10]
 
 ================================================================================
-PROVERBS CATEGORY (LEVELS 1 - 60)
+PROVERBS CATEGORY (LEVELS 1 - 100)
 ================================================================================
 
 --------------------------------------------------------------------------------
@@ -1254,13 +1254,37 @@ Stats: [Unique Letters: 8, Total Letters: 28, Redundancy: 3.50x, Words: 8]
 
 3.
 Category: Proverbs
+Difficulty Score: 12.0/100
+Tier: Tier 1: Beginner
+Quote: "Easy come, easy go."
+Author: None (Omitted)
+Stats: [Unique Letters: 8, Total Letters: 14, Redundancy: 1.75x, Words: 4]
+
+4.
+Category: Proverbs
+Difficulty Score: 16.5/100
+Tier: Tier 1: Beginner
+Quote: "Knowledge is power."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 16, Redundancy: 1.33x, Words: 3]
+
+5.
+Category: Proverbs
 Difficulty Score: 17.0/100
 Tier: Tier 1: Beginner
 Quote: "Where there is a will, there is a way."
 Author: None (Omitted)
 Stats: [Unique Letters: 10, Total Letters: 28, Redundancy: 2.80x, Words: 9]
 
-4.
+6.
+Category: Proverbs
+Difficulty Score: 20.2/100
+Tier: Tier 1: Beginner
+Quote: "Great minds think alike."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 20, Redundancy: 1.54x, Words: 4]
+
+7.
 Category: Proverbs
 Difficulty Score: 22.6/100
 Tier: Tier 1: Beginner
@@ -1268,7 +1292,7 @@ Quote: "When the going gets tough, the tough get going."
 Author: None (Omitted)
 Stats: [Unique Letters: 10, Total Letters: 37, Redundancy: 3.70x, Words: 9]
 
-5.
+8.
 Category: Proverbs
 Difficulty Score: 24.4/100
 Tier: Tier 1: Beginner
@@ -1276,7 +1300,15 @@ Quote: "A penny saved is a penny earned."
 Author: None (Omitted)
 Stats: [Unique Letters: 10, Total Letters: 25, Redundancy: 2.50x, Words: 7]
 
-6.
+9.
+Category: Proverbs
+Difficulty Score: 24.8/100
+Tier: Tier 1: Beginner
+Quote: "Where there is smoke, there is fire."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 28, Redundancy: 2.55x, Words: 7]
+
+10.
 Category: Proverbs
 Difficulty Score: 25.1/100
 Tier: Tier 1: Beginner
@@ -1284,7 +1316,7 @@ Quote: "Do unto others as you would have them do unto you."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 39, Redundancy: 2.60x, Words: 11]
 
-7.
+11.
 Category: Proverbs
 Difficulty Score: 27.5/100
 Tier: Tier 1: Beginner
@@ -1292,7 +1324,7 @@ Quote: "Slow and steady wins the race."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 24, Redundancy: 1.71x, Words: 6]
 
-8.
+12.
 Category: Proverbs
 Difficulty Score: 28.0/100
 Tier: Tier 1: Beginner
@@ -1300,7 +1332,15 @@ Quote: "Blood is thicker than water."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 23, Redundancy: 1.53x, Words: 5]
 
-9.
+13.
+Category: Proverbs
+Difficulty Score: 28.0/100
+Tier: Tier 1: Beginner
+Quote: "Opposites attract."
+Author: None (Omitted)
+Stats: [Unique Letters: 9, Total Letters: 16, Redundancy: 1.78x, Words: 2]
+
+14.
 Category: Proverbs
 Difficulty Score: 30.2/100
 Tier: Tier 1: Beginner
@@ -1308,7 +1348,15 @@ Quote: "Better late than never."
 Author: None (Omitted)
 Stats: [Unique Letters: 9, Total Letters: 19, Redundancy: 2.11x, Words: 4]
 
-10.
+15.
+Category: Proverbs
+Difficulty Score: 31.5/100
+Tier: Tier 1: Beginner
+Quote: "The best things in life are free."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 26, Redundancy: 2.17x, Words: 7]
+
+16.
 Category: Proverbs
 Difficulty Score: 31.8/100
 Tier: Tier 1: Beginner
@@ -1316,7 +1364,7 @@ Quote: "Two wrongs do not make a right."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 24, Redundancy: 1.71x, Words: 7]
 
-11.
+17.
 Category: Proverbs
 Difficulty Score: 34.0/100
 Tier: Tier 1: Beginner
@@ -1324,7 +1372,15 @@ Quote: "Two heads are better than one."
 Author: None (Omitted)
 Stats: [Unique Letters: 11, Total Letters: 24, Redundancy: 2.18x, Words: 6]
 
-12.
+18.
+Category: Proverbs
+Difficulty Score: 35.0/100
+Tier: Tier 1: Beginner
+Quote: "A chain is only as strong as its weakest link."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.40x, Words: 10]
+
+19.
 Category: Proverbs
 Difficulty Score: 36.5/100
 Tier: Tier 1: Beginner
@@ -1332,7 +1388,7 @@ Quote: "If the shoe fits, wear it."
 Author: None (Omitted)
 Stats: [Unique Letters: 10, Total Letters: 19, Redundancy: 1.90x, Words: 6]
 
-13.
+20.
 Category: Proverbs
 Difficulty Score: 38.2/100
 Tier: Tier 1: Beginner
@@ -1340,7 +1396,15 @@ Quote: "Birds of a feather flock together."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 28, Redundancy: 1.87x, Words: 6]
 
-14.
+21.
+Category: Proverbs
+Difficulty Score: 38.2/100
+Tier: Tier 1: Beginner
+Quote: "Money does not grow on trees."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 23, Redundancy: 2.09x, Words: 6]
+
+22.
 Category: Proverbs
 Difficulty Score: 40.5/100
 Tier: Tier 1: Beginner
@@ -1348,7 +1412,23 @@ Quote: "All good things must come to an end."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.00x, Words: 8]
 
-15.
+23.
+Category: Proverbs
+Difficulty Score: 41.0/100
+Tier: Tier 1: Beginner
+Quote: "Let sleeping dogs lie."
+Author: None (Omitted)
+Stats: [Unique Letters: 10, Total Letters: 18, Redundancy: 1.80x, Words: 4]
+
+24.
+Category: Proverbs
+Difficulty Score: 43.5/100
+Tier: Tier 1: Beginner
+Quote: "A bad workman always blames his tools."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 31, Redundancy: 1.94x, Words: 7]
+
+25.
 Category: Proverbs
 Difficulty Score: 43.8/100
 Tier: Tier 1: Beginner
@@ -1360,7 +1440,7 @@ Stats: [Unique Letters: 11, Total Letters: 20, Redundancy: 1.82x, Words: 3]
 TIER 2: INTERMEDIATE
 --------------------------------------------------------------------------------
 
-16.
+26.
 Category: Proverbs
 Difficulty Score: 46.2/100
 Tier: Tier 2: Intermediate
@@ -1368,7 +1448,15 @@ Quote: "A picture is worth a thousand words."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 29, Redundancy: 2.07x, Words: 7]
 
-17.
+27.
+Category: Proverbs
+Difficulty Score: 47.2/100
+Tier: Tier 2: Intermediate
+Quote: "Still waters run deep."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 18, Redundancy: 1.50x, Words: 4]
+
+28.
 Category: Proverbs
 Difficulty Score: 47.5/100
 Tier: Tier 2: Intermediate
@@ -1376,7 +1464,7 @@ Quote: "Look before you leap."
 Author: None (Omitted)
 Stats: [Unique Letters: 11, Total Letters: 17, Redundancy: 1.55x, Words: 4]
 
-18.
+29.
 Category: Proverbs
 Difficulty Score: 48.9/100
 Tier: Tier 2: Intermediate
@@ -1384,7 +1472,15 @@ Quote: "No pain, no gain."
 Author: None (Omitted)
 Stats: [Unique Letters: 6, Total Letters: 12, Redundancy: 2.00x, Words: 4]
 
-19.
+30.
+Category: Proverbs
+Difficulty Score: 49.8/100
+Tier: Tier 2: Intermediate
+Quote: "A rolling stone gathers no moss."
+Author: None (Omitted)
+Stats: [Unique Letters: 12, Total Letters: 26, Redundancy: 2.17x, Words: 6]
+
+31.
 Category: Proverbs
 Difficulty Score: 50.1/100
 Tier: Tier 2: Intermediate
@@ -1392,7 +1488,7 @@ Quote: "Better safe than sorry."
 Author: None (Omitted)
 Stats: [Unique Letters: 11, Total Letters: 19, Redundancy: 1.73x, Words: 4]
 
-20.
+32.
 Category: Proverbs
 Difficulty Score: 51.4/100
 Tier: Tier 2: Intermediate
@@ -1400,7 +1496,15 @@ Quote: "All that glitters is not gold."
 Author: None (Omitted)
 Stats: [Unique Letters: 12, Total Letters: 24, Redundancy: 2.00x, Words: 6]
 
-21.
+33.
+Category: Proverbs
+Difficulty Score: 52.4/100
+Tier: Tier 2: Intermediate
+Quote: "Familiarity breeds contempt."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 25, Redundancy: 1.56x, Words: 3]
+
+34.
 Category: Proverbs
 Difficulty Score: 53.0/100
 Tier: Tier 2: Intermediate
@@ -1408,7 +1512,7 @@ Quote: "When in Rome, do as the Romans do."
 Author: None (Omitted)
 Stats: [Unique Letters: 12, Total Letters: 25, Redundancy: 2.08x, Words: 8]
 
-22.
+35.
 Category: Proverbs
 Difficulty Score: 54.2/100
 Tier: Tier 2: Intermediate
@@ -1416,7 +1520,15 @@ Quote: "A stitch in time saves nine."
 Author: None (Omitted)
 Stats: [Unique Letters: 10, Total Letters: 22, Redundancy: 2.20x, Words: 6]
 
-23.
+36.
+Category: Proverbs
+Difficulty Score: 54.6/100
+Tier: Tier 2: Intermediate
+Quote: "Misery loves company."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 18, Redundancy: 1.38x, Words: 3]
+
+37.
 Category: Proverbs
 Difficulty Score: 55.6/100
 Tier: Tier 2: Intermediate
@@ -1424,7 +1536,15 @@ Quote: "Every cloud has a silver lining."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 26, Redundancy: 1.73x, Words: 6]
 
-24.
+38.
+Category: Proverbs
+Difficulty Score: 56.8/100
+Tier: Tier 2: Intermediate
+Quote: "No man is an island."
+Author: None (Omitted)
+Stats: [Unique Letters: 8, Total Letters: 15, Redundancy: 1.88x, Words: 5]
+
+39.
 Category: Proverbs
 Difficulty Score: 57.0/100
 Tier: Tier 2: Intermediate
@@ -1432,7 +1552,7 @@ Quote: "Strike while the iron is hot."
 Author: None (Omitted)
 Stats: [Unique Letters: 11, Total Letters: 23, Redundancy: 2.09x, Words: 6]
 
-25.
+40.
 Category: Proverbs
 Difficulty Score: 58.5/100
 Tier: Tier 2: Intermediate
@@ -1440,7 +1560,15 @@ Quote: "Rome was not built in a day."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 21, Redundancy: 1.40x, Words: 7]
 
-26.
+41.
+Category: Proverbs
+Difficulty Score: 58.5/100
+Tier: Tier 2: Intermediate
+Quote: "Leave no stone unturned."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 20, Redundancy: 1.82x, Words: 4]
+
+42.
 Category: Proverbs
 Difficulty Score: 59.8/100
 Tier: Tier 2: Intermediate
@@ -1448,7 +1576,15 @@ Quote: "The early bird catches the worm."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 26, Redundancy: 1.73x, Words: 6]
 
-27.
+43.
+Category: Proverbs
+Difficulty Score: 60.2/100
+Tier: Tier 2: Intermediate
+Quote: "Beggars cannot be choosers."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 23, Redundancy: 2.09x, Words: 4]
+
+44.
 Category: Proverbs
 Difficulty Score: 61.2/100
 Tier: Tier 2: Intermediate
@@ -1456,7 +1592,15 @@ Quote: "Do not judge a book by its cover."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 25, Redundancy: 1.47x, Words: 8]
 
-28.
+45.
+Category: Proverbs
+Difficulty Score: 61.9/100
+Tier: Tier 2: Intermediate
+Quote: "Every rose has its thorn."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 20, Redundancy: 1.82x, Words: 5]
+
+46.
 Category: Proverbs
 Difficulty Score: 62.5/100
 Tier: Tier 2: Intermediate
@@ -1464,7 +1608,15 @@ Quote: "Honesty is the best policy."
 Author: None (Omitted)
 Stats: [Unique Letters: 12, Total Letters: 22, Redundancy: 1.83x, Words: 5]
 
-29.
+47.
+Category: Proverbs
+Difficulty Score: 63.4/100
+Tier: Tier 2: Intermediate
+Quote: "The apple does not fall far from the tree."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 33, Redundancy: 2.54x, Words: 9]
+
+48.
 Category: Proverbs
 Difficulty Score: 63.8/100
 Tier: Tier 2: Intermediate
@@ -1472,7 +1624,15 @@ Quote: "Barking dogs seldom bite."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 21, Redundancy: 1.50x, Words: 4]
 
-30.
+49.
+Category: Proverbs
+Difficulty Score: 64.8/100
+Tier: Tier 2: Intermediate
+Quote: "You cannot have your cake and eat it too."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 32, Redundancy: 2.29x, Words: 9]
+
+50.
 Category: Proverbs
 Difficulty Score: 64.9/100
 Tier: Tier 2: Intermediate
@@ -1484,7 +1644,15 @@ Stats: [Unique Letters: 13, Total Letters: 18, Redundancy: 1.38x, Words: 4]
 TIER 3: ADVANCED
 --------------------------------------------------------------------------------
 
-31.
+51.
+Category: Proverbs
+Difficulty Score: 66.0/100
+Tier: Tier 3: Advanced
+Quote: "You can lead a horse to water, but you cannot make him drink."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 47, Redundancy: 2.61x, Words: 13]
+
+52.
 Category: Proverbs
 Difficulty Score: 66.2/100
 Tier: Tier 3: Advanced
@@ -1492,7 +1660,7 @@ Quote: "A bird in the hand is worth two in the bush."
 Author: None (Omitted)
 Stats: [Unique Letters: 13, Total Letters: 33, Redundancy: 2.54x, Words: 11]
 
-32.
+53.
 Category: Proverbs
 Difficulty Score: 67.5/100
 Tier: Tier 3: Advanced
@@ -1500,7 +1668,15 @@ Quote: "Do not count your chickens before they hatch."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 8]
 
-33.
+54.
+Category: Proverbs
+Difficulty Score: 67.8/100
+Tier: Tier 3: Advanced
+Quote: "A fool and his money are soon parted."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 29, Redundancy: 1.93x, Words: 8]
+
+55.
 Category: Proverbs
 Difficulty Score: 68.8/100
 Tier: Tier 3: Advanced
@@ -1508,7 +1684,15 @@ Quote: "Do not cry over spilled milk."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 23, Redundancy: 1.53x, Words: 6]
 
-34.
+56.
+Category: Proverbs
+Difficulty Score: 69.5/100
+Tier: Tier 3: Advanced
+Quote: "Fools rush in where angels fear to tread."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 33, Redundancy: 2.20x, Words: 8]
+
+57.
 Category: Proverbs
 Difficulty Score: 70.0/100
 Tier: Tier 3: Advanced
@@ -1516,7 +1700,15 @@ Quote: "Do not put all your eggs in one basket."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 30, Redundancy: 1.88x, Words: 9]
 
-35.
+58.
+Category: Proverbs
+Difficulty Score: 71.2/100
+Tier: Tier 3: Advanced
+Quote: "Discretion is the greater part of valor."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 33, Redundancy: 2.06x, Words: 7]
+
+59.
 Category: Proverbs
 Difficulty Score: 71.4/100
 Tier: Tier 3: Advanced
@@ -1524,7 +1716,7 @@ Quote: "Cleanliness is next to godliness."
 Author: None (Omitted)
 Stats: [Unique Letters: 12, Total Letters: 28, Redundancy: 2.33x, Words: 5]
 
-36.
+60.
 Category: Proverbs
 Difficulty Score: 72.8/100
 Tier: Tier 3: Advanced
@@ -1532,7 +1724,15 @@ Quote: "Curiosity killed the cat."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 21, Redundancy: 1.50x, Words: 4]
 
-37.
+61.
+Category: Proverbs
+Difficulty Score: 72.9/100
+Tier: Tier 3: Advanced
+Quote: "An ounce of prevention is worth a pound of cure."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 38, Redundancy: 2.38x, Words: 10]
+
+62.
 Category: Proverbs
 Difficulty Score: 73.9/100
 Tier: Tier 3: Advanced
@@ -1540,7 +1740,15 @@ Quote: "Do not bite the hand that feeds you."
 Author: None (Omitted)
 Stats: [Unique Letters: 13, Total Letters: 28, Redundancy: 2.15x, Words: 8]
 
-38.
+63.
+Category: Proverbs
+Difficulty Score: 74.5/100
+Tier: Tier 3: Advanced
+Quote: "In the kingdom of the blind, the one-eyed man is king."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 41, Redundancy: 2.56x, Words: 11]
+
+64.
 Category: Proverbs
 Difficulty Score: 75.0/100
 Tier: Tier 3: Advanced
@@ -1548,7 +1756,7 @@ Quote: "Every dog has its day."
 Author: None (Omitted)
 Stats: [Unique Letters: 12, Total Letters: 17, Redundancy: 1.42x, Words: 5]
 
-39.
+65.
 Category: Proverbs
 Difficulty Score: 76.1/100
 Tier: Tier 3: Advanced
@@ -1556,7 +1764,15 @@ Quote: "Good things come to those who wait."
 Author: None (Omitted)
 Stats: [Unique Letters: 13, Total Letters: 28, Redundancy: 2.15x, Words: 7]
 
-40.
+66.
+Category: Proverbs
+Difficulty Score: 76.1/100
+Tier: Tier 3: Advanced
+Quote: "The squeaky wheel gets the grease."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 28, Redundancy: 2.15x, Words: 6]
+
+67.
 Category: Proverbs
 Difficulty Score: 77.0/100
 Tier: Tier 3: Advanced
@@ -1564,7 +1780,15 @@ Quote: "Haste makes waste."
 Author: None (Omitted)
 Stats: [Unique Letters: 8, Total Letters: 15, Redundancy: 1.88x, Words: 3]
 
-41.
+68.
+Category: Proverbs
+Difficulty Score: 77.4/100
+Tier: Tier 3: Advanced
+Quote: "Pride comes before a fall."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 21, Redundancy: 1.62x, Words: 5]
+
+69.
 Category: Proverbs
 Difficulty Score: 78.0/100
 Tier: Tier 3: Advanced
@@ -1572,7 +1796,15 @@ Quote: "Hope for the best, prepare for the worst."
 Author: None (Omitted)
 Stats: [Unique Letters: 11, Total Letters: 32, Redundancy: 2.91x, Words: 8]
 
-42.
+70.
+Category: Proverbs
+Difficulty Score: 78.6/100
+Tier: Tier 3: Advanced
+Quote: "One man's trash is another man's treasure."
+Author: None (Omitted)
+Stats: [Unique Letters: 11, Total Letters: 33, Redundancy: 3.00x, Words: 7]
+
+71.
 Category: Proverbs
 Difficulty Score: 78.8/100
 Tier: Tier 3: Advanced
@@ -1580,7 +1812,7 @@ Quote: "It takes a village to raise a child."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.00x, Words: 8]
 
-43.
+72.
 Category: Proverbs
 Difficulty Score: 79.2/100
 Tier: Tier 3: Advanced
@@ -1588,7 +1820,7 @@ Quote: "Laughter is the best medicine."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 25, Redundancy: 1.67x, Words: 5]
 
-44.
+73.
 Category: Proverbs
 Difficulty Score: 79.6/100
 Tier: Tier 3: Advanced
@@ -1596,7 +1828,15 @@ Quote: "Make hay while the sun shines."
 Author: None (Omitted)
 Stats: [Unique Letters: 13, Total Letters: 24, Redundancy: 1.85x, Words: 6]
 
-45.
+74.
+Category: Proverbs
+Difficulty Score: 79.8/100
+Tier: Tier 3: Advanced
+Quote: "He who hesitates is lost."
+Author: None (Omitted)
+Stats: [Unique Letters: 9, Total Letters: 20, Redundancy: 2.22x, Words: 5]
+
+75.
 Category: Proverbs
 Difficulty Score: 80.0/100
 Tier: Tier 3: Advanced
@@ -1608,7 +1848,7 @@ Stats: [Unique Letters: 13, Total Letters: 31, Redundancy: 2.38x, Words: 6]
 TIER 4: MASTER
 --------------------------------------------------------------------------------
 
-46.
+76.
 Category: Proverbs
 Difficulty Score: 81.5/100
 Tier: Tier 4: Master
@@ -1616,7 +1856,15 @@ Quote: "Out of sight, out of mind."
 Author: None (Omitted)
 Stats: [Unique Letters: 11, Total Letters: 19, Redundancy: 1.73x, Words: 6]
 
-47.
+77.
+Category: Proverbs
+Difficulty Score: 81.5/100
+Tier: Tier 4: Master
+Quote: "An apple a day keeps the doctor away."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 29, Redundancy: 1.93x, Words: 8]
+
+78.
 Category: Proverbs
 Difficulty Score: 82.8/100
 Tier: Tier 4: Master
@@ -1624,7 +1872,15 @@ Quote: "Patience is a virtue."
 Author: None (Omitted)
 Stats: [Unique Letters: 11, Total Letters: 17, Redundancy: 1.55x, Words: 4]
 
-48.
+79.
+Category: Proverbs
+Difficulty Score: 83.2/100
+Tier: Tier 4: Master
+Quote: "Empty vessels make the most sound."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 28, Redundancy: 1.87x, Words: 6]
+
+80.
 Category: Proverbs
 Difficulty Score: 84.0/100
 Tier: Tier 4: Master
@@ -1632,7 +1888,15 @@ Quote: "Silence is golden."
 Author: None (Omitted)
 Stats: [Unique Letters: 9, Total Letters: 15, Redundancy: 1.67x, Words: 3]
 
-49.
+81.
+Category: Proverbs
+Difficulty Score: 85.0/100
+Tier: Tier 4: Master
+Quote: "Cowards die many times before their deaths."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 36, Redundancy: 2.25x, Words: 7]
+
+82.
 Category: Proverbs
 Difficulty Score: 85.2/100
 Tier: Tier 4: Master
@@ -1640,7 +1904,7 @@ Quote: "The grass is always greener on the other side."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 37, Redundancy: 2.64x, Words: 9]
 
-50.
+83.
 Category: Proverbs
 Difficulty Score: 86.5/100
 Tier: Tier 4: Master
@@ -1648,7 +1912,15 @@ Quote: "The pen is mightier than the sword."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.00x, Words: 7]
 
-51.
+84.
+Category: Proverbs
+Difficulty Score: 87.4/100
+Tier: Tier 4: Master
+Quote: "Adversity and loss make a man wise."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 28, Redundancy: 1.87x, Words: 7]
+
+85.
 Category: Proverbs
 Difficulty Score: 88.0/100
 Tier: Tier 4: Master
@@ -1656,7 +1928,15 @@ Quote: "There is no place like home."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 22, Redundancy: 1.57x, Words: 6]
 
-52.
+86.
+Category: Proverbs
+Difficulty Score: 89.2/100
+Tier: Tier 4: Master
+Quote: "Cast not pearls before swine."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 24, Redundancy: 1.71x, Words: 5]
+
+87.
 Category: Proverbs
 Difficulty Score: 89.4/100
 Tier: Tier 4: Master
@@ -1664,7 +1944,7 @@ Quote: "Too many cooks spoil the broth."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 25, Redundancy: 1.56x, Words: 6]
 
-53.
+88.
 Category: Proverbs
 Difficulty Score: 91.0/100
 Tier: Tier 4: Master
@@ -1672,7 +1952,15 @@ Quote: "You cannot teach an old dog new tricks."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 31, Redundancy: 1.82x, Words: 8]
 
-54.
+89.
+Category: Proverbs
+Difficulty Score: 91.5/100
+Tier: Tier 4: Master
+Quote: "Patience is a bitter plant, but its fruit is sweet."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 40, Redundancy: 2.86x, Words: 10]
+
+90.
 Category: Proverbs
 Difficulty Score: 92.5/100
 Tier: Tier 4: Master
@@ -1680,7 +1968,15 @@ Quote: "You reap what you sow."
 Author: None (Omitted)
 Stats: [Unique Letters: 11, Total Letters: 17, Redundancy: 1.55x, Words: 5]
 
-55.
+91.
+Category: Proverbs
+Difficulty Score: 93.4/100
+Tier: Tier 4: Master
+Quote: "A drowning man will clutch at a straw."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 30, Redundancy: 2.00x, Words: 8]
+
+92.
 Category: Proverbs
 Difficulty Score: 94.0/100
 Tier: Tier 4: Master
@@ -1688,7 +1984,7 @@ Quote: "Beauty is in the eye of the beholder."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 29, Redundancy: 1.93x, Words: 8]
 
-56.
+93.
 Category: Proverbs
 Difficulty Score: 95.2/100
 Tier: Tier 4: Master
@@ -1696,7 +1992,15 @@ Quote: "Fall seven times, stand up eight."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 26, Redundancy: 1.73x, Words: 6]
 
-57.
+94.
+Category: Proverbs
+Difficulty Score: 95.2/100
+Tier: Tier 4: Master
+Quote: "Do not put the cart before the horse."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 29, Redundancy: 2.07x, Words: 8]
+
+95.
 Category: Proverbs
 Difficulty Score: 96.5/100
 Tier: Tier 4: Master
@@ -1704,7 +2008,15 @@ Quote: "A watched pot never boils."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 21, Redundancy: 1.31x, Words: 5]
 
-58.
+96.
+Category: Proverbs
+Difficulty Score: 97.0/100
+Tier: Tier 4: Master
+Quote: "The road to hell is paved with good intentions."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 38, Redundancy: 2.53x, Words: 9]
+
+97.
 Category: Proverbs
 Difficulty Score: 97.8/100
 Tier: Tier 4: Master
@@ -1712,7 +2024,7 @@ Quote: "Actions speak louder than words."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 27, Redundancy: 1.69x, Words: 5]
 
-59.
+98.
 Category: Proverbs
 Difficulty Score: 98.6/100
 Tier: Tier 4: Master
@@ -1720,7 +2032,15 @@ Quote: "Many hands make light work."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 22, Redundancy: 1.38x, Words: 5]
 
-60.
+99.
+Category: Proverbs
+Difficulty Score: 98.8/100
+Tier: Tier 4: Master
+Quote: "A calm sea does not make a skilled navigator."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.40x, Words: 9]
+
+100.
 Category: Proverbs
 Difficulty Score: 99.0/100
 Tier: Tier 4: Master
@@ -1729,7 +2049,7 @@ Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 30, Redundancy: 1.88x, Words: 6]
 
 ================================================================================
-RIDDLES CATEGORY (LEVELS 1 - 60)
+RIDDLES CATEGORY (LEVELS 1 - 100)
 ================================================================================
 
 --------------------------------------------------------------------------------
@@ -1754,13 +2074,45 @@ Stats: [Unique Letters: 18, Total Letters: 98, Redundancy: 5.44x, Words: 24]
 
 3.
 Category: Riddles
+Difficulty Score: 11.5/100
+Tier: Tier 1: Beginner
+Quote: "What gets wetter the more it dries? A towel."
+Author: None (Omitted)
+Stats: [Unique Letters: 13, Total Letters: 34, Redundancy: 2.62x, Words: 9]
+
+4.
+Category: Riddles
+Difficulty Score: 15.8/100
+Tier: Tier 1: Beginner
+Quote: "What invention lets you look right through a wall? A window."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 48, Redundancy: 2.82x, Words: 11]
+
+5.
+Category: Riddles
 Difficulty Score: 17.3/100
 Tier: Tier 1: Beginner
 Quote: "If you have me, you want to share me; if you share me, you do not have me. What am I? A secret."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 67, Redundancy: 3.94x, Words: 23]
 
-4.
+6.
+Category: Riddles
+Difficulty Score: 19.4/100
+Tier: Tier 1: Beginner
+Quote: "What has hands and a face, but cannot hold anything or smile? A clock."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 54, Redundancy: 2.70x, Words: 14]
+
+7.
+Category: Riddles
+Difficulty Score: 23.6/100
+Tier: Tier 1: Beginner
+Quote: "What goes up as soon as rain comes down? An umbrella."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 41, Redundancy: 2.28x, Words: 11]
+
+8.
 Category: Riddles
 Difficulty Score: 25.0/100
 Tier: Tier 1: Beginner
@@ -1768,7 +2120,23 @@ Quote: "The person who makes it has no need of it; the person who buys it has no
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 78, Redundancy: 4.11x, Words: 25]
 
-5.
+9.
+Category: Riddles
+Difficulty Score: 27.2/100
+Tier: Tier 1: Beginner
+Quote: "What has four legs, but cannot walk? A table."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.13x, Words: 9]
+
+10.
+Category: Riddles
+Difficulty Score: 30.8/100
+Tier: Tier 1: Beginner
+Quote: "What has legs, but cannot walk? A chair."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 30, Redundancy: 1.88x, Words: 8]
+
+11.
 Category: Riddles
 Difficulty Score: 31.1/100
 Tier: Tier 1: Beginner
@@ -1776,7 +2144,7 @@ Quote: "I am tall when I am young, and I am short when I am old. What am I? A ca
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 54, Redundancy: 3.18x, Words: 20]
 
-6.
+12.
 Category: Riddles
 Difficulty Score: 33.5/100
 Tier: Tier 1: Beginner
@@ -1784,7 +2152,23 @@ Quote: "Thirty white horses on a red hill; first they champ, then they stamp, th
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 88, Redundancy: 5.18x, Words: 21]
 
-7.
+13.
+Category: Riddles
+Difficulty Score: 34.5/100
+Tier: Tier 1: Beginner
+Quote: "What kind of cup cannot hold water? A cupcake."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 36, Redundancy: 2.25x, Words: 9]
+
+14.
+Category: Riddles
+Difficulty Score: 37.8/100
+Tier: Tier 1: Beginner
+Quote: "What has words, but never speaks? A book."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 31, Redundancy: 2.07x, Words: 8]
+
+15.
 Category: Riddles
 Difficulty Score: 38.8/100
 Tier: Tier 1: Beginner
@@ -1792,7 +2176,7 @@ Quote: "What goes on four legs in the morning, two legs at noon, and three legs 
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 70, Redundancy: 4.12x, Words: 19]
 
-8.
+16.
 Category: Riddles
 Difficulty Score: 39.0/100
 Tier: Tier 1: Beginner
@@ -1800,7 +2184,7 @@ Quote: "I shave every day, but my beard stays the same. What am I? A barber."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 50, Redundancy: 3.57x, Words: 15]
 
-9.
+17.
 Category: Riddles
 Difficulty Score: 39.3/100
 Tier: Tier 1: Beginner
@@ -1808,7 +2192,7 @@ Quote: "I have many teeth, but I cannot bite. What am I? A comb."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 40, Redundancy: 2.86x, Words: 13]
 
-10.
+18.
 Category: Riddles
 Difficulty Score: 39.6/100
 Tier: Tier 1: Beginner
@@ -1816,7 +2200,15 @@ Quote: "Feed me and I live, yet give me a drink and I die. What am I? Fire."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 47, Redundancy: 2.94x, Words: 17]
 
-11.
+19.
+Category: Riddles
+Difficulty Score: 41.2/100
+Tier: Tier 1: Beginner
+Quote: "I get smaller every time I take a bath. What am I? A bar of soap."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 47, Redundancy: 2.61x, Words: 16]
+
+20.
 Category: Riddles
 Difficulty Score: 41.4/100
 Tier: Tier 1: Beginner
@@ -1824,7 +2216,7 @@ Quote: "What has a head and a foot but no body? A bed."
 Author: None (Omitted)
 Stats: [Unique Letters: 13, Total Letters: 33, Redundancy: 2.54x, Words: 12]
 
-12.
+21.
 Category: Riddles
 Difficulty Score: 43.1/100
 Tier: Tier 1: Beginner
@@ -1832,7 +2224,7 @@ Quote: "I follow you all day, but when the sun goes down I am gone. What am I? A
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 58, Redundancy: 3.41x, Words: 19]
 
-13.
+22.
 Category: Riddles
 Difficulty Score: 43.3/100
 Tier: Tier 1: Beginner
@@ -1840,7 +2232,15 @@ Quote: "What kind of room has no doors or windows? A mushroom."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 42, Redundancy: 3.00x, Words: 11]
 
-14.
+23.
+Category: Riddles
+Difficulty Score: 43.9/100
+Tier: Tier 1: Beginner
+Quote: "What has teeth, but cannot eat? A zipper."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 31, Redundancy: 2.07x, Words: 8]
+
+24.
 Category: Riddles
 Difficulty Score: 44.7/100
 Tier: Tier 1: Beginner
@@ -1848,7 +2248,7 @@ Quote: "What has a tongue but cannot taste? A shoe."
 Author: None (Omitted)
 Stats: [Unique Letters: 12, Total Letters: 33, Redundancy: 2.75x, Words: 9]
 
-15.
+25.
 Category: Riddles
 Difficulty Score: 45.0/100
 Tier: Tier 1: Beginner
@@ -1860,7 +2260,7 @@ Stats: [Unique Letters: 17, Total Letters: 67, Redundancy: 3.94x, Words: 19]
 TIER 2: INTERMEDIATE
 --------------------------------------------------------------------------------
 
-16.
+26.
 Category: Riddles
 Difficulty Score: 45.5/100
 Tier: Tier 2: Intermediate
@@ -1868,7 +2268,31 @@ Quote: "I have cities, but no houses; forests, but no trees; and water, but no f
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 67, Redundancy: 3.72x, Words: 20]
 
-17.
+27.
+Category: Riddles
+Difficulty Score: 47.5/100
+Tier: Tier 2: Intermediate
+Quote: "Take off my skin and I will not cry, but you will. What am I? An onion."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 51, Redundancy: 2.68x, Words: 17]
+
+28.
+Category: Riddles
+Difficulty Score: 49.6/100
+Tier: Tier 2: Intermediate
+Quote: "What has branches, but no fruit, trunk, or leaves? A bank."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 43, Redundancy: 2.53x, Words: 11]
+
+29.
+Category: Riddles
+Difficulty Score: 51.8/100
+Tier: Tier 2: Intermediate
+Quote: "What has a head and can be struck, but has no brain? A match."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 45, Redundancy: 2.81x, Words: 14]
+
+30.
 Category: Riddles
 Difficulty Score: 53.0/100
 Tier: Tier 2: Intermediate
@@ -1876,7 +2300,7 @@ Quote: "What has a bark but no bite? A tree."
 Author: None (Omitted)
 Stats: [Unique Letters: 13, Total Letters: 26, Redundancy: 2.00x, Words: 9]
 
-18.
+31.
 Category: Riddles
 Difficulty Score: 53.1/100
 Tier: Tier 2: Intermediate
@@ -1884,7 +2308,7 @@ Quote: "What begins with T, finishes with T, and has T in it? A teapot."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 46, Redundancy: 3.29x, Words: 14]
 
-19.
+32.
 Category: Riddles
 Difficulty Score: 53.5/100
 Tier: Tier 2: Intermediate
@@ -1892,7 +2316,7 @@ Quote: "What has an eye but cannot see? A needle."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 31, Redundancy: 2.21x, Words: 9]
 
-20.
+33.
 Category: Riddles
 Difficulty Score: 53.9/100
 Tier: Tier 2: Intermediate
@@ -1900,7 +2324,7 @@ Quote: "I speak without a mouth and hear without ears. I have no body, but I com
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 82, Redundancy: 4.10x, Words: 24]
 
-21.
+34.
 Category: Riddles
 Difficulty Score: 53.9/100
 Tier: Tier 2: Intermediate
@@ -1908,7 +2332,15 @@ Quote: "There is a house. One enters it blind and comes out seeing. What is it? 
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 61, Redundancy: 3.59x, Words: 17]
 
-22.
+35.
+Category: Riddles
+Difficulty Score: 53.9/100
+Tier: Tier 2: Intermediate
+Quote: "What kind of coat is best put on wet? A coat of paint."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 40, Redundancy: 2.50x, Words: 13]
+
+36.
 Category: Riddles
 Difficulty Score: 54.9/100
 Tier: Tier 2: Intermediate
@@ -1916,7 +2348,23 @@ Quote: "I am an odd number. Take away a letter and I become even. What number am
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 61, Redundancy: 3.21x, Words: 18]
 
-23.
+37.
+Category: Riddles
+Difficulty Score: 55.7/100
+Tier: Tier 2: Intermediate
+Quote: "You throw me out when you use me, and pull me in when you are done. What am I? An anchor."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 65, Redundancy: 3.82x, Words: 21]
+
+38.
+Category: Riddles
+Difficulty Score: 57.8/100
+Tier: Tier 2: Intermediate
+Quote: "What comes down but never goes up? Rain."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 31, Redundancy: 1.72x, Words: 8]
+
+39.
 Category: Riddles
 Difficulty Score: 58.7/100
 Tier: Tier 2: Intermediate
@@ -1924,7 +2372,7 @@ Quote: "If you drop me I am sure to crack, but give me a smile and I will always
 Author: None (Omitted)
 Stats: [Unique Letters: 22, Total Letters: 77, Redundancy: 3.50x, Words: 25]
 
-24.
+40.
 Category: Riddles
 Difficulty Score: 59.0/100
 Tier: Tier 2: Intermediate
@@ -1932,7 +2380,15 @@ Quote: "I belong to you, but others use me more than you do. What am I? Your nam
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 54, Redundancy: 3.18x, Words: 17]
 
-25.
+41.
+Category: Riddles
+Difficulty Score: 59.6/100
+Tier: Tier 2: Intermediate
+Quote: "What is black when you buy it, red when you use it, and gray when you throw it away? Charcoal."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 71, Redundancy: 3.94x, Words: 20]
+
+42.
 Category: Riddles
 Difficulty Score: 59.8/100
 Tier: Tier 2: Intermediate
@@ -1940,7 +2396,7 @@ Quote: "What runs but never walks, has a mouth but never talks? A river."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 49, Redundancy: 3.06x, Words: 13]
 
-26.
+43.
 Category: Riddles
 Difficulty Score: 59.9/100
 Tier: Tier 2: Intermediate
@@ -1948,7 +2404,15 @@ Quote: "The more you take away, the larger I become. What am I? A hole."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 46, Redundancy: 2.88x, Words: 14]
 
-27.
+44.
+Category: Riddles
+Difficulty Score: 61.4/100
+Tier: Tier 2: Intermediate
+Quote: "I am white when I am dirty, and black when I am clean. What am I? A chalkboard."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 58, Redundancy: 3.63x, Words: 18]
+
+45.
 Category: Riddles
 Difficulty Score: 61.8/100
 Tier: Tier 2: Intermediate
@@ -1956,7 +2420,7 @@ Quote: "What comes once in a minute, twice in a moment, but never in a thousand 
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 70, Redundancy: 3.89x, Words: 19]
 
-28.
+46.
 Category: Riddles
 Difficulty Score: 62.4/100
 Tier: Tier 2: Intermediate
@@ -1964,7 +2428,15 @@ Quote: "What has a neck but no head? A bottle."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 28, Redundancy: 2.00x, Words: 9]
 
-29.
+47.
+Category: Riddles
+Difficulty Score: 63.1/100
+Tier: Tier 2: Intermediate
+Quote: "What has a bottom at the top? Your legs."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 30, Redundancy: 2.00x, Words: 9]
+
+48.
 Category: Riddles
 Difficulty Score: 63.4/100
 Tier: Tier 2: Intermediate
@@ -1972,7 +2444,15 @@ Quote: "What has a head and a tail but no body? A coin."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 34, Redundancy: 2.27x, Words: 12]
 
-30.
+49.
+Category: Riddles
+Difficulty Score: 64.7/100
+Tier: Tier 2: Intermediate
+Quote: "What can you hold in your right hand, but never in your left hand? Your left hand."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 63, Redundancy: 3.50x, Words: 17]
+
+50.
 Category: Riddles
 Difficulty Score: 64.9/100
 Tier: Tier 2: Intermediate
@@ -1984,7 +2464,7 @@ Stats: [Unique Letters: 19, Total Letters: 63, Redundancy: 3.32x, Words: 18]
 TIER 3: ADVANCED
 --------------------------------------------------------------------------------
 
-31.
+51.
 Category: Riddles
 Difficulty Score: 65.5/100
 Tier: Tier 3: Advanced
@@ -1992,7 +2472,7 @@ Quote: "What can you catch, but never throw? A cold."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 33, Redundancy: 2.20x, Words: 9]
 
-32.
+52.
 Category: Riddles
 Difficulty Score: 65.5/100
 Tier: Tier 3: Advanced
@@ -2000,7 +2480,7 @@ Quote: "What has to be broken before you can use it? An egg."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 12]
 
-33.
+53.
 Category: Riddles
 Difficulty Score: 66.3/100
 Tier: Tier 3: Advanced
@@ -2008,7 +2488,15 @@ Quote: "What can be swallowed, but can also swallow you? Pride."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 43, Redundancy: 2.53x, Words: 10]
 
-34.
+54.
+Category: Riddles
+Difficulty Score: 66.5/100
+Tier: Tier 3: Advanced
+Quote: "What has one eye, but cannot see anything at all? A needle."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 45, Redundancy: 2.81x, Words: 12]
+
+55.
 Category: Riddles
 Difficulty Score: 68.2/100
 Tier: Tier 3: Advanced
@@ -2016,7 +2504,15 @@ Quote: "What loses its head in the morning and gets it back at night? A pillow."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 55, Redundancy: 3.06x, Words: 15]
 
-35.
+56.
+Category: Riddles
+Difficulty Score: 68.2/100
+Tier: Tier 3: Advanced
+Quote: "The more of this there is, the less you see. What is it? Darkness."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 49, Redundancy: 2.88x, Words: 14]
+
+57.
 Category: Riddles
 Difficulty Score: 68.4/100
 Tier: Tier 3: Advanced
@@ -2024,7 +2520,7 @@ Quote: "What has a spine, but no bones? An encyclopedia."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 9]
 
-36.
+58.
 Category: Riddles
 Difficulty Score: 69.0/100
 Tier: Tier 3: Advanced
@@ -2032,7 +2528,7 @@ Quote: "What can you break, even if you never pick it up or touch it? A promise.
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 54, Redundancy: 2.84x, Words: 16]
 
-37.
+59.
 Category: Riddles
 Difficulty Score: 70.1/100
 Tier: Tier 3: Advanced
@@ -2040,7 +2536,15 @@ Quote: "What has thirteen hearts, but no other organs? A deck of cards."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 49, Redundancy: 2.88x, Words: 12]
 
-38.
+60.
+Category: Riddles
+Difficulty Score: 70.1/100
+Tier: Tier 3: Advanced
+Quote: "What can run, but never walks; has a bed, but never sleeps? A river."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 50, Redundancy: 2.94x, Words: 14]
+
+61.
 Category: Riddles
 Difficulty Score: 70.6/100
 Tier: Tier 3: Advanced
@@ -2048,7 +2552,15 @@ Quote: "What has a ring but no finger? A telephone."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 33, Redundancy: 2.06x, Words: 9]
 
-39.
+62.
+Category: Riddles
+Difficulty Score: 71.9/100
+Tier: Tier 3: Advanced
+Quote: "What has a heart that doesn't beat? An artichoke."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 38, Redundancy: 2.71x, Words: 9]
+
+63.
 Category: Riddles
 Difficulty Score: 72.0/100
 Tier: Tier 3: Advanced
@@ -2056,7 +2568,7 @@ Quote: "What begins with P, ends with E, and has thousands of letters? The post 
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 61, Redundancy: 3.39x, Words: 15]
 
-40.
+64.
 Category: Riddles
 Difficulty Score: 72.1/100
 Tier: Tier 3: Advanced
@@ -2064,7 +2576,7 @@ Quote: "What is full of holes but still holds water? A sponge."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 42, Redundancy: 2.47x, Words: 11]
 
-41.
+65.
 Category: Riddles
 Difficulty Score: 72.4/100
 Tier: Tier 3: Advanced
@@ -2072,7 +2584,7 @@ Quote: "What begins with an E but only has one letter? An envelope."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 12]
 
-42.
+66.
 Category: Riddles
 Difficulty Score: 73.5/100
 Tier: Tier 3: Advanced
@@ -2080,7 +2592,7 @@ Quote: "What flies without wings and cries without eyes? A cloud."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 10]
 
-43.
+67.
 Category: Riddles
 Difficulty Score: 73.8/100
 Tier: Tier 3: Advanced
@@ -2088,7 +2600,47 @@ Quote: "I am light as a feather, yet the strongest person cannot hold me for fiv
 Author: None (Omitted)
 Stats: [Unique Letters: 21, Total Letters: 78, Redundancy: 3.71x, Words: 20]
 
-44.
+68.
+Category: Riddles
+Difficulty Score: 73.8/100
+Tier: Tier 3: Advanced
+Quote: "What can you hold without ever touching it? A conversation."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 48, Redundancy: 2.82x, Words: 10]
+
+69.
+Category: Riddles
+Difficulty Score: 75.4/100
+Tier: Tier 3: Advanced
+Quote: "What has no beginning, end, or middle? A donut."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 35, Redundancy: 2.19x, Words: 9]
+
+70.
+Category: Riddles
+Difficulty Score: 76.9/100
+Tier: Tier 3: Advanced
+Quote: "What belongs to you, but everyone else uses it? Your name."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 45, Redundancy: 2.65x, Words: 11]
+
+71.
+Category: Riddles
+Difficulty Score: 78.2/100
+Tier: Tier 3: Advanced
+Quote: "What has eighty-eight keys, but cannot open a single door? A piano."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 52, Redundancy: 2.74x, Words: 12]
+
+72.
+Category: Riddles
+Difficulty Score: 79.1/100
+Tier: Tier 3: Advanced
+Quote: "What kind of tree can you hold in your hand? A palm tree."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 43, Redundancy: 2.39x, Words: 13]
+
+73.
 Category: Riddles
 Difficulty Score: 79.5/100
 Tier: Tier 3: Advanced
@@ -2096,7 +2648,7 @@ Quote: "The more you take, the more you leave behind. What am I? Footsteps."
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 51, Redundancy: 2.55x, Words: 13]
 
-45.
+74.
 Category: Riddles
 Difficulty Score: 79.9/100
 Tier: Tier 3: Advanced
@@ -2104,11 +2656,19 @@ Quote: "What has a thumb and four fingers but is not alive? A glove."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 46, Redundancy: 2.56x, Words: 13]
 
+75.
+Category: Riddles
+Difficulty Score: 79.9/100
+Tier: Tier 3: Advanced
+Quote: "What has keys that open no locks, and space with no room? A keyboard."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 53, Redundancy: 2.94x, Words: 14]
+
 --------------------------------------------------------------------------------
 TIER 4: MASTER
 --------------------------------------------------------------------------------
 
-46.
+76.
 Category: Riddles
 Difficulty Score: 80.5/100
 Tier: Tier 4: Master
@@ -2116,7 +2676,7 @@ Quote: "What five-letter word becomes shorter when you add two letters to it? Sh
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 61, Redundancy: 3.21x, Words: 13]
 
-47.
+77.
 Category: Riddles
 Difficulty Score: 80.7/100
 Tier: Tier 4: Master
@@ -2124,7 +2684,7 @@ Quote: "What gets sharper the more you use it? Your brain."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 39, Redundancy: 2.44x, Words: 10]
 
-48.
+78.
 Category: Riddles
 Difficulty Score: 81.3/100
 Tier: Tier 4: Master
@@ -2132,7 +2692,7 @@ Quote: "What has many keys but cannot open a single lock? A piano."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 45, Redundancy: 2.50x, Words: 12]
 
-49.
+79.
 Category: Riddles
 Difficulty Score: 81.7/100
 Tier: Tier 4: Master
@@ -2140,7 +2700,15 @@ Quote: "What disappears the moment you say its name? Silence."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 43, Redundancy: 2.53x, Words: 9]
 
-50.
+80.
+Category: Riddles
+Difficulty Score: 82.0/100
+Tier: Tier 4: Master
+Quote: "I am taken from a mine, and shut in a wooden case, from which I am never released. What am I? Pencil lead."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 79, Redundancy: 4.16x, Words: 23]
+
+81.
 Category: Riddles
 Difficulty Score: 82.6/100
 Tier: Tier 4: Master
@@ -2148,7 +2716,15 @@ Quote: "What has many needles, but cannot sew? A pine tree."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 39, Redundancy: 2.17x, Words: 10]
 
-51.
+82.
+Category: Riddles
+Difficulty Score: 84.2/100
+Tier: Tier 4: Master
+Quote: "What can pierce the ears without a sound, and speak without a voice? Telepathy."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 63, Redundancy: 3.50x, Words: 14]
+
+83.
 Category: Riddles
 Difficulty Score: 84.5/100
 Tier: Tier 4: Master
@@ -2156,7 +2732,7 @@ Quote: "What goes up and down without moving? A staircase."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 40, Redundancy: 2.35x, Words: 9]
 
-52.
+84.
 Category: Riddles
 Difficulty Score: 84.5/100
 Tier: Tier 4: Master
@@ -2164,7 +2740,7 @@ Quote: "What can travel around the world while staying in a corner? A stamp."
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 54, Redundancy: 2.84x, Words: 13]
 
-53.
+85.
 Category: Riddles
 Difficulty Score: 84.6/100
 Tier: Tier 4: Master
@@ -2172,7 +2748,7 @@ Quote: "What has one horn and gives milk? A milk truck."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 36, Redundancy: 2.00x, Words: 10]
 
-54.
+86.
 Category: Riddles
 Difficulty Score: 84.7/100
 Tier: Tier 4: Master
@@ -2180,7 +2756,15 @@ Quote: "What building has the most stories? The library."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 8]
 
-55.
+87.
+Category: Riddles
+Difficulty Score: 86.5/100
+Tier: Tier 4: Master
+Quote: "A barrel of water weighed sixty pounds. Someone put something in it and now it weighs forty. What was added? A hole."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 91, Redundancy: 4.55x, Words: 22]
+
+88.
 Category: Riddles
 Difficulty Score: 86.6/100
 Tier: Tier 4: Master
@@ -2188,7 +2772,7 @@ Quote: "What can fill a room but takes up no space? Light."
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 38, Redundancy: 2.00x, Words: 11]
 
-56.
+89.
 Category: Riddles
 Difficulty Score: 87.3/100
 Tier: Tier 4: Master
@@ -2196,7 +2780,7 @@ Quote: "What can run around the whole yard without moving? A fence."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 47, Redundancy: 2.61x, Words: 11]
 
-57.
+90.
 Category: Riddles
 Difficulty Score: 88.2/100
 Tier: Tier 4: Master
@@ -2204,7 +2788,31 @@ Quote: "What has four wheels and flies? A garbage truck."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 38, Redundancy: 2.11x, Words: 9]
 
-58.
+91.
+Category: Riddles
+Difficulty Score: 88.7/100
+Tier: Tier 4: Master
+Quote: "You see a boat filled with people. It has not sunk, but when you look again you don't see a single person. Why? All are married."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 97, Redundancy: 4.85x, Words: 26]
+
+92.
+Category: Riddles
+Difficulty Score: 90.6/100
+Tier: Tier 4: Master
+Quote: "Forward I am heavy, but backward I am not. What am I? The word ton."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 49, Redundancy: 2.72x, Words: 15]
+
+93.
+Category: Riddles
+Difficulty Score: 92.8/100
+Tier: Tier 4: Master
+Quote: "I have lakes with no water, mountains with no stone, and cities with no buildings. What am I? A map."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 76, Redundancy: 3.80x, Words: 20]
+
+94.
 Category: Riddles
 Difficulty Score: 92.9/100
 Tier: Tier 4: Master
@@ -2212,7 +2820,15 @@ Quote: "What goes through cities and over fields, but never moves? A road."
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 52, Redundancy: 2.74x, Words: 12]
 
-59.
+95.
+Category: Riddles
+Difficulty Score: 94.5/100
+Tier: Tier 4: Master
+Quote: "What flies forever, rests never? The wind."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 33, Redundancy: 2.36x, Words: 7]
+
+96.
 Category: Riddles
 Difficulty Score: 95.4/100
 Tier: Tier 4: Master
@@ -2220,13 +2836,37 @@ Quote: "What goes up but never comes down? Your age."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 34, Redundancy: 1.89x, Words: 9]
 
-60.
+97.
+Category: Riddles
+Difficulty Score: 96.2/100
+Tier: Tier 4: Master
+Quote: "I am always hungry and must be fed; the finger I touch will soon turn red. What am I? Fire."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 68, Redundancy: 3.58x, Words: 20]
+
+98.
+Category: Riddles
+Difficulty Score: 97.8/100
+Tier: Tier 4: Master
+Quote: "Never ahead, ever behind, yet flying swiftly past; for child and king alike, I am the same. What am I? Time."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 81, Redundancy: 3.86x, Words: 21]
+
+99.
 Category: Riddles
 Difficulty Score: 99.0/100
 Tier: Tier 4: Master
 Quote: "What kind of band never plays music? A rubber band."
 Author: None (Omitted)
 Stats: [Unique Letters: 21, Total Letters: 40, Redundancy: 1.90x, Words: 10]
+
+100.
+Category: Riddles
+Difficulty Score: 99.0/100
+Tier: Tier 4: Master
+Quote: "The man who invented it doesn't want it; the man who bought it doesn't need it. What is it? A coffin."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 75, Redundancy: 4.41x, Words: 21]
 
 ================================================================================
 MOVIE LINES CATEGORY (LEVELS 1 - 100)
@@ -2558,7 +3198,7 @@ Difficulty Score: 57.7/100
 Tier: Tier 2: Intermediate
 Quote: "Hello, gorgeous."
 Author: Funny Girl
-Stats: [Unique Letters: 8, Total Letters: 13, Redundancy: 1.62x, Words: 2]
+Stats: [Unique Letters: 8, Total Letters: 13, Redundancy: 1.63x, Words: 2]
 
 41.
 Category: Movie Lines
@@ -3014,7 +3654,7 @@ Difficulty Score: 94.2/100
 Tier: Tier 4: Master
 Quote: "As you wish."
 Author: The Princess Bride
-Stats: [Unique Letters: 8, Total Letters: 9, Redundancy: 1.12x, Words: 3]
+Stats: [Unique Letters: 8, Total Letters: 9, Redundancy: 1.13x, Words: 3]
 
 97.
 Category: Movie Lines
@@ -3049,7 +3689,7 @@ Author: The Adventures of Sherlock Holmes
 Stats: [Unique Letters: 12, Total Letters: 22, Redundancy: 1.83x, Words: 4]
 
 ================================================================================
-TRIVIA CATEGORY (LEVELS 1 - 60)
+TRIVIA CATEGORY (LEVELS 1 - 100)
 ================================================================================
 
 --------------------------------------------------------------------------------
@@ -3090,13 +3730,29 @@ Stats: [Unique Letters: 17, Total Letters: 81, Redundancy: 4.76x, Words: 17]
 
 5.
 Category: Trivia
+Difficulty Score: 11.0/100
+Tier: Tier 1: Beginner
+Quote: "A day on Venus is longer than a year on Venus."
+Author: None (Omitted)
+Stats: [Unique Letters: 15, Total Letters: 35, Redundancy: 2.33x, Words: 11]
+
+6.
+Category: Trivia
 Difficulty Score: 13.6/100
 Tier: Tier 1: Beginner
 Quote: "Australia is wider in diameter than the Moon."
 Author: None (Omitted)
 Stats: [Unique Letters: 14, Total Letters: 37, Redundancy: 2.64x, Words: 8]
 
-6.
+7.
+Category: Trivia
+Difficulty Score: 16.0/100
+Tier: Tier 1: Beginner
+Quote: "Hot water turns into ice faster than cold water, a phenomenon known as the Mpemba effect."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 72, Redundancy: 3.79x, Words: 16]
+
+8.
 Category: Trivia
 Difficulty Score: 16.7/100
 Tier: Tier 1: Beginner
@@ -3104,7 +3760,7 @@ Quote: "Nearly ninety percent of the entire human population lives in the Northe
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 73, Redundancy: 4.29x, Words: 13]
 
-7.
+9.
 Category: Trivia
 Difficulty Score: 19.9/100
 Tier: Tier 1: Beginner
@@ -3112,7 +3768,15 @@ Quote: "Scotland chose the mythical unicorn as its official national animal in t
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 77, Redundancy: 4.53x, Words: 14]
 
-8.
+10.
+Category: Trivia
+Difficulty Score: 20.5/100
+Tier: Tier 1: Beginner
+Quote: "A group of owls is called a parliament."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 31, Redundancy: 1.82x, Words: 8]
+
+11.
 Category: Trivia
 Difficulty Score: 23.0/100
 Tier: Tier 1: Beginner
@@ -3120,7 +3784,15 @@ Quote: "Sunset on Mars appears blue to the human eye due to fine dust in its thi
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 68, Redundancy: 4.00x, Words: 17]
 
-9.
+12.
+Category: Trivia
+Difficulty Score: 24.2/100
+Tier: Tier 1: Beginner
+Quote: "The heart of a blue whale is the size of a small car."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 40, Redundancy: 2.50x, Words: 13]
+
+13.
 Category: Trivia
 Difficulty Score: 26.1/100
 Tier: Tier 1: Beginner
@@ -3128,7 +3800,15 @@ Quote: "The Sun contains over ninety-nine percent of all the mass in our solar s
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 63, Redundancy: 3.71x, Words: 14]
 
-10.
+14.
+Category: Trivia
+Difficulty Score: 28.5/100
+Tier: Tier 1: Beginner
+Quote: "Venus is the only planet in our solar system that spins clockwise."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 54, Redundancy: 3.00x, Words: 12]
+
+15.
 Category: Trivia
 Difficulty Score: 29.3/100
 Tier: Tier 1: Beginner
@@ -3136,7 +3816,15 @@ Quote: "There are more trees on Earth than stars in the Milky Way galaxy."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 52, Redundancy: 3.25x, Words: 13]
 
-11.
+16.
+Category: Trivia
+Difficulty Score: 32.0/100
+Tier: Tier 1: Beginner
+Quote: "Octopuses have three hearts, nine brains, and blue blood."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 46, Redundancy: 2.88x, Words: 9]
+
+17.
 Category: Trivia
 Difficulty Score: 32.4/100
 Tier: Tier 1: Beginner
@@ -3144,7 +3832,7 @@ Quote: "Mount Chimborazo in Ecuador is the closest point on Earth to the Moon du
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 80, Redundancy: 4.21x, Words: 18]
 
-12.
+18.
 Category: Trivia
 Difficulty Score: 35.6/100
 Tier: Tier 1: Beginner
@@ -3152,7 +3840,15 @@ Quote: "An octopus has three hearts, nine brains, and blue blood."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 45, Redundancy: 3.00x, Words: 10]
 
-13.
+19.
+Category: Trivia
+Difficulty Score: 35.8/100
+Tier: Tier 1: Beginner
+Quote: "There are more fake flamingos in the world than real ones."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 47, Redundancy: 2.94x, Words: 11]
+
+20.
 Category: Trivia
 Difficulty Score: 38.7/100
 Tier: Tier 1: Beginner
@@ -3160,7 +3856,23 @@ Quote: "The Pacific Ocean is larger in surface area than all of the Earth's land
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 72, Redundancy: 4.00x, Words: 16]
 
-14.
+21.
+Category: Trivia
+Difficulty Score: 38.9/100
+Tier: Tier 1: Beginner
+Quote: "Strawberries are not true berries, but bananas and watermelons are."
+Author: None (Omitted)
+Stats: [Unique Letters: 14, Total Letters: 56, Redundancy: 4.00x, Words: 10]
+
+22.
+Category: Trivia
+Difficulty Score: 41.5/100
+Tier: Tier 1: Beginner
+Quote: "A jiffy is an actual scientific unit of time equal to one hundredth of a second."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 64, Redundancy: 3.56x, Words: 16]
+
+23.
 Category: Trivia
 Difficulty Score: 41.9/100
 Tier: Tier 1: Beginner
@@ -3168,7 +3880,15 @@ Quote: "A day on Venus is longer than its year; it takes 243 Earth days to rotat
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 58, Redundancy: 3.41x, Words: 17]
 
-15.
+24.
+Category: Trivia
+Difficulty Score: 44.0/100
+Tier: Tier 1: Beginner
+Quote: "Lightning strikes the Earth roughly one hundred times every single second."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 63, Redundancy: 3.50x, Words: 11]
+
+25.
 Category: Trivia
 Difficulty Score: 45.0/100
 Tier: Tier 1: Beginner
@@ -3180,7 +3900,7 @@ Stats: [Unique Letters: 19, Total Letters: 80, Redundancy: 4.21x, Words: 17]
 TIER 2: INTERMEDIATE
 --------------------------------------------------------------------------------
 
-16.
+26.
 Category: Trivia
 Difficulty Score: 45.5/100
 Tier: Tier 2: Intermediate
@@ -3188,7 +3908,7 @@ Quote: "The shortest war in recorded human history lasted only thirty-eight minu
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 64, Redundancy: 3.76x, Words: 11]
 
-17.
+27.
 Category: Trivia
 Difficulty Score: 46.9/100
 Tier: Tier 2: Intermediate
@@ -3196,7 +3916,15 @@ Quote: "The Mid-Atlantic Ridge is the longest mountain chain on Earth, spanning 
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 87, Redundancy: 4.58x, Words: 15]
 
-18.
+28.
+Category: Trivia
+Difficulty Score: 47.0/100
+Tier: Tier 2: Intermediate
+Quote: "The fingerprints of a koala are so indistinguishable from humans they have confused crime scenes."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 82, Redundancy: 3.90x, Words: 15]
+
+29.
 Category: Trivia
 Difficulty Score: 48.3/100
 Tier: Tier 2: Intermediate
@@ -3204,7 +3932,15 @@ Quote: "The footprint left by Apollo astronauts on the Moon could last for a mil
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 68, Redundancy: 3.78x, Words: 15]
 
-19.
+30.
+Category: Trivia
+Difficulty Score: 49.5/100
+Tier: Tier 2: Intermediate
+Quote: "A cloud of alcohol in deep space contains enough ethyl alcohol to fill four hundred trillion pints."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 82, Redundancy: 4.82x, Words: 17]
+
+31.
 Category: Trivia
 Difficulty Score: 49.7/100
 Tier: Tier 2: Intermediate
@@ -3212,7 +3948,7 @@ Quote: "Elephants are the only mammals that cannot jump."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 40, Redundancy: 2.67x, Words: 8]
 
-20.
+32.
 Category: Trivia
 Difficulty Score: 51.0/100
 Tier: Tier 2: Intermediate
@@ -3220,7 +3956,15 @@ Quote: "Babies are born with three hundred bones, but adults have only two hundr
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 67, Redundancy: 3.94x, Words: 15]
 
-21.
+33.
+Category: Trivia
+Difficulty Score: 52.0/100
+Tier: Tier 2: Intermediate
+Quote: "Sea otters hold hands while sleeping so they do not drift apart."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 52, Redundancy: 3.25x, Words: 12]
+
+34.
 Category: Trivia
 Difficulty Score: 52.4/100
 Tier: Tier 2: Intermediate
@@ -3228,7 +3972,7 @@ Quote: "A bolt of lightning is roughly five times hotter than the surface of the
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 62, Redundancy: 3.44x, Words: 15]
 
-22.
+35.
 Category: Trivia
 Difficulty Score: 53.8/100
 Tier: Tier 2: Intermediate
@@ -3236,7 +3980,15 @@ Quote: "Your skin is the largest and heaviest organ in your entire body."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 52, Redundancy: 3.06x, Words: 12]
 
-23.
+36.
+Category: Trivia
+Difficulty Score: 54.2/100
+Tier: Tier 2: Intermediate
+Quote: "The Hawaiian alphabet has only twelve letters: five vowels and seven consonants."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 67, Redundancy: 3.72x, Words: 12]
+
+37.
 Category: Trivia
 Difficulty Score: 55.2/100
 Tier: Tier 2: Intermediate
@@ -3244,7 +3996,15 @@ Quote: "Butterflies taste their food with tiny sensors on their feet."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 51, Redundancy: 3.19x, Words: 10]
 
-24.
+38.
+Category: Trivia
+Difficulty Score: 56.5/100
+Tier: Tier 2: Intermediate
+Quote: "A crocodile cannot stick its tongue out because it is attached to the roof of its mouth."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 71, Redundancy: 3.94x, Words: 17]
+
+39.
 Category: Trivia
 Difficulty Score: 56.6/100
 Tier: Tier 2: Intermediate
@@ -3252,7 +4012,7 @@ Quote: "A snail can sleep continuously for up to three years without eating."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 56, Redundancy: 3.29x, Words: 12]
 
-25.
+40.
 Category: Trivia
 Difficulty Score: 58.0/100
 Tier: Tier 2: Intermediate
@@ -3260,7 +4020,15 @@ Quote: "Ancient Romans used heated hollow floors called hypocausts to warm their
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 75, Redundancy: 4.17x, Words: 14]
 
-26.
+41.
+Category: Trivia
+Difficulty Score: 58.8/100
+Tier: Tier 2: Intermediate
+Quote: "The wood frog can freeze completely solid during winter and thaw alive in the spring."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 70, Redundancy: 3.33x, Words: 15]
+
+42.
 Category: Trivia
 Difficulty Score: 59.4/100
 Tier: Tier 2: Intermediate
@@ -3268,7 +4036,15 @@ Quote: "The Eiffel Tower grows up to six inches taller during the heat of summer
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 80, Redundancy: 4.21x, Words: 18]
 
-27.
+43.
+Category: Trivia
+Difficulty Score: 60.5/100
+Tier: Tier 2: Intermediate
+Quote: "Reno, Nevada is farther west than Los Angeles, California."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 47, Redundancy: 2.94x, Words: 9]
+
+44.
 Category: Trivia
 Difficulty Score: 60.7/100
 Tier: Tier 2: Intermediate
@@ -3276,7 +4052,7 @@ Quote: "The inventor of the stop sign never learned how to drive a motor vehicle
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 59, Redundancy: 3.28x, Words: 14]
 
-28.
+45.
 Category: Trivia
 Difficulty Score: 62.1/100
 Tier: Tier 2: Intermediate
@@ -3284,7 +4060,15 @@ Quote: "Your stomach lining completely replaces itself every three to four days 
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 83, Redundancy: 4.37x, Words: 15]
 
-29.
+46.
+Category: Trivia
+Difficulty Score: 62.2/100
+Tier: Tier 2: Intermediate
+Quote: "The tongue of a blue whale weighs more than an entire adult elephant."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 56, Redundancy: 3.11x, Words: 13]
+
+47.
 Category: Trivia
 Difficulty Score: 63.5/100
 Tier: Tier 2: Intermediate
@@ -3292,7 +4076,15 @@ Quote: "Saturn is less dense than water; if placed in a giant bathtub, it would 
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 61, Redundancy: 3.39x, Words: 15]
 
-30.
+48.
+Category: Trivia
+Difficulty Score: 63.8/100
+Tier: Tier 2: Intermediate
+Quote: "Turtles can breathe through their butts during winter hibernation."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 57, Redundancy: 3.56x, Words: 9]
+
+49.
 Category: Trivia
 Difficulty Score: 64.9/100
 Tier: Tier 2: Intermediate
@@ -3300,11 +4092,19 @@ Quote: "The lighter was invented before the modern friction match was created in
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 61, Redundancy: 3.39x, Words: 13]
 
+50.
+Category: Trivia
+Difficulty Score: 64.9/100
+Tier: Tier 2: Intermediate
+Quote: "The Apollo astronauts had no life insurance, so they signed autographs to support their families."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 81, Redundancy: 4.50x, Words: 15]
+
 --------------------------------------------------------------------------------
 TIER 3: ADVANCED
 --------------------------------------------------------------------------------
 
-31.
+51.
 Category: Trivia
 Difficulty Score: 65.5/100
 Tier: Tier 3: Advanced
@@ -3312,7 +4112,15 @@ Quote: "In 1913, Hitler, Stalin, Trotsky, and Freud all lived within a few miles
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 71, Redundancy: 3.74x, Words: 18]
 
-32.
+52.
+Category: Trivia
+Difficulty Score: 66.2/100
+Tier: Tier 3: Advanced
+Quote: "A single bolt of lightning contains enough energy to toast one hundred thousand slices of bread."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 80, Redundancy: 4.71x, Words: 16]
+
+53.
 Category: Trivia
 Difficulty Score: 66.5/100
 Tier: Tier 3: Advanced
@@ -3320,7 +4128,7 @@ Quote: "Russia spans eleven different time zones across Europe and Asia."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 54, Redundancy: 3.18x, Words: 10]
 
-33.
+54.
 Category: Trivia
 Difficulty Score: 67.6/100
 Tier: Tier 3: Advanced
@@ -3328,7 +4136,15 @@ Quote: "Human bones are gram for gram roughly five times stronger than structura
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 67, Redundancy: 3.72x, Words: 13]
 
-34.
+55.
+Category: Trivia
+Difficulty Score: 68.0/100
+Tier: Tier 3: Advanced
+Quote: "Dragonflies have six legs, but they cannot walk on them."
+Author: None (Omitted)
+Stats: [Unique Letters: 22, Total Letters: 45, Redundancy: 2.05x, Words: 10]
+
+56.
 Category: Trivia
 Difficulty Score: 68.6/100
 Tier: Tier 3: Advanced
@@ -3336,7 +4152,7 @@ Quote: "A group of flamingos is officially known as a flamboyance."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 48, Redundancy: 2.67x, Words: 10]
 
-35.
+57.
 Category: Trivia
 Difficulty Score: 69.6/100
 Tier: Tier 3: Advanced
@@ -3344,7 +4160,15 @@ Quote: "Bubble wrap was originally invented in 1957 to serve as textured wallpap
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 59, Redundancy: 3.28x, Words: 12]
 
-36.
+58.
+Category: Trivia
+Difficulty Score: 70.2/100
+Tier: Tier 3: Advanced
+Quote: "The kingdom of Bhutan measures its prosperity through Gross National Happiness instead of GDP."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 80, Redundancy: 4.21x, Words: 14]
+
+59.
 Category: Trivia
 Difficulty Score: 70.6/100
 Tier: Tier 3: Advanced
@@ -3352,7 +4176,7 @@ Quote: "The Moon is lemon-shaped, with flattened poles and a slight equatorial b
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 63, Redundancy: 3.32x, Words: 12]
 
-37.
+60.
 Category: Trivia
 Difficulty Score: 71.7/100
 Tier: Tier 3: Advanced
@@ -3360,7 +4184,15 @@ Quote: "Continents drift across tectonic plates at about the same rate human fin
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 73, Redundancy: 3.84x, Words: 13]
 
-38.
+61.
+Category: Trivia
+Difficulty Score: 72.0/100
+Tier: Tier 3: Advanced
+Quote: "A teaspoonful of a neutron star would weigh six billion tons."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 50, Redundancy: 2.78x, Words: 11]
+
+62.
 Category: Trivia
 Difficulty Score: 72.7/100
 Tier: Tier 3: Advanced
@@ -3368,7 +4200,7 @@ Quote: "Sound travels four times faster through water than it does through open 
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 63, Redundancy: 3.50x, Words: 13]
 
-39.
+63.
 Category: Trivia
 Difficulty Score: 73.7/100
 Tier: Tier 3: Advanced
@@ -3376,7 +4208,15 @@ Quote: "Honey never spoils; pots found in ancient Egyptian tombs are over three 
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 89, Redundancy: 4.45x, Words: 18]
 
-40.
+64.
+Category: Trivia
+Difficulty Score: 73.9/100
+Tier: Tier 3: Advanced
+Quote: "Pluto was discovered in 1930 and has not completed a single orbit around the Sun since."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 67, Redundancy: 3.53x, Words: 16]
+
+65.
 Category: Trivia
 Difficulty Score: 74.8/100
 Tier: Tier 3: Advanced
@@ -3384,7 +4224,15 @@ Quote: "One million Earths could comfortably fit inside the Sun."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 47, Redundancy: 2.76x, Words: 9]
 
-41.
+66.
+Category: Trivia
+Difficulty Score: 75.5/100
+Tier: Tier 3: Advanced
+Quote: "The human eye can distinguish approximately ten million different colors."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 63, Redundancy: 3.32x, Words: 10]
+
+67.
 Category: Trivia
 Difficulty Score: 75.8/100
 Tier: Tier 3: Advanced
@@ -3392,7 +4240,7 @@ Quote: "Space is completely silent because there is no atmosphere to carry sound
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 66, Redundancy: 3.47x, Words: 13]
 
-42.
+68.
 Category: Trivia
 Difficulty Score: 76.8/100
 Tier: Tier 3: Advanced
@@ -3400,7 +4248,15 @@ Quote: "A hummingbird weighs less than a single penny."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 38, Redundancy: 2.24x, Words: 8]
 
-43.
+69.
+Category: Trivia
+Difficulty Score: 77.0/100
+Tier: Tier 3: Advanced
+Quote: "There are more trees on Mars than water? No, but Mars has the largest volcano in the solar system."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 77, Redundancy: 4.28x, Words: 19]
+
+70.
 Category: Trivia
 Difficulty Score: 77.8/100
 Tier: Tier 3: Advanced
@@ -3408,7 +4264,15 @@ Quote: "Honeybees can be trained to recognize and remember human faces."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 53, Redundancy: 2.94x, Words: 10]
 
-44.
+71.
+Category: Trivia
+Difficulty Score: 78.4/100
+Tier: Tier 3: Advanced
+Quote: "The world's quietest room at Microsoft headquarters has a background noise of minus twenty decibels."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 84, Redundancy: 4.00x, Words: 15]
+
+72.
 Category: Trivia
 Difficulty Score: 78.9/100
 Tier: Tier 3: Advanced
@@ -3416,7 +4280,15 @@ Quote: "Neutron stars spin so fast they can rotate hundreds of times every singl
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 67, Redundancy: 3.53x, Words: 14]
 
-45.
+73.
+Category: Trivia
+Difficulty Score: 79.2/100
+Tier: Tier 3: Advanced
+Quote: "Pigeons can be trained to distinguish between paintings by Monet and Picasso."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 65, Redundancy: 3.61x, Words: 12]
+
+74.
 Category: Trivia
 Difficulty Score: 79.9/100
 Tier: Tier 3: Advanced
@@ -3424,11 +4296,19 @@ Quote: "Male seahorses carry the eggs and give birth to up to two thousand babie
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 66, Redundancy: 3.30x, Words: 16]
 
+75.
+Category: Trivia
+Difficulty Score: 79.9/100
+Tier: Tier 3: Advanced
+Quote: "The Mariana Trench is deeper than Mount Everest is tall."
+Author: None (Omitted)
+Stats: [Unique Letters: 16, Total Letters: 46, Redundancy: 2.88x, Words: 10]
+
 --------------------------------------------------------------------------------
 TIER 4: MASTER
 --------------------------------------------------------------------------------
 
-46.
+76.
 Category: Trivia
 Difficulty Score: 80.5/100
 Tier: Tier 4: Master
@@ -3436,7 +4316,7 @@ Quote: "Canned food was invented in 1810, but the can opener was not invented un
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 77, Redundancy: 3.85x, Words: 17]
 
-47.
+77.
 Category: Trivia
 Difficulty Score: 81.8/100
 Tier: Tier 4: Master
@@ -3444,7 +4324,15 @@ Quote: "Wombats are the only known animals in the world that produce cube-shaped
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 69, Redundancy: 3.45x, Words: 13]
 
-48.
+78.
+Category: Trivia
+Difficulty Score: 82.2/100
+Tier: Tier 4: Master
+Quote: "The national animal of Scotland is the unicorn, chosen for its mythical power and purity."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 73, Redundancy: 4.06x, Words: 15]
+
+79.
 Category: Trivia
 Difficulty Score: 83.1/100
 Tier: Tier 4: Master
@@ -3452,7 +4340,7 @@ Quote: "Polar bears have black skin underneath their thick white fur to absorb h
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 73, Redundancy: 3.65x, Words: 16]
 
-49.
+80.
 Category: Trivia
 Difficulty Score: 84.5/100
 Tier: Tier 4: Master
@@ -3460,7 +4348,15 @@ Quote: "Sloths can hold their breath underwater for forty minutes, four times lo
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 76, Redundancy: 3.80x, Words: 14]
 
-50.
+81.
+Category: Trivia
+Difficulty Score: 84.5/100
+Tier: Tier 4: Master
+Quote: "Cleopatra lived closer in time to the iPhone than to the building of the Great Pyramid of Giza."
+Author: None (Omitted)
+Stats: [Unique Letters: 21, Total Letters: 77, Redundancy: 3.67x, Words: 18]
+
+82.
 Category: Trivia
 Difficulty Score: 85.8/100
 Tier: Tier 4: Master
@@ -3468,7 +4364,15 @@ Quote: "Bananas are naturally radioactive because they contain high levels of po
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 74, Redundancy: 3.70x, Words: 12]
 
-51.
+83.
+Category: Trivia
+Difficulty Score: 86.8/100
+Tier: Tier 4: Master
+Quote: "A day on Mercury lasts approximately fifty-nine Earth days."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 49, Redundancy: 2.72x, Words: 9]
+
+84.
 Category: Trivia
 Difficulty Score: 87.1/100
 Tier: Tier 4: Master
@@ -3476,7 +4380,7 @@ Quote: "Water can boil and freeze simultaneously at a unique temperature called 
 Author: None (Omitted)
 Stats: [Unique Letters: 21, Total Letters: 75, Redundancy: 3.57x, Words: 14]
 
-52.
+85.
 Category: Trivia
 Difficulty Score: 88.4/100
 Tier: Tier 4: Master
@@ -3484,7 +4388,15 @@ Quote: "Sharks existed on Earth before trees; sharks appeared four hundred milli
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 71, Redundancy: 3.55x, Words: 13]
 
-53.
+86.
+Category: Trivia
+Difficulty Score: 89.0/100
+Tier: Tier 4: Master
+Quote: "The total weight of all ants on Earth once roughly equaled the total biomass of all humans."
+Author: None (Omitted)
+Stats: [Unique Letters: 20, Total Letters: 74, Redundancy: 3.70x, Words: 17]
+
+87.
 Category: Trivia
 Difficulty Score: 89.8/100
 Tier: Tier 4: Master
@@ -3492,7 +4404,7 @@ Quote: "Atoms are ninety-nine percent empty space; all humanity would fit inside
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 70, Redundancy: 3.50x, Words: 14]
 
-54.
+88.
 Category: Trivia
 Difficulty Score: 91.1/100
 Tier: Tier 4: Master
@@ -3500,7 +4412,15 @@ Quote: "Cows have best friends and experience measurable stress when separated f
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 69, Redundancy: 3.45x, Words: 12]
 
-55.
+89.
+Category: Trivia
+Difficulty Score: 91.2/100
+Tier: Tier 4: Master
+Quote: "Goldfish can recognize their owners and distinguish different human faces."
+Author: None (Omitted)
+Stats: [Unique Letters: 18, Total Letters: 64, Redundancy: 3.56x, Words: 10]
+
+90.
 Category: Trivia
 Difficulty Score: 92.4/100
 Tier: Tier 4: Master
@@ -3508,7 +4428,15 @@ Quote: "The Great Wall of China is held together in part by sticky rice mortar."
 Author: None (Omitted)
 Stats: [Unique Letters: 20, Total Letters: 57, Redundancy: 2.85x, Words: 14]
 
-56.
+91.
+Category: Trivia
+Difficulty Score: 93.0/100
+Tier: Tier 4: Master
+Quote: "Vending machines kill more people worldwide each year than shark attacks do."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 64, Redundancy: 3.37x, Words: 12]
+
+92.
 Category: Trivia
 Difficulty Score: 93.7/100
 Tier: Tier 4: Master
@@ -3516,7 +4444,7 @@ Quote: "Woolly mammoths were still walking the Earth while the Great Pyramid of 
 Author: None (Omitted)
 Stats: [Unique Letters: 21, Total Letters: 77, Redundancy: 3.67x, Words: 16]
 
-57.
+93.
 Category: Trivia
 Difficulty Score: 95.0/100
 Tier: Tier 4: Master
@@ -3524,7 +4452,15 @@ Quote: "A single fluffy cumulus cloud can weigh over one million pounds."
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 53, Redundancy: 2.79x, Words: 11]
 
-58.
+94.
+Category: Trivia
+Difficulty Score: 95.0/100
+Tier: Tier 4: Master
+Quote: "The dot over the lowercase letter i and j is officially called a tittle."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 58, Redundancy: 3.41x, Words: 14]
+
+95.
 Category: Trivia
 Difficulty Score: 96.4/100
 Tier: Tier 4: Master
@@ -3532,7 +4468,15 @@ Quote: "Archaeologists have found five-thousand-year-old chewing gum made from b
 Author: None (Omitted)
 Stats: [Unique Letters: 21, Total Letters: 72, Redundancy: 3.43x, Words: 11]
 
-59.
+96.
+Category: Trivia
+Difficulty Score: 96.8/100
+Tier: Tier 4: Master
+Quote: "A pangolin's scales are made of keratin, the exact same protein found in human fingernails."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 74, Redundancy: 3.89x, Words: 15]
+
+97.
 Category: Trivia
 Difficulty Score: 97.7/100
 Tier: Tier 4: Master
@@ -3540,7 +4484,15 @@ Quote: "The immortal jellyfish can revert back to its juvenile polyp stage when 
 Author: None (Omitted)
 Stats: [Unique Letters: 23, Total Letters: 74, Redundancy: 3.22x, Words: 15]
 
-60.
+98.
+Category: Trivia
+Difficulty Score: 98.2/100
+Tier: Tier 4: Master
+Quote: "Saturn's moon Titan has liquid methane lakes and rain made of liquid natural gas."
+Author: None (Omitted)
+Stats: [Unique Letters: 17, Total Letters: 66, Redundancy: 3.88x, Words: 14]
+
+99.
 Category: Trivia
 Difficulty Score: 99.0/100
 Tier: Tier 4: Master
@@ -3548,8 +4500,16 @@ Quote: "Dolphins call each other by unique signature whistles that act just like
 Author: None (Omitted)
 Stats: [Unique Letters: 23, Total Letters: 76, Redundancy: 3.30x, Words: 14]
 
+100.
+Category: Trivia
+Difficulty Score: 99.0/100
+Tier: Tier 4: Master
+Quote: "The mantis shrimp can punch with the acceleration of a bullet, boiling the water around its claws."
+Author: None (Omitted)
+Stats: [Unique Letters: 19, Total Letters: 80, Redundancy: 4.21x, Words: 17]
+
 ================================================================================
-WORDPLAY CATEGORY (LEVELS 1 - 60)
+WORDPLAY CATEGORY (LEVELS 1 - 100)
 ================================================================================
 
 --------------------------------------------------------------------------------
@@ -3590,13 +4550,21 @@ Stats: [Unique Letters: 14, Total Letters: 36, Redundancy: 2.57x, Words: 11]
 
 5.
 Category: Wordplay
+Difficulty Score: 12.5/100
+Tier: Tier 1: Beginner
+Quote: "I told my wife she was drawing her eyebrows too high. She looked surprised."
+Author: Anonymous
+Stats: [Unique Letters: 20, Total Letters: 60, Redundancy: 3.00x, Words: 14]
+
+6.
+Category: Wordplay
 Difficulty Score: 13.6/100
 Tier: Tier 1: Beginner
 Quote: "I intend to live forever. So far, so good."
 Author: Steven Wright
 Stats: [Unique Letters: 13, Total Letters: 31, Redundancy: 2.38x, Words: 9]
 
-6.
+7.
 Category: Wordplay
 Difficulty Score: 16.7/100
 Tier: Tier 1: Beginner
@@ -3604,7 +4572,15 @@ Quote: "A bicycle cannot stand on its own because it is two-tired."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 46, Redundancy: 3.07x, Words: 11]
 
-7.
+8.
+Category: Wordplay
+Difficulty Score: 16.8/100
+Tier: Tier 1: Beginner
+Quote: "My wife told me to stop impersonating a flamingo. I had to put my foot down."
+Author: Anonymous
+Stats: [Unique Letters: 18, Total Letters: 59, Redundancy: 3.28x, Words: 16]
+
+9.
 Category: Wordplay
 Difficulty Score: 19.9/100
 Tier: Tier 1: Beginner
@@ -3612,7 +4588,15 @@ Quote: "Knowledge is knowing a tomato is a fruit; wisdom is not putting it in a 
 Author: Miles Kington
 Stats: [Unique Letters: 17, Total Letters: 66, Redundancy: 3.88x, Words: 17]
 
-8.
+10.
+Category: Wordplay
+Difficulty Score: 21.0/100
+Tier: Tier 1: Beginner
+Quote: "I am on a whiskey diet. I have lost three days already."
+Author: Tommy Cooper
+Stats: [Unique Letters: 16, Total Letters: 42, Redundancy: 2.63x, Words: 12]
+
+11.
 Category: Wordplay
 Difficulty Score: 23.0/100
 Tier: Tier 1: Beginner
@@ -3620,7 +4604,15 @@ Quote: "My wife and I were happy for twenty years; then we met."
 Author: Rodney Dangerfield
 Stats: [Unique Letters: 15, Total Letters: 42, Redundancy: 2.80x, Words: 12]
 
-9.
+12.
+Category: Wordplay
+Difficulty Score: 25.2/100
+Tier: Tier 1: Beginner
+Quote: "I asked the librarian if the library had books on paranoia. She whispered, they are right behind you."
+Author: Anonymous
+Stats: [Unique Letters: 19, Total Letters: 81, Redundancy: 4.26x, Words: 18]
+
+13.
 Category: Wordplay
 Difficulty Score: 26.1/100
 Tier: Tier 1: Beginner
@@ -3628,7 +4620,15 @@ Quote: "The tallest building in town is the library; it has thousands of stories
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 59, Redundancy: 3.47x, Words: 13]
 
-10.
+14.
+Category: Wordplay
+Difficulty Score: 29.0/100
+Tier: Tier 1: Beginner
+Quote: "I told my computer I needed a break, and now it won't stop sending me Kit-Kats."
+Author: Anonymous
+Stats: [Unique Letters: 19, Total Letters: 60, Redundancy: 3.16x, Words: 16]
+
+15.
 Category: Wordplay
 Difficulty Score: 29.3/100
 Tier: Tier 1: Beginner
@@ -3636,7 +4636,7 @@ Quote: "The future ain't what it used to be."
 Author: Yogi Berra
 Stats: [Unique Letters: 14, Total Letters: 27, Redundancy: 1.93x, Words: 8]
 
-11.
+16.
 Category: Wordplay
 Difficulty Score: 32.4/100
 Tier: Tier 1: Beginner
@@ -3644,7 +4644,15 @@ Quote: "I used to be addicted to soap, but I'm clean now."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 36, Redundancy: 2.40x, Words: 11]
 
-12.
+17.
+Category: Wordplay
+Difficulty Score: 32.8/100
+Tier: Tier 1: Beginner
+Quote: "I used to play piano by ear, but now I use my hands."
+Author: Anonymous
+Stats: [Unique Letters: 17, Total Letters: 38, Redundancy: 2.24x, Words: 13]
+
+18.
 Category: Wordplay
 Difficulty Score: 35.6/100
 Tier: Tier 1: Beginner
@@ -3652,7 +4660,15 @@ Quote: "Baseball is ninety percent mental. The other half is physical."
 Author: Yogi Berra
 Stats: [Unique Letters: 16, Total Letters: 51, Redundancy: 3.19x, Words: 10]
 
-13.
+19.
+Category: Wordplay
+Difficulty Score: 36.2/100
+Tier: Tier 1: Beginner
+Quote: "Never lie to an x-ray technician. They can see right through you."
+Author: Anonymous
+Stats: [Unique Letters: 16, Total Letters: 51, Redundancy: 3.19x, Words: 12]
+
+20.
 Category: Wordplay
 Difficulty Score: 38.7/100
 Tier: Tier 1: Beginner
@@ -3660,7 +4676,15 @@ Quote: "I was wondering why the baseball was getting bigger. Then it hit me."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 54, Redundancy: 3.38x, Words: 13]
 
-14.
+21.
+Category: Wordplay
+Difficulty Score: 39.5/100
+Tier: Tier 1: Beginner
+Quote: "I would avoid the sushi if I were you. It is a little fishy."
+Author: Anonymous
+Stats: [Unique Letters: 15, Total Letters: 45, Redundancy: 3.00x, Words: 14]
+
+22.
 Category: Wordplay
 Difficulty Score: 41.9/100
 Tier: Tier 1: Beginner
@@ -3668,7 +4692,23 @@ Quote: "A day without sunshine is like, you know, night."
 Author: Steve Martin
 Stats: [Unique Letters: 15, Total Letters: 37, Redundancy: 2.47x, Words: 9]
 
-15.
+23.
+Category: Wordplay
+Difficulty Score: 42.0/100
+Tier: Tier 1: Beginner
+Quote: "I went to buy some camouflage trousers yesterday, but I couldn't find any."
+Author: Anonymous
+Stats: [Unique Letters: 18, Total Letters: 59, Redundancy: 3.28x, Words: 13]
+
+24.
+Category: Wordplay
+Difficulty Score: 44.5/100
+Tier: Tier 1: Beginner
+Quote: "I used to be indecisive. Now I am not so sure."
+Author: Tommy Cooper
+Stats: [Unique Letters: 15, Total Letters: 34, Redundancy: 2.27x, Words: 11]
+
+25.
 Category: Wordplay
 Difficulty Score: 45.0/100
 Tier: Tier 1: Beginner
@@ -3680,7 +4720,7 @@ Stats: [Unique Letters: 15, Total Letters: 44, Redundancy: 2.93x, Words: 11]
 TIER 2: INTERMEDIATE
 --------------------------------------------------------------------------------
 
-16.
+26.
 Category: Wordplay
 Difficulty Score: 45.5/100
 Tier: Tier 2: Intermediate
@@ -3688,7 +4728,7 @@ Quote: "The rotation of Earth really makes my day."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 34, Redundancy: 2.27x, Words: 8]
 
-17.
+27.
 Category: Wordplay
 Difficulty Score: 46.9/100
 Tier: Tier 2: Intermediate
@@ -3696,7 +4736,15 @@ Quote: "Parallel lines have so much in common. It is a shame they will never mee
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 58, Redundancy: 3.41x, Words: 15]
 
-18.
+28.
+Category: Wordplay
+Difficulty Score: 47.8/100
+Tier: Tier 2: Intermediate
+Quote: "I asked my dog what is two minus two. He said nothing."
+Author: Anonymous
+Stats: [Unique Letters: 15, Total Letters: 41, Redundancy: 2.73x, Words: 12]
+
+29.
 Category: Wordplay
 Difficulty Score: 48.3/100
 Tier: Tier 2: Intermediate
@@ -3704,7 +4752,7 @@ Quote: "Right now I'm having amnesia and deja vu at the same time."
 Author: Steven Wright
 Stats: [Unique Letters: 16, Total Letters: 45, Redundancy: 2.81x, Words: 12]
 
-19.
+30.
 Category: Wordplay
 Difficulty Score: 49.7/100
 Tier: Tier 2: Intermediate
@@ -3712,7 +4760,15 @@ Quote: "I used to work in a blanket factory, but it folded."
 Author: None (Omitted)
 Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 11]
 
-20.
+31.
+Category: Wordplay
+Difficulty Score: 50.2/100
+Tier: Tier 2: Intermediate
+Quote: "I asked the gym instructor if he could teach me to do the splits. He said, how flexible are you?"
+Author: Anonymous
+Stats: [Unique Letters: 22, Total Letters: 74, Redundancy: 3.36x, Words: 20]
+
+32.
 Category: Wordplay
 Difficulty Score: 51.0/100
 Tier: Tier 2: Intermediate
@@ -3720,7 +4776,7 @@ Quote: "I spilled spot remover on my dog, and now he is gone."
 Author: Steven Wright
 Stats: [Unique Letters: 17, Total Letters: 40, Redundancy: 2.35x, Words: 12]
 
-21.
+33.
 Category: Wordplay
 Difficulty Score: 52.4/100
 Tier: Tier 2: Intermediate
@@ -3728,7 +4784,15 @@ Quote: "My math teacher called me average. How mean."
 Author: None (Omitted)
 Stats: [Unique Letters: 15, Total Letters: 35, Redundancy: 2.33x, Words: 8]
 
-22.
+34.
+Category: Wordplay
+Difficulty Score: 52.8/100
+Tier: Tier 2: Intermediate
+Quote: "My fake plants died because I did not pretend to water them."
+Author: Mitch Hedberg
+Stats: [Unique Letters: 20, Total Letters: 48, Redundancy: 2.40x, Words: 12]
+
+35.
 Category: Wordplay
 Difficulty Score: 53.8/100
 Tier: Tier 2: Intermediate
@@ -3736,7 +4800,15 @@ Quote: "I told my doctor that I broke my arm in two places. He told me to stop g
 Author: Henny Youngman
 Stats: [Unique Letters: 19, Total Letters: 71, Redundancy: 3.74x, Words: 21]
 
-23.
+36.
+Category: Wordplay
+Difficulty Score: 55.0/100
+Tier: Tier 2: Intermediate
+Quote: "I am writing a book on reverse psychology. Please do not buy it."
+Author: Anonymous
+Stats: [Unique Letters: 21, Total Letters: 50, Redundancy: 2.38x, Words: 13]
+
+37.
 Category: Wordplay
 Difficulty Score: 55.2/100
 Tier: Tier 2: Intermediate
@@ -3744,7 +4816,7 @@ Quote: "A pessimist's blood type is always B-negative."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 37, Redundancy: 2.31x, Words: 7]
 
-24.
+38.
 Category: Wordplay
 Difficulty Score: 56.6/100
 Tier: Tier 2: Intermediate
@@ -3752,15 +4824,23 @@ Quote: "We never really grow up; we only learn how to act in public."
 Author: Bryan White
 Stats: [Unique Letters: 17, Total Letters: 46, Redundancy: 2.71x, Words: 13]
 
-25.
+39.
+Category: Wordplay
+Difficulty Score: 57.2/100
+Tier: Tier 2: Intermediate
+Quote: "A bookstore is one of the only pieces of evidence we have that people are still thinking."
+Author: Jerry Seinfeld
+Stats: [Unique Letters: 20, Total Letters: 72, Redundancy: 3.60x, Words: 17]
+
+40.
 Category: Wordplay
 Difficulty Score: 58.0/100
 Tier: Tier 2: Intermediate
 Quote: "If I agreed with you, we would both be wrong."
 Author: None (Omitted)
-Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.12x, Words: 10]
+Stats: [Unique Letters: 16, Total Letters: 34, Redundancy: 2.13x, Words: 10]
 
-26.
+41.
 Category: Wordplay
 Difficulty Score: 59.4/100
 Tier: Tier 2: Intermediate
@@ -3768,7 +4848,15 @@ Quote: "I want to die peacefully in my sleep like my grandfather, not screaming 
 Author: Bob Monkhouse
 Stats: [Unique Letters: 20, Total Letters: 83, Redundancy: 4.15x, Words: 19]
 
-27.
+42.
+Category: Wordplay
+Difficulty Score: 59.4/100
+Tier: Tier 2: Intermediate
+Quote: "I have a lot of growing up to do. I realized that the other day inside my fort."
+Author: Zach Galifianakis
+Stats: [Unique Letters: 20, Total Letters: 60, Redundancy: 3.00x, Words: 18]
+
+43.
 Category: Wordplay
 Difficulty Score: 60.7/100
 Tier: Tier 2: Intermediate
@@ -3776,7 +4864,15 @@ Quote: "If at first you don't succeed, then skydiving definitely isn't for you."
 Author: Steven Wright
 Stats: [Unique Letters: 18, Total Letters: 56, Redundancy: 3.11x, Words: 12]
 
-28.
+44.
+Category: Wordplay
+Difficulty Score: 61.5/100
+Tier: Tier 2: Intermediate
+Quote: "Common sense is like deodorant. The people who need it most never use it."
+Author: Anonymous
+Stats: [Unique Letters: 18, Total Letters: 58, Redundancy: 3.22x, Words: 14]
+
+45.
 Category: Wordplay
 Difficulty Score: 62.1/100
 Tier: Tier 2: Intermediate
@@ -3784,7 +4880,15 @@ Quote: "The early bird gets the worm, but the second mouse gets the cheese."
 Author: Steven Wright
 Stats: [Unique Letters: 18, Total Letters: 53, Redundancy: 2.94x, Words: 13]
 
-29.
+46.
+Category: Wordplay
+Difficulty Score: 63.0/100
+Tier: Tier 2: Intermediate
+Quote: "Light travels faster than sound. That is why some people appear bright until you hear them speak."
+Author: Alan Dundes
+Stats: [Unique Letters: 21, Total Letters: 79, Redundancy: 3.76x, Words: 17]
+
+47.
 Category: Wordplay
 Difficulty Score: 63.5/100
 Tier: Tier 2: Intermediate
@@ -3792,7 +4896,15 @@ Quote: "I find television very educating. Every time someone turns it on, I go a
 Author: Groucho Marx
 Stats: [Unique Letters: 19, Total Letters: 68, Redundancy: 3.58x, Words: 17]
 
-30.
+48.
+Category: Wordplay
+Difficulty Score: 64.2/100
+Tier: Tier 2: Intermediate
+Quote: "If you think nobody cares if you are alive, try missing a couple of car payments."
+Author: Flip Wilson
+Stats: [Unique Letters: 21, Total Letters: 64, Redundancy: 3.05x, Words: 16]
+
+49.
 Category: Wordplay
 Difficulty Score: 64.9/100
 Tier: Tier 2: Intermediate
@@ -3800,11 +4912,19 @@ Quote: "I can resist everything except temptation."
 Author: Oscar Wilde
 Stats: [Unique Letters: 16, Total Letters: 36, Redundancy: 2.25x, Words: 6]
 
+50.
+Category: Wordplay
+Difficulty Score: 64.9/100
+Tier: Tier 2: Intermediate
+Quote: "I am on a thirty-day diet. So far I have lost fifteen days."
+Author: Anonymous
+Stats: [Unique Letters: 15, Total Letters: 44, Redundancy: 2.93x, Words: 13]
+
 --------------------------------------------------------------------------------
 TIER 3: ADVANCED
 --------------------------------------------------------------------------------
 
-31.
+51.
 Category: Wordplay
 Difficulty Score: 65.5/100
 Tier: Tier 3: Advanced
@@ -3812,7 +4932,15 @@ Quote: "It's deja vu all over again."
 Author: Yogi Berra
 Stats: [Unique Letters: 14, Total Letters: 21, Redundancy: 1.50x, Words: 6]
 
-32.
+52.
+Category: Wordplay
+Difficulty Score: 66.4/100
+Tier: Tier 3: Advanced
+Quote: "I refuse to join any club that would have me as a member."
+Author: Groucho Marx
+Stats: [Unique Letters: 20, Total Letters: 44, Redundancy: 2.20x, Words: 13]
+
+53.
 Category: Wordplay
 Difficulty Score: 66.5/100
 Tier: Tier 3: Advanced
@@ -3820,7 +4948,7 @@ Quote: "A clear conscience is usually the sign of a bad memory."
 Author: Steven Wright
 Stats: [Unique Letters: 18, Total Letters: 44, Redundancy: 2.44x, Words: 11]
 
-33.
+54.
 Category: Wordplay
 Difficulty Score: 67.6/100
 Tier: Tier 3: Advanced
@@ -3828,7 +4956,15 @@ Quote: "I told my suitcase there will be no vacation this year. Now I'm dealing 
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 76, Redundancy: 4.00x, Words: 17]
 
-34.
+55.
+Category: Wordplay
+Difficulty Score: 68.5/100
+Tier: Tier 3: Advanced
+Quote: "The difference between stupidity and genius is that genius has its limits."
+Author: Albert Einstein
+Stats: [Unique Letters: 19, Total Letters: 62, Redundancy: 3.26x, Words: 12]
+
+56.
 Category: Wordplay
 Difficulty Score: 68.6/100
 Tier: Tier 3: Advanced
@@ -3836,7 +4972,7 @@ Quote: "There are two types of people: those who can extrapolate from incomplete
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 64, Redundancy: 3.56x, Words: 13]
 
-35.
+57.
 Category: Wordplay
 Difficulty Score: 69.6/100
 Tier: Tier 3: Advanced
@@ -3844,7 +4980,15 @@ Quote: "I wanted to buy a candle holder, but the store didn't have one, so I got
 Author: Mitch Hedberg
 Stats: [Unique Letters: 19, Total Letters: 59, Redundancy: 3.11x, Words: 18]
 
-36.
+58.
+Category: Wordplay
+Difficulty Score: 70.4/100
+Tier: Tier 3: Advanced
+Quote: "Experience is something you don't get until just after you need it."
+Author: Steven Wright
+Stats: [Unique Letters: 20, Total Letters: 54, Redundancy: 2.70x, Words: 12]
+
+59.
 Category: Wordplay
 Difficulty Score: 70.6/100
 Tier: Tier 3: Advanced
@@ -3852,7 +4996,7 @@ Quote: "I used to think I was indecisive, but now I am not quite sure."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 47, Redundancy: 2.61x, Words: 14]
 
-37.
+60.
 Category: Wordplay
 Difficulty Score: 71.7/100
 Tier: Tier 3: Advanced
@@ -3860,7 +5004,15 @@ Quote: "I asked my dog what's on top of the house. He said roof."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 41, Redundancy: 2.28x, Words: 13]
 
-38.
+61.
+Category: Wordplay
+Difficulty Score: 72.5/100
+Tier: Tier 3: Advanced
+Quote: "I am so clever that sometimes I don't understand a single word of what I am saying."
+Author: Oscar Wilde
+Stats: [Unique Letters: 19, Total Letters: 65, Redundancy: 3.42x, Words: 17]
+
+62.
 Category: Wordplay
 Difficulty Score: 72.7/100
 Tier: Tier 3: Advanced
@@ -3868,7 +5020,7 @@ Quote: "Some cause happiness wherever they go; others whenever they go."
 Author: Oscar Wilde
 Stats: [Unique Letters: 17, Total Letters: 52, Redundancy: 3.06x, Words: 10]
 
-39.
+63.
 Category: Wordplay
 Difficulty Score: 73.7/100
 Tier: Tier 3: Advanced
@@ -3876,7 +5028,15 @@ Quote: "Behind every great man is a woman rolling her eyes."
 Author: Jim Carrey
 Stats: [Unique Letters: 17, Total Letters: 41, Redundancy: 2.41x, Words: 10]
 
-40.
+64.
+Category: Wordplay
+Difficulty Score: 74.2/100
+Tier: Tier 3: Advanced
+Quote: "If two wrongs don't make a right, try three."
+Author: Laurence J. Peter
+Stats: [Unique Letters: 16, Total Letters: 33, Redundancy: 2.06x, Words: 9]
+
+65.
 Category: Wordplay
 Difficulty Score: 74.8/100
 Tier: Tier 3: Advanced
@@ -3884,7 +5044,7 @@ Quote: "Artificial intelligence is no match for natural stupidity."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 50, Redundancy: 2.78x, Words: 8]
 
-41.
+66.
 Category: Wordplay
 Difficulty Score: 75.8/100
 Tier: Tier 3: Advanced
@@ -3892,7 +5052,15 @@ Quote: "A conscience is what hurts when all your other parts feel so good."
 Author: None (Omitted)
 Stats: [Unique Letters: 18, Total Letters: 53, Redundancy: 2.94x, Words: 13]
 
-42.
+67.
+Category: Wordplay
+Difficulty Score: 76.0/100
+Tier: Tier 3: Advanced
+Quote: "My doctor told me that jogging could add years to my life. I think he was right. I feel ten years older already."
+Author: Milton Berle
+Stats: [Unique Letters: 20, Total Letters: 87, Redundancy: 4.35x, Words: 23]
+
+68.
 Category: Wordplay
 Difficulty Score: 76.8/100
 Tier: Tier 3: Advanced
@@ -3900,7 +5068,15 @@ Quote: "Never trust an atom; they make up everything."
 Author: None (Omitted)
 Stats: [Unique Letters: 16, Total Letters: 36, Redundancy: 2.25x, Words: 8]
 
-43.
+69.
+Category: Wordplay
+Difficulty Score: 77.5/100
+Tier: Tier 3: Advanced
+Quote: "I am an early bird and a night owl. So I am wise and I have worms."
+Author: Michael Scott
+Stats: [Unique Letters: 17, Total Letters: 48, Redundancy: 2.82x, Words: 17]
+
+70.
 Category: Wordplay
 Difficulty Score: 77.8/100
 Tier: Tier 3: Advanced
@@ -3908,7 +5084,15 @@ Quote: "I refused to believe my dad was stealing from his road work job, but whe
 Author: None (Omitted)
 Stats: [Unique Letters: 21, Total Letters: 86, Redundancy: 4.10x, Words: 23]
 
-44.
+71.
+Category: Wordplay
+Difficulty Score: 78.8/100
+Tier: Tier 3: Advanced
+Quote: "Doing nothing is very hard to do. You never know when you're finished."
+Author: Leslie Nielsen
+Stats: [Unique Letters: 17, Total Letters: 55, Redundancy: 3.24x, Words: 13]
+
+72.
 Category: Wordplay
 Difficulty Score: 78.9/100
 Tier: Tier 3: Advanced
@@ -3916,7 +5100,15 @@ Quote: "Nobody goes there anymore because it's too crowded."
 Author: Yogi Berra
 Stats: [Unique Letters: 17, Total Letters: 42, Redundancy: 2.47x, Words: 8]
 
-45.
+73.
+Category: Wordplay
+Difficulty Score: 79.4/100
+Tier: Tier 3: Advanced
+Quote: "I don't suffer from insanity; I enjoy every minute of it."
+Author: Anonymous
+Stats: [Unique Letters: 15, Total Letters: 44, Redundancy: 2.93x, Words: 11]
+
+74.
 Category: Wordplay
 Difficulty Score: 79.9/100
 Tier: Tier 3: Advanced
@@ -3924,11 +5116,19 @@ Quote: "I bought a ceiling fan the other day. Complete waste of money; he just s
 Author: None (Omitted)
 Stats: [Unique Letters: 21, Total Letters: 76, Redundancy: 3.62x, Words: 17]
 
+75.
+Category: Wordplay
+Difficulty Score: 79.9/100
+Tier: Tier 3: Advanced
+Quote: "There are three kinds of people in the world: those who can count, and those who can't."
+Author: Anonymous
+Stats: [Unique Letters: 17, Total Letters: 67, Redundancy: 3.94x, Words: 17]
+
 --------------------------------------------------------------------------------
 TIER 4: MASTER
 --------------------------------------------------------------------------------
 
-46.
+76.
 Category: Wordplay
 Difficulty Score: 80.5/100
 Tier: Tier 4: Master
@@ -3936,7 +5136,7 @@ Quote: "I'm reading a book on anti-gravity. It's impossible to put down!"
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 49, Redundancy: 2.58x, Words: 11]
 
-47.
+77.
 Category: Wordplay
 Difficulty Score: 81.8/100
 Tier: Tier 4: Master
@@ -3944,7 +5144,15 @@ Quote: "Always borrow money from a pessimist. He won't expect it back."
 Author: Oscar Wilde
 Stats: [Unique Letters: 19, Total Letters: 49, Redundancy: 2.58x, Words: 11]
 
-48.
+78.
+Category: Wordplay
+Difficulty Score: 82.5/100
+Tier: Tier 4: Master
+Quote: "The trouble with having an open mind, of course, is that people will insist on coming along and putting things in it."
+Author: Terry Pratchett
+Stats: [Unique Letters: 20, Total Letters: 93, Redundancy: 4.65x, Words: 22]
+
+79.
 Category: Wordplay
 Difficulty Score: 83.1/100
 Tier: Tier 4: Master
@@ -3952,7 +5160,7 @@ Quote: "I don't care to belong to any club that will have me as a member."
 Author: Groucho Marx
 Stats: [Unique Letters: 19, Total Letters: 49, Redundancy: 2.58x, Words: 15]
 
-49.
+80.
 Category: Wordplay
 Difficulty Score: 84.5/100
 Tier: Tier 4: Master
@@ -3960,7 +5168,15 @@ Quote: "My doctor gave me six months to live, but when I couldn't pay the bill h
 Author: Walter Matthau
 Stats: [Unique Letters: 21, Total Letters: 75, Redundancy: 3.57x, Words: 21]
 
-50.
+81.
+Category: Wordplay
+Difficulty Score: 84.8/100
+Tier: Tier 4: Master
+Quote: "A day without laughter is a day wasted."
+Author: Charlie Chaplin
+Stats: [Unique Letters: 14, Total Letters: 31, Redundancy: 2.21x, Words: 8]
+
+82.
 Category: Wordplay
 Difficulty Score: 85.8/100
 Tier: Tier 4: Master
@@ -3968,7 +5184,15 @@ Quote: "Those are my principles. If you don't like them, I have others."
 Author: Groucho Marx
 Stats: [Unique Letters: 19, Total Letters: 48, Redundancy: 2.53x, Words: 12]
 
-51.
+83.
+Category: Wordplay
+Difficulty Score: 87.0/100
+Tier: Tier 4: Master
+Quote: "I drank some food coloring the other day. The doctor said I'm fine, but I feel like I've dyed a little inside."
+Author: Anonymous
+Stats: [Unique Letters: 20, Total Letters: 84, Redundancy: 4.20x, Words: 22]
+
+84.
 Category: Wordplay
 Difficulty Score: 87.1/100
 Tier: Tier 4: Master
@@ -3976,7 +5200,7 @@ Quote: "You can observe a lot just by watching."
 Author: Yogi Berra
 Stats: [Unique Letters: 18, Total Letters: 31, Redundancy: 1.72x, Words: 8]
 
-52.
+85.
 Category: Wordplay
 Difficulty Score: 88.4/100
 Tier: Tier 4: Master
@@ -3984,7 +5208,15 @@ Quote: "Change is inevitable, except from a vending machine."
 Author: None (Omitted)
 Stats: [Unique Letters: 19, Total Letters: 43, Redundancy: 2.26x, Words: 8]
 
-53.
+86.
+Category: Wordplay
+Difficulty Score: 89.5/100
+Tier: Tier 4: Master
+Quote: "I have noticed that even people who claim everything is predestined still look before they cross the street."
+Author: Stephen Hawking
+Stats: [Unique Letters: 21, Total Letters: 90, Redundancy: 4.29x, Words: 18]
+
+87.
 Category: Wordplay
 Difficulty Score: 89.8/100
 Tier: Tier 4: Master
@@ -3992,7 +5224,7 @@ Quote: "A bank is a place that will lend you money if you can prove that you don
 Author: Bob Hope
 Stats: [Unique Letters: 21, Total Letters: 63, Redundancy: 3.00x, Words: 19]
 
-54.
+88.
 Category: Wordplay
 Difficulty Score: 91.1/100
 Tier: Tier 4: Master
@@ -4000,7 +5232,15 @@ Quote: "If you don't know where you are going, you might wind up someplace else.
 Author: Yogi Berra
 Stats: [Unique Letters: 20, Total Letters: 56, Redundancy: 2.80x, Words: 14]
 
-55.
+89.
+Category: Wordplay
+Difficulty Score: 92.0/100
+Tier: Tier 4: Master
+Quote: "If you want to know what God thinks of money, just look at the people he gave it to."
+Author: Dorothy Parker
+Stats: [Unique Letters: 20, Total Letters: 64, Redundancy: 3.20x, Words: 19]
+
+90.
 Category: Wordplay
 Difficulty Score: 92.4/100
 Tier: Tier 4: Master
@@ -4008,7 +5248,7 @@ Quote: "If you think nobody cares if you are alive, try missing a couple of paym
 Author: Flip Wilson
 Stats: [Unique Letters: 21, Total Letters: 61, Redundancy: 2.90x, Words: 15]
 
-56.
+91.
 Category: Wordplay
 Difficulty Score: 93.7/100
 Tier: Tier 4: Master
@@ -4016,7 +5256,15 @@ Quote: "Everywhere is walking distance if you have the time."
 Author: Steven Wright
 Stats: [Unique Letters: 20, Total Letters: 43, Redundancy: 2.15x, Words: 9]
 
-57.
+92.
+Category: Wordplay
+Difficulty Score: 94.0/100
+Tier: Tier 4: Master
+Quote: "The best way to appreciate your job is to imagine yourself without one."
+Author: Oscar Wilde
+Stats: [Unique Letters: 20, Total Letters: 58, Redundancy: 2.90x, Words: 13]
+
+93.
 Category: Wordplay
 Difficulty Score: 95.0/100
 Tier: Tier 4: Master
@@ -4024,7 +5272,15 @@ Quote: "I never forget a face, but in your case I'll be glad to make an exceptio
 Author: Groucho Marx
 Stats: [Unique Letters: 21, Total Letters: 56, Redundancy: 2.67x, Words: 16]
 
-58.
+94.
+Category: Wordplay
+Difficulty Score: 95.8/100
+Tier: Tier 4: Master
+Quote: "I would never die for my beliefs because I might be wrong."
+Author: Bertrand Russell
+Stats: [Unique Letters: 20, Total Letters: 46, Redundancy: 2.30x, Words: 12]
+
+95.
 Category: Wordplay
 Difficulty Score: 96.4/100
 Tier: Tier 4: Master
@@ -4032,7 +5288,15 @@ Quote: "I am free of all prejudices. I hate everyone equally."
 Author: W.C. Fields
 Stats: [Unique Letters: 20, Total Letters: 42, Redundancy: 2.10x, Words: 10]
 
-59.
+96.
+Category: Wordplay
+Difficulty Score: 97.2/100
+Tier: Tier 4: Master
+Quote: "The four most beautiful words in our common language: I told you so."
+Author: Gore Vidal
+Stats: [Unique Letters: 19, Total Letters: 54, Redundancy: 2.84x, Words: 13]
+
+97.
 Category: Wordplay
 Difficulty Score: 97.7/100
 Tier: Tier 4: Master
@@ -4040,7 +5304,15 @@ Quote: "I haven't slept for ten days, because that would be too long."
 Author: Mitch Hedberg
 Stats: [Unique Letters: 20, Total Letters: 47, Redundancy: 2.35x, Words: 12]
 
-60.
+98.
+Category: Wordplay
+Difficulty Score: 98.5/100
+Tier: Tier 4: Master
+Quote: "You can't have everything. Where would you put it?"
+Author: Steven Wright
+Stats: [Unique Letters: 17, Total Letters: 39, Redundancy: 2.29x, Words: 9]
+
+99.
 Category: Wordplay
 Difficulty Score: 99.0/100
 Tier: Tier 4: Master
@@ -4048,8 +5320,16 @@ Quote: "I have an inferiority complex, but it's not a very good one."
 Author: None (Omitted)
 Stats: [Unique Letters: 21, Total Letters: 46, Redundancy: 2.19x, Words: 12]
 
+100.
+Category: Wordplay
+Difficulty Score: 99.0/100
+Tier: Tier 4: Master
+Quote: "I'm not afraid of death; I just don't want to be there when it happens."
+Author: Woody Allen
+Stats: [Unique Letters: 17, Total Letters: 53, Redundancy: 3.12x, Words: 15]
+
 --------------------------------------------------------------------------------
-COMPACT SUMMARY (ALL 540 PUZZLES ACROSS CATEGORIES)
+COMPACT SUMMARY (ALL 700 PUZZLES ACROSS CATEGORIES)
 --------------------------------------------------------------------------------
 [1.0] [Quotes #1]: "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that." - Martin Luther King Jr.
 [10.6] [Quotes #2]: "Ask not what your country can do for you; ask what you can do for your country." - John F. Kennedy
@@ -4253,124 +5533,204 @@ COMPACT SUMMARY (ALL 540 PUZZLES ACROSS CATEGORIES)
 [99.0] [Quotes #200]: "Life is what happens when you're busy making other plans." - John Lennon
 [1.0] [Proverbs #1]: "Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime."
 [2.3] [Proverbs #2]: "A friend in need is a friend indeed."
-[17.0] [Proverbs #3]: "Where there is a will, there is a way."
-[22.6] [Proverbs #4]: "When the going gets tough, the tough get going."
-[24.4] [Proverbs #5]: "A penny saved is a penny earned."
-[25.1] [Proverbs #6]: "Do unto others as you would have them do unto you."
-[27.5] [Proverbs #7]: "Slow and steady wins the race."
-[28.0] [Proverbs #8]: "Blood is thicker than water."
-[30.2] [Proverbs #9]: "Better late than never."
-[31.8] [Proverbs #10]: "Two wrongs do not make a right."
-[34.0] [Proverbs #11]: "Two heads are better than one."
-[36.5] [Proverbs #12]: "If the shoe fits, wear it."
-[38.2] [Proverbs #13]: "Birds of a feather flock together."
-[40.5] [Proverbs #14]: "All good things must come to an end."
-[43.8] [Proverbs #15]: "Practice makes perfect."
-[46.2] [Proverbs #16]: "A picture is worth a thousand words."
-[47.5] [Proverbs #17]: "Look before you leap."
-[48.9] [Proverbs #18]: "No pain, no gain."
-[50.1] [Proverbs #19]: "Better safe than sorry."
-[51.4] [Proverbs #20]: "All that glitters is not gold."
-[53.0] [Proverbs #21]: "When in Rome, do as the Romans do."
-[54.2] [Proverbs #22]: "A stitch in time saves nine."
-[55.6] [Proverbs #23]: "Every cloud has a silver lining."
-[57.0] [Proverbs #24]: "Strike while the iron is hot."
-[58.5] [Proverbs #25]: "Rome was not built in a day."
-[59.8] [Proverbs #26]: "The early bird catches the worm."
-[61.2] [Proverbs #27]: "Do not judge a book by its cover."
-[62.5] [Proverbs #28]: "Honesty is the best policy."
-[63.8] [Proverbs #29]: "Barking dogs seldom bite."
-[64.9] [Proverbs #30]: "Time heals all wounds."
-[66.2] [Proverbs #31]: "A bird in the hand is worth two in the bush."
-[67.5] [Proverbs #32]: "Do not count your chickens before they hatch."
-[68.8] [Proverbs #33]: "Do not cry over spilled milk."
-[70.0] [Proverbs #34]: "Do not put all your eggs in one basket."
-[71.4] [Proverbs #35]: "Cleanliness is next to godliness."
-[72.8] [Proverbs #36]: "Curiosity killed the cat."
-[73.9] [Proverbs #37]: "Do not bite the hand that feeds you."
-[75.0] [Proverbs #38]: "Every dog has its day."
-[76.1] [Proverbs #39]: "Good things come to those who wait."
-[77.0] [Proverbs #40]: "Haste makes waste."
-[78.0] [Proverbs #41]: "Hope for the best, prepare for the worst."
-[78.8] [Proverbs #42]: "It takes a village to raise a child."
-[79.2] [Proverbs #43]: "Laughter is the best medicine."
-[79.6] [Proverbs #44]: "Make hay while the sun shines."
-[80.0] [Proverbs #45]: "Necessity is the mother of invention."
-[81.5] [Proverbs #46]: "Out of sight, out of mind."
-[82.8] [Proverbs #47]: "Patience is a virtue."
-[84.0] [Proverbs #48]: "Silence is golden."
-[85.2] [Proverbs #49]: "The grass is always greener on the other side."
-[86.5] [Proverbs #50]: "The pen is mightier than the sword."
-[88.0] [Proverbs #51]: "There is no place like home."
-[89.4] [Proverbs #52]: "Too many cooks spoil the broth."
-[91.0] [Proverbs #53]: "You cannot teach an old dog new tricks."
-[92.5] [Proverbs #54]: "You reap what you sow."
-[94.0] [Proverbs #55]: "Beauty is in the eye of the beholder."
-[95.2] [Proverbs #56]: "Fall seven times, stand up eight."
-[96.5] [Proverbs #57]: "A watched pot never boils."
-[97.8] [Proverbs #58]: "Actions speak louder than words."
-[98.6] [Proverbs #59]: "Many hands make light work."
-[99.0] [Proverbs #60]: "Absence makes the heart grow fonder."
+[12.0] [Proverbs #3]: "Easy come, easy go."
+[16.5] [Proverbs #4]: "Knowledge is power."
+[17.0] [Proverbs #5]: "Where there is a will, there is a way."
+[20.2] [Proverbs #6]: "Great minds think alike."
+[22.6] [Proverbs #7]: "When the going gets tough, the tough get going."
+[24.4] [Proverbs #8]: "A penny saved is a penny earned."
+[24.8] [Proverbs #9]: "Where there is smoke, there is fire."
+[25.1] [Proverbs #10]: "Do unto others as you would have them do unto you."
+[27.5] [Proverbs #11]: "Slow and steady wins the race."
+[28.0] [Proverbs #12]: "Blood is thicker than water."
+[28.0] [Proverbs #13]: "Opposites attract."
+[30.2] [Proverbs #14]: "Better late than never."
+[31.5] [Proverbs #15]: "The best things in life are free."
+[31.8] [Proverbs #16]: "Two wrongs do not make a right."
+[34.0] [Proverbs #17]: "Two heads are better than one."
+[35.0] [Proverbs #18]: "A chain is only as strong as its weakest link."
+[36.5] [Proverbs #19]: "If the shoe fits, wear it."
+[38.2] [Proverbs #20]: "Birds of a feather flock together."
+[38.2] [Proverbs #21]: "Money does not grow on trees."
+[40.5] [Proverbs #22]: "All good things must come to an end."
+[41.0] [Proverbs #23]: "Let sleeping dogs lie."
+[43.5] [Proverbs #24]: "A bad workman always blames his tools."
+[43.8] [Proverbs #25]: "Practice makes perfect."
+[46.2] [Proverbs #26]: "A picture is worth a thousand words."
+[47.2] [Proverbs #27]: "Still waters run deep."
+[47.5] [Proverbs #28]: "Look before you leap."
+[48.9] [Proverbs #29]: "No pain, no gain."
+[49.8] [Proverbs #30]: "A rolling stone gathers no moss."
+[50.1] [Proverbs #31]: "Better safe than sorry."
+[51.4] [Proverbs #32]: "All that glitters is not gold."
+[52.4] [Proverbs #33]: "Familiarity breeds contempt."
+[53.0] [Proverbs #34]: "When in Rome, do as the Romans do."
+[54.2] [Proverbs #35]: "A stitch in time saves nine."
+[54.6] [Proverbs #36]: "Misery loves company."
+[55.6] [Proverbs #37]: "Every cloud has a silver lining."
+[56.8] [Proverbs #38]: "No man is an island."
+[57.0] [Proverbs #39]: "Strike while the iron is hot."
+[58.5] [Proverbs #40]: "Rome was not built in a day."
+[58.5] [Proverbs #41]: "Leave no stone unturned."
+[59.8] [Proverbs #42]: "The early bird catches the worm."
+[60.2] [Proverbs #43]: "Beggars cannot be choosers."
+[61.2] [Proverbs #44]: "Do not judge a book by its cover."
+[61.9] [Proverbs #45]: "Every rose has its thorn."
+[62.5] [Proverbs #46]: "Honesty is the best policy."
+[63.4] [Proverbs #47]: "The apple does not fall far from the tree."
+[63.8] [Proverbs #48]: "Barking dogs seldom bite."
+[64.8] [Proverbs #49]: "You cannot have your cake and eat it too."
+[64.9] [Proverbs #50]: "Time heals all wounds."
+[66.0] [Proverbs #51]: "You can lead a horse to water, but you cannot make him drink."
+[66.2] [Proverbs #52]: "A bird in the hand is worth two in the bush."
+[67.5] [Proverbs #53]: "Do not count your chickens before they hatch."
+[67.8] [Proverbs #54]: "A fool and his money are soon parted."
+[68.8] [Proverbs #55]: "Do not cry over spilled milk."
+[69.5] [Proverbs #56]: "Fools rush in where angels fear to tread."
+[70.0] [Proverbs #57]: "Do not put all your eggs in one basket."
+[71.2] [Proverbs #58]: "Discretion is the greater part of valor."
+[71.4] [Proverbs #59]: "Cleanliness is next to godliness."
+[72.8] [Proverbs #60]: "Curiosity killed the cat."
+[72.9] [Proverbs #61]: "An ounce of prevention is worth a pound of cure."
+[73.9] [Proverbs #62]: "Do not bite the hand that feeds you."
+[74.5] [Proverbs #63]: "In the kingdom of the blind, the one-eyed man is king."
+[75.0] [Proverbs #64]: "Every dog has its day."
+[76.1] [Proverbs #65]: "Good things come to those who wait."
+[76.1] [Proverbs #66]: "The squeaky wheel gets the grease."
+[77.0] [Proverbs #67]: "Haste makes waste."
+[77.4] [Proverbs #68]: "Pride comes before a fall."
+[78.0] [Proverbs #69]: "Hope for the best, prepare for the worst."
+[78.6] [Proverbs #70]: "One man's trash is another man's treasure."
+[78.8] [Proverbs #71]: "It takes a village to raise a child."
+[79.2] [Proverbs #72]: "Laughter is the best medicine."
+[79.6] [Proverbs #73]: "Make hay while the sun shines."
+[79.8] [Proverbs #74]: "He who hesitates is lost."
+[80.0] [Proverbs #75]: "Necessity is the mother of invention."
+[81.5] [Proverbs #76]: "Out of sight, out of mind."
+[81.5] [Proverbs #77]: "An apple a day keeps the doctor away."
+[82.8] [Proverbs #78]: "Patience is a virtue."
+[83.2] [Proverbs #79]: "Empty vessels make the most sound."
+[84.0] [Proverbs #80]: "Silence is golden."
+[85.0] [Proverbs #81]: "Cowards die many times before their deaths."
+[85.2] [Proverbs #82]: "The grass is always greener on the other side."
+[86.5] [Proverbs #83]: "The pen is mightier than the sword."
+[87.4] [Proverbs #84]: "Adversity and loss make a man wise."
+[88.0] [Proverbs #85]: "There is no place like home."
+[89.2] [Proverbs #86]: "Cast not pearls before swine."
+[89.4] [Proverbs #87]: "Too many cooks spoil the broth."
+[91.0] [Proverbs #88]: "You cannot teach an old dog new tricks."
+[91.5] [Proverbs #89]: "Patience is a bitter plant, but its fruit is sweet."
+[92.5] [Proverbs #90]: "You reap what you sow."
+[93.4] [Proverbs #91]: "A drowning man will clutch at a straw."
+[94.0] [Proverbs #92]: "Beauty is in the eye of the beholder."
+[95.2] [Proverbs #93]: "Fall seven times, stand up eight."
+[95.2] [Proverbs #94]: "Do not put the cart before the horse."
+[96.5] [Proverbs #95]: "A watched pot never boils."
+[97.0] [Proverbs #96]: "The road to hell is paved with good intentions."
+[97.8] [Proverbs #97]: "Actions speak louder than words."
+[98.6] [Proverbs #98]: "Many hands make light work."
+[98.8] [Proverbs #99]: "A calm sea does not make a skilled navigator."
+[99.0] [Proverbs #100]: "Absence makes the heart grow fonder."
 [1.0] [Riddles #1]: "I turn once, what is out will not get in. I turn again, what is in will not get out. What am I? A key."
 [10.3] [Riddles #2]: "It cannot be seen, cannot be felt, cannot be heard, cannot be smelt. It lies behind stars and under hills. What is it? Darkness."
-[17.3] [Riddles #3]: "If you have me, you want to share me; if you share me, you do not have me. What am I? A secret."
-[25.0] [Riddles #4]: "The person who makes it has no need of it; the person who buys it has no use for it. What is it? A coffin."
-[31.1] [Riddles #5]: "I am tall when I am young, and I am short when I am old. What am I? A candle."
-[33.5] [Riddles #6]: "Thirty white horses on a red hill; first they champ, then they stamp, then they stand still. What are they? Teeth."
-[38.8] [Riddles #7]: "What goes on four legs in the morning, two legs at noon, and three legs in the evening? Man."
-[39.0] [Riddles #8]: "I shave every day, but my beard stays the same. What am I? A barber."
-[39.3] [Riddles #9]: "I have many teeth, but I cannot bite. What am I? A comb."
-[39.6] [Riddles #10]: "Feed me and I live, yet give me a drink and I die. What am I? Fire."
-[41.4] [Riddles #11]: "What has a head and a foot but no body? A bed."
-[43.1] [Riddles #12]: "I follow you all day, but when the sun goes down I am gone. What am I? A shadow."
-[43.3] [Riddles #13]: "What kind of room has no doors or windows? A mushroom."
-[44.7] [Riddles #14]: "What has a tongue but cannot taste? A shoe."
-[45.0] [Riddles #15]: "What flies when it is born, lies when it is alive, and runs when it is dead? A snowflake."
-[45.5] [Riddles #16]: "I have cities, but no houses; forests, but no trees; and water, but no fish. What am I? A map."
-[53.0] [Riddles #17]: "What has a bark but no bite? A tree."
-[53.1] [Riddles #18]: "What begins with T, finishes with T, and has T in it? A teapot."
-[53.5] [Riddles #19]: "What has an eye but cannot see? A needle."
-[53.9] [Riddles #20]: "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I? An echo."
-[53.9] [Riddles #21]: "There is a house. One enters it blind and comes out seeing. What is it? A school."
-[54.9] [Riddles #22]: "I am an odd number. Take away a letter and I become even. What number am I? Seven."
-[58.7] [Riddles #23]: "If you drop me I am sure to crack, but give me a smile and I will always smile back. What am I? A mirror."
-[59.0] [Riddles #24]: "I belong to you, but others use me more than you do. What am I? Your name."
-[59.8] [Riddles #25]: "What runs but never walks, has a mouth but never talks? A river."
-[59.9] [Riddles #26]: "The more you take away, the larger I become. What am I? A hole."
-[61.8] [Riddles #27]: "What comes once in a minute, twice in a moment, but never in a thousand years? The letter M."
-[62.4] [Riddles #28]: "What has a neck but no head? A bottle."
-[63.4] [Riddles #29]: "What has a head and a tail but no body? A coin."
-[64.9] [Riddles #30]: "Poor people have it. Rich people need it. If you eat it, you die. What is it? Nothing."
-[65.5] [Riddles #31]: "What can you catch, but never throw? A cold."
-[65.5] [Riddles #32]: "What has to be broken before you can use it? An egg."
-[66.3] [Riddles #33]: "What can be swallowed, but can also swallow you? Pride."
-[68.2] [Riddles #34]: "What loses its head in the morning and gets it back at night? A pillow."
-[68.4] [Riddles #35]: "What has a spine, but no bones? An encyclopedia."
-[69.0] [Riddles #36]: "What can you break, even if you never pick it up or touch it? A promise."
-[70.1] [Riddles #37]: "What has thirteen hearts, but no other organs? A deck of cards."
-[70.6] [Riddles #38]: "What has a ring but no finger? A telephone."
-[72.0] [Riddles #39]: "What begins with P, ends with E, and has thousands of letters? The post office."
-[72.1] [Riddles #40]: "What is full of holes but still holds water? A sponge."
-[72.4] [Riddles #41]: "What begins with an E but only has one letter? An envelope."
-[73.5] [Riddles #42]: "What flies without wings and cries without eyes? A cloud."
-[73.8] [Riddles #43]: "I am light as a feather, yet the strongest person cannot hold me for five minutes. What am I? Breath."
-[79.5] [Riddles #44]: "The more you take, the more you leave behind. What am I? Footsteps."
-[79.9] [Riddles #45]: "What has a thumb and four fingers but is not alive? A glove."
-[80.5] [Riddles #46]: "What five-letter word becomes shorter when you add two letters to it? Short."
-[80.7] [Riddles #47]: "What gets sharper the more you use it? Your brain."
-[81.3] [Riddles #48]: "What has many keys but cannot open a single lock? A piano."
-[81.7] [Riddles #49]: "What disappears the moment you say its name? Silence."
-[82.6] [Riddles #50]: "What has many needles, but cannot sew? A pine tree."
-[84.5] [Riddles #51]: "What goes up and down without moving? A staircase."
-[84.5] [Riddles #52]: "What can travel around the world while staying in a corner? A stamp."
-[84.6] [Riddles #53]: "What has one horn and gives milk? A milk truck."
-[84.7] [Riddles #54]: "What building has the most stories? The library."
-[86.6] [Riddles #55]: "What can fill a room but takes up no space? Light."
-[87.3] [Riddles #56]: "What can run around the whole yard without moving? A fence."
-[88.2] [Riddles #57]: "What has four wheels and flies? A garbage truck."
-[92.9] [Riddles #58]: "What goes through cities and over fields, but never moves? A road."
-[95.4] [Riddles #59]: "What goes up but never comes down? Your age."
-[99.0] [Riddles #60]: "What kind of band never plays music? A rubber band."
+[11.5] [Riddles #3]: "What gets wetter the more it dries? A towel."
+[15.8] [Riddles #4]: "What invention lets you look right through a wall? A window."
+[17.3] [Riddles #5]: "If you have me, you want to share me; if you share me, you do not have me. What am I? A secret."
+[19.4] [Riddles #6]: "What has hands and a face, but cannot hold anything or smile? A clock."
+[23.6] [Riddles #7]: "What goes up as soon as rain comes down? An umbrella."
+[25.0] [Riddles #8]: "The person who makes it has no need of it; the person who buys it has no use for it. What is it? A coffin."
+[27.2] [Riddles #9]: "What has four legs, but cannot walk? A table."
+[30.8] [Riddles #10]: "What has legs, but cannot walk? A chair."
+[31.1] [Riddles #11]: "I am tall when I am young, and I am short when I am old. What am I? A candle."
+[33.5] [Riddles #12]: "Thirty white horses on a red hill; first they champ, then they stamp, then they stand still. What are they? Teeth."
+[34.5] [Riddles #13]: "What kind of cup cannot hold water? A cupcake."
+[37.8] [Riddles #14]: "What has words, but never speaks? A book."
+[38.8] [Riddles #15]: "What goes on four legs in the morning, two legs at noon, and three legs in the evening? Man."
+[39.0] [Riddles #16]: "I shave every day, but my beard stays the same. What am I? A barber."
+[39.3] [Riddles #17]: "I have many teeth, but I cannot bite. What am I? A comb."
+[39.6] [Riddles #18]: "Feed me and I live, yet give me a drink and I die. What am I? Fire."
+[41.2] [Riddles #19]: "I get smaller every time I take a bath. What am I? A bar of soap."
+[41.4] [Riddles #20]: "What has a head and a foot but no body? A bed."
+[43.1] [Riddles #21]: "I follow you all day, but when the sun goes down I am gone. What am I? A shadow."
+[43.3] [Riddles #22]: "What kind of room has no doors or windows? A mushroom."
+[43.9] [Riddles #23]: "What has teeth, but cannot eat? A zipper."
+[44.7] [Riddles #24]: "What has a tongue but cannot taste? A shoe."
+[45.0] [Riddles #25]: "What flies when it is born, lies when it is alive, and runs when it is dead? A snowflake."
+[45.5] [Riddles #26]: "I have cities, but no houses; forests, but no trees; and water, but no fish. What am I? A map."
+[47.5] [Riddles #27]: "Take off my skin and I will not cry, but you will. What am I? An onion."
+[49.6] [Riddles #28]: "What has branches, but no fruit, trunk, or leaves? A bank."
+[51.8] [Riddles #29]: "What has a head and can be struck, but has no brain? A match."
+[53.0] [Riddles #30]: "What has a bark but no bite? A tree."
+[53.1] [Riddles #31]: "What begins with T, finishes with T, and has T in it? A teapot."
+[53.5] [Riddles #32]: "What has an eye but cannot see? A needle."
+[53.9] [Riddles #33]: "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I? An echo."
+[53.9] [Riddles #34]: "There is a house. One enters it blind and comes out seeing. What is it? A school."
+[53.9] [Riddles #35]: "What kind of coat is best put on wet? A coat of paint."
+[54.9] [Riddles #36]: "I am an odd number. Take away a letter and I become even. What number am I? Seven."
+[55.7] [Riddles #37]: "You throw me out when you use me, and pull me in when you are done. What am I? An anchor."
+[57.8] [Riddles #38]: "What comes down but never goes up? Rain."
+[58.7] [Riddles #39]: "If you drop me I am sure to crack, but give me a smile and I will always smile back. What am I? A mirror."
+[59.0] [Riddles #40]: "I belong to you, but others use me more than you do. What am I? Your name."
+[59.6] [Riddles #41]: "What is black when you buy it, red when you use it, and gray when you throw it away? Charcoal."
+[59.8] [Riddles #42]: "What runs but never walks, has a mouth but never talks? A river."
+[59.9] [Riddles #43]: "The more you take away, the larger I become. What am I? A hole."
+[61.4] [Riddles #44]: "I am white when I am dirty, and black when I am clean. What am I? A chalkboard."
+[61.8] [Riddles #45]: "What comes once in a minute, twice in a moment, but never in a thousand years? The letter M."
+[62.4] [Riddles #46]: "What has a neck but no head? A bottle."
+[63.1] [Riddles #47]: "What has a bottom at the top? Your legs."
+[63.4] [Riddles #48]: "What has a head and a tail but no body? A coin."
+[64.7] [Riddles #49]: "What can you hold in your right hand, but never in your left hand? Your left hand."
+[64.9] [Riddles #50]: "Poor people have it. Rich people need it. If you eat it, you die. What is it? Nothing."
+[65.5] [Riddles #51]: "What can you catch, but never throw? A cold."
+[65.5] [Riddles #52]: "What has to be broken before you can use it? An egg."
+[66.3] [Riddles #53]: "What can be swallowed, but can also swallow you? Pride."
+[66.5] [Riddles #54]: "What has one eye, but cannot see anything at all? A needle."
+[68.2] [Riddles #55]: "What loses its head in the morning and gets it back at night? A pillow."
+[68.2] [Riddles #56]: "The more of this there is, the less you see. What is it? Darkness."
+[68.4] [Riddles #57]: "What has a spine, but no bones? An encyclopedia."
+[69.0] [Riddles #58]: "What can you break, even if you never pick it up or touch it? A promise."
+[70.1] [Riddles #59]: "What has thirteen hearts, but no other organs? A deck of cards."
+[70.1] [Riddles #60]: "What can run, but never walks; has a bed, but never sleeps? A river."
+[70.6] [Riddles #61]: "What has a ring but no finger? A telephone."
+[71.9] [Riddles #62]: "What has a heart that doesn't beat? An artichoke."
+[72.0] [Riddles #63]: "What begins with P, ends with E, and has thousands of letters? The post office."
+[72.1] [Riddles #64]: "What is full of holes but still holds water? A sponge."
+[72.4] [Riddles #65]: "What begins with an E but only has one letter? An envelope."
+[73.5] [Riddles #66]: "What flies without wings and cries without eyes? A cloud."
+[73.8] [Riddles #67]: "I am light as a feather, yet the strongest person cannot hold me for five minutes. What am I? Breath."
+[73.8] [Riddles #68]: "What can you hold without ever touching it? A conversation."
+[75.4] [Riddles #69]: "What has no beginning, end, or middle? A donut."
+[76.9] [Riddles #70]: "What belongs to you, but everyone else uses it? Your name."
+[78.2] [Riddles #71]: "What has eighty-eight keys, but cannot open a single door? A piano."
+[79.1] [Riddles #72]: "What kind of tree can you hold in your hand? A palm tree."
+[79.5] [Riddles #73]: "The more you take, the more you leave behind. What am I? Footsteps."
+[79.9] [Riddles #74]: "What has a thumb and four fingers but is not alive? A glove."
+[79.9] [Riddles #75]: "What has keys that open no locks, and space with no room? A keyboard."
+[80.5] [Riddles #76]: "What five-letter word becomes shorter when you add two letters to it? Short."
+[80.7] [Riddles #77]: "What gets sharper the more you use it? Your brain."
+[81.3] [Riddles #78]: "What has many keys but cannot open a single lock? A piano."
+[81.7] [Riddles #79]: "What disappears the moment you say its name? Silence."
+[82.0] [Riddles #80]: "I am taken from a mine, and shut in a wooden case, from which I am never released. What am I? Pencil lead."
+[82.6] [Riddles #81]: "What has many needles, but cannot sew? A pine tree."
+[84.2] [Riddles #82]: "What can pierce the ears without a sound, and speak without a voice? Telepathy."
+[84.5] [Riddles #83]: "What goes up and down without moving? A staircase."
+[84.5] [Riddles #84]: "What can travel around the world while staying in a corner? A stamp."
+[84.6] [Riddles #85]: "What has one horn and gives milk? A milk truck."
+[84.7] [Riddles #86]: "What building has the most stories? The library."
+[86.5] [Riddles #87]: "A barrel of water weighed sixty pounds. Someone put something in it and now it weighs forty. What was added? A hole."
+[86.6] [Riddles #88]: "What can fill a room but takes up no space? Light."
+[87.3] [Riddles #89]: "What can run around the whole yard without moving? A fence."
+[88.2] [Riddles #90]: "What has four wheels and flies? A garbage truck."
+[88.7] [Riddles #91]: "You see a boat filled with people. It has not sunk, but when you look again you don't see a single person. Why? All are married."
+[90.6] [Riddles #92]: "Forward I am heavy, but backward I am not. What am I? The word ton."
+[92.8] [Riddles #93]: "I have lakes with no water, mountains with no stone, and cities with no buildings. What am I? A map."
+[92.9] [Riddles #94]: "What goes through cities and over fields, but never moves? A road."
+[94.5] [Riddles #95]: "What flies forever, rests never? The wind."
+[95.4] [Riddles #96]: "What goes up but never comes down? Your age."
+[96.2] [Riddles #97]: "I am always hungry and must be fed; the finger I touch will soon turn red. What am I? Fire."
+[97.8] [Riddles #98]: "Never ahead, ever behind, yet flying swiftly past; for child and king alike, I am the same. What am I? Time."
+[99.0] [Riddles #99]: "What kind of band never plays music? A rubber band."
+[99.0] [Riddles #100]: "The man who invented it doesn't want it; the man who bought it doesn't need it. What is it? A coffin."
 [1.0] [Movie Lines #1]: "Listen to me, mister. You're my knight in shining armor. Don't you forget it. You're going to get back on that horse, and I'm going to be right behind you, holding on tight, and away we're gonna go, go, go!" - On Golden Pond
 [7.8] [Movie Lines #2]: "Cinderella story. Outta nowhere. It looks like a miracle. It's in the hole!" - Caddyshack
 [12.4] [Movie Lines #3]: "You don't understand! I coulda had class. I coulda been a contender. I could've been somebody, instead of a bum, which is what I am." - On the Waterfront
@@ -4475,119 +5835,199 @@ COMPACT SUMMARY (ALL 540 PUZZLES ACROSS CATEGORIES)
 [4.1] [Trivia #2]: "Antarctica is technically the largest and driest desert on planet Earth."
 [7.3] [Trivia #3]: "Maine is the closest United States state to the African continent."
 [10.4] [Trivia #4]: "More historical artifacts rest at the bottom of the ocean than in all the world's museums combined."
-[13.6] [Trivia #5]: "Australia is wider in diameter than the Moon."
-[16.7] [Trivia #6]: "Nearly ninety percent of the entire human population lives in the Northern Hemisphere."
-[19.9] [Trivia #7]: "Scotland chose the mythical unicorn as its official national animal in the twelfth century."
-[23.0] [Trivia #8]: "Sunset on Mars appears blue to the human eye due to fine dust in its thin atmosphere."
-[26.1] [Trivia #9]: "The Sun contains over ninety-nine percent of all the mass in our solar system."
-[29.3] [Trivia #10]: "There are more trees on Earth than stars in the Milky Way galaxy."
-[32.4] [Trivia #11]: "Mount Chimborazo in Ecuador is the closest point on Earth to the Moon due to the equatorial bulge."
-[35.6] [Trivia #12]: "An octopus has three hearts, nine brains, and blue blood."
-[38.7] [Trivia #13]: "The Pacific Ocean is larger in surface area than all of the Earth's land masses combined."
-[41.9] [Trivia #14]: "A day on Venus is longer than its year; it takes 243 Earth days to rotate once."
-[45.0] [Trivia #15]: "Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid."
-[45.5] [Trivia #16]: "The shortest war in recorded human history lasted only thirty-eight minutes."
-[46.9] [Trivia #17]: "The Mid-Atlantic Ridge is the longest mountain chain on Earth, spanning forty thousand miles underwater."
-[48.3] [Trivia #18]: "The footprint left by Apollo astronauts on the Moon could last for a million years."
-[49.7] [Trivia #19]: "Elephants are the only mammals that cannot jump."
-[51.0] [Trivia #20]: "Babies are born with three hundred bones, but adults have only two hundred and six."
-[52.4] [Trivia #21]: "A bolt of lightning is roughly five times hotter than the surface of the Sun."
-[53.8] [Trivia #22]: "Your skin is the largest and heaviest organ in your entire body."
-[55.2] [Trivia #23]: "Butterflies taste their food with tiny sensors on their feet."
-[56.6] [Trivia #24]: "A snail can sleep continuously for up to three years without eating."
-[58.0] [Trivia #25]: "Ancient Romans used heated hollow floors called hypocausts to warm their homes in winter."
-[59.4] [Trivia #26]: "The Eiffel Tower grows up to six inches taller during the heat of summer due to thermal expansion."
-[60.7] [Trivia #27]: "The inventor of the stop sign never learned how to drive a motor vehicle."
-[62.1] [Trivia #28]: "Your stomach lining completely replaces itself every three to four days to avoid digesting itself."
-[63.5] [Trivia #29]: "Saturn is less dense than water; if placed in a giant bathtub, it would float."
-[64.9] [Trivia #30]: "The lighter was invented before the modern friction match was created in 1826."
-[65.5] [Trivia #31]: "In 1913, Hitler, Stalin, Trotsky, and Freud all lived within a few miles of each other in Vienna."
-[66.5] [Trivia #32]: "Russia spans eleven different time zones across Europe and Asia."
-[67.6] [Trivia #33]: "Human bones are gram for gram roughly five times stronger than structural steel."
-[68.6] [Trivia #34]: "A group of flamingos is officially known as a flamboyance."
-[69.6] [Trivia #35]: "Bubble wrap was originally invented in 1957 to serve as textured wallpaper."
-[70.6] [Trivia #36]: "The Moon is lemon-shaped, with flattened poles and a slight equatorial bulge."
-[71.7] [Trivia #37]: "Continents drift across tectonic plates at about the same rate human fingernails grow."
-[72.7] [Trivia #38]: "Sound travels four times faster through water than it does through open air."
-[73.7] [Trivia #39]: "Honey never spoils; pots found in ancient Egyptian tombs are over three thousand years old and still edible."
-[74.8] [Trivia #40]: "One million Earths could comfortably fit inside the Sun."
-[75.8] [Trivia #41]: "Space is completely silent because there is no atmosphere to carry sound waves."
-[76.8] [Trivia #42]: "A hummingbird weighs less than a single penny."
-[77.8] [Trivia #43]: "Honeybees can be trained to recognize and remember human faces."
-[78.9] [Trivia #44]: "Neutron stars spin so fast they can rotate hundreds of times every single second."
-[79.9] [Trivia #45]: "Male seahorses carry the eggs and give birth to up to two thousand babies at once."
-[80.5] [Trivia #46]: "Canned food was invented in 1810, but the can opener was not invented until forty-eight years later."
-[81.8] [Trivia #47]: "Wombats are the only known animals in the world that produce cube-shaped droppings."
-[83.1] [Trivia #48]: "Polar bears have black skin underneath their thick white fur to absorb heat from the sun."
-[84.5] [Trivia #49]: "Sloths can hold their breath underwater for forty minutes, four times longer than dolphins."
-[85.8] [Trivia #50]: "Bananas are naturally radioactive because they contain high levels of potassium forty."
-[87.1] [Trivia #51]: "Water can boil and freeze simultaneously at a unique temperature called the triple point."
-[88.4] [Trivia #52]: "Sharks existed on Earth before trees; sharks appeared four hundred million years ago."
-[89.8] [Trivia #53]: "Atoms are ninety-nine percent empty space; all humanity would fit inside a sugar cube."
-[91.1] [Trivia #54]: "Cows have best friends and experience measurable stress when separated from them."
-[92.4] [Trivia #55]: "The Great Wall of China is held together in part by sticky rice mortar."
-[93.7] [Trivia #56]: "Woolly mammoths were still walking the Earth while the Great Pyramid of Giza was being built."
-[95.0] [Trivia #57]: "A single fluffy cumulus cloud can weigh over one million pounds."
-[96.4] [Trivia #58]: "Archaeologists have found five-thousand-year-old chewing gum made from birch bark tar."
-[97.7] [Trivia #59]: "The immortal jellyfish can revert back to its juvenile polyp stage when injured or aging."
-[99.0] [Trivia #60]: "Dolphins call each other by unique signature whistles that act just like individual names."
+[11.0] [Trivia #5]: "A day on Venus is longer than a year on Venus."
+[13.6] [Trivia #6]: "Australia is wider in diameter than the Moon."
+[16.0] [Trivia #7]: "Hot water turns into ice faster than cold water, a phenomenon known as the Mpemba effect."
+[16.7] [Trivia #8]: "Nearly ninety percent of the entire human population lives in the Northern Hemisphere."
+[19.9] [Trivia #9]: "Scotland chose the mythical unicorn as its official national animal in the twelfth century."
+[20.5] [Trivia #10]: "A group of owls is called a parliament."
+[23.0] [Trivia #11]: "Sunset on Mars appears blue to the human eye due to fine dust in its thin atmosphere."
+[24.2] [Trivia #12]: "The heart of a blue whale is the size of a small car."
+[26.1] [Trivia #13]: "The Sun contains over ninety-nine percent of all the mass in our solar system."
+[28.5] [Trivia #14]: "Venus is the only planet in our solar system that spins clockwise."
+[29.3] [Trivia #15]: "There are more trees on Earth than stars in the Milky Way galaxy."
+[32.0] [Trivia #16]: "Octopuses have three hearts, nine brains, and blue blood."
+[32.4] [Trivia #17]: "Mount Chimborazo in Ecuador is the closest point on Earth to the Moon due to the equatorial bulge."
+[35.6] [Trivia #18]: "An octopus has three hearts, nine brains, and blue blood."
+[35.8] [Trivia #19]: "There are more fake flamingos in the world than real ones."
+[38.7] [Trivia #20]: "The Pacific Ocean is larger in surface area than all of the Earth's land masses combined."
+[38.9] [Trivia #21]: "Strawberries are not true berries, but bananas and watermelons are."
+[41.5] [Trivia #22]: "A jiffy is an actual scientific unit of time equal to one hundredth of a second."
+[41.9] [Trivia #23]: "A day on Venus is longer than its year; it takes 243 Earth days to rotate once."
+[44.0] [Trivia #24]: "Lightning strikes the Earth roughly one hundred times every single second."
+[45.0] [Trivia #25]: "Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid."
+[45.5] [Trivia #26]: "The shortest war in recorded human history lasted only thirty-eight minutes."
+[46.9] [Trivia #27]: "The Mid-Atlantic Ridge is the longest mountain chain on Earth, spanning forty thousand miles underwater."
+[47.0] [Trivia #28]: "The fingerprints of a koala are so indistinguishable from humans they have confused crime scenes."
+[48.3] [Trivia #29]: "The footprint left by Apollo astronauts on the Moon could last for a million years."
+[49.5] [Trivia #30]: "A cloud of alcohol in deep space contains enough ethyl alcohol to fill four hundred trillion pints."
+[49.7] [Trivia #31]: "Elephants are the only mammals that cannot jump."
+[51.0] [Trivia #32]: "Babies are born with three hundred bones, but adults have only two hundred and six."
+[52.0] [Trivia #33]: "Sea otters hold hands while sleeping so they do not drift apart."
+[52.4] [Trivia #34]: "A bolt of lightning is roughly five times hotter than the surface of the Sun."
+[53.8] [Trivia #35]: "Your skin is the largest and heaviest organ in your entire body."
+[54.2] [Trivia #36]: "The Hawaiian alphabet has only twelve letters: five vowels and seven consonants."
+[55.2] [Trivia #37]: "Butterflies taste their food with tiny sensors on their feet."
+[56.5] [Trivia #38]: "A crocodile cannot stick its tongue out because it is attached to the roof of its mouth."
+[56.6] [Trivia #39]: "A snail can sleep continuously for up to three years without eating."
+[58.0] [Trivia #40]: "Ancient Romans used heated hollow floors called hypocausts to warm their homes in winter."
+[58.8] [Trivia #41]: "The wood frog can freeze completely solid during winter and thaw alive in the spring."
+[59.4] [Trivia #42]: "The Eiffel Tower grows up to six inches taller during the heat of summer due to thermal expansion."
+[60.5] [Trivia #43]: "Reno, Nevada is farther west than Los Angeles, California."
+[60.7] [Trivia #44]: "The inventor of the stop sign never learned how to drive a motor vehicle."
+[62.1] [Trivia #45]: "Your stomach lining completely replaces itself every three to four days to avoid digesting itself."
+[62.2] [Trivia #46]: "The tongue of a blue whale weighs more than an entire adult elephant."
+[63.5] [Trivia #47]: "Saturn is less dense than water; if placed in a giant bathtub, it would float."
+[63.8] [Trivia #48]: "Turtles can breathe through their butts during winter hibernation."
+[64.9] [Trivia #49]: "The lighter was invented before the modern friction match was created in 1826."
+[64.9] [Trivia #50]: "The Apollo astronauts had no life insurance, so they signed autographs to support their families."
+[65.5] [Trivia #51]: "In 1913, Hitler, Stalin, Trotsky, and Freud all lived within a few miles of each other in Vienna."
+[66.2] [Trivia #52]: "A single bolt of lightning contains enough energy to toast one hundred thousand slices of bread."
+[66.5] [Trivia #53]: "Russia spans eleven different time zones across Europe and Asia."
+[67.6] [Trivia #54]: "Human bones are gram for gram roughly five times stronger than structural steel."
+[68.0] [Trivia #55]: "Dragonflies have six legs, but they cannot walk on them."
+[68.6] [Trivia #56]: "A group of flamingos is officially known as a flamboyance."
+[69.6] [Trivia #57]: "Bubble wrap was originally invented in 1957 to serve as textured wallpaper."
+[70.2] [Trivia #58]: "The kingdom of Bhutan measures its prosperity through Gross National Happiness instead of GDP."
+[70.6] [Trivia #59]: "The Moon is lemon-shaped, with flattened poles and a slight equatorial bulge."
+[71.7] [Trivia #60]: "Continents drift across tectonic plates at about the same rate human fingernails grow."
+[72.0] [Trivia #61]: "A teaspoonful of a neutron star would weigh six billion tons."
+[72.7] [Trivia #62]: "Sound travels four times faster through water than it does through open air."
+[73.7] [Trivia #63]: "Honey never spoils; pots found in ancient Egyptian tombs are over three thousand years old and still edible."
+[73.9] [Trivia #64]: "Pluto was discovered in 1930 and has not completed a single orbit around the Sun since."
+[74.8] [Trivia #65]: "One million Earths could comfortably fit inside the Sun."
+[75.5] [Trivia #66]: "The human eye can distinguish approximately ten million different colors."
+[75.8] [Trivia #67]: "Space is completely silent because there is no atmosphere to carry sound waves."
+[76.8] [Trivia #68]: "A hummingbird weighs less than a single penny."
+[77.0] [Trivia #69]: "There are more trees on Mars than water? No, but Mars has the largest volcano in the solar system."
+[77.8] [Trivia #70]: "Honeybees can be trained to recognize and remember human faces."
+[78.4] [Trivia #71]: "The world's quietest room at Microsoft headquarters has a background noise of minus twenty decibels."
+[78.9] [Trivia #72]: "Neutron stars spin so fast they can rotate hundreds of times every single second."
+[79.2] [Trivia #73]: "Pigeons can be trained to distinguish between paintings by Monet and Picasso."
+[79.9] [Trivia #74]: "Male seahorses carry the eggs and give birth to up to two thousand babies at once."
+[79.9] [Trivia #75]: "The Mariana Trench is deeper than Mount Everest is tall."
+[80.5] [Trivia #76]: "Canned food was invented in 1810, but the can opener was not invented until forty-eight years later."
+[81.8] [Trivia #77]: "Wombats are the only known animals in the world that produce cube-shaped droppings."
+[82.2] [Trivia #78]: "The national animal of Scotland is the unicorn, chosen for its mythical power and purity."
+[83.1] [Trivia #79]: "Polar bears have black skin underneath their thick white fur to absorb heat from the sun."
+[84.5] [Trivia #80]: "Sloths can hold their breath underwater for forty minutes, four times longer than dolphins."
+[84.5] [Trivia #81]: "Cleopatra lived closer in time to the iPhone than to the building of the Great Pyramid of Giza."
+[85.8] [Trivia #82]: "Bananas are naturally radioactive because they contain high levels of potassium forty."
+[86.8] [Trivia #83]: "A day on Mercury lasts approximately fifty-nine Earth days."
+[87.1] [Trivia #84]: "Water can boil and freeze simultaneously at a unique temperature called the triple point."
+[88.4] [Trivia #85]: "Sharks existed on Earth before trees; sharks appeared four hundred million years ago."
+[89.0] [Trivia #86]: "The total weight of all ants on Earth once roughly equaled the total biomass of all humans."
+[89.8] [Trivia #87]: "Atoms are ninety-nine percent empty space; all humanity would fit inside a sugar cube."
+[91.1] [Trivia #88]: "Cows have best friends and experience measurable stress when separated from them."
+[91.2] [Trivia #89]: "Goldfish can recognize their owners and distinguish different human faces."
+[92.4] [Trivia #90]: "The Great Wall of China is held together in part by sticky rice mortar."
+[93.0] [Trivia #91]: "Vending machines kill more people worldwide each year than shark attacks do."
+[93.7] [Trivia #92]: "Woolly mammoths were still walking the Earth while the Great Pyramid of Giza was being built."
+[95.0] [Trivia #93]: "A single fluffy cumulus cloud can weigh over one million pounds."
+[95.0] [Trivia #94]: "The dot over the lowercase letter i and j is officially called a tittle."
+[96.4] [Trivia #95]: "Archaeologists have found five-thousand-year-old chewing gum made from birch bark tar."
+[96.8] [Trivia #96]: "A pangolin's scales are made of keratin, the exact same protein found in human fingernails."
+[97.7] [Trivia #97]: "The immortal jellyfish can revert back to its juvenile polyp stage when injured or aging."
+[98.2] [Trivia #98]: "Saturn's moon Titan has liquid methane lakes and rain made of liquid natural gas."
+[99.0] [Trivia #99]: "Dolphins call each other by unique signature whistles that act just like individual names."
+[99.0] [Trivia #100]: "The mantis shrimp can punch with the acceleration of a bullet, boiling the water around its claws."
 [1.0] [Wordplay #1]: "I used to do drugs. I still do, but I used to, too." - Mitch Hedberg
 [4.1] [Wordplay #2]: "Outside of a dog, a book is a man's best friend. Inside of a dog, it's too dark to read." - Groucho Marx
 [7.3] [Wordplay #3]: "I'm on a seafood diet. Every time I see food, I eat it."
 [10.4] [Wordplay #4]: "I used to be a banker, but then I lost interest."
-[13.6] [Wordplay #5]: "I intend to live forever. So far, so good." - Steven Wright
-[16.7] [Wordplay #6]: "A bicycle cannot stand on its own because it is two-tired."
-[19.9] [Wordplay #7]: "Knowledge is knowing a tomato is a fruit; wisdom is not putting it in a fruit salad." - Miles Kington
-[23.0] [Wordplay #8]: "My wife and I were happy for twenty years; then we met." - Rodney Dangerfield
-[26.1] [Wordplay #9]: "The tallest building in town is the library; it has thousands of stories."
-[29.3] [Wordplay #10]: "The future ain't what it used to be." - Yogi Berra
-[32.4] [Wordplay #11]: "I used to be addicted to soap, but I'm clean now."
-[35.6] [Wordplay #12]: "Baseball is ninety percent mental. The other half is physical." - Yogi Berra
-[38.7] [Wordplay #13]: "I was wondering why the baseball was getting bigger. Then it hit me."
-[41.9] [Wordplay #14]: "A day without sunshine is like, you know, night." - Steve Martin
-[45.0] [Wordplay #15]: "Time flies like an arrow, but fruit flies like a banana." - Groucho Marx
-[45.5] [Wordplay #16]: "The rotation of Earth really makes my day."
-[46.9] [Wordplay #17]: "Parallel lines have so much in common. It is a shame they will never meet."
-[48.3] [Wordplay #18]: "Right now I'm having amnesia and deja vu at the same time." - Steven Wright
-[49.7] [Wordplay #19]: "I used to work in a blanket factory, but it folded."
-[51.0] [Wordplay #20]: "I spilled spot remover on my dog, and now he is gone." - Steven Wright
-[52.4] [Wordplay #21]: "My math teacher called me average. How mean."
-[53.8] [Wordplay #22]: "I told my doctor that I broke my arm in two places. He told me to stop going to those places." - Henny Youngman
-[55.2] [Wordplay #23]: "A pessimist's blood type is always B-negative."
-[56.6] [Wordplay #24]: "We never really grow up; we only learn how to act in public." - Bryan White
-[58.0] [Wordplay #25]: "If I agreed with you, we would both be wrong."
-[59.4] [Wordplay #26]: "I want to die peacefully in my sleep like my grandfather, not screaming like the passengers in his car." - Bob Monkhouse
-[60.7] [Wordplay #27]: "If at first you don't succeed, then skydiving definitely isn't for you." - Steven Wright
-[62.1] [Wordplay #28]: "The early bird gets the worm, but the second mouse gets the cheese." - Steven Wright
-[63.5] [Wordplay #29]: "I find television very educating. Every time someone turns it on, I go and read a book." - Groucho Marx
-[64.9] [Wordplay #30]: "I can resist everything except temptation." - Oscar Wilde
-[65.5] [Wordplay #31]: "It's deja vu all over again." - Yogi Berra
-[66.5] [Wordplay #32]: "A clear conscience is usually the sign of a bad memory." - Steven Wright
-[67.6] [Wordplay #33]: "I told my suitcase there will be no vacation this year. Now I'm dealing with emotional baggage."
-[68.6] [Wordplay #34]: "There are two types of people: those who can extrapolate from incomplete data."
-[69.6] [Wordplay #35]: "I wanted to buy a candle holder, but the store didn't have one, so I got a cake." - Mitch Hedberg
-[70.6] [Wordplay #36]: "I used to think I was indecisive, but now I am not quite sure."
-[71.7] [Wordplay #37]: "I asked my dog what's on top of the house. He said roof."
-[72.7] [Wordplay #38]: "Some cause happiness wherever they go; others whenever they go." - Oscar Wilde
-[73.7] [Wordplay #39]: "Behind every great man is a woman rolling her eyes." - Jim Carrey
-[74.8] [Wordplay #40]: "Artificial intelligence is no match for natural stupidity."
-[75.8] [Wordplay #41]: "A conscience is what hurts when all your other parts feel so good."
-[76.8] [Wordplay #42]: "Never trust an atom; they make up everything."
-[77.8] [Wordplay #43]: "I refused to believe my dad was stealing from his road work job, but when I got home all the signs were there."
-[78.9] [Wordplay #44]: "Nobody goes there anymore because it's too crowded." - Yogi Berra
-[79.9] [Wordplay #45]: "I bought a ceiling fan the other day. Complete waste of money; he just stands there applauding."
-[80.5] [Wordplay #46]: "I'm reading a book on anti-gravity. It's impossible to put down!"
-[81.8] [Wordplay #47]: "Always borrow money from a pessimist. He won't expect it back." - Oscar Wilde
-[83.1] [Wordplay #48]: "I don't care to belong to any club that will have me as a member." - Groucho Marx
-[84.5] [Wordplay #49]: "My doctor gave me six months to live, but when I couldn't pay the bill he gave me six months more." - Walter Matthau
-[85.8] [Wordplay #50]: "Those are my principles. If you don't like them, I have others." - Groucho Marx
-[87.1] [Wordplay #51]: "You can observe a lot just by watching." - Yogi Berra
-[88.4] [Wordplay #52]: "Change is inevitable, except from a vending machine."
-[89.8] [Wordplay #53]: "A bank is a place that will lend you money if you can prove that you don't need it." - Bob Hope
-[91.1] [Wordplay #54]: "If you don't know where you are going, you might wind up someplace else." - Yogi Berra
-[92.4] [Wordplay #55]: "If you think nobody cares if you are alive, try missing a couple of payments." - Flip Wilson
-[93.7] [Wordplay #56]: "Everywhere is walking distance if you have the time." - Steven Wright
-[95.0] [Wordplay #57]: "I never forget a face, but in your case I'll be glad to make an exception." - Groucho Marx
-[96.4] [Wordplay #58]: "I am free of all prejudices. I hate everyone equally." - W.C. Fields
-[97.7] [Wordplay #59]: "I haven't slept for ten days, because that would be too long." - Mitch Hedberg
-[99.0] [Wordplay #60]: "I have an inferiority complex, but it's not a very good one."
+[12.5] [Wordplay #5]: "I told my wife she was drawing her eyebrows too high. She looked surprised." - Anonymous
+[13.6] [Wordplay #6]: "I intend to live forever. So far, so good." - Steven Wright
+[16.7] [Wordplay #7]: "A bicycle cannot stand on its own because it is two-tired."
+[16.8] [Wordplay #8]: "My wife told me to stop impersonating a flamingo. I had to put my foot down." - Anonymous
+[19.9] [Wordplay #9]: "Knowledge is knowing a tomato is a fruit; wisdom is not putting it in a fruit salad." - Miles Kington
+[21.0] [Wordplay #10]: "I am on a whiskey diet. I have lost three days already." - Tommy Cooper
+[23.0] [Wordplay #11]: "My wife and I were happy for twenty years; then we met." - Rodney Dangerfield
+[25.2] [Wordplay #12]: "I asked the librarian if the library had books on paranoia. She whispered, they are right behind you." - Anonymous
+[26.1] [Wordplay #13]: "The tallest building in town is the library; it has thousands of stories."
+[29.0] [Wordplay #14]: "I told my computer I needed a break, and now it won't stop sending me Kit-Kats." - Anonymous
+[29.3] [Wordplay #15]: "The future ain't what it used to be." - Yogi Berra
+[32.4] [Wordplay #16]: "I used to be addicted to soap, but I'm clean now."
+[32.8] [Wordplay #17]: "I used to play piano by ear, but now I use my hands." - Anonymous
+[35.6] [Wordplay #18]: "Baseball is ninety percent mental. The other half is physical." - Yogi Berra
+[36.2] [Wordplay #19]: "Never lie to an x-ray technician. They can see right through you." - Anonymous
+[38.7] [Wordplay #20]: "I was wondering why the baseball was getting bigger. Then it hit me."
+[39.5] [Wordplay #21]: "I would avoid the sushi if I were you. It is a little fishy." - Anonymous
+[41.9] [Wordplay #22]: "A day without sunshine is like, you know, night." - Steve Martin
+[42.0] [Wordplay #23]: "I went to buy some camouflage trousers yesterday, but I couldn't find any." - Anonymous
+[44.5] [Wordplay #24]: "I used to be indecisive. Now I am not so sure." - Tommy Cooper
+[45.0] [Wordplay #25]: "Time flies like an arrow, but fruit flies like a banana." - Groucho Marx
+[45.5] [Wordplay #26]: "The rotation of Earth really makes my day."
+[46.9] [Wordplay #27]: "Parallel lines have so much in common. It is a shame they will never meet."
+[47.8] [Wordplay #28]: "I asked my dog what is two minus two. He said nothing." - Anonymous
+[48.3] [Wordplay #29]: "Right now I'm having amnesia and deja vu at the same time." - Steven Wright
+[49.7] [Wordplay #30]: "I used to work in a blanket factory, but it folded."
+[50.2] [Wordplay #31]: "I asked the gym instructor if he could teach me to do the splits. He said, how flexible are you?" - Anonymous
+[51.0] [Wordplay #32]: "I spilled spot remover on my dog, and now he is gone." - Steven Wright
+[52.4] [Wordplay #33]: "My math teacher called me average. How mean."
+[52.8] [Wordplay #34]: "My fake plants died because I did not pretend to water them." - Mitch Hedberg
+[53.8] [Wordplay #35]: "I told my doctor that I broke my arm in two places. He told me to stop going to those places." - Henny Youngman
+[55.0] [Wordplay #36]: "I am writing a book on reverse psychology. Please do not buy it." - Anonymous
+[55.2] [Wordplay #37]: "A pessimist's blood type is always B-negative."
+[56.6] [Wordplay #38]: "We never really grow up; we only learn how to act in public." - Bryan White
+[57.2] [Wordplay #39]: "A bookstore is one of the only pieces of evidence we have that people are still thinking." - Jerry Seinfeld
+[58.0] [Wordplay #40]: "If I agreed with you, we would both be wrong."
+[59.4] [Wordplay #41]: "I want to die peacefully in my sleep like my grandfather, not screaming like the passengers in his car." - Bob Monkhouse
+[59.4] [Wordplay #42]: "I have a lot of growing up to do. I realized that the other day inside my fort." - Zach Galifianakis
+[60.7] [Wordplay #43]: "If at first you don't succeed, then skydiving definitely isn't for you." - Steven Wright
+[61.5] [Wordplay #44]: "Common sense is like deodorant. The people who need it most never use it." - Anonymous
+[62.1] [Wordplay #45]: "The early bird gets the worm, but the second mouse gets the cheese." - Steven Wright
+[63.0] [Wordplay #46]: "Light travels faster than sound. That is why some people appear bright until you hear them speak." - Alan Dundes
+[63.5] [Wordplay #47]: "I find television very educating. Every time someone turns it on, I go and read a book." - Groucho Marx
+[64.2] [Wordplay #48]: "If you think nobody cares if you are alive, try missing a couple of car payments." - Flip Wilson
+[64.9] [Wordplay #49]: "I can resist everything except temptation." - Oscar Wilde
+[64.9] [Wordplay #50]: "I am on a thirty-day diet. So far I have lost fifteen days." - Anonymous
+[65.5] [Wordplay #51]: "It's deja vu all over again." - Yogi Berra
+[66.4] [Wordplay #52]: "I refuse to join any club that would have me as a member." - Groucho Marx
+[66.5] [Wordplay #53]: "A clear conscience is usually the sign of a bad memory." - Steven Wright
+[67.6] [Wordplay #54]: "I told my suitcase there will be no vacation this year. Now I'm dealing with emotional baggage."
+[68.5] [Wordplay #55]: "The difference between stupidity and genius is that genius has its limits." - Albert Einstein
+[68.6] [Wordplay #56]: "There are two types of people: those who can extrapolate from incomplete data."
+[69.6] [Wordplay #57]: "I wanted to buy a candle holder, but the store didn't have one, so I got a cake." - Mitch Hedberg
+[70.4] [Wordplay #58]: "Experience is something you don't get until just after you need it." - Steven Wright
+[70.6] [Wordplay #59]: "I used to think I was indecisive, but now I am not quite sure."
+[71.7] [Wordplay #60]: "I asked my dog what's on top of the house. He said roof."
+[72.5] [Wordplay #61]: "I am so clever that sometimes I don't understand a single word of what I am saying." - Oscar Wilde
+[72.7] [Wordplay #62]: "Some cause happiness wherever they go; others whenever they go." - Oscar Wilde
+[73.7] [Wordplay #63]: "Behind every great man is a woman rolling her eyes." - Jim Carrey
+[74.2] [Wordplay #64]: "If two wrongs don't make a right, try three." - Laurence J. Peter
+[74.8] [Wordplay #65]: "Artificial intelligence is no match for natural stupidity."
+[75.8] [Wordplay #66]: "A conscience is what hurts when all your other parts feel so good."
+[76.0] [Wordplay #67]: "My doctor told me that jogging could add years to my life. I think he was right. I feel ten years older already." - Milton Berle
+[76.8] [Wordplay #68]: "Never trust an atom; they make up everything."
+[77.5] [Wordplay #69]: "I am an early bird and a night owl. So I am wise and I have worms." - Michael Scott
+[77.8] [Wordplay #70]: "I refused to believe my dad was stealing from his road work job, but when I got home all the signs were there."
+[78.8] [Wordplay #71]: "Doing nothing is very hard to do. You never know when you're finished." - Leslie Nielsen
+[78.9] [Wordplay #72]: "Nobody goes there anymore because it's too crowded." - Yogi Berra
+[79.4] [Wordplay #73]: "I don't suffer from insanity; I enjoy every minute of it." - Anonymous
+[79.9] [Wordplay #74]: "I bought a ceiling fan the other day. Complete waste of money; he just stands there applauding."
+[79.9] [Wordplay #75]: "There are three kinds of people in the world: those who can count, and those who can't." - Anonymous
+[80.5] [Wordplay #76]: "I'm reading a book on anti-gravity. It's impossible to put down!"
+[81.8] [Wordplay #77]: "Always borrow money from a pessimist. He won't expect it back." - Oscar Wilde
+[82.5] [Wordplay #78]: "The trouble with having an open mind, of course, is that people will insist on coming along and putting things in it." - Terry Pratchett
+[83.1] [Wordplay #79]: "I don't care to belong to any club that will have me as a member." - Groucho Marx
+[84.5] [Wordplay #80]: "My doctor gave me six months to live, but when I couldn't pay the bill he gave me six months more." - Walter Matthau
+[84.8] [Wordplay #81]: "A day without laughter is a day wasted." - Charlie Chaplin
+[85.8] [Wordplay #82]: "Those are my principles. If you don't like them, I have others." - Groucho Marx
+[87.0] [Wordplay #83]: "I drank some food coloring the other day. The doctor said I'm fine, but I feel like I've dyed a little inside." - Anonymous
+[87.1] [Wordplay #84]: "You can observe a lot just by watching." - Yogi Berra
+[88.4] [Wordplay #85]: "Change is inevitable, except from a vending machine."
+[89.5] [Wordplay #86]: "I have noticed that even people who claim everything is predestined still look before they cross the street." - Stephen Hawking
+[89.8] [Wordplay #87]: "A bank is a place that will lend you money if you can prove that you don't need it." - Bob Hope
+[91.1] [Wordplay #88]: "If you don't know where you are going, you might wind up someplace else." - Yogi Berra
+[92.0] [Wordplay #89]: "If you want to know what God thinks of money, just look at the people he gave it to." - Dorothy Parker
+[92.4] [Wordplay #90]: "If you think nobody cares if you are alive, try missing a couple of payments." - Flip Wilson
+[93.7] [Wordplay #91]: "Everywhere is walking distance if you have the time." - Steven Wright
+[94.0] [Wordplay #92]: "The best way to appreciate your job is to imagine yourself without one." - Oscar Wilde
+[95.0] [Wordplay #93]: "I never forget a face, but in your case I'll be glad to make an exception." - Groucho Marx
+[95.8] [Wordplay #94]: "I would never die for my beliefs because I might be wrong." - Bertrand Russell
+[96.4] [Wordplay #95]: "I am free of all prejudices. I hate everyone equally." - W.C. Fields
+[97.2] [Wordplay #96]: "The four most beautiful words in our common language: I told you so." - Gore Vidal
+[97.7] [Wordplay #97]: "I haven't slept for ten days, because that would be too long." - Mitch Hedberg
+[98.5] [Wordplay #98]: "You can't have everything. Where would you put it?" - Steven Wright
+[99.0] [Wordplay #99]: "I have an inferiority complex, but it's not a very good one."
+[99.0] [Wordplay #100]: "I'm not afraid of death; I just don't want to be there when it happens." - Woody Allen

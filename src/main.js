@@ -206,12 +206,13 @@ function initApp() {
       if (homeScreenInstance) {
         homeScreenInstance.resetTitle();
         homeScreenInstance.updateProgress();
-        // Delay cascade until the 0.25s screen transition settles
+        // Delay cascade until the screen transition settles (fast when instant)
+        const animDelay = instant ? 60 : 260;
         setTimeout(() => {
           if (elements.homeScreen.classList.contains('active')) {
             homeScreenInstance.animateTitle();
           }
-        }, 260);
+        }, animDelay);
       }
     }
 
@@ -266,18 +267,14 @@ function initApp() {
     },
     onReturnToHome: () => {
       if (gameState.isWon) {
-        const proceed = () => {
-          showScreen('home');
-        };
+        showScreen('home', { instant: true });
         if (AdService.shouldShowInterstitial({ force: true })) {
-          AdService.showInterstitial({ onComplete: proceed });
-        } else {
-          proceed();
+          AdService.showInterstitial();
         }
       } else {
         modalManager.open('returnHome', {
           onConfirm: () => {
-            showScreen('home');
+            showScreen('home', { instant: true });
           }
         });
       }
@@ -331,13 +328,9 @@ function initApp() {
           }
         },
         onHome: () => {
-          const proceed = () => {
-            showScreen('home');
-          };
+          showScreen('home', { instant: true });
           if (AdService.shouldShowInterstitial()) {
-            AdService.showInterstitial({ onComplete: proceed });
-          } else {
-            proceed();
+            AdService.showInterstitial();
           }
         }
       });
@@ -475,13 +468,9 @@ function initApp() {
 
         // If level has already been completed/won, return to home with interstitial ad
         if (gameState.isWon) {
-          const proceed = () => {
-            showScreen('home');
-          };
+          showScreen('home', { instant: true });
           if (AdService.shouldShowInterstitial({ force: true })) {
-            AdService.showInterstitial({ onComplete: proceed });
-          } else {
-            proceed();
+            AdService.showInterstitial();
           }
           return true;
         }
@@ -489,7 +478,7 @@ function initApp() {
         // Show confirmation modal to return to home
         modalManager.open('returnHome', {
           onConfirm: () => {
-            showScreen('home');
+            showScreen('home', { instant: true });
           }
         });
         return true;

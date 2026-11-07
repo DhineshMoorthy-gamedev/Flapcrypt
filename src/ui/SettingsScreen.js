@@ -183,6 +183,13 @@ export class SettingsScreen {
       });
     }
 
+    // Keep settings screen state synced if Remove Ads is purchased via Shop modal
+    IAPService.addListener((event) => {
+      if (event === 'purchase_remove_ads') {
+        this.syncState();
+      }
+    });
+
     // Rate Us Native In-App Review with Loading Spinner
     const btnRateUs = document.getElementById('btnRateUs');
     const rowRateUs = document.getElementById('rowRateUs');

@@ -298,7 +298,10 @@ export class ModalManager {
     }
 
     if (immediate) {
-      this.overlay.classList.remove('active', 'drawer-mode');
+      if (this.overlay) {
+        this.overlay.classList.add('no-transition');
+        this.overlay.classList.remove('active', 'drawer-mode');
+      }
       if (this.dragHandleEl) this.dragHandleEl.style.display = '';
       if (this.closeBtn) this.closeBtn.style.display = '';
       if (this.containerEl) {
@@ -306,6 +309,11 @@ export class ModalManager {
         this.containerEl.style.transform = '';
         this.containerEl.style.transition = '';
       }
+      requestAnimationFrame(() => {
+        if (this.overlay) {
+          this.overlay.classList.remove('no-transition');
+        }
+      });
       return;
     }
 
@@ -1005,7 +1013,7 @@ export class ModalManager {
             </div>
           ` : `
             <!-- 2. Watch Video for Free Hint -->
-            <div class="shop-row">
+            <div id="rowShopWatchAd" class="shop-row">
               <div class="shop-row-left">
                 <div class="shop-row-icon shop-video-icon">
                   <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -1022,7 +1030,7 @@ export class ModalManager {
             </div>
 
             <!-- 3. Remove Ads -->
-            <div class="shop-row">
+            <div id="rowShopRemoveAds" class="shop-row">
               <div class="shop-row-left">
                 <div class="shop-row-icon">
                   ${Icons.ban(20)}
@@ -1032,14 +1040,14 @@ export class ModalManager {
                 </div>
               </div>
               <div class="shop-row-right">
-                <button id="btnRemoveAds" class="btn-shop-pill ${hasNoAds ? 'purchased' : ''}" ${hasNoAds ? 'disabled' : ''}>
+                <button id="btnShopRemoveAds" class="btn-shop-pill ${hasNoAds ? 'purchased' : ''}" ${hasNoAds ? 'disabled' : ''}>
                   ${hasNoAds ? 'ACTIVE' : priceRemoveAds}
                 </button>
               </div>
             </div>
 
             <!-- 4. 25 Hints Pack -->
-            <div class="shop-row">
+            <div id="rowShopHints25" class="shop-row">
               <div class="shop-row-left">
                 <div class="shop-row-icon">
                   ${Icons.bolt(20)}
@@ -1054,7 +1062,7 @@ export class ModalManager {
             </div>
 
             <!-- 5. 50 Hints Pack -->
-            <div class="shop-row">
+            <div id="rowShopHints50" class="shop-row">
               <div class="shop-row-left">
                 <div class="shop-row-icon">
                   ${Icons.sparkles(20)}
@@ -1120,31 +1128,57 @@ export class ModalManager {
             }
           });
         };
+
+        const rowWatchAd = document.getElementById('rowShopWatchAd');
+        if (rowWatchAd) {
+          rowShopWatchAd.onclick = (e) => {
+            if (e.target === btnWatchAd || e.target.closest('#btnWatchAdForHint')) return;
+            btnWatchAd.click();
+          };
+        }
       }
 
-      const btnRemoveAds = document.getElementById('btnRemoveAds');
-      if (btnRemoveAds && !hasNoAds) {
-        btnRemoveAds.onclick = async () => {
-          if (this.audio) this.audio.playClick();
-          try {
-            const res = await IAPService.purchase(IAP_PRODUCTS.REMOVE_ADS.id);
-            if (res && res.success) {
-              AdService.hideBanner();
-              AdService.destroyBanner();
-              this.showShopPopup({
-                title: "Ads Removed!",
-                message: "All advertisements disabled permanently. Enjoy pure mechanical split-flap decryption!",
-                buttonText: "CONTINUE"
-              });
-              updateShopView();
-            }
-          } catch (err) {
-            console.error('[Shop] Remove Ads purchase error:', err);
+      const btnShopRemoveAds = document.getElementById('btnShopRemoveAds');
+      const rowShopRemoveAds = document.getElementById('rowShopRemoveAds');
+
+      const triggerShopRemoveAds = async () => {
+        if (hasNoAds) return;
+        if (this.audio) this.audio.playClick();
+        try {
+          const res = await IAPService.purchase(IAP_PRODUCTS.REMOVE_ADS.id);
+          if (res && res.success) {
+            AdService.hideBanner();
+            AdService.destroyBanner();
+            this.showShopPopup({
+              title: "Ads Removed!",
+              message: "All advertisements disabled permanently. Enjoy pure mechanical split-flap decryption!",
+              buttonText: "CONTINUE"
+            });
+            updateShopView();
+          } else if (res && !res.cancelled && res.error) {
+            this.showShopPopup({
+              title: "Purchase Incomplete",
+              message: res.error || "Google Play transaction could not be completed.",
+              buttonText: "OK"
+            });
           }
+        } catch (err) {
+          console.error('[Shop] Remove Ads purchase error:', err);
+        }
+      };
+
+      if (btnShopRemoveAds && !hasNoAds) {
+        btnShopRemoveAds.onclick = triggerShopRemoveAds;
+      }
+      if (rowShopRemoveAds && !hasNoAds) {
+        rowShopRemoveAds.onclick = (e) => {
+          if (e.target === btnShopRemoveAds || e.target.closest('#btnShopRemoveAds')) return;
+          triggerShopRemoveAds();
         };
       }
 
       const btnBuy25 = document.getElementById('btnBuyHints25');
+      const rowShopHints25 = document.getElementById('rowShopHints25');
       if (btnBuy25) {
         btnBuy25.onclick = async () => {
           if (this.audio) this.audio.playClick();
@@ -1161,14 +1195,27 @@ export class ModalManager {
               if (this.onHintInventoryChanged) {
                 this.onHintInventoryChanged(currentBal);
               }
+            } else if (res && !res.cancelled && res.error) {
+              this.showShopPopup({
+                title: "Purchase Incomplete",
+                message: res.error || "Google Play transaction could not be completed.",
+                buttonText: "OK"
+              });
             }
           } catch (err) {
             console.error('[Shop] 25 Hints purchase error:', err);
           }
         };
       }
+      if (rowShopHints25 && btnBuy25) {
+        rowShopHints25.onclick = (e) => {
+          if (e.target === btnBuy25 || e.target.closest('#btnBuyHints25')) return;
+          btnBuy25.click();
+        };
+      }
 
       const btnBuy50 = document.getElementById('btnBuyHints50');
+      const rowShopHints50 = document.getElementById('rowShopHints50');
       if (btnBuy50) {
         btnBuy50.onclick = async () => {
           if (this.audio) this.audio.playClick();
@@ -1185,10 +1232,22 @@ export class ModalManager {
               if (this.onHintInventoryChanged) {
                 this.onHintInventoryChanged(currentBal);
               }
+            } else if (res && !res.cancelled && res.error) {
+              this.showShopPopup({
+                title: "Purchase Incomplete",
+                message: res.error || "Google Play transaction could not be completed.",
+                buttonText: "OK"
+              });
             }
           } catch (err) {
             console.error('[Shop] 50 Hints purchase error:', err);
           }
+        };
+      }
+      if (rowShopHints50 && btnBuy50) {
+        rowShopHints50.onclick = (e) => {
+          if (e.target === btnBuy50 || e.target.closest('#btnBuyHints50')) return;
+          btnBuy50.click();
         };
       }
     };
@@ -1766,14 +1825,15 @@ export class ModalManager {
       btnNext.addEventListener('click', () => {
         if (this.audio) this.audio.playClick();
         Confetti.stop();
-        this.close();
-        setTimeout(() => {
-          if (!isDaily && hasNextLevel && onNextLevel) {
+        if (!isDaily && hasNextLevel && onNextLevel) {
+          this.close();
+          setTimeout(() => {
             onNextLevel(nextLevelIndex);
-          } else if (onHome) {
-            onHome();
-          }
-        }, 160);
+          }, 160);
+        } else if (onHome) {
+          this.close({ immediate: true });
+          onHome();
+        }
       });
     }
 
@@ -1820,10 +1880,8 @@ export class ModalManager {
       btnHome.addEventListener('click', () => {
         if (this.audio) this.audio.playClick();
         Confetti.stop();
-        this.close();
-        setTimeout(() => {
-          if (onHome) onHome();
-        }, 140);
+        this.close({ immediate: true });
+        if (onHome) onHome();
       });
     }
 

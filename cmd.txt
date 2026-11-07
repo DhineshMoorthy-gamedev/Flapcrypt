@@ -29,3 +29,9 @@ android:
 # AndroidManifest.xml:
 #   <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-4890313674539327~5030519641"/>
 # ==============================================================================
+
+
+4. Puzzle Sharing
+ "I solved this in 2 hints and 1:43 — can you beat it?" as a share card (the split-flap board frozen at the solved state, your
+ stats overlaid) is free marketing. You already generate the board visually. A screenshot-to-share or a generated link to the
+ specific puzzle would be low-lift, high-reach.
