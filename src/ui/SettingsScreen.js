@@ -590,10 +590,15 @@ export class SettingsScreen {
         btnMoreGames.addEventListener('click', () => {
           if (this.audio && this.storage.isSoundEnabled()) this.audio.playClick();
           PlatformBridge.vibrateLight();
+          const targetUrl = TargetConfig.isDesktop
+            ? 'https://olaidigitalstudios.itch.io/'
+            : (TargetConfig.isPlayStore
+                ? 'https://play.google.com/store/apps/developer?id=OlaiDigitalStudios'
+                : 'https://olaidigitalstudios.itch.io/');
           try {
-            PlatformBridge.openExternalUrl('https://play.google.com/store/apps/developer?id=OlaiDigitalStudios');
+            PlatformBridge.openExternalUrl(targetUrl);
           } catch (_) {
-            window.open('https://play.google.com/store/apps/developer?id=OlaiDigitalStudios', '_blank');
+            window.open(targetUrl, '_blank');
           }
         });
       }

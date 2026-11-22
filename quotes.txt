@@ -5329,7 +5329,7 @@ Author: Woody Allen
 Stats: [Unique Letters: 17, Total Letters: 53, Redundancy: 3.12x, Words: 15]
 
 --------------------------------------------------------------------------------
-COMPACT SUMMARY (ALL 700 PUZZLES ACROSS CATEGORIES)
+COMPACT SUMMARY (ALL 1,000 PUZZLES ACROSS CATEGORIES)
 --------------------------------------------------------------------------------
 [1.0] [Quotes #1]: "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that." - Martin Luther King Jr.
 [10.6] [Quotes #2]: "Ask not what your country can do for you; ask what you can do for your country." - John F. Kennedy
@@ -6033,7 +6033,7 @@ COMPACT SUMMARY (ALL 700 PUZZLES ACROSS CATEGORIES)
 [99.0] [Wordplay #100]: "I'm not afraid of death; I just don't want to be there when it happens." - Woody Allen
 
 ================================================================================
-CATEGORY: JOKES (100 PUZZLES)
+CATEGORY: JOKES (125 PUZZLES)
 ================================================================================
 [1.0] [Jokes #1]: "I told my doctor I broke my arm in two places. He told me to stop going to those places." - Henny Youngman
 [2.5] [Jokes #2]: "I asked the waiter for something with zero calories. He brought me an empty plate."
@@ -6135,3 +6135,235 @@ CATEGORY: JOKES (100 PUZZLES)
 [98.5] [Jokes #98]: "I told my wife I wanted to be cremated. She made an appointment for Tuesday."
 [99.0] [Jokes #99]: "I asked the store clerk where the candles were. She said, 'In the dark section.'"
 [99.0] [Jokes #100]: "I told my friend I was writing a novel about a broken pencil. He said, 'What is the point?'"
+
+================================================================================
+EXPANSION TO 1,000 PUZZLES (LEVELS 801 - 1,000)
+================================================================================
+
+--------------------------------------------------------------------------------
+CATEGORY: QUOTES (+50 PUZZLES, #201 - #250)
+--------------------------------------------------------------------------------
+[6.0] [Quotes #201]: "Action is the foundational key to all success." - Pablo Picasso
+[8.0] [Quotes #202]: "Well begun is half done." - Aristotle
+[10.0] [Quotes #203]: "If you want to lift yourself up, lift up someone else." - Booker T. Washington
+[12.0] [Quotes #204]: "Dream big and dare to fail." - Norman Vaughan
+[14.0] [Quotes #205]: "Every moment is a fresh beginning." - T.S. Eliot
+[15.0] [Quotes #206]: "Never regret anything that made you smile." - Mark Twain
+[16.0] [Quotes #207]: "Die with memories, not dreams." - Unknown
+[17.0] [Quotes #208]: "Everything you can imagine is real." - Pablo Picasso
+[18.0] [Quotes #209]: "What we think, we become." - Buddha
+[19.0] [Quotes #210]: "Light tomorrow with today." - Elizabeth Browning
+[20.0] [Quotes #211]: "Keep going. Everything you need will come to you at the perfect time." - Unknown
+[21.0] [Quotes #212]: "In the middle of difficulty lies opportunity." - Albert Einstein
+[26.0] [Quotes #213]: "The best preparation for tomorrow is doing your best today." - H. Jackson Brown Jr.
+[28.0] [Quotes #214]: "We may encounter many defeats but we must not be defeated." - Maya Angelou
+[30.0] [Quotes #215]: "Knowing yourself is the beginning of all wisdom." - Aristotle
+[32.0] [Quotes #216]: "Life is really simple, but we insist on making it complicated." - Confucius
+[34.0] [Quotes #217]: "Nothing is impossible, the word itself says I'm possible!" - Audrey Hepburn
+[36.0] [Quotes #218]: "Try to be a rainbow in someone's cloud." - Maya Angelou
+[38.0] [Quotes #219]: "You do not find the happy life. You make it." - Camilla Kimball
+[40.0] [Quotes #220]: "The most wasted of all days is one without laughter." - Nicolas Chamfort
+[42.0] [Quotes #221]: "May your choices reflect your hopes, not your fears." - Nelson Mandela
+[44.0] [Quotes #222]: "Keep your face always toward the sunshine, and shadows will fall behind you." - Walt Whitman
+[45.0] [Quotes #223]: "What you do makes a difference, and you have to decide what kind of difference you want to make." - Jane Goodall
+[46.0] [Quotes #224]: "You must do the things you think you cannot do." - Eleanor Roosevelt
+[48.0] [Quotes #225]: "The bad news is time flies. The good news is you're the pilot." - Michael Altshuler
+[52.0] [Quotes #226]: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment." - Ralph Waldo Emerson
+[54.0] [Quotes #227]: "You cannot shake hands with a clenched fist." - Indira Gandhi
+[56.0] [Quotes #228]: "Happiness is not something readymade. It comes from your own actions." - Dalai Lama
+[58.0] [Quotes #229]: "Success usually comes to those who are too busy to be looking for it." - Henry David Thoreau
+[60.0] [Quotes #230]: "Peace comes from within. Do not seek it without." - Buddha
+[62.0] [Quotes #231]: "It is not length of life, but depth of life." - Ralph Waldo Emerson
+[64.0] [Quotes #232]: "Change your thoughts and you change your world." - Norman Vincent Peale
+[66.0] [Quotes #233]: "Never bend your head. Always hold it high. Look the world straight in the eye." - Helen Keller
+[70.0] [Quotes #234]: "If you tell the truth, you don't have to remember anything." - Mark Twain
+[71.0] [Quotes #235]: "We become what we think about most of the time." - Earl Nightingale
+[72.0] [Quotes #236]: "Don't count the days, make the days count." - Muhammad Ali
+[59.0] [Quotes #237]: "The mind is not a vessel to be filled, but a fire to be kindled." - Plutarch
+[67.0] [Quotes #238]: "It is not whether you get knocked down, it is whether you get up." - Vince Lombardi
+[76.0] [Quotes #239]: "The unexamined life is not worth living." - Socrates
+[78.0] [Quotes #240]: "Those who dare to fail miserably can achieve greatly." - John F. Kennedy
+[80.0] [Quotes #241]: "Doubt kills more dreams than failure ever will." - Suzy Kassem
+[82.0] [Quotes #242]: "The only person you are destined to become is the person you decide to be." - Ralph Waldo Emerson
+[84.0] [Quotes #243]: "What you get by achieving your goals is not as important as what you become by achieving your goals." - Zig Ziglar
+[86.0] [Quotes #244]: "It is not what happens to you, but how you react to it that matters." - Epictetus
+[88.0] [Quotes #245]: "All that we see or seem is but a dream within a dream." - Edgar Allan Poe
+[90.0] [Quotes #246]: "Do anything, but let it produce joy." - Walt Whitman
+[92.0] [Quotes #247]: "He that can have patience can have what he will." - Benjamin Franklin
+[94.0] [Quotes #248]: "There are no regrets in life, just lessons." - Jennifer Aniston
+[98.0] [Quotes #249]: "Either write something worth reading or do something worth writing." - Benjamin Franklin
+[87.0] [Quotes #250]: "I would rather die of passion than of boredom." - Vincent van Gogh
+
+--------------------------------------------------------------------------------
+CATEGORY: PROVERBS (+25 PUZZLES, #101 - #125)
+--------------------------------------------------------------------------------
+[16.0] [Proverbs #101]: "Walls have ears." - Proverb
+[24.5] [Proverbs #102]: "All good things come to an end." - Proverb
+[11.0] [Proverbs #103]: "A bad penny always turns up." - Proverb
+[15.0] [Proverbs #104]: "A small spark makes a great fire." - Proverb
+[18.0] [Proverbs #105]: "A quiet tongue makes a wise head." - Proverb
+[21.0] [Proverbs #106]: "Good fences make good neighbors." - Proverb
+[43.0] [Proverbs #107]: "You can't judge a book by its cover." - Proverb
+[47.0] [Proverbs #108]: "Beggars can't be choosers." - Proverb
+[49.0] [Proverbs #109]: "Don't count your chickens before they hatch." - Proverb
+[38.0] [Proverbs #110]: "When the cat is away, the mice will play." - Proverb
+[41.0] [Proverbs #111]: "Every dog has his day." - Proverb
+[33.0] [Proverbs #112]: "A chain is no stronger than its weakest link." - Proverb
+[62.0] [Proverbs #113]: "People who live in glass houses should not throw stones." - Proverb
+[74.0] [Proverbs #114]: "Even monkeys fall from trees." - Japanese Proverb
+[54.0] [Proverbs #115]: "You can lead a horse to water, but you can't make him drink." - Proverb
+[59.0] [Proverbs #116]: "Do not count your chickens before they are hatched." - Proverb
+[70.0] [Proverbs #117]: "Never look a gift horse in the mouth." - Proverb
+[58.0] [Proverbs #118]: "Better to light a candle than to curse the darkness." - Chinese Proverb
+[80.0] [Proverbs #119]: "A tree is known by its fruit." - Proverb
+[86.0] [Proverbs #120]: "It takes a whole village to raise a child." - African Proverb
+[92.0] [Proverbs #121]: "Smooth words make smooth ways." - Proverb
+[95.0] [Proverbs #122]: "A rising tide lifts all boats." - Proverb
+[96.0] [Proverbs #123]: "When the wind of change blows, some build walls, others build windmills." - Chinese Proverb
+[97.0] [Proverbs #124]: "He who digs a pit for others falls into it himself." - Proverb
+[98.0] [Proverbs #125]: "A wise man hears one word and understands two." - Yiddish Proverb
+
+--------------------------------------------------------------------------------
+CATEGORY: RIDDLES (+25 PUZZLES, #101 - #125)
+--------------------------------------------------------------------------------
+[5.0] [Riddles #101]: "What has hands but cannot clap? A clock."
+[21.0] [Riddles #102]: "What has legs but does not walk? A table."
+[23.0] [Riddles #103]: "What has one eye but cannot see? A needle."
+[24.0] [Riddles #104]: "What has keys but no locks? A piano."
+[24.5] [Riddles #105]: "What falls but never breaks? Night."
+[24.8] [Riddles #106]: "What breaks but never falls? Day."
+[35.0] [Riddles #107]: "I speak without a mouth and hear without ears. What am I? An echo."
+[46.0] [Riddles #108]: "What has many teeth, but cannot bite? A comb."
+[48.5] [Riddles #109]: "What has a thumb and four fingers, but is not a hand? A glove."
+[49.0] [Riddles #110]: "What goes up and down but does not move? A staircase."
+[33.0] [Riddles #111]: "What has four legs, but cannot walk? A chair."
+[37.0] [Riddles #112]: "What goes up when rain comes down? An umbrella."
+[57.0] [Riddles #113]: "If you drop me I'm sure to crack, but give me a smile and I'll always smile back. What am I? A mirror."
+[72.0] [Riddles #114]: "What is so fragile that saying its name breaks it? Silence."
+[74.0] [Riddles #115]: "What belongs to you, but others use it more than you do? Your name."
+[67.0] [Riddles #116]: "What question can you never answer yes to? Are you asleep yet?"
+[70.0] [Riddles #117]: "What has ten letters and starts with gas? Automobile."
+[65.0] [Riddles #118]: "I can be cracked, made, told, and played. What am I? A joke."
+[77.0] [Riddles #119]: "I have branches, but no fruit, trunk or leaves. What am I? A bank."
+[85.0] [Riddles #120]: "I am not alive, but I grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I? Fire."
+[88.0] [Riddles #121]: "You see a boat filled with people, yet there isn't a single person on board. How is that possible? All of them are married."
+[91.0] [Riddles #122]: "What has a spine, but no bones? A book."
+[96.0] [Riddles #123]: "What has cities, but no houses; forests, but no trees; and water, but no fish? A map."
+[98.0] [Riddles #124]: "Give me food, and I will live; give me water, and I will die. What am I? Fire."
+[98.5] [Riddles #125]: "The more you take, the more you leave behind. What are they? Footsteps."
+
+--------------------------------------------------------------------------------
+CATEGORY: MOVIE LINES (+25 PUZZLES, #101 - #125)
+--------------------------------------------------------------------------------
+[9.0] [Movie Lines #101]: "There's no place like home." - The Wizard of Oz
+[24.5] [Movie Lines #102]: "Here's looking at you, kid." - Casablanca
+[7.0] [Movie Lines #103]: "You talking to me?" - Taxi Driver
+[22.0] [Movie Lines #104]: "Hasta la vista, baby." - Terminator 2
+[11.0] [Movie Lines #105]: "Wax on, wax off." - The Karate Kid
+[17.0] [Movie Lines #106]: "You're a wizard, Harry." - Harry Potter
+[31.0] [Movie Lines #107]: "Life is like a box of chocolates. You never know what you're gonna get." - Forrest Gump
+[35.0] [Movie Lines #108]: "I'm going to make him an offer he can't refuse." - The Godfather
+[39.0] [Movie Lines #109]: "Keep your friends close, but your enemies closer." - The Godfather Part II
+[48.0] [Movie Lines #110]: "Carpe diem. Seize the day, boys. Make your lives extraordinary." - Dead Poets Society
+[32.0] [Movie Lines #111]: "We're not in Kansas anymore." - The Wizard of Oz
+[36.0] [Movie Lines #112]: "You make me want to be a better man." - As Good as It Gets
+[57.0] [Movie Lines #113]: "With great power comes great responsibility." - Spider-Man
+[65.0] [Movie Lines #114]: "Magic Mirror on the wall, who is the fairest one of all?" - Snow White
+[73.0] [Movie Lines #115]: "They may take our lives, but they'll never take our freedom!" - Braveheart
+[63.0] [Movie Lines #116]: "Roads? Where we're going, we don't need roads." - Back to the Future
+[66.0] [Movie Lines #117]: "My name is Inigo Montoya. You killed my father. Prepare to die." - The Princess Bride
+[58.0] [Movie Lines #118]: "What we've got here is failure to communicate." - Cool Hand Luke
+[77.0] [Movie Lines #119]: "It's not who I am underneath, but what I do that defines me." - Batman Begins
+[81.0] [Movie Lines #120]: "Hope is a good thing, maybe the best of things, and no good thing ever dies." - The Shawshank Redemption
+[88.0] [Movie Lines #121]: "Great men are not born great, they grow great." - The Godfather
+[91.0] [Movie Lines #122]: "Every man dies, not every man really lives." - Braveheart
+[94.0] [Movie Lines #123]: "Some people can't believe in themselves until someone else believes in them first." - Good Will Hunting
+[96.0] [Movie Lines #124]: "We walk away from our dreams afraid we may fail, or worse yet, afraid we may succeed." - Finding Forrester
+[97.0] [Movie Lines #125]: "All those moments will be lost in time, like tears in rain." - Blade Runner
+
+--------------------------------------------------------------------------------
+CATEGORY: TRIVIA (+25 PUZZLES, #101 - #125)
+--------------------------------------------------------------------------------
+[5.0] [Trivia #101]: "The heart of a shrimp is located in its head." - Science Trivia
+[9.0] [Trivia #102]: "A snail can sleep for three years at a time." - Nature Trivia
+[13.0] [Trivia #103]: "Slugs have four noses." - Animal Trivia
+[17.0] [Trivia #104]: "Butterflies taste with their feet." - Nature Trivia
+[21.0] [Trivia #105]: "Elephants are the only animals that cannot jump." - Animal Trivia
+[23.0] [Trivia #106]: "A group of flamingos is called a flamboyance." - Trivia
+[27.0] [Trivia #107]: "Hot water turns into ice faster than cold water, a phenomenon called the Mpemba effect." - Science Trivia
+[31.0] [Trivia #108]: "A cloud can weigh more than a million pounds." - Science Trivia
+[35.0] [Trivia #109]: "Venus is the only planet in the solar system that spins clockwise." - Astronomy Trivia
+[43.0] [Trivia #110]: "The Eiffel Tower can be fifteen centimeters taller during the summer due to thermal expansion." - Trivia
+[46.0] [Trivia #111]: "Koalas have unique fingerprints that are almost indistinguishable from human fingerprints." - Nature Trivia
+[47.5] [Trivia #112]: "A single strand of spaghetti is called a spaghetto." - Food Trivia
+[53.0] [Trivia #113]: "A bolt of lightning contains enough energy to toast one hundred thousand slices of bread." - Science Trivia
+[57.0] [Trivia #114]: "More than ninety percent of the world's population lives in the Northern Hemisphere." - Geography Trivia
+[65.0] [Trivia #115]: "The blue whale's heart is the size of a small car and beats only five times per minute." - Biology Trivia
+[72.0] [Trivia #116]: "Raindrops are not teardrop-shaped; they actually resemble hamburger buns as they fall." - Science Trivia
+[73.0] [Trivia #117]: "The moon has moonquakes that are caused by tidal stresses from Earth." - Space Trivia
+[74.0] [Trivia #118]: "Crows can remember individual human faces and hold grudges for years." - Science Trivia
+[77.0] [Trivia #119]: "One teaspoon of honey represents the life work of twelve bees." - Nature Trivia
+[81.0] [Trivia #120]: "The wood frog can hold its urine for up to eight months during winter freeze." - Biology Trivia
+[91.0] [Trivia #121]: "The world's oldest known living tree is over five thousand years old." - Nature Trivia
+[94.0] [Trivia #122]: "Glass is neither a true liquid nor a true solid, but an amorphous solid." - Chemistry Trivia
+[96.0] [Trivia #123]: "The footprints left on the Moon by Apollo astronauts will stay there for at least a million years." - Space Trivia
+[97.0] [Trivia #124]: "Antarctica is technically the largest and driest desert in the entire world." - Geography Trivia
+[98.0] [Trivia #125]: "Sunlight takes eight minutes and twenty seconds to reach Earth from the Sun." - Space Trivia
+
+--------------------------------------------------------------------------------
+CATEGORY: WORDPLAY (+25 PUZZLES, #101 - #125)
+--------------------------------------------------------------------------------
+[5.0] [Wordplay #101]: "I used to be a baker, but I could not make enough dough."
+[9.0] [Wordplay #102]: "I was struggling to understand lightning, then it struck me."
+[13.0] [Wordplay #103]: "The chef was arrested for beating an egg."
+[17.0] [Wordplay #104]: "Time flies like an arrow, but fruit flies like bananas."
+[21.0] [Wordplay #105]: "I tried to write a theater script, but I had no stage presence."
+[23.0] [Wordplay #106]: "The math book was sad because it had too many problems."
+[27.0] [Wordplay #107]: "I used to be a shoe salesman until I got the boot."
+[31.0] [Wordplay #108]: "The candle shop owner was delighted to make scents of it all."
+[35.0] [Wordplay #109]: "The bicycle fell over because it was two tired."
+[39.0] [Wordplay #110]: "I am reading a book about teleportation; it gets you nowhere fast."
+[43.0] [Wordplay #111]: "The scarecrow won an award because he was outstanding in his field."
+[46.0] [Wordplay #112]: "I asked the butcher for lean meat, and he stood on one leg."
+[53.0] [Wordplay #113]: "The cross-eyed teacher could not control his pupils."
+[57.0] [Wordplay #114]: "I lost my watch at a party once, an hour later I saw another guy stepping on it. Time marches on."
+[65.0] [Wordplay #115]: "The graveyard is overcrowded; people are dying to get in."
+[69.0] [Wordplay #116]: "I used to think grammar was unimportant, until I realized punctuation saves lives."
+[72.0] [Wordplay #117]: "A cardboard belt would be a waist of paper."
+[73.0] [Wordplay #118]: "I would tell you a chemistry joke, but I know I would get no reaction."
+[77.0] [Wordplay #119]: "The man who survived mustard gas and pepper spray is now a seasoned veteran."
+[81.0] [Wordplay #120]: "Claustrophobic people are fine with tight schedules, but hate small spaces."
+[85.0] [Wordplay #121]: "A boiled egg for breakfast is hard to beat, but a scrambled one is confusing."
+[88.0] [Wordplay #122]: "The elevator business has its ups and downs."
+[91.0] [Wordplay #123]: "I asked the origami artist how his business was doing. He said it folded."
+[94.0] [Wordplay #124]: "The difference between a numerator and a denominator is a fine line."
+[96.0] [Wordplay #125]: "I stayed up all night wondering where the sun went, then it dawned on me."
+
+--------------------------------------------------------------------------------
+CATEGORY: JOKES (+25 PUZZLES, #101 - #125)
+--------------------------------------------------------------------------------
+[5.0] [Jokes #101]: "What do you call a fake noodle? An impasta."
+[9.0] [Jokes #102]: "Why did the scarecrow win an award? Because he was outstanding in his field."
+[13.0] [Jokes #103]: "What do you call cheese that isn't yours? Nacho cheese."
+[17.0] [Jokes #104]: "Why do bicycles fall over? Because they are two-tired."
+[21.0] [Jokes #105]: "What do you call a sleeping bull? A bulldozer."
+[23.0] [Jokes #106]: "Why did the tomato blush? Because it saw the salad dressing."
+[27.0] [Jokes #107]: "I asked my dog what is seven minus seven. He said nothing."
+[31.0] [Jokes #108]: "I told my doctor I get tired when I sleep. He told me to wake up earlier."
+[35.0] [Jokes #109]: "Why did the golfer bring two pairs of pants? In case he got a hole in one."
+[39.0] [Jokes #110]: "I told my wife she should stop eating so fast. She said she has a tight schedule."
+[43.0] [Jokes #111]: "I tried to sue the airline for losing my luggage. I lost my case."
+[46.0] [Jokes #112]: "My friend said he did not understand cloning. I told him that makes two of us."
+[53.0] [Jokes #113]: "I told my doctor that I swallowed a dictionary. He said, 'Time will tell.'"
+[57.0] [Jokes #114]: "My wife asked me to pass her the lip balm, but I handed her superglue by mistake. She still isn't talking to me."
+[61.0] [Jokes #115]: "I told my friend my shoe was talking to me. He told me my sole was showing."
+[65.0] [Jokes #116]: "I asked the flight attendant if I could sit closer to the pilot. She said, 'Only if you brought a parachute.'"
+[69.0] [Jokes #117]: "My wife says I never listen to her. Or something like that."
+[72.0] [Jokes #118]: "I told my boss I needed a raise because my family was expanding. He asked, 'By how much?' I said, 'We just bought a bigger TV.'"
+[77.0] [Jokes #119]: "I asked my financial planner how to double my money. He told me to fold it in half and put it back in my pocket."
+[81.0] [Jokes #120]: "My doctor asked if anyone in my family suffered from mental illness. I said, 'No, we all seem to enjoy it.'"
+[85.0] [Jokes #121]: "I told my wife I was writing an autobiography. She said, 'Do not bother, everyone already knows what a joke you are.'"
+[88.0] [Jokes #122]: "I bought a dictionary that was missing the word 'apology'. It was unapologetically bad."
+[91.0] [Jokes #123]: "I asked the watchmaker what time it was. He said, 'It depends on how much you are willing to spend.'"
+[94.0] [Jokes #124]: "My friend told me that silent letters are useless. I asked him what he meant by debt and doubt."
+[96.0] [Jokes #125]: "I told my lawyer I wanted to plead guilty to being handsome. He said, 'The jury will acquit you in thirty seconds.'"

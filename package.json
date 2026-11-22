@@ -1,8 +1,8 @@
 {
   "name": "flapcrypt",
   "private": true,
-  "version": "0.0.9",
-  "versionCode": 9,
+  "version": "0.0.13",
+  "versionCode": 13,
   "type": "module",
   "scripts": {
     "bump": "node scripts/bump-version.mjs",

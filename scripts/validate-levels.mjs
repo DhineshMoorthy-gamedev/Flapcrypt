@@ -6,11 +6,11 @@ console.log(`Loaded ${LEVEL_DATA.length} levels.`);
 let errors = [];
 
 // 1. Check total count
-if (LEVEL_DATA.length !== 800) {
-  errors.push(`Expected 800 levels, found ${LEVEL_DATA.length}`);
+if (LEVEL_DATA.length !== 1000) {
+  errors.push(`Expected 1000 levels, found ${LEVEL_DATA.length}`);
 }
 
-// 2. Check sequential IDs 1..800
+// 2. Check sequential IDs 1..1000
 LEVEL_DATA.forEach((level, idx) => {
   const expectedId = idx + 1;
   if (level.id !== expectedId) {
@@ -20,13 +20,13 @@ LEVEL_DATA.forEach((level, idx) => {
 
 // 3. Category count check
 const expectedCats = {
-  'Quotes': 200,
-  'Proverbs': 100,
-  'Riddles': 100,
-  'Movie Lines': 100,
-  'Trivia': 100,
-  'Wordplay': 100,
-  'Jokes': 100
+  'Quotes': 250,
+  'Proverbs': 125,
+  'Riddles': 125,
+  'Movie Lines': 125,
+  'Trivia': 125,
+  'Wordplay': 125,
+  'Jokes': 125
 };
 
 const catCounts = {};
@@ -41,7 +41,7 @@ for (const [cat, expected] of Object.entries(expectedCats)) {
   }
 }
 
-// 4. Tier breakdown check (25 per tier for non-quotes; 38/62/59/41 for Quotes)
+// 4. Tier breakdown check (Quotes: 50/75/72/53; Others: 31/31/31/32)
 const tierCounts = {};
 LEVEL_DATA.forEach(l => {
   const key = `${l.category} -> ${l.tier}`;
@@ -50,17 +50,19 @@ LEVEL_DATA.forEach(l => {
 
 const tiers = ['Tier 1: Beginner', 'Tier 2: Intermediate', 'Tier 3: Advanced', 'Tier 4: Master'];
 const expectedQuotesTier = {
-  'Tier 1: Beginner': 38,
-  'Tier 2: Intermediate': 62,
-  'Tier 3: Advanced': 59,
-  'Tier 4: Master': 41
+  'Tier 1: Beginner': 50,
+  'Tier 2: Intermediate': 75,
+  'Tier 3: Advanced': 72,
+  'Tier 4: Master': 53
 };
 
 for (const [cat, expectedTotal] of Object.entries(expectedCats)) {
   tiers.forEach(tier => {
     const key = `${cat} -> ${tier}`;
     const actual = tierCounts[key] || 0;
-    const expectedPerTier = cat === 'Quotes' ? expectedQuotesTier[tier] : 25;
+    const expectedPerTier = cat === 'Quotes'
+      ? expectedQuotesTier[tier]
+      : (tier === 'Tier 4: Master' ? 32 : 31);
     if (actual !== expectedPerTier) {
       errors.push(`Tier ${key} expected ${expectedPerTier} levels, found ${actual}`);
     }

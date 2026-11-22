@@ -24,7 +24,7 @@ class AdServiceClass {
     this.uiController = null;
     this.isInitialized = false;
     this.isNative = false;
-    this.useTestAds = true; // Active: using official Google AdMob test IDs until Play Store approval
+    this.useTestAds = false; // Production active: Google Play Console approved production credentials
 
     // Concurrency & timing guards for interstitial ads
     this.isShowingInterstitial = false;

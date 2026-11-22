@@ -1,6 +1,6 @@
 [package]
 name = "flapcrypt"
-version = "0.0.8"
+version = "0.0.13"
 description = "Flapcrypt - The Mechanical Split-Flap Cryptogram"
 authors = ["Olai Digital Studios"]
 edition = "2021"

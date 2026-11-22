@@ -1,13 +1,13 @@
 /**
  * Flapcrypt Levels Data
- * 800 Progressive Cryptograms Across Categories:
- * - Quotes: 200 Puzzles (Levels 1 - 200, 4 Tiers, 50 each)
- * - Proverbs: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
- * - Riddles: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
- * - Movie Lines: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
- * - Trivia: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
- * - Wordplay: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
- * - Jokes: 100 Puzzles (Levels 1 - 100, 4 Tiers, 25 each)
+ * 1,000 Progressive Cryptograms Across Categories:
+ * - Quotes: 250 Puzzles (Levels 1 - 200, 801 - 850)
+ * - Proverbs: 125 Puzzles (Levels 201 - 300, 851 - 875)
+ * - Riddles: 125 Puzzles (Levels 301 - 400, 876 - 900)
+ * - Movie Lines: 125 Puzzles (Levels 401 - 500, 901 - 925)
+ * - Trivia: 125 Puzzles (Levels 501 - 600, 926 - 950)
+ * - Wordplay: 125 Puzzles (Levels 601 - 700, 951 - 975)
+ * - Jokes: 125 Puzzles (Levels 701 - 800, 976 - 1000)
  */
 
 export const LEVEL_DATA = [
@@ -8010,5 +8010,2005 @@ export const LEVEL_DATA = [
     "given": 4,
     "category": "Jokes",
     "num": 100
+  },
+  {
+    "id": 801,
+    "quote": "Action is the foundational key to all success.",
+    "author": "Pablo Picasso",
+    "diff": "6.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 201
+  },
+  {
+    "id": 802,
+    "quote": "Well begun is half done.",
+    "author": "Aristotle",
+    "diff": "8.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 202
+  },
+  {
+    "id": 803,
+    "quote": "If you want to lift yourself up, lift up someone else.",
+    "author": "Booker T. Washington",
+    "diff": "10.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 203
+  },
+  {
+    "id": 804,
+    "quote": "Dream big and dare to fail.",
+    "author": "Norman Vaughan",
+    "diff": "12.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 204
+  },
+  {
+    "id": 805,
+    "quote": "Every moment is a fresh beginning.",
+    "author": "T.S. Eliot",
+    "diff": "14.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 205
+  },
+  {
+    "id": 806,
+    "quote": "Never regret anything that made you smile.",
+    "author": "Mark Twain",
+    "diff": "15.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 206
+  },
+  {
+    "id": 807,
+    "quote": "Die with memories, not dreams.",
+    "author": "Unknown",
+    "diff": "16.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 207
+  },
+  {
+    "id": 808,
+    "quote": "Everything you can imagine is real.",
+    "author": "Pablo Picasso",
+    "diff": "17.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 208
+  },
+  {
+    "id": 809,
+    "quote": "What we think, we become.",
+    "author": "Buddha",
+    "diff": "18.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 209
+  },
+  {
+    "id": 810,
+    "quote": "Light tomorrow with today.",
+    "author": "Elizabeth Browning",
+    "diff": "19.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 210
+  },
+  {
+    "id": 811,
+    "quote": "Keep going. Everything you need will come to you at the perfect time.",
+    "author": "Unknown",
+    "diff": "20.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 211
+  },
+  {
+    "id": 812,
+    "quote": "In the middle of difficulty lies opportunity.",
+    "author": "Albert Einstein",
+    "diff": "21.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Quotes",
+    "num": 212
+  },
+  {
+    "id": 813,
+    "quote": "The best preparation for tomorrow is doing your best today.",
+    "author": "H. Jackson Brown Jr.",
+    "diff": "26.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 213
+  },
+  {
+    "id": 814,
+    "quote": "We may encounter many defeats but we must not be defeated.",
+    "author": "Maya Angelou",
+    "diff": "28.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 214
+  },
+  {
+    "id": 815,
+    "quote": "Knowing yourself is the beginning of all wisdom.",
+    "author": "Aristotle",
+    "diff": "30.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 215
+  },
+  {
+    "id": 816,
+    "quote": "Life is really simple, but we insist on making it complicated.",
+    "author": "Confucius",
+    "diff": "32.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 216
+  },
+  {
+    "id": 817,
+    "quote": "Nothing is impossible, the word itself says I'm possible!",
+    "author": "Audrey Hepburn",
+    "diff": "34.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 217
+  },
+  {
+    "id": 818,
+    "quote": "Try to be a rainbow in someone's cloud.",
+    "author": "Maya Angelou",
+    "diff": "36.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 218
+  },
+  {
+    "id": 819,
+    "quote": "You do not find the happy life. You make it.",
+    "author": "Camilla Kimball",
+    "diff": "38.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 219
+  },
+  {
+    "id": 820,
+    "quote": "The most wasted of all days is one without laughter.",
+    "author": "Nicolas Chamfort",
+    "diff": "40.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 220
+  },
+  {
+    "id": 821,
+    "quote": "May your choices reflect your hopes, not your fears.",
+    "author": "Nelson Mandela",
+    "diff": "42.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 221
+  },
+  {
+    "id": 822,
+    "quote": "Keep your face always toward the sunshine, and shadows will fall behind you.",
+    "author": "Walt Whitman",
+    "diff": "44.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 222
+  },
+  {
+    "id": 823,
+    "quote": "What you do makes a difference, and you have to decide what kind of difference you want to make.",
+    "author": "Jane Goodall",
+    "diff": "45.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 223
+  },
+  {
+    "id": 824,
+    "quote": "You must do the things you think you cannot do.",
+    "author": "Eleanor Roosevelt",
+    "diff": "46.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 224
+  },
+  {
+    "id": 825,
+    "quote": "The bad news is time flies. The good news is you're the pilot.",
+    "author": "Michael Altshuler",
+    "diff": "48.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Quotes",
+    "num": 225
+  },
+  {
+    "id": 826,
+    "quote": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    "author": "Ralph Waldo Emerson",
+    "diff": "52.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 226
+  },
+  {
+    "id": 827,
+    "quote": "You cannot shake hands with a clenched fist.",
+    "author": "Indira Gandhi",
+    "diff": "54.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 227
+  },
+  {
+    "id": 828,
+    "quote": "Happiness is not something readymade. It comes from your own actions.",
+    "author": "Dalai Lama",
+    "diff": "56.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 228
+  },
+  {
+    "id": 829,
+    "quote": "Success usually comes to those who are too busy to be looking for it.",
+    "author": "Henry David Thoreau",
+    "diff": "58.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 229
+  },
+  {
+    "id": 830,
+    "quote": "Peace comes from within. Do not seek it without.",
+    "author": "Buddha",
+    "diff": "60.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 230
+  },
+  {
+    "id": 831,
+    "quote": "It is not length of life, but depth of life.",
+    "author": "Ralph Waldo Emerson",
+    "diff": "62.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 231
+  },
+  {
+    "id": 832,
+    "quote": "Change your thoughts and you change your world.",
+    "author": "Norman Vincent Peale",
+    "diff": "64.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 232
+  },
+  {
+    "id": 833,
+    "quote": "Never bend your head. Always hold it high. Look the world straight in the eye.",
+    "author": "Helen Keller",
+    "diff": "66.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 233
+  },
+  {
+    "id": 834,
+    "quote": "If you tell the truth, you don't have to remember anything.",
+    "author": "Mark Twain",
+    "diff": "70.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 234
+  },
+  {
+    "id": 835,
+    "quote": "We become what we think about most of the time.",
+    "author": "Earl Nightingale",
+    "diff": "71.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 235
+  },
+  {
+    "id": 836,
+    "quote": "Don't count the days, make the days count.",
+    "author": "Muhammad Ali",
+    "diff": "72.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 236
+  },
+  {
+    "id": 837,
+    "quote": "The mind is not a vessel to be filled, but a fire to be kindled.",
+    "author": "Plutarch",
+    "diff": "59.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 237
+  },
+  {
+    "id": 838,
+    "quote": "It is not whether you get knocked down, it is whether you get up.",
+    "author": "Vince Lombardi",
+    "diff": "67.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Quotes",
+    "num": 238
+  },
+  {
+    "id": 839,
+    "quote": "The unexamined life is not worth living.",
+    "author": "Socrates",
+    "diff": "76.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 239
+  },
+  {
+    "id": 840,
+    "quote": "Those who dare to fail miserably can achieve greatly.",
+    "author": "John F. Kennedy",
+    "diff": "78.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 240
+  },
+  {
+    "id": 841,
+    "quote": "Doubt kills more dreams than failure ever will.",
+    "author": "Suzy Kassem",
+    "diff": "80.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 241
+  },
+  {
+    "id": 842,
+    "quote": "The only person you are destined to become is the person you decide to be.",
+    "author": "Ralph Waldo Emerson",
+    "diff": "82.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 242
+  },
+  {
+    "id": 843,
+    "quote": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+    "author": "Zig Ziglar",
+    "diff": "84.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 243
+  },
+  {
+    "id": 844,
+    "quote": "It is not what happens to you, but how you react to it that matters.",
+    "author": "Epictetus",
+    "diff": "86.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 244
+  },
+  {
+    "id": 845,
+    "quote": "All that we see or seem is but a dream within a dream.",
+    "author": "Edgar Allan Poe",
+    "diff": "88.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 245
+  },
+  {
+    "id": 846,
+    "quote": "Do anything, but let it produce joy.",
+    "author": "Walt Whitman",
+    "diff": "90.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 246
+  },
+  {
+    "id": 847,
+    "quote": "He that can have patience can have what he will.",
+    "author": "Benjamin Franklin",
+    "diff": "92.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 247
+  },
+  {
+    "id": 848,
+    "quote": "There are no regrets in life, just lessons.",
+    "author": "Jennifer Aniston",
+    "diff": "94.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 248
+  },
+  {
+    "id": 849,
+    "quote": "Either write something worth reading or do something worth writing.",
+    "author": "Benjamin Franklin",
+    "diff": "98.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 249
+  },
+  {
+    "id": 850,
+    "quote": "I would rather die of passion than of boredom.",
+    "author": "Vincent van Gogh",
+    "diff": "87.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Quotes",
+    "num": 250
+  },
+  {
+    "id": 851,
+    "quote": "Walls have ears.",
+    "author": "Proverb",
+    "diff": "16.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Proverbs",
+    "num": 101
+  },
+  {
+    "id": 852,
+    "quote": "All good things come to an end.",
+    "author": "Proverb",
+    "diff": "24.5",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Proverbs",
+    "num": 102
+  },
+  {
+    "id": 853,
+    "quote": "A bad penny always turns up.",
+    "author": "Proverb",
+    "diff": "11.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Proverbs",
+    "num": 103
+  },
+  {
+    "id": 854,
+    "quote": "A small spark makes a great fire.",
+    "author": "Proverb",
+    "diff": "15.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Proverbs",
+    "num": 104
+  },
+  {
+    "id": 855,
+    "quote": "A quiet tongue makes a wise head.",
+    "author": "Proverb",
+    "diff": "18.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Proverbs",
+    "num": 105
+  },
+  {
+    "id": 856,
+    "quote": "Good fences make good neighbors.",
+    "author": "Proverb",
+    "diff": "21.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Proverbs",
+    "num": 106
+  },
+  {
+    "id": 857,
+    "quote": "You can't judge a book by its cover.",
+    "author": "Proverb",
+    "diff": "43.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 107
+  },
+  {
+    "id": 858,
+    "quote": "Beggars can't be choosers.",
+    "author": "Proverb",
+    "diff": "47.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 108
+  },
+  {
+    "id": 859,
+    "quote": "Don't count your chickens before they hatch.",
+    "author": "Proverb",
+    "diff": "49.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 109
+  },
+  {
+    "id": 860,
+    "quote": "When the cat is away, the mice will play.",
+    "author": "Proverb",
+    "diff": "38.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 110
+  },
+  {
+    "id": 861,
+    "quote": "Every dog has his day.",
+    "author": "Proverb",
+    "diff": "41.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 111
+  },
+  {
+    "id": 862,
+    "quote": "A chain is no stronger than its weakest link.",
+    "author": "Proverb",
+    "diff": "33.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 112
+  },
+  {
+    "id": 863,
+    "quote": "People who live in glass houses should not throw stones.",
+    "author": "Proverb",
+    "diff": "62.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 113
+  },
+  {
+    "id": 864,
+    "quote": "Even monkeys fall from trees.",
+    "author": "Japanese Proverb",
+    "diff": "74.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 114
+  },
+  {
+    "id": 865,
+    "quote": "You can lead a horse to water, but you can't make him drink.",
+    "author": "Proverb",
+    "diff": "54.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 115
+  },
+  {
+    "id": 866,
+    "quote": "Do not count your chickens before they are hatched.",
+    "author": "Proverb",
+    "diff": "59.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 116
+  },
+  {
+    "id": 867,
+    "quote": "Never look a gift horse in the mouth.",
+    "author": "Proverb",
+    "diff": "70.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 117
+  },
+  {
+    "id": 868,
+    "quote": "Better to light a candle than to curse the darkness.",
+    "author": "Chinese Proverb",
+    "diff": "58.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Proverbs",
+    "num": 118
+  },
+  {
+    "id": 869,
+    "quote": "A tree is known by its fruit.",
+    "author": "Proverb",
+    "diff": "80.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Proverbs",
+    "num": 119
+  },
+  {
+    "id": 870,
+    "quote": "It takes a whole village to raise a child.",
+    "author": "African Proverb",
+    "diff": "86.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Proverbs",
+    "num": 120
+  },
+  {
+    "id": 871,
+    "quote": "Smooth words make smooth ways.",
+    "author": "Proverb",
+    "diff": "92.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Proverbs",
+    "num": 121
+  },
+  {
+    "id": 872,
+    "quote": "A rising tide lifts all boats.",
+    "author": "Proverb",
+    "diff": "95.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Proverbs",
+    "num": 122
+  },
+  {
+    "id": 873,
+    "quote": "When the wind of change blows, some build walls, others build windmills.",
+    "author": "Chinese Proverb",
+    "diff": "96.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Proverbs",
+    "num": 123
+  },
+  {
+    "id": 874,
+    "quote": "He who digs a pit for others falls into it himself.",
+    "author": "Proverb",
+    "diff": "97.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Proverbs",
+    "num": 124
+  },
+  {
+    "id": 875,
+    "quote": "A wise man hears one word and understands two.",
+    "author": "Yiddish Proverb",
+    "diff": "98.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Proverbs",
+    "num": 125
+  },
+  {
+    "id": 876,
+    "quote": "What has hands but cannot clap? A clock.",
+    "author": "",
+    "diff": "5.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Riddles",
+    "num": 101
+  },
+  {
+    "id": 877,
+    "quote": "What has legs but does not walk? A table.",
+    "author": "",
+    "diff": "21.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Riddles",
+    "num": 102
+  },
+  {
+    "id": 878,
+    "quote": "What has one eye but cannot see? A needle.",
+    "author": "",
+    "diff": "23.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Riddles",
+    "num": 103
+  },
+  {
+    "id": 879,
+    "quote": "What has keys but no locks? A piano.",
+    "author": "",
+    "diff": "24.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Riddles",
+    "num": 104
+  },
+  {
+    "id": 880,
+    "quote": "What falls but never breaks? Night.",
+    "author": "",
+    "diff": "24.5",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Riddles",
+    "num": 105
+  },
+  {
+    "id": 881,
+    "quote": "What breaks but never falls? Day.",
+    "author": "",
+    "diff": "24.8",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Riddles",
+    "num": 106
+  },
+  {
+    "id": 882,
+    "quote": "I speak without a mouth and hear without ears. What am I? An echo.",
+    "author": "",
+    "diff": "35.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Riddles",
+    "num": 107
+  },
+  {
+    "id": 883,
+    "quote": "What has many teeth, but cannot bite? A comb.",
+    "author": "",
+    "diff": "46.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Riddles",
+    "num": 108
+  },
+  {
+    "id": 884,
+    "quote": "What has a thumb and four fingers, but is not a hand? A glove.",
+    "author": "",
+    "diff": "48.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Riddles",
+    "num": 109
+  },
+  {
+    "id": 885,
+    "quote": "What goes up and down but does not move? A staircase.",
+    "author": "",
+    "diff": "49.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Riddles",
+    "num": 110
+  },
+  {
+    "id": 886,
+    "quote": "What has four legs, but cannot walk? A chair.",
+    "author": "",
+    "diff": "33.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Riddles",
+    "num": 111
+  },
+  {
+    "id": 887,
+    "quote": "What goes up when rain comes down? An umbrella.",
+    "author": "",
+    "diff": "37.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Riddles",
+    "num": 112
+  },
+  {
+    "id": 888,
+    "quote": "If you drop me I'm sure to crack, but give me a smile and I'll always smile back. What am I? A mirror.",
+    "author": "",
+    "diff": "57.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Riddles",
+    "num": 113
+  },
+  {
+    "id": 889,
+    "quote": "What is so fragile that saying its name breaks it? Silence.",
+    "author": "",
+    "diff": "72.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Riddles",
+    "num": 114
+  },
+  {
+    "id": 890,
+    "quote": "What belongs to you, but others use it more than you do? Your name.",
+    "author": "",
+    "diff": "74.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Riddles",
+    "num": 115
+  },
+  {
+    "id": 891,
+    "quote": "What question can you never answer yes to? Are you asleep yet?",
+    "author": "",
+    "diff": "67.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Riddles",
+    "num": 116
+  },
+  {
+    "id": 892,
+    "quote": "What has ten letters and starts with gas? Automobile.",
+    "author": "",
+    "diff": "70.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Riddles",
+    "num": 117
+  },
+  {
+    "id": 893,
+    "quote": "I can be cracked, made, told, and played. What am I? A joke.",
+    "author": "",
+    "diff": "65.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Riddles",
+    "num": 118
+  },
+  {
+    "id": 894,
+    "quote": "I have branches, but no fruit, trunk or leaves. What am I? A bank.",
+    "author": "",
+    "diff": "77.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Riddles",
+    "num": 119
+  },
+  {
+    "id": 895,
+    "quote": "I am not alive, but I grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I? Fire.",
+    "author": "",
+    "diff": "85.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Riddles",
+    "num": 120
+  },
+  {
+    "id": 896,
+    "quote": "You see a boat filled with people, yet there isn't a single person on board. How is that possible? All of them are married.",
+    "author": "",
+    "diff": "88.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Riddles",
+    "num": 121
+  },
+  {
+    "id": 897,
+    "quote": "What has a spine, but no bones? A book.",
+    "author": "",
+    "diff": "91.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Riddles",
+    "num": 122
+  },
+  {
+    "id": 898,
+    "quote": "What has cities, but no houses; forests, but no trees; and water, but no fish? A map.",
+    "author": "",
+    "diff": "96.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Riddles",
+    "num": 123
+  },
+  {
+    "id": 899,
+    "quote": "Give me food, and I will live; give me water, and I will die. What am I? Fire.",
+    "author": "",
+    "diff": "98.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Riddles",
+    "num": 124
+  },
+  {
+    "id": 900,
+    "quote": "The more you take, the more you leave behind. What are they? Footsteps.",
+    "author": "",
+    "diff": "98.5",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Riddles",
+    "num": 125
+  },
+  {
+    "id": 901,
+    "quote": "There's no place like home.",
+    "author": "The Wizard of Oz",
+    "diff": "9.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Movie Lines",
+    "num": 101
+  },
+  {
+    "id": 902,
+    "quote": "Here's looking at you, kid.",
+    "author": "Casablanca",
+    "diff": "24.5",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Movie Lines",
+    "num": 102
+  },
+  {
+    "id": 903,
+    "quote": "You talking to me?",
+    "author": "Taxi Driver",
+    "diff": "7.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Movie Lines",
+    "num": 103
+  },
+  {
+    "id": 904,
+    "quote": "Hasta la vista, baby.",
+    "author": "Terminator 2",
+    "diff": "22.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Movie Lines",
+    "num": 104
+  },
+  {
+    "id": 905,
+    "quote": "Wax on, wax off.",
+    "author": "The Karate Kid",
+    "diff": "11.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Movie Lines",
+    "num": 105
+  },
+  {
+    "id": 906,
+    "quote": "You're a wizard, Harry.",
+    "author": "Harry Potter",
+    "diff": "17.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Movie Lines",
+    "num": 106
+  },
+  {
+    "id": 907,
+    "quote": "Life is like a box of chocolates. You never know what you're gonna get.",
+    "author": "Forrest Gump",
+    "diff": "31.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 107
+  },
+  {
+    "id": 908,
+    "quote": "I'm going to make him an offer he can't refuse.",
+    "author": "The Godfather",
+    "diff": "35.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 108
+  },
+  {
+    "id": 909,
+    "quote": "Keep your friends close, but your enemies closer.",
+    "author": "The Godfather Part II",
+    "diff": "39.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 109
+  },
+  {
+    "id": 910,
+    "quote": "Carpe diem. Seize the day, boys. Make your lives extraordinary.",
+    "author": "Dead Poets Society",
+    "diff": "48.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 110
+  },
+  {
+    "id": 911,
+    "quote": "We're not in Kansas anymore.",
+    "author": "The Wizard of Oz",
+    "diff": "32.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 111
+  },
+  {
+    "id": 912,
+    "quote": "You make me want to be a better man.",
+    "author": "As Good as It Gets",
+    "diff": "36.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 112
+  },
+  {
+    "id": 913,
+    "quote": "With great power comes great responsibility.",
+    "author": "Spider-Man",
+    "diff": "57.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 113
+  },
+  {
+    "id": 914,
+    "quote": "Magic Mirror on the wall, who is the fairest one of all?",
+    "author": "Snow White",
+    "diff": "65.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 114
+  },
+  {
+    "id": 915,
+    "quote": "They may take our lives, but they'll never take our freedom!",
+    "author": "Braveheart",
+    "diff": "73.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 115
+  },
+  {
+    "id": 916,
+    "quote": "Roads? Where we're going, we don't need roads.",
+    "author": "Back to the Future",
+    "diff": "63.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 116
+  },
+  {
+    "id": 917,
+    "quote": "My name is Inigo Montoya. You killed my father. Prepare to die.",
+    "author": "The Princess Bride",
+    "diff": "66.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 117
+  },
+  {
+    "id": 918,
+    "quote": "What we've got here is failure to communicate.",
+    "author": "Cool Hand Luke",
+    "diff": "58.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Movie Lines",
+    "num": 118
+  },
+  {
+    "id": 919,
+    "quote": "It's not who I am underneath, but what I do that defines me.",
+    "author": "Batman Begins",
+    "diff": "77.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Movie Lines",
+    "num": 119
+  },
+  {
+    "id": 920,
+    "quote": "Hope is a good thing, maybe the best of things, and no good thing ever dies.",
+    "author": "The Shawshank Redemption",
+    "diff": "81.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Movie Lines",
+    "num": 120
+  },
+  {
+    "id": 921,
+    "quote": "Great men are not born great, they grow great.",
+    "author": "The Godfather",
+    "diff": "88.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Movie Lines",
+    "num": 121
+  },
+  {
+    "id": 922,
+    "quote": "Every man dies, not every man really lives.",
+    "author": "Braveheart",
+    "diff": "91.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Movie Lines",
+    "num": 122
+  },
+  {
+    "id": 923,
+    "quote": "Some people can't believe in themselves until someone else believes in them first.",
+    "author": "Good Will Hunting",
+    "diff": "94.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Movie Lines",
+    "num": 123
+  },
+  {
+    "id": 924,
+    "quote": "We walk away from our dreams afraid we may fail, or worse yet, afraid we may succeed.",
+    "author": "Finding Forrester",
+    "diff": "96.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Movie Lines",
+    "num": 124
+  },
+  {
+    "id": 925,
+    "quote": "All those moments will be lost in time, like tears in rain.",
+    "author": "Blade Runner",
+    "diff": "97.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Movie Lines",
+    "num": 125
+  },
+  {
+    "id": 926,
+    "quote": "The heart of a shrimp is located in its head.",
+    "author": "Science Trivia",
+    "diff": "5.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Trivia",
+    "num": 101
+  },
+  {
+    "id": 927,
+    "quote": "A snail can sleep for three years at a time.",
+    "author": "Nature Trivia",
+    "diff": "9.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Trivia",
+    "num": 102
+  },
+  {
+    "id": 928,
+    "quote": "Slugs have four noses.",
+    "author": "Animal Trivia",
+    "diff": "13.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Trivia",
+    "num": 103
+  },
+  {
+    "id": 929,
+    "quote": "Butterflies taste with their feet.",
+    "author": "Nature Trivia",
+    "diff": "17.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Trivia",
+    "num": 104
+  },
+  {
+    "id": 930,
+    "quote": "Elephants are the only animals that cannot jump.",
+    "author": "Animal Trivia",
+    "diff": "21.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Trivia",
+    "num": 105
+  },
+  {
+    "id": 931,
+    "quote": "A group of flamingos is called a flamboyance.",
+    "author": "Trivia",
+    "diff": "23.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Trivia",
+    "num": 106
+  },
+  {
+    "id": 932,
+    "quote": "Hot water turns into ice faster than cold water, a phenomenon called the Mpemba effect.",
+    "author": "Science Trivia",
+    "diff": "27.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Trivia",
+    "num": 107
+  },
+  {
+    "id": 933,
+    "quote": "A cloud can weigh more than a million pounds.",
+    "author": "Science Trivia",
+    "diff": "31.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Trivia",
+    "num": 108
+  },
+  {
+    "id": 934,
+    "quote": "Venus is the only planet in the solar system that spins clockwise.",
+    "author": "Astronomy Trivia",
+    "diff": "35.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Trivia",
+    "num": 109
+  },
+  {
+    "id": 935,
+    "quote": "The Eiffel Tower can be fifteen centimeters taller during the summer due to thermal expansion.",
+    "author": "Trivia",
+    "diff": "43.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Trivia",
+    "num": 110
+  },
+  {
+    "id": 936,
+    "quote": "Koalas have unique fingerprints that are almost indistinguishable from human fingerprints.",
+    "author": "Nature Trivia",
+    "diff": "46.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Trivia",
+    "num": 111
+  },
+  {
+    "id": 937,
+    "quote": "A single strand of spaghetti is called a spaghetto.",
+    "author": "Food Trivia",
+    "diff": "47.5",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Trivia",
+    "num": 112
+  },
+  {
+    "id": 938,
+    "quote": "A bolt of lightning contains enough energy to toast one hundred thousand slices of bread.",
+    "author": "Science Trivia",
+    "diff": "53.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Trivia",
+    "num": 113
+  },
+  {
+    "id": 939,
+    "quote": "More than ninety percent of the world's population lives in the Northern Hemisphere.",
+    "author": "Geography Trivia",
+    "diff": "57.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Trivia",
+    "num": 114
+  },
+  {
+    "id": 940,
+    "quote": "The blue whale's heart is the size of a small car and beats only five times per minute.",
+    "author": "Biology Trivia",
+    "diff": "65.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Trivia",
+    "num": 115
+  },
+  {
+    "id": 941,
+    "quote": "Raindrops are not teardrop-shaped; they actually resemble hamburger buns as they fall.",
+    "author": "Science Trivia",
+    "diff": "72.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Trivia",
+    "num": 116
+  },
+  {
+    "id": 942,
+    "quote": "The moon has moonquakes that are caused by tidal stresses from Earth.",
+    "author": "Space Trivia",
+    "diff": "73.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Trivia",
+    "num": 117
+  },
+  {
+    "id": 943,
+    "quote": "Crows can remember individual human faces and hold grudges for years.",
+    "author": "Science Trivia",
+    "diff": "74.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Trivia",
+    "num": 118
+  },
+  {
+    "id": 944,
+    "quote": "One teaspoon of honey represents the life work of twelve bees.",
+    "author": "Nature Trivia",
+    "diff": "77.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Trivia",
+    "num": 119
+  },
+  {
+    "id": 945,
+    "quote": "The wood frog can hold its urine for up to eight months during winter freeze.",
+    "author": "Biology Trivia",
+    "diff": "81.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Trivia",
+    "num": 120
+  },
+  {
+    "id": 946,
+    "quote": "The world's oldest known living tree is over five thousand years old.",
+    "author": "Nature Trivia",
+    "diff": "91.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Trivia",
+    "num": 121
+  },
+  {
+    "id": 947,
+    "quote": "Glass is neither a true liquid nor a true solid, but an amorphous solid.",
+    "author": "Chemistry Trivia",
+    "diff": "94.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Trivia",
+    "num": 122
+  },
+  {
+    "id": 948,
+    "quote": "The footprints left on the Moon by Apollo astronauts will stay there for at least a million years.",
+    "author": "Space Trivia",
+    "diff": "96.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Trivia",
+    "num": 123
+  },
+  {
+    "id": 949,
+    "quote": "Antarctica is technically the largest and driest desert in the entire world.",
+    "author": "Geography Trivia",
+    "diff": "97.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Trivia",
+    "num": 124
+  },
+  {
+    "id": 950,
+    "quote": "Sunlight takes eight minutes and twenty seconds to reach Earth from the Sun.",
+    "author": "Space Trivia",
+    "diff": "98.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Trivia",
+    "num": 125
+  },
+  {
+    "id": 951,
+    "quote": "I used to be a baker, but I could not make enough dough.",
+    "author": "",
+    "diff": "5.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Wordplay",
+    "num": 101
+  },
+  {
+    "id": 952,
+    "quote": "I was struggling to understand lightning, then it struck me.",
+    "author": "",
+    "diff": "9.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Wordplay",
+    "num": 102
+  },
+  {
+    "id": 953,
+    "quote": "The chef was arrested for beating an egg.",
+    "author": "",
+    "diff": "13.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Wordplay",
+    "num": 103
+  },
+  {
+    "id": 954,
+    "quote": "Time flies like an arrow, but fruit flies like bananas.",
+    "author": "",
+    "diff": "17.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Wordplay",
+    "num": 104
+  },
+  {
+    "id": 955,
+    "quote": "I tried to write a theater script, but I had no stage presence.",
+    "author": "",
+    "diff": "21.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Wordplay",
+    "num": 105
+  },
+  {
+    "id": 956,
+    "quote": "The math book was sad because it had too many problems.",
+    "author": "",
+    "diff": "23.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Wordplay",
+    "num": 106
+  },
+  {
+    "id": 957,
+    "quote": "I used to be a shoe salesman until I got the boot.",
+    "author": "",
+    "diff": "27.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 107
+  },
+  {
+    "id": 958,
+    "quote": "The candle shop owner was delighted to make scents of it all.",
+    "author": "",
+    "diff": "31.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 108
+  },
+  {
+    "id": 959,
+    "quote": "The bicycle fell over because it was two tired.",
+    "author": "",
+    "diff": "35.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 109
+  },
+  {
+    "id": 960,
+    "quote": "I am reading a book about teleportation; it gets you nowhere fast.",
+    "author": "",
+    "diff": "39.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 110
+  },
+  {
+    "id": 961,
+    "quote": "The scarecrow won an award because he was outstanding in his field.",
+    "author": "",
+    "diff": "43.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 111
+  },
+  {
+    "id": 962,
+    "quote": "I asked the butcher for lean meat, and he stood on one leg.",
+    "author": "",
+    "diff": "46.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 112
+  },
+  {
+    "id": 963,
+    "quote": "The cross-eyed teacher could not control his pupils.",
+    "author": "",
+    "diff": "53.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 113
+  },
+  {
+    "id": 964,
+    "quote": "I lost my watch at a party once, an hour later I saw another guy stepping on it. Time marches on.",
+    "author": "",
+    "diff": "57.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 114
+  },
+  {
+    "id": 965,
+    "quote": "The graveyard is overcrowded; people are dying to get in.",
+    "author": "",
+    "diff": "65.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 115
+  },
+  {
+    "id": 966,
+    "quote": "I used to think grammar was unimportant, until I realized punctuation saves lives.",
+    "author": "",
+    "diff": "69.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 116
+  },
+  {
+    "id": 967,
+    "quote": "A cardboard belt would be a waist of paper.",
+    "author": "",
+    "diff": "72.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 117
+  },
+  {
+    "id": 968,
+    "quote": "I would tell you a chemistry joke, but I know I would get no reaction.",
+    "author": "",
+    "diff": "73.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Wordplay",
+    "num": 118
+  },
+  {
+    "id": 969,
+    "quote": "The man who survived mustard gas and pepper spray is now a seasoned veteran.",
+    "author": "",
+    "diff": "77.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Wordplay",
+    "num": 119
+  },
+  {
+    "id": 970,
+    "quote": "Claustrophobic people are fine with tight schedules, but hate small spaces.",
+    "author": "",
+    "diff": "81.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Wordplay",
+    "num": 120
+  },
+  {
+    "id": 971,
+    "quote": "A boiled egg for breakfast is hard to beat, but a scrambled one is confusing.",
+    "author": "",
+    "diff": "85.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Wordplay",
+    "num": 121
+  },
+  {
+    "id": 972,
+    "quote": "The elevator business has its ups and downs.",
+    "author": "",
+    "diff": "88.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Wordplay",
+    "num": 122
+  },
+  {
+    "id": 973,
+    "quote": "I asked the origami artist how his business was doing. He said it folded.",
+    "author": "",
+    "diff": "91.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Wordplay",
+    "num": 123
+  },
+  {
+    "id": 974,
+    "quote": "The difference between a numerator and a denominator is a fine line.",
+    "author": "",
+    "diff": "94.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Wordplay",
+    "num": 124
+  },
+  {
+    "id": 975,
+    "quote": "I stayed up all night wondering where the sun went, then it dawned on me.",
+    "author": "",
+    "diff": "96.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Wordplay",
+    "num": 125
+  },
+  {
+    "id": 976,
+    "quote": "What do you call a fake noodle? An impasta.",
+    "author": "",
+    "diff": "5.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Jokes",
+    "num": 101
+  },
+  {
+    "id": 977,
+    "quote": "Why did the scarecrow win an award? Because he was outstanding in his field.",
+    "author": "",
+    "diff": "9.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Jokes",
+    "num": 102
+  },
+  {
+    "id": 978,
+    "quote": "What do you call cheese that isn't yours? Nacho cheese.",
+    "author": "",
+    "diff": "13.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Jokes",
+    "num": 103
+  },
+  {
+    "id": 979,
+    "quote": "Why do bicycles fall over? Because they are two-tired.",
+    "author": "",
+    "diff": "17.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Jokes",
+    "num": 104
+  },
+  {
+    "id": 980,
+    "quote": "What do you call a sleeping bull? A bulldozer.",
+    "author": "",
+    "diff": "21.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Jokes",
+    "num": 105
+  },
+  {
+    "id": 981,
+    "quote": "Why did the tomato blush? Because it saw the salad dressing.",
+    "author": "",
+    "diff": "23.0",
+    "tier": "Tier 1: Beginner",
+    "given": 5,
+    "category": "Jokes",
+    "num": 106
+  },
+  {
+    "id": 982,
+    "quote": "I asked my dog what is seven minus seven. He said nothing.",
+    "author": "",
+    "diff": "27.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 107
+  },
+  {
+    "id": 983,
+    "quote": "I told my doctor I get tired when I sleep. He told me to wake up earlier.",
+    "author": "",
+    "diff": "31.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 108
+  },
+  {
+    "id": 984,
+    "quote": "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+    "author": "",
+    "diff": "35.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 109
+  },
+  {
+    "id": 985,
+    "quote": "I told my wife she should stop eating so fast. She said she has a tight schedule.",
+    "author": "",
+    "diff": "39.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 110
+  },
+  {
+    "id": 986,
+    "quote": "I tried to sue the airline for losing my luggage. I lost my case.",
+    "author": "",
+    "diff": "43.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 111
+  },
+  {
+    "id": 987,
+    "quote": "My friend said he did not understand cloning. I told him that makes two of us.",
+    "author": "",
+    "diff": "46.0",
+    "tier": "Tier 2: Intermediate",
+    "given": 4,
+    "category": "Jokes",
+    "num": 112
+  },
+  {
+    "id": 988,
+    "quote": "I told my doctor that I swallowed a dictionary. He said, 'Time will tell.'",
+    "author": "",
+    "diff": "53.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 113
+  },
+  {
+    "id": 989,
+    "quote": "My wife asked me to pass her the lip balm, but I handed her superglue by mistake. She still isn't talking to me.",
+    "author": "",
+    "diff": "57.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 114
+  },
+  {
+    "id": 990,
+    "quote": "I told my friend my shoe was talking to me. He told me my sole was showing.",
+    "author": "",
+    "diff": "61.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 115
+  },
+  {
+    "id": 991,
+    "quote": "I asked the flight attendant if I could sit closer to the pilot. She said, 'Only if you brought a parachute.'",
+    "author": "",
+    "diff": "65.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 116
+  },
+  {
+    "id": 992,
+    "quote": "My wife says I never listen to her. Or something like that.",
+    "author": "",
+    "diff": "69.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 117
+  },
+  {
+    "id": 993,
+    "quote": "I told my boss I needed a raise because my family was expanding. He asked, 'By how much?' I said, 'We just bought a bigger TV.'",
+    "author": "",
+    "diff": "72.0",
+    "tier": "Tier 3: Advanced",
+    "given": 4,
+    "category": "Jokes",
+    "num": 118
+  },
+  {
+    "id": 994,
+    "quote": "I asked my financial planner how to double my money. He told me to fold it in half and put it back in my pocket.",
+    "author": "",
+    "diff": "77.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Jokes",
+    "num": 119
+  },
+  {
+    "id": 995,
+    "quote": "My doctor asked if anyone in my family suffered from mental illness. I said, 'No, we all seem to enjoy it.'",
+    "author": "",
+    "diff": "81.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Jokes",
+    "num": 120
+  },
+  {
+    "id": 996,
+    "quote": "I told my wife I was writing an autobiography. She said, 'Do not bother, everyone already knows what a joke you are.'",
+    "author": "",
+    "diff": "85.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Jokes",
+    "num": 121
+  },
+  {
+    "id": 997,
+    "quote": "I bought a dictionary that was missing the word 'apology'. It was unapologetically bad.",
+    "author": "",
+    "diff": "88.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Jokes",
+    "num": 122
+  },
+  {
+    "id": 998,
+    "quote": "I asked the watchmaker what time it was. He said, 'It depends on how much you are willing to spend.'",
+    "author": "",
+    "diff": "91.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Jokes",
+    "num": 123
+  },
+  {
+    "id": 999,
+    "quote": "My friend told me that silent letters are useless. I asked him what he meant by debt and doubt.",
+    "author": "",
+    "diff": "94.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Jokes",
+    "num": 124
+  },
+  {
+    "id": 1000,
+    "quote": "I told my lawyer I wanted to plead guilty to being handsome. He said, 'The jury will acquit you in thirty seconds.'",
+    "author": "",
+    "diff": "96.0",
+    "tier": "Tier 4: Master",
+    "given": 3,
+    "category": "Jokes",
+    "num": 125
   }
 ];

@@ -44,11 +44,16 @@
                 android:resource="@xml/file_paths"></meta-data>
         </provider>
 
-        <!-- Google AdMob Application ID (Official Sample Test App ID until Play Store approval) -->
+        <!-- Google AdMob Application ID (Production Credentials) -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-4890313674539327~5030519641"/>
     </application>
+
+    <!-- Hardware Features (Marked optional to support Tablets, Foldables, ChromeOS, Desktop, Google Play Games on PC, and Android XR) -->
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
     <!-- Permissions -->
 

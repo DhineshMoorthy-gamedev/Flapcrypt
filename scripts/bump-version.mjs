@@ -62,5 +62,33 @@ pkg.version = newVersion;
 pkg.versionCode = newCode;
 writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + '\n', 'utf8');
 
+const tauriConfPath = join(root, 'src-tauri', 'tauri.conf.json');
+const tauriConf = JSON.parse(readFileSync(tauriConfPath, 'utf8'));
+tauriConf.version = newVersion;
+writeFileSync(tauriConfPath, JSON.stringify(tauriConf, null, 2) + '\n', 'utf8');
+
+const cargoTomlPath = join(root, 'src-tauri', 'Cargo.toml');
+const cargoToml = readFileSync(cargoTomlPath, 'utf8');
+const cargoTomlNext = cargoToml.replace(
+  /^(\[package\][\s\S]*?^version\s*=\s*)"[^"]*"/m,
+  `$1"${newVersion}"`
+);
+if (cargoTomlNext === cargoToml && !cargoToml.includes(`version = "${newVersion}"`)) {
+  console.error('Failed to update version in src-tauri/Cargo.toml.');
+  process.exit(1);
+}
+writeFileSync(cargoTomlPath, cargoTomlNext, 'utf8');
+
+try {
+  const { execFileSync } = await import('node:child_process');
+  execFileSync('cargo', ['update', '-p', 'flapcrypt'], {
+    cwd: join(root, 'src-tauri'),
+    stdio: 'inherit',
+  });
+} catch {
+  console.warn('Warning: could not refresh src-tauri/Cargo.lock (cargo not found?). Run `cargo update -p flapcrypt` manually.');
+}
+
 console.log(`Bumped ${oldVersion} (code ${oldCode}) -> ${newVersion} (code ${newCode})`);
+console.log('Synced: package.json, src-tauri/tauri.conf.json, src-tauri/Cargo.toml, src-tauri/Cargo.lock');
 console.log('Next: npm run build:playstore');
