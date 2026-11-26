@@ -974,6 +974,7 @@ export class ModalManager {
         const s = secs % 60;
         return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
       };
+      this._formatCountdown = formatTime;
 
       this.bodyEl.innerHTML = `
         <div class="shop-list">
@@ -1007,7 +1008,7 @@ export class ModalManager {
               </div>
               <div class="shop-row-right">
                 <button id="btnTacticalRefill" class="btn-shop-pill ${tacticalCooldown.canClaim ? 'ready' : 'disabled'}" ${tacticalCooldown.canClaim ? '' : 'disabled'}>
-                  ${tacticalCooldown.canClaim ? 'CLAIM' : `<span id="tacticalCountdown">${tacticalCooldown.remainingSeconds}s</span>`}
+                  ${tacticalCooldown.canClaim ? 'CLAIM' : `<span id="tacticalCountdown">${formatTime(tacticalCooldown.remainingSeconds)}</span>`}
                 </button>
               </div>
             </div>
@@ -1275,7 +1276,7 @@ export class ModalManager {
         if (tacticalCooldown.canClaim) {
           updateShopView();
         } else {
-          tacticalCountdownEl.textContent = `${tacticalCooldown.remainingSeconds}s`;
+          tacticalCountdownEl.textContent = formatTime(tacticalCooldown.remainingSeconds);
         }
       }
     }, 1000);
@@ -1546,8 +1547,31 @@ export class ModalManager {
   }
 
   renderHintPrompt(options = {}) {
+    if (this.shopTickerInterval) {
+      clearInterval(this.shopTickerInterval);
+      this.shopTickerInterval = null;
+    }
+
     this.titleEl.innerHTML = `<span class="dialog-title-text">NEED A HINT?</span>`;
     const isStandalone = TargetConfig.capabilities.isStandaloneMode;
+    const tacticalCooldown = (isStandalone && this.storage?.getTacticalRefillCooldown)
+      ? this.storage.getTacticalRefillCooldown()
+      : { canClaim: true, remainingSeconds: 0 };
+
+    const formatTime = (secs) => {
+      const h = Math.floor(secs / 3600);
+      const m = Math.floor((secs % 3600) / 60);
+      const s = secs % 60;
+      return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    };
+
+    const primaryLabel = isStandalone
+      ? (tacticalCooldown.canClaim
+          ? 'TACTICAL REFILL (+1 HINT)'
+          : `REFILL IN <span id="hintPromptTacticalCountdown">${formatTime(tacticalCooldown.remainingSeconds)}</span>`)
+      : 'WATCH AD (+1 HINT)';
+
+    const isPrimaryDisabled = isStandalone && !tacticalCooldown.canClaim;
 
     this.bodyEl.innerHTML = `
       <div class="hint-prompt-container">
@@ -1558,18 +1582,20 @@ export class ModalManager {
         </div>
         <div class="hint-prompt-desc">
           ${isStandalone
-            ? 'You currently have <strong>0 hints</strong> in your inventory. Claim an immediate tactical refill (+1 Hint) or check your daily supply in the shop.'
+            ? (tacticalCooldown.canClaim
+                ? 'You currently have <strong>0 hints</strong> in your inventory. Claim a tactical refill (+1 Hint, 1 hr cooldown) or check your daily supply in the shop.'
+                : 'You currently have <strong>0 hints</strong> in your inventory. Your tactical refill is recharging—visit the shop for your daily supply or wait for the timer.')
             : 'You currently have <strong>0 hints</strong> in your inventory. Watch a short video to earn a free hint or visit the shop.'
           }
         </div>
         <div class="hint-prompt-actions">
-          <button id="btnPromptWatchAd" class="btn-prompt-primary">
+          <button id="btnPromptWatchAd" class="btn-prompt-primary ${isPrimaryDisabled ? 'disabled' : ''}" ${isPrimaryDisabled ? 'disabled' : ''}>
             ${isStandalone ? Icons.bolt(18) : `
               <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                 <polygon points="5 3 19 12 5 21 5 3"/>
               </svg>
             `}
-            <span>${isStandalone ? 'TACTICAL REFILL (+1 HINT)' : 'WATCH AD (+1 HINT)'}</span>
+            <span>${primaryLabel}</span>
           </button>
           <button id="btnPromptShop" class="btn-prompt-secondary">VISIT SHOP</button>
           <button id="btnPromptDismiss" class="btn-prompt-cancel">CANCEL</button>
@@ -1581,12 +1607,42 @@ export class ModalManager {
     const btnShop = document.getElementById('btnPromptShop');
     const btnDismiss = document.getElementById('btnPromptDismiss');
 
-    if (btnWatch) {
+    if (btnWatch && !isPrimaryDisabled) {
       btnWatch.onclick = () => {
         if (this.audio) this.audio.playClick();
         this.close({ immediate: true });
-        if (typeof options.onWatchAd === 'function') options.onWatchAd();
+        if (isStandalone) {
+          if (typeof options.onTacticalRefill === 'function') {
+            options.onTacticalRefill();
+          } else if (this.storage?.claimTacticalRefill) {
+            const res = this.storage.claimTacticalRefill();
+            if (res.success && this.onHintInventoryChanged) {
+              this.onHintInventoryChanged(res.balance);
+            }
+          }
+        } else if (typeof options.onWatchAd === 'function') {
+          options.onWatchAd();
+        }
       };
+    }
+
+    if (isStandalone && !tacticalCooldown.canClaim && this.storage?.getTacticalRefillCooldown) {
+      this.shopTickerInterval = setInterval(() => {
+        const countdownEl = document.getElementById('hintPromptTacticalCountdown');
+        if (!countdownEl) {
+          clearInterval(this.shopTickerInterval);
+          this.shopTickerInterval = null;
+          return;
+        }
+        const latest = this.storage.getTacticalRefillCooldown();
+        if (latest.canClaim) {
+          clearInterval(this.shopTickerInterval);
+          this.shopTickerInterval = null;
+          this.renderHintPrompt(options);
+        } else {
+          countdownEl.textContent = formatTime(latest.remainingSeconds);
+        }
+      }, 1000);
     }
     if (btnShop) {
       btnShop.onclick = () => {

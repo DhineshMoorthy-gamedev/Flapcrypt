@@ -4003,6 +4003,18 @@
   filter: brightness(0.92);
 }
 
+.btn-prompt-primary:disabled,
+.btn-prompt-primary.disabled {
+  background: #1A2820;
+  border-color: #263B2F;
+  color: #7B9487;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.85;
+  transform: none;
+  filter: none;
+}
+
 .btn-prompt-secondary {
   width: 100%;
   height: 42px;

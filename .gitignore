@@ -8,4 +8,7 @@ docs/raw-screenshots/
 
 *.jpg
 *.png
+!public/*.png
+!public/**/*.png
+!src-tauri/icons/*.png
 /.agents

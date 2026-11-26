@@ -459,6 +459,15 @@ export class Game {
             onWatchAd: () => {
               AdService.showRewarded();
             },
+            onTacticalRefill: () => {
+              if (!this.storage?.claimTacticalRefill) return;
+              const res = this.storage.claimTacticalRefill();
+              if (res.success) {
+                this.ui.updateHintButton(res.balance);
+                if (this.audio) this.audio.playVictoryFanfare();
+                this.ui.setStatus('⚡ Tactical Refill claimed! (+1 Hint)');
+              }
+            },
             onOpenShop: () => {
               if (this.onRequestShop) {
                 this.onRequestShop();

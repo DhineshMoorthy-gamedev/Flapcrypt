@@ -273,6 +273,11 @@ class AdServiceClass {
   // =========================================================================
 
   async showRewarded({ onRewardEarned, onDismiss, onFail } = {}) {
+    if (TargetConfig.capabilities.isStandaloneMode) {
+      if (typeof onFail === 'function') onFail(new Error('Rewarded ads disabled in standalone mode'));
+      return;
+    }
+
     // If player purchased Remove Ads, immediately grant the hint reward without showing an ad!
     if (this.hasAdsRemoved()) {
       this.handleRewardConfirmed({ amount: 1, type: 'hint', onRewardEarned });

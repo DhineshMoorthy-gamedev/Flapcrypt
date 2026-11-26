@@ -15,7 +15,8 @@ const DEFAULT_STATE = {
   removeAds: false,
   hints: {
     balance: 5,
-    lastFreeHintClaimTimestamp: 0
+    lastFreeHintClaimTimestamp: 0,
+    lastTacticalRefillTimestamp: 0
   },
   stats: {
     levelsCompleted: 0,
@@ -308,7 +309,7 @@ export class StorageService {
     if (!this.data.hints) {
       this.data.hints = { ...DEFAULT_STATE.hints };
     }
-    const COOLDOWN_MS = 60 * 1000; // 60s tactical cooldown on standalone desktop/web
+    const COOLDOWN_MS = 60 * 60 * 1000; // 1 hour tactical cooldown on standalone desktop/web
     const lastClaim = this.data.hints.lastTacticalRefillTimestamp || 0;
     const now = Date.now();
     const elapsed = now - lastClaim;
